@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens — source: design-system/xiontechs/MASTER.md.
+ * Use these via Tailwind utilities (bg-primary, text-accent, font-display, ...).
+ * Never hardcode hex values or font names in components.
+ * Spacing, radius and shadows use Tailwind defaults (they match MASTER.md).
+ */
+@theme {
+  --color-primary: #0f172a;
+  --color-on-primary: #ffffff;
+  --color-secondary: #334155;
+  --color-accent: #0369a1;
+  --color-background: #f8fafc;
+  --color-foreground: #020617;
+  --color-muted: #e8ecf1;
+  --color-border: #e2e8f0;
+  --color-destructive: #dc2626;
+  --color-ring: #0f172a;
+}
+
+/* Font variables are injected by <Font /> (see `fonts` in astro.config.mjs). */
+@theme inline {
+  --font-sans: var(--font-open-sans), system-ui, sans-serif;
+  --font-display: var(--font-montserrat), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

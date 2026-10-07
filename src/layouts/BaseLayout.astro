@@ -1,0 +1,48 @@
+---
+import { Font } from 'astro:assets';
+import { getAbsoluteLocaleUrl } from 'astro:i18n';
+import { defaultLocale, locales, stripLocale, type Locale } from '../i18n';
+import '../styles/global.css';
+
+interface Props {
+  lang: Locale;
+  title: string;
+  description: string;
+}
+
+const { lang, title, description } = Astro.props;
+
+const path = stripLocale(Astro.url.pathname, lang);
+const canonical = getAbsoluteLocaleUrl(lang, path);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {locales.map((l) => (
+      <link rel="alternate" hreflang={l} href={getAbsoluteLocaleUrl(l, path)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl(defaultLocale, path)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="XionTechs" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang} />
+
+    <Font cssVariable="--font-montserrat" preload />
+    <Font cssVariable="--font-open-sans" preload />
+  </head>
+  <body class="bg-background text-foreground min-h-dvh font-sans antialiased">
+    <slot />
+  </body>
+</html>

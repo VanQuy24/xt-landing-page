@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getDictionary, type Locale } from '../i18n';
+import Header from './sections/Header.astro';
+import Hero from './sections/Hero.astro';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+---
+
+<BaseLayout lang={lang} title={t.meta.title} description={t.meta.description}>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} />
+  </main>
+</BaseLayout>
