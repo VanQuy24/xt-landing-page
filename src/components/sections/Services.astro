@@ -1,0 +1,28 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import Icon, { type IconName } from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §3. Cards per MASTER §5.8 (icon → h3 → body); not links, so no hover lift.
+interface Props {
+  lang: Locale;
+}
+
+const t = getDictionary(Astro.props.lang);
+---
+
+<Section id="services" labelledby="services-title" surface>
+  <SectionHeader id="services-title" label={t.services.label} heading={t.services.heading} />
+  <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {t.services.items.map((s) => (
+      <li class="border-line rounded-lg border bg-white p-6 lg:p-8">
+        <span class="inline-flex size-12 items-center justify-center rounded-md bg-blue-50 text-blue-600">
+          <Icon name={s.icon as IconName} />
+        </span>
+        <h3 class="font-display text-h3 text-ink-900 mt-5">{s.title}</h3>
+        <p class="text-small text-ink-500 mt-3">{s.body}</p>
+      </li>
+    ))}
+  </ul>
+</Section>

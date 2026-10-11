@@ -1,0 +1,31 @@
+---
+// MASTER §5.9.
+const tones = {
+  neutral: 'border border-line bg-surface text-ink-700',
+  brand: 'bg-blue-100 text-blue-700',
+  highlight: 'bg-gold-400 text-brand-navy',
+  success: 'bg-surface text-success',
+  more: 'border border-dashed border-ink-500 text-ink-500',
+} as const;
+
+export type ChipTone = keyof typeof tones;
+
+interface Props {
+  tone?: ChipTone;
+  size?: 'md' | 'xs';
+  class?: string;
+}
+
+const { tone = 'neutral', size = 'md', class: className } = Astro.props;
+---
+
+<span
+  class:list={[
+    'inline-flex items-center gap-1 rounded-sm font-semibold whitespace-nowrap',
+    size === 'md' ? 'h-8 px-3 text-[13px]' : 'h-6 px-2 text-[11px]',
+    tones[tone],
+    className,
+  ]}
+>
+  <slot />
+</span>

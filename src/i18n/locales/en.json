@@ -1,14 +1,289 @@
 {
   "meta": {
-    "title": "XionTechs — Technology Solutions",
-    "description": "XionTechs builds reliable software and technology solutions for growing businesses."
+    "title": "XionTechs - Get IT Done",
+    "description": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Plano, Texas, and Ho Chi Minh City, Vietnam."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "primaryNav": "Main",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "home": "XionTechs home",
+    "illustrative": "Illustrative — fictional data",
+    "external": "opens in a new tab"
   },
   "nav": {
-    "language": "Language"
+    "language": "Language",
+    "services": "Services",
+    "products": "Products",
+    "clients": "Clients",
+    "process": "Process",
+    "faq": "FAQ",
+    "careers": "Careers",
+    "cta": "Get in touch"
   },
   "hero": {
-    "title": "Technology that moves your business forward",
-    "subtitle": "We design, build and run software products for companies that need to ship with confidence.",
-    "cta": "Contact us"
+    "eyebrow": "Get IT Done",
+    "title": "Crafting secure and innovative IT solutions",
+    "subtitle": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.",
+    "cta": "Get in touch",
+    "secondary": "Explore services"
+  },
+  "numbers": {
+    "label": "XionTechs in numbers",
+    "items": [
+      { "value": 25, "suffix": "+", "label": "Years of leadership experience" },
+      { "value": 20, "suffix": "+", "label": "Tech stack expertise" },
+      { "value": 3, "suffix": "", "label": "Office locations", "context": "Plano (USA) · Ho Chi Minh City (Vietnam)" }
+    ]
+  },
+  "services": {
+    "label": "Our services",
+    "heading": "Technology solutions that transform your business",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Product engineering",
+        "body": "Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation."
+      },
+      {
+        "icon": "chart",
+        "title": "AI-driven analytics",
+        "body": "Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes."
+      },
+      {
+        "icon": "users",
+        "title": "Product co-creation",
+        "body": "Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives."
+      },
+      {
+        "icon": "briefcase",
+        "title": "Staffing services",
+        "body": "Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery."
+      },
+      {
+        "icon": "window",
+        "title": "Custom app development",
+        "body": "Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage."
+      },
+      {
+        "icon": "zap",
+        "title": "Low-code solutions",
+        "body": "Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications."
+      },
+      {
+        "icon": "spark",
+        "title": "AI-powered solutions",
+        "body": "Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth."
+      },
+      {
+        "icon": "cloud",
+        "title": "Cloud computing",
+        "body": "Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs."
+      }
+    ]
+  },
+  "products": {
+    "label": "Products for schools",
+    "heading": "Our products for schools",
+    "intro": "Products of our own for schools, built on the same engineering we bring to client work.",
+    "tag": "Our product · Education",
+    "platform": {
+      "title": "AI-powered platform for smart schools",
+      "body": "An integrated digital ecosystem that uses artificial intelligence to improve learning, streamline administration and raise student engagement. It delivers personalized learning paths, real-time analytics, automated grading and smart resource management.",
+      "featuresLabel": "Features",
+      "features": [
+        "Personalized learning",
+        "Smart classroom management",
+        "AI-powered assessment",
+        "Virtual teaching assistant",
+        "Data-driven insights",
+        "Intelligent scheduling",
+        "Smart communication",
+        "Security and compliance",
+        "Gamified learning",
+        "Integration and scalability"
+      ]
+    },
+    "numbers": [
+      { "value": "10", "label": "Platform features" },
+      { "value": "2", "label": "School products" }
+    ],
+    "timetabling": {
+      "title": "AI-powered timetabling",
+      "body": "An intelligent scheduling system that automates the creation and optimization of academic timetables. It compares timetables generated from different inputs and constraints, talks users through their scheduling goals, and reports on room use and capacity."
+    },
+    "window": {
+      "bar": "School platform · Dashboard",
+      "kpis": [
+        { "label": "To mark", "value": "3" },
+        { "label": "Classes today", "value": "5" },
+        { "label": "Tasks", "value": "4" }
+      ],
+      "rows": [
+        { "text": "Wellbeing note — Class 5B", "status": "Due", "tone": "highlight" },
+        { "text": "Attendance — Period 2", "status": "Done", "tone": "success" },
+        { "text": "Timetable — next week", "status": "Draft", "tone": "neutral" }
+      ]
+    }
+  },
+  "clients": {
+    "label": "Clients and domains",
+    "heading": "Who we build for",
+    "namesLabel": "Clients",
+    "names": ["Varkey Education", "CyberHive"],
+    "work": {
+      "tag": "Client work · Education",
+      "title": "Multi-school apps for parents and staff",
+      "body": "Parents chat with an AI assistant to pay fees, update their details and get notifications.",
+      "numbers": [
+        { "value": "2", "label": "Audiences" },
+        { "value": "3", "label": "Assistant tasks" }
+      ],
+      "chips": ["Pay fees", "Update details", "Notifications"]
+    },
+    "window": {
+      "bar": "Parent app · AI assistant",
+      "ask": "Pay this term's fees for my son.",
+      "card": "Confirm payment",
+      "rows": [
+        { "k": "Student", "v": "Grade 5" },
+        { "k": "Term", "v": "Term 2" },
+        { "k": "Amount", "v": "$1,250" }
+      ],
+      "confirm": "Confirm"
+    },
+    "domainsLabel": "Domains",
+    "domains": ["EdTech", "Healthcare", "Logistics"],
+    "domainsBody": "Our domain knowledge runs deepest in EdTech, healthcare and logistics.",
+    "more": "& more",
+    "visit": "In October 2025 a client visited our delivery center in Ho Chi Minh City to explore AI and robotics in education."
+  },
+  "process": {
+    "label": "4-D process",
+    "heading": "How we get IT done",
+    "steps": [
+      {
+        "name": "Discovery",
+        "body": "Strategic alignment of your business goals with technical solutions. We define clear, measurable outcomes."
+      },
+      {
+        "name": "Design",
+        "body": "Custom solutions built on our integrated engineering platform. We address your specific business challenges."
+      },
+      {
+        "name": "Development",
+        "body": "Agile implementation with transparent communication. We ensure quality through comprehensive testing."
+      },
+      {
+        "name": "Deployment",
+        "body": "Data-driven performance monitoring with ongoing support. We ensure efficiency while focusing on long-term success."
+      }
+    ],
+    "note": "Agile practices and an AI-driven workflow, with metric-driven project management.",
+    "ship": ["Apps", "AI robotics", "IoT", "Smart platform"],
+    "shipLabel": "What we deploy",
+    "pause": "Pause",
+    "play": "Play"
+  },
+  "why": {
+    "label": "Why choose us",
+    "heading": "Our priority, our commitment, our solutions",
+    "intro": "Choose XionTechs for integrated solutions, industry experience, and metric-driven delivery. We bring product ideas to life through collaborative creation and a \"Get IT Done\" attitude.",
+    "items": [
+      {
+        "icon": "users",
+        "title": "Client centricity focus",
+        "body": "XionTechs emphasizes a client-first approach, focusing on providing exceptional experiences and valuable outcomes."
+      },
+      {
+        "icon": "shield",
+        "title": "Integrity and ethical standards",
+        "body": "With an integrity mindset, XionTechs operates with honesty and transparency, maintaining the highest ethical standards in all work."
+      },
+      {
+        "icon": "check",
+        "title": "High quality delivery",
+        "body": "XionTechs is responsible for providing high-quality solutions that are reliable and efficient, exceeding industry standards."
+      }
+    ]
+  },
+  "about": {
+    "label": "Who we are",
+    "heading": "We deliver consumer-centric tech solutions",
+    "body": "XionTechs specializes in delivering consumer-centric technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth.",
+    "bullets": [
+      "Identify growth opportunities and expand market presence",
+      "Enhance operational efficiency and reduce waste",
+      "Make informed decisions based on data-driven insights"
+    ],
+    "name": "The name Xion is inspired by a mountain, a high place that people reach together.",
+    "place": "Our engineers work in Ho Chi Minh City, Vietnam. Our US office is in Plano, Texas.",
+    "photos": [
+      { "alt": "The XionTechs team at an AI workshop", "caption": "AI workshop" },
+      { "alt": "Hands-on AI training at XionTechs", "caption": "Hands-on AI training" },
+      { "alt": "A company-wide knowledge sharing session", "caption": "Knowledge sharing" },
+      { "alt": "Team members recognized for great work", "caption": "Recognizing great work" }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What services does XionTechs offer?",
+        "a": "XionTechs offers digital product engineering, digital insights and analytics, product co-creation, and staffing services. These services leverage emerging technologies like AI/ML and generative AI. XionTechs focuses on industries such as EdTech, healthcare, logistics, and private equity."
+      },
+      {
+        "q": "How do you ensure data security?",
+        "a": "With an integrity mindset, XionTechs maintains honesty and transparency in all dealings, ensuring client data is protected through ethical standards and responsible practices. Security automation and continuous scanning further enhance data protection."
+      },
+      {
+        "q": "How do you run a project?",
+        "a": "We follow the 4-D process: Discovery, Design, Development and Deployment. The team works with Agile practices and an AI-driven workflow, and project management is metric-driven, so you read quality and progress in numbers."
+      },
+      {
+        "q": "How do you measure and demonstrate value?",
+        "a": "XionTechs measures and demonstrates value by tracking metrics related to speed, quality, product impact, and team autonomy. This metric-driven performance approach ensures transparency and accountability while demonstrating tangible results and validating ROI."
+      }
+    ]
+  },
+  "brief": {
+    "label": "Work with us",
+    "heading": "Tell us what you are building",
+    "intro": "Send a brief and we reply by email within 24 business hours.",
+    "cta": "Email your brief",
+    "subject": "Project brief",
+    "contactLabel": "Other ways to reach us",
+    "usa": "USA",
+    "vietnam": "Vietnam",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "hours": "Office hours",
+    "hoursValue": "Monday to Friday, 9:00 to 18:00 (ICT, GMT+7)",
+    "officesLabel": "Offices",
+    "offices": [
+      { "city": "Plano", "address": "7950 Legacy Drive, Suite 400, Plano, TX 75024, USA" },
+      {
+        "city": "Ho Chi Minh City",
+        "address": "Floor 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam"
+      },
+      {
+        "city": "Ho Chi Minh City",
+        "address": "Floor 15, B1 Building, 279 Nguyen Tri Phuong, Ho Chi Minh City, Vietnam"
+      }
+    ]
+  },
+  "footer": {
+    "slogan": "Get IT Done",
+    "line": "AI-powered IT services and products",
+    "contactLabel": "Contact",
+    "officesLabel": "Offices",
+    "offices": "Plano, Texas, USA · Ho Chi Minh City, Vietnam",
+    "linksLabel": "Company",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "socialLabel": "Social",
+    "legal": "© 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815"
   }
 }

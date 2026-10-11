@@ -1,9 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getDictionary, type Locale } from '../i18n';
-import Header from './sections/Header.astro';
+import About from './sections/About.astro';
+import Brief from './sections/Brief.astro';
+import Clients from './sections/Clients.astro';
+import Faq from './sections/Faq.astro';
 import Hero from './sections/Hero.astro';
+import Process from './sections/Process.astro';
+import Products from './sections/Products.astro';
+import Services from './sections/Services.astro';
+import WhyUs from './sections/WhyUs.astro';
 
+// Section order follows design-system/xiontechs/content/en/home.md. §6 Testimonials ships only
+// once an approved quote exists (content/open-data.md #8, #9).
 interface Props {
   lang: Locale;
 }
@@ -13,8 +22,13 @@ const t = getDictionary(lang);
 ---
 
 <BaseLayout lang={lang} title={t.meta.title} description={t.meta.description}>
-  <Header lang={lang} />
-  <main>
-    <Hero lang={lang} />
-  </main>
+  <Hero lang={lang} />
+  <Services lang={lang} />
+  <Products lang={lang} />
+  <Clients lang={lang} />
+  <Process lang={lang} />
+  <WhyUs lang={lang} />
+  <About lang={lang} />
+  <Faq lang={lang} />
+  <Brief lang={lang} />
 </BaseLayout>

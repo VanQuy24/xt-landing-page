@@ -1,0 +1,33 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import Icon from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §10. Native <details> accordion, zero JS (MASTER §5.12).
+interface Props {
+  lang: Locale;
+}
+
+const t = getDictionary(Astro.props.lang);
+---
+
+<Section id="faq" labelledby="faq-title" surface>
+  <div class="grid gap-10 lg:grid-cols-12">
+    <SectionHeader id="faq-title" label={t.faq.label} heading={t.faq.heading} class="lg:col-span-4" />
+    <div class="divide-line border-line divide-y border-y lg:col-span-8">
+      {t.faq.items.map((f) => (
+        <details class="group">
+          <summary class="text-h4 text-ink-900 flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 [&::-webkit-details-marker]:hidden">
+            {f.q}
+            <Icon
+              name="plus"
+              class="size-5 shrink-0 text-blue-600 transition-transform duration-250 group-open:rotate-45"
+            />
+          </summary>
+          <p class="text-body text-ink-700 pb-6">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</Section>

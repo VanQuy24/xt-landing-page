@@ -1,21 +1,128 @@
 ---
+import { Image } from 'astro:assets';
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import type { Locale } from '../../i18n';
+import { getDictionary, type Locale } from '../../i18n';
+import mark from '../../assets/xt-mark.png';
 import LanguageSwitcher from '../LanguageSwitcher.astro';
+import Button from '../ui/Button.astro';
 import Container from '../ui/Container.astro';
+import Icon from '../ui/Icon.astro';
 
+// MASTER §5.2. Section links jump to Home anchors from any page.
 interface Props {
   lang: Locale;
 }
 
 const { lang } = Astro.props;
+const t = getDictionary(lang);
+const home = getRelativeLocaleUrl(lang);
+const links = [
+  { href: `${home}#services`, label: t.nav.services },
+  { href: `${home}#products`, label: t.nav.products },
+  { href: `${home}#clients`, label: t.nav.clients },
+  { href: `${home}#process`, label: t.nav.process },
+  { href: `${home}#faq`, label: t.nav.faq },
+  { href: getRelativeLocaleUrl(lang, 'careers'), label: t.nav.careers },
+];
+const contact = `${home}#contact`;
 ---
 
-<header class="border-line border-b">
-  <Container class="flex flex-wrap items-center justify-between gap-4 py-4">
-    <a href={getRelativeLocaleUrl(lang)} class="font-display text-h3 text-brand-navy">
+<header data-header class="sticky top-0 z-50 border-b border-transparent bg-white transition-colors duration-150">
+  <Container class="flex h-18 items-center gap-6">
+    <a href={home} class="font-display text-h4 text-brand-navy flex shrink-0 items-center gap-2 font-extrabold">
+      <Image src={mark} alt="" height={28} class="h-7 w-auto" loading="eager" />
       XionTechs
     </a>
-    <LanguageSwitcher lang={lang} />
+
+    <nav aria-label={t.a11y.primaryNav} class="mx-auto hidden lg:block">
+      <ul class="flex items-center gap-1">
+        {links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class="text-ink-700 inline-flex h-11 items-center px-3 text-[15px] font-medium transition-colors duration-150 hover:text-blue-600"
+            >
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="ms-auto flex items-center gap-3 lg:ms-0">
+      <LanguageSwitcher lang={lang} />
+      <div class="hidden lg:block">
+        <Button href={contact} size="sm">
+          {t.nav.cta}
+        </Button>
+      </div>
+      <button
+        type="button"
+        data-menu-button
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="text-ink-900 inline-flex size-11 cursor-pointer items-center justify-center rounded-md lg:hidden"
+      >
+        <span data-when-closed>
+          <span class="sr-only">{t.a11y.menuOpen}</span>
+          <Icon name="menu" />
+        </span>
+        <span data-when-open hidden>
+          <span class="sr-only">{t.a11y.menuClose}</span>
+          <Icon name="x" />
+        </span>
+      </button>
+    </div>
   </Container>
+
+  <div
+    id="mobile-menu"
+    hidden
+    class="border-line fixed inset-x-0 top-18 bottom-0 z-60 overflow-y-auto border-t bg-white px-4 pb-8 lg:hidden"
+  >
+    <nav aria-label={t.a11y.primaryNav}>
+      <ul class="divide-line divide-y">
+        {links.map((l) => (
+          <li>
+            <a href={l.href} class="text-ink-900 flex h-14 items-center text-lg font-medium">
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <Button href={contact} class="mt-6 w-full">
+      {t.nav.cta}
+    </Button>
+  </div>
 </header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-header]')!;
+  const button = header.querySelector<HTMLButtonElement>('[data-menu-button]')!;
+  const menu = header.querySelector<HTMLElement>('#mobile-menu')!;
+
+  const onScroll = () => header.classList.toggle('border-line', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const setOpen = (open: boolean) => {
+    menu.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+    button.querySelector<HTMLElement>('[data-when-closed]')!.hidden = open;
+    button.querySelector<HTMLElement>('[data-when-open]')!.hidden = !open;
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+  menu.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      button.focus();
+    }
+  });
+  matchMedia('(min-width: 1024px)').addEventListener('change', (e) => e.matches && setOpen(false));
+</script>

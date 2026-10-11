@@ -1,0 +1,45 @@
+---
+import Chip, { type ChipTone } from './Chip.astro';
+
+// MASTER §6.2 "App window": desktop frame with KPI tiles and a status list. Fictional data, decorative.
+interface Props {
+  bar: string;
+  kpis: { label: string; value: string }[];
+  rows: { text: string; status: string; tone: string }[];
+}
+
+const { bar, kpis, rows } = Astro.props;
+---
+
+<div class="border-line shadow-2 overflow-hidden rounded-lg border bg-white" aria-hidden="true">
+  <div class="border-line text-small text-ink-500 flex h-9 items-center gap-2 border-b px-4">
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="ms-2 truncate font-semibold">{bar}</span>
+  </div>
+  <div class="bg-surface grid gap-3 p-4 sm:p-5">
+    <div class="grid grid-cols-3 gap-3">
+      {kpis.map((k, i) => (
+        <div data-step style={`--i:${i}`} class="border-line rounded-md border bg-white p-3">
+          <p class="text-ink-500 text-xs">{k.label}</p>
+          <p class="font-display text-num-md text-ink-900 mt-1">{k.value}</p>
+        </div>
+      ))}
+    </div>
+    <ul class="border-line divide-line divide-y rounded-md border bg-white">
+      {rows.map((r, i) => (
+        <li
+          data-step
+          style={`--i:${i + kpis.length}`}
+          class="text-small flex items-center justify-between gap-3 px-4 py-3"
+        >
+          <span class="text-ink-700 truncate">{r.text}</span>
+          <Chip tone={r.tone as ChipTone} size="xs">
+            {r.status}
+          </Chip>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

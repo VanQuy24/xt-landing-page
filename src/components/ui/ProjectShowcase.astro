@@ -1,0 +1,88 @@
+---
+import Chip from './Chip.astro';
+
+// MASTER §6.2: tag → title → 2–3 numbers → product window (slot) → chips → "Illustrative" caption.
+interface Props {
+  tag: string;
+  tagTone?: 'brand' | 'highlight';
+  title: string;
+  body?: string;
+  numbers: { value: string; label: string }[];
+  chips?: string[];
+  more?: string;
+  caption: string;
+  /** Put the window on the start side (alternate between projects). */
+  reverse?: boolean;
+}
+
+const { tag, tagTone = 'brand', title, body, numbers, chips = [], more, caption, reverse = false } = Astro.props;
+---
+
+<article class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+  <div class:list={['lg:col-span-5', reverse && 'lg:order-2']}>
+    <Chip tone={tagTone}>{tag}</Chip>
+    <h3 class="font-display text-h2 text-ink-900 mt-4">{title}</h3>
+    {body && <p class="text-body text-ink-700 mt-3">{body}</p>}
+    <dl class="border-line my-6 grid grid-cols-2 border-y">
+      {numbers.map((n) => (
+        <div class="border-line flex flex-col py-4 not-first:border-s not-first:ps-5">
+          <dt class="text-label text-ink-500 mt-1 uppercase">{n.label}</dt>
+          <dd class="font-display text-num-lg text-ink-900 -order-1 tabular-nums">{n.value}</dd>
+        </div>
+      ))}
+    </dl>
+    {chips.length > 0 && (
+      <ul class="flex flex-wrap gap-2">
+        {chips.map((c) => (
+          <li>
+            <Chip>{c}</Chip>
+          </li>
+        ))}
+        {more && (
+          <li>
+            <Chip tone="more">{more}</Chip>
+          </li>
+        )}
+      </ul>
+    )}
+  </div>
+  <figure class:list={['lg:col-span-7', reverse && 'lg:order-1']}>
+    <div data-showcase-window class="showcase-window">
+      <slot />
+    </div>
+    <figcaption class="text-small text-ink-500 mt-3 text-center">{caption}</figcaption>
+  </figure>
+</article>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .showcase-window :global([data-step]) {
+      transition:
+        opacity 600ms var(--ease-out),
+        translate 600ms var(--ease-out);
+      transition-delay: calc(var(--i, 0) * 150ms);
+    }
+    .showcase-window[data-state='pending'] :global([data-step]) {
+      opacity: 0;
+      translate: 0 16px;
+    }
+  }
+</style>
+
+<script>
+  // Animate each window once when it scrolls into view. Windows already on screen at load stay as they are.
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        io.unobserve(e.target);
+        (e.target as HTMLElement).dataset.state = 'done';
+      }
+    },
+    { threshold: 0.3 },
+  );
+  document.querySelectorAll<HTMLElement>('[data-showcase-window]').forEach((el) => {
+    if (el.getBoundingClientRect().top > innerHeight) el.dataset.state = 'pending';
+    io.observe(el);
+  });
+</script>

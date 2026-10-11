@@ -1,0 +1,30 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+// MASTER §5.1. `highlight` (gold) is allowed once per page; `light` is the primary button on the navy band.
+const variants = {
+  primary: 'bg-blue-600 text-white hover:bg-blue-700',
+  secondary: 'border-[1.5px] border-blue-600 bg-white text-blue-600 hover:bg-blue-50',
+  highlight: 'bg-gold-400 text-brand-navy hover:bg-gold-300',
+  light: 'bg-white text-brand-navy hover:bg-blue-50',
+} as const;
+
+type Props = HTMLAttributes<'a'> & {
+  variant?: keyof typeof variants;
+  size?: 'md' | 'sm';
+};
+
+const { variant = 'primary', size = 'md', class: className, ...attrs } = Astro.props;
+---
+
+<a
+  class:list={[
+    'inline-flex cursor-pointer items-center justify-center gap-2 rounded-md font-semibold whitespace-nowrap transition-colors duration-150',
+    size === 'md' ? 'h-12 px-6 text-base' : 'h-11 px-5 text-sm',
+    variants[variant],
+    className,
+  ]}
+  {...attrs}
+>
+  <slot />
+</a>

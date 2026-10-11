@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getDictionary, localeNames, locales, stripLocale, type Locale } from '../i18n';
 
+// MASTER §5.3: short codes (EN / VI); the endonym is the accessible name.
 interface Props {
   lang: Locale;
 }
@@ -12,17 +13,19 @@ const path = stripLocale(Astro.url.pathname, lang);
 ---
 
 <nav aria-label={t.nav.language}>
-  <ul class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+  <ul class="divide-line flex items-center divide-x text-sm font-semibold">
     {locales.map((l) => (
       <li>
         <a
           href={getRelativeLocaleUrl(l, path)}
           lang={l}
           hreflang={l}
+          aria-label={localeNames[l]}
+          title={localeNames[l]}
           aria-current={l === lang ? 'page' : undefined}
-          class="text-ink-500 hover:text-blue-600 aria-[current=page]:text-ink-900 rounded-sm transition-colors duration-150 aria-[current=page]:font-semibold"
+          class="text-ink-500 aria-[current=page]:text-ink-900 inline-flex h-11 min-w-11 items-center justify-center px-2 uppercase transition-colors duration-150 hover:text-blue-600"
         >
-          {localeNames[l]}
+          {l}
         </a>
       </li>
     ))}
