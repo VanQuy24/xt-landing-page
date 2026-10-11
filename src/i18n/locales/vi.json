@@ -184,7 +184,8 @@
     "ship": ["Ứng dụng", "Robot AI", "IoT", "Nền tảng thông minh"],
     "shipLabel": "Những gì chúng tôi triển khai",
     "pause": "Tạm dừng",
-    "play": "Phát"
+    "play": "Phát",
+    "loss": "sai số"
   },
   "why": {
     "label": "Vì sao chọn chúng tôi",
