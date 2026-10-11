@@ -18,7 +18,7 @@ const links = [
   { href: getRelativeLocaleUrl(lang, 'terms-of-service'), label: t.footer.terms },
 ];
 const heading = 'text-label text-blue-200 uppercase';
-const link = 'hover:text-white hover:underline';
+const link = 'inline-flex min-h-11 items-center hover:text-white hover:underline';
 ---
 
 <footer class="bg-brand-navy text-small text-white/80">
@@ -31,7 +31,7 @@ const link = 'hover:text-white hover:underline';
 
     <div>
       <h2 class={heading}>{t.footer.contactLabel}</h2>
-      <ul class="mt-4 space-y-2">
+      <ul class="mt-2">
         <li>
           <a class={link} href={telHref(company.phones.usa)}>
             {company.phones.usa}
@@ -54,7 +54,7 @@ const link = 'hover:text-white hover:underline';
 
     <div>
       <h2 class={heading}>{t.footer.linksLabel}</h2>
-      <ul class="mt-4 space-y-2">
+      <ul class="mt-2">
         {links.map((l) => (
           <li>
             <a class={link} href={l.href}>

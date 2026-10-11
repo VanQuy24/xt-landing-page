@@ -118,7 +118,9 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
     scroll-padding-top: 88px; /* sticky 72px nav + 16px, so anchors aren't hidden */
+    touch-action: manipulation;
   }
 
   :focus-visible {

@@ -281,7 +281,7 @@ White, sticky, 72px tall, bottom border 1px `line` (appears after 8px of scroll)
 
 ### 5.3 Language switcher
 
-Two short labels **EN / VI** (the full endonym "English" / "Tiếng Việt" as `aria-label`/`title`), each link with `lang` and `hreflang`. Current = `ink-900` + `aria-current="page"`; other = `ink-500`, hover `blue-600`. It links to the same page in the other language (`getRelativeLocaleUrl`). Separated by a 1px `line` divider.
+Two short labels **EN / VI** (the full endonym "English" / "Tiếng Việt" follows as screen-reader text and `title`, so the accessible name still contains the visible code, WCAG 2.5.3), each link with `lang` and `hreflang`. Current = `ink-900` + `aria-current="page"`; other = `ink-500`, hover `blue-600`. It links to the same page in the other language (`getRelativeLocaleUrl`). Separated by a 1px `line` divider.
 
 ### 5.4 Skip link
 
@@ -391,7 +391,7 @@ Same header and footer. Centered block: `num-hero` "404" (ink-900, gold bar abov
 
 - Auto-plays through 4 stages while on screen: **hold 4.2s, morph 1.3s**. Pauses when off-screen or the tab is hidden.
 - Clicking a stage takes manual control (auto-play stops). The Pause/Play toggle is always visible.
-- `aria-live` announces the stage name. Stage buttons use `aria-current="step"`.
+- `aria-live` announces the stage name when the user picks a stage (not during auto-play, which would speak every 4 seconds). Stage buttons use `aria-current="step"`.
 - **Reduced motion:** starts paused, no morphing; switching stages swaps states instantly.
 - Canvas: devicePixelRatio ≤ 2, batched paths (~10 per frame), 720 points desktop / **360 points mobile**.
 - Canvas height 360px desktop / 240px mobile; the canvas is `aria-hidden`; icon labels sit **below** the canvas as real text (translated, readable by screen readers).
@@ -442,13 +442,14 @@ Rules:
 | ------------- | ------------------------ | --------------------------- |
 | `dur-fast`    | 150ms                    | Hover, focus, color changes |
 | `dur-base`    | 250ms                    | Dropdowns, accordions, tabs |
-| `dur-slow`    | 600ms                    | Section reveal              |
+| `dur-slow`    | 400ms                    | Section reveal              |
 | `ease-out`    | cubic-bezier(.2,.8,.2,1) | Entrances                   |
 | `ease-in-out` | cubic-bezier(.4,0,.2,1)  | Morphs (4-D)                |
 
 Rules:
 
-- Minimal: **fade + 16px rise** on reveal (no blur, no glow, no shimmer).
+- Minimal: **fade + 16px rise** on reveal (no blur, no glow, no shimmer); stagger items by 50ms.
+- Anchor links scroll smoothly (`scroll-behavior: smooth`, off under reduced motion). Buttons scale to 0.98 while pressed.
 - Allowed always-on motion: only the 4-D canvas (pausable) and count-ups (run once).
 - Animate only `transform` and `opacity`.
 - **`prefers-reduced-motion`:** everything static, final states shown.

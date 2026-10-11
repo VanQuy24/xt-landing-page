@@ -371,7 +371,6 @@ export function initFourD(sec: HTMLElement) {
       if (i === k) b.setAttribute('aria-current', 'step');
       else b.removeAttribute('aria-current');
     });
-    live.textContent = names[k];
     current.textContent = descs[k];
     draw(0);
   }
@@ -403,6 +402,8 @@ export function initFourD(sec: HTMLElement) {
       playing = false;
       t = k * HOLD;
       go(k);
+      // Announce only stages the user picked; auto-play would talk every 4 seconds.
+      live.textContent = names[k];
       line(0);
       sync();
     }),
