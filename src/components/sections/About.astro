@@ -9,7 +9,7 @@ import Icon from '../ui/Icon.astro';
 import Section from '../ui/Section.astro';
 import SectionHeader from '../ui/SectionHeader.astro';
 
-// Home §9. Real XionTechs photos; they are small crops, so they stay ≤ 300px wide (MASTER §4.2).
+// Home §9. Real XionTechs photos, restored from the existing small crops.
 interface Props {
   lang: Locale;
 }
@@ -45,8 +45,8 @@ const photos = [teamAtWork, aiTraining, sessions, recognition].map((src, i) => (
             <Image
               src={p.src}
               alt={p.alt}
-              width={300}
-              widths={[150, 300]}
+              width={600}
+              widths={[300, 600]}
               sizes="(min-width: 1024px) 280px, 45vw"
               class="aspect-[3/4] w-full rounded-md object-cover"
             />
