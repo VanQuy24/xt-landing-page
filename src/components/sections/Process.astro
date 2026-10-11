@@ -3,7 +3,8 @@ import { getDictionary, type Locale } from '../../i18n';
 import Section from '../ui/Section.astro';
 import SectionHeader from '../ui/SectionHeader.astro';
 
-// Home §7, 4-D process. Static four-step version; this is also the no-JS fallback of the animated one.
+// Home §7, 4-D process (MASTER §6.1). Without JS it is a static list of the four steps with all copy visible;
+// the script adds the canvas, the timeline and auto-play (`data-enhanced`).
 interface Props {
   lang: Locale;
 }
@@ -13,15 +14,78 @@ const p = t.process;
 ---
 
 <Section id="process" labelledby="process-title">
-  <SectionHeader id="process-title" label={p.label} heading={p.heading} />
-  <ol class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-    {p.steps.map((s, i) => (
-      <li class="border-line border-t-2 pt-6">
-        <span class="text-label text-blue-600">{String(i + 1).padStart(2, '0')}</span>
-        <h3 class="font-display text-h3 text-ink-900 mt-2">{s.name}</h3>
-        <p class="text-small text-ink-700 mt-3">{s.body}</p>
-      </li>
-    ))}
-  </ol>
-  <p class="text-small text-ink-500 mt-10">{p.note}</p>
+  <div data-fourd data-loss={p.loss} class="group">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <SectionHeader id="process-title" label={p.label} heading={p.heading} />
+      <button
+        type="button"
+        data-toggle
+        data-pause={p.pause}
+        data-play={p.play}
+        class="hidden h-11 cursor-pointer items-center rounded-md border-[1.5px] border-blue-600 bg-white px-5 text-sm font-semibold text-blue-600 transition-colors duration-150 group-data-[enhanced]:inline-flex hover:bg-blue-50"
+      >
+        {p.pause}
+      </button>
+    </div>
+
+    <div class="border-line bg-surface mt-8 hidden rounded-lg border group-data-[enhanced]:block">
+      <canvas data-canvas aria-hidden="true" class="block h-60 w-full lg:h-90"></canvas>
+      <ul
+        aria-label={p.shipLabel}
+        class="text-small text-ink-500 group-data-[stage=3]:text-brand-navy grid grid-cols-4 px-2 pb-4 text-center font-semibold transition-colors duration-600"
+      >
+        {p.ship.map((s) => (
+          <li>{s}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="relative mt-10">
+      <div
+        class="bg-line absolute inset-x-[12.5%] top-[9px] hidden h-0.5 group-data-[enhanced]:block"
+        aria-hidden="true"
+      >
+        <span class="absolute inset-y-0 start-0 w-[calc(var(--f,0)*100%)] bg-blue-600"></span>
+      </div>
+      <ol class="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-4 group-data-[enhanced]:grid-cols-4 group-data-[enhanced]:gap-2 group-data-[enhanced]:text-center">
+        {p.steps.map((s, i) => (
+          <li data-state="now" class="group/step">
+            <button
+              type="button"
+              data-stop
+              class="flex w-full flex-col items-start gap-1 text-start group-data-[enhanced]:min-h-11 group-data-[enhanced]:cursor-pointer group-data-[enhanced]:items-center group-data-[enhanced]:text-center"
+            >
+              <span
+                aria-hidden="true"
+                class="border-line group-data-[state=reached]/step:border-blue-600 group-data-[state=reached]/step:bg-blue-600 group-data-[state=now]/step:border-brand-navy group-data-[state=now]/step:bg-gold-400 group-data-[state=now]/step:ring-gold-100 mb-2 hidden size-5 rounded-full border-2 bg-white transition-all duration-250 group-data-[enhanced]:block group-data-[state=now]/step:scale-115 group-data-[state=now]/step:ring-4"
+              />
+              <span class="text-label text-blue-600">{String(i + 1).padStart(2, '0')}</span>
+              <span
+                data-name
+                class="font-display text-ink-500 group-data-[state=now]/step:text-ink-900 text-h3 transition-colors duration-250 max-lg:group-data-[enhanced]:text-sm"
+              >
+                {s.name}
+              </span>
+            </button>
+            <p
+              data-desc
+              class="text-small text-ink-500 group-data-[state=now]/step:text-ink-700 mt-2 group-data-[enhanced]:mx-auto group-data-[enhanced]:max-w-64 transition-colors duration-250 max-lg:group-data-[enhanced]:hidden"
+            >
+              {s.body}
+            </p>
+          </li>
+        ))}
+      </ol>
+      <p data-current class="text-small text-ink-700 mt-6 hidden text-center max-lg:group-data-[enhanced]:block"></p>
+      <p data-live aria-live="polite" class="sr-only"></p>
+    </div>
+
+    <p class="text-small text-ink-500 mt-10">{p.note}</p>
+  </div>
 </Section>
+
+<script>
+  import { initFourD } from '../../scripts/fourD';
+
+  document.querySelectorAll<HTMLElement>('[data-fourd]').forEach(initFourD);
+</script>

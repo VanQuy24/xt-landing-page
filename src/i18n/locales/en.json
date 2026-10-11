@@ -184,7 +184,8 @@
     "ship": ["Apps", "AI robotics", "IoT", "Smart platform"],
     "shipLabel": "What we deploy",
     "pause": "Pause",
-    "play": "Play"
+    "play": "Play",
+    "loss": "loss"
   },
   "why": {
     "label": "Why choose us",
