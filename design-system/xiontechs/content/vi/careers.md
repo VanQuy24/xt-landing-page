@@ -26,13 +26,13 @@ Meta description: Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí 
 
 ## 3. Why join us
 
-| Perk | Copy |
-|---|---|
-| Môi trường đổi mới | Làm việc với công nghệ tiên tiến để xây dựng những hệ thống CNTT tạo ra thay đổi, cùng tầm nhìn của Xion. |
-| Văn hóa trao quyền | Trở thành một phần của văn hóa "Beyond Employees", nơi đề cao tinh thần khởi nghiệp, sự đổi mới và tư duy "Get IT Done", nơi ai cũng thuộc về. |
-| Phát triển liên tục | Được đào tạo bài bản, có tài liệu chuyên môn và chương trình hội nhập theo từng vị trí, để bạn làm tốt ngay từ ngày đầu. |
-| Công nghệ hấp dẫn | Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile, trong một môi trường kỹ thuật trưởng thành. |
-| Tác động thật | Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới trên toàn thế giới. |
+| Perk                | Copy                                                                                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Môi trường đổi mới  | Làm việc với công nghệ tiên tiến để xây dựng những hệ thống CNTT tạo ra thay đổi, cùng tầm nhìn của Xion.                                      |
+| Văn hóa trao quyền  | Trở thành một phần của văn hóa "Beyond Employees", nơi đề cao tinh thần khởi nghiệp, sự đổi mới và tư duy "Get IT Done", nơi ai cũng thuộc về. |
+| Phát triển liên tục | Được đào tạo bài bản, có tài liệu chuyên môn và chương trình hội nhập theo từng vị trí, để bạn làm tốt ngay từ ngày đầu.                       |
+| Công nghệ hấp dẫn   | Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile, trong một môi trường kỹ thuật trưởng thành.               |
+| Tác động thật       | Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới trên toàn thế giới.                 |
 
 ---
 
@@ -40,15 +40,15 @@ Meta description: Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí 
 
 - Heading: Bảy giá trị, một cách làm việc
 
-| Value | Motto |
-|---|---|
-| Chất lượng là trên hết | Không bao giờ thỏa hiệp về chất lượng. |
-| Tinh thần khởi nghiệp | Luôn linh hoạt, nghĩ như người chủ. |
-| Lấy khách hàng làm trung tâm | Thành công của khách hàng là thành công của chúng tôi. |
-| Chính trực là trên hết | Luôn làm điều đúng đắn. |
-| Đổi mới có mục đích | Đổi mới vì một mục tiêu rõ ràng. |
-| Tinh thần "Get IT done" | Nhận việc, hoàn thành, và làm tốt hơn. |
-| Văn hóa lấy con người làm trung tâm | Con người là cốt lõi của thành công. |
+| Value                               | Motto                                                  |
+| ----------------------------------- | ------------------------------------------------------ |
+| Chất lượng là trên hết              | Không bao giờ thỏa hiệp về chất lượng.                 |
+| Tinh thần khởi nghiệp               | Luôn linh hoạt, nghĩ như người chủ.                    |
+| Lấy khách hàng làm trung tâm        | Thành công của khách hàng là thành công của chúng tôi. |
+| Chính trực là trên hết              | Luôn làm điều đúng đắn.                                |
+| Đổi mới có mục đích                 | Đổi mới vì một mục tiêu rõ ràng.                       |
+| Tinh thần "Get IT done"             | Nhận việc, hoàn thành, và làm tốt hơn.                 |
+| Văn hóa lấy con người làm trung tâm | Con người là cốt lõi của thành công.                   |
 
 ---
 

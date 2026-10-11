@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XionTech Design System — Visual Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6" /></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9z" /></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <path d="M3 3v18h18" />
+        <path d="m7 15 4-4 3 3 5-6" />
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" /></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24">
+        <path d="M22 10 12 5 2 10l10 5 10-5z" />
+        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+      </symbol>
+      <symbol id="i-msg" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <path d="M14 2v6h6" />
+      </symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 8v4M12 16h.01" />
+      </symbol>
+    </svg>
+
+    <header class="board-top">
+      <b>XionTech Design System</b><span class="pill">v1.1 · matches MASTER.md</span
+      ><span>Minimal · White · Logo navy + gold · Numbers & images first</span>
+      <a href="#page">Jump to Home mockup ↓</a>
+    </header>
+
+    <div class="board">
+      <nav class="layers" aria-label="Frames">
+        <h6>Foundations</h6>
+        <a href="#colors">Colors</a><a href="#type">Typography</a><a href="#space">Spacing · Radius · Icons</a>
+        <h6>Components</h6>
+        <a href="#buttons">Buttons & Nav</a><a href="#stats">Stat tiles</a><a href="#cards">Cards · Chips · Media</a
+        ><a href="#forms">Tabs · FAQ · Inputs</a>
+        <h6>Signature</h6>
+        <a href="#fourd">4-D Process</a><a href="#pv">Project Visualization</a>
+        <h6>Pages</h6>
+        <a href="#page">Home (desktop)</a>
+      </nav>
+
+      <main class="canvas">
+        <!-- ================= COLORS ================= -->
+        <section id="colors">
+          <p class="frame-label">Foundations / Colors</p>
+          <div class="frame">
+            <h2 class="spec-title">Colors</h2>
+            <p class="spec-sub">
+              Navy and gold are sampled from the logo. White is the main theme. Contrast ratios are measured against
+              white (WCAG: ≥ 4.5 for text, ≥ 3 for large text).
+            </p>
+
+            <div class="brand-pair">
+              <div style="background: var(--brand-navy); color: #fff">
+                <span class="note" style="color: var(--blue-200)">brand-navy · logo</span>
+                <h4>#173762</h4>
+                <span style="font-size: 13px">11.94 : 1 on white · headings, dark bands</span>
+              </div>
+              <div style="background: var(--brand-gold); color: var(--brand-navy)">
+                <span class="note" style="color: var(--brand-navy)">brand-gold · logo</span>
+                <h4>#FCC00A</h4>
+                <span style="font-size: 13px">Navy on gold 7.21 : 1 · highlights only</span>
+              </div>
+              <div style="background: var(--white); border: 1px solid var(--line)">
+                <span class="note">Usage proportion (60-30-10 rule)</span>
+                <div class="ratio">
+                  <i style="flex: 70; background: #fff">White 70%</i
+                  ><i style="flex: 20; background: var(--ink-700); color: #fff">Ink 20%</i
+                  ><i style="flex: 8; background: var(--blue-600); color: #fff">8%</i
+                  ><i style="flex: 2; background: var(--gold-400)"></i>
+                </div>
+                <span class="note">Blue = actions & structure · Gold = "look here" (max 1 per screen)</span>
+              </div>
+            </div>
+
+            <h3 class="spec-h">Blue scale <span class="anno">primary action = blue-600</span></h3>
+            <div class="swatches">
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-50)"></div>
+                <div class="meta"><b>blue-50</b><span>#E9F6FF</span><br />Tinted bg</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-100)"></div>
+                <div class="meta"><b>blue-100</b><span>#DBE9FC</span><br />Chip bg</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-200)"></div>
+                <div class="meta"><b>blue-200</b><span>#B8D3F9</span><br />Borders</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-300)"></div>
+                <div class="meta"><b>blue-300</b><span>#81B3F9</span><br /><span class="no">2.15</span> decor</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-400); color: #fff"></div>
+                <div class="meta"><b>blue-400</b><span>#5D8ED1</span><br /><span class="no">3.36</span> ≥24px</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-500); color: #fff">Aa</div>
+                <div class="meta"><b>blue-500</b><span>#406FB0</span><br /><span class="ok">5.10 ✓</span></div>
+              </div>
+              <div class="sw" style="outline: 2px solid var(--blue-600)">
+                <div class="chip" style="background: var(--blue-600); color: #fff">Aa</div>
+                <div class="meta">
+                  <b>blue-600 ★</b><span>#295896</span><br /><span class="ok">7.17 ✓</span> primary
+                </div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-700); color: #fff">Aa</div>
+                <div class="meta"><b>blue-700</b><span>#154481</span><br /><span class="ok">9.65 ✓</span> hover</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--blue-900); color: #fff">Aa</div>
+                <div class="meta"><b>blue-900 = navy</b><span>#173762</span><br /><span class="ok">11.94 ✓</span></div>
+              </div>
+            </div>
+
+            <h3 class="spec-h">Gold scale <span class="anno">never text on white (except gold-700)</span></h3>
+            <div class="swatches">
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-50); color: var(--brand-navy)">Aa</div>
+                <div class="meta"><b>gold-50</b><span>#FFF8D4</span><br />Highlight bg</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-100); color: var(--brand-navy)">Aa</div>
+                <div class="meta"><b>gold-100</b><span>#FFF0CC</span><br />Badge bg</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-200); color: var(--brand-navy)">Aa</div>
+                <div class="meta"><b>gold-200</b><span>#FFE08D</span><br />Marker</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-300)"></div>
+                <div class="meta"><b>gold-300</b><span>#FFCC4F</span><br />Decor</div>
+              </div>
+              <div class="sw" style="outline: 2px solid var(--gold-400)">
+                <div class="chip" style="background: var(--gold-400); color: var(--brand-navy)">Aa</div>
+                <div class="meta">
+                  <b>gold-400 ★</b><span>#FCC00A</span><br /><span class="no">1.66</span> fill only
+                </div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-500)"></div>
+                <div class="meta"><b>gold-500</b><span>#D5A20A</span><br />Chart series 2</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-600); color: #fff">Aa</div>
+                <div class="meta"><b>gold-600</b><span>#AE7D00</span><br />3.66 large only</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--gold-700); color: #fff">Aa</div>
+                <div class="meta"><b>gold-700</b><span>#8F5F00</span><br /><span class="ok">5.52 ✓</span> text</div>
+              </div>
+            </div>
+
+            <h3 class="spec-h">Neutrals & status</h3>
+            <div class="swatches">
+              <div class="sw">
+                <div class="chip" style="background: #fff; border-bottom: 1px solid var(--line)"></div>
+                <div class="meta"><b>white</b><span>#FFFFFF</span><br />Page bg</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--surface)"></div>
+                <div class="meta"><b>surface</b><span>#F7F9FC</span><br />Alt section</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--line)"></div>
+                <div class="meta"><b>line</b><span>#E3E8EF</span><br />Borders</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--ink-400); color: #fff"></div>
+                <div class="meta"><b>ink-400</b><span>#8A94A6</span><br />3.06 non-text only</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--ink-500); color: #fff">Aa</div>
+                <div class="meta"><b>ink-500</b><span>#5B6676</span><br /><span class="ok">5.82 ✓</span> muted</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--ink-700); color: #fff">Aa</div>
+                <div class="meta"><b>ink-700</b><span>#334155</span><br /><span class="ok">10.35 ✓</span> body</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--ink-900); color: #fff">Aa</div>
+                <div class="meta"><b>ink-900</b><span>#0F1B2D</span><br /><span class="ok">17.28 ✓</span> heading</div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--success); color: #fff">✓</div>
+                <div class="meta"><b>success</b><span>#15803D</span><br /><span class="ok">5.02 ✓</span></div>
+              </div>
+              <div class="sw">
+                <div class="chip" style="background: var(--danger); color: #fff">!</div>
+                <div class="meta"><b>danger</b><span>#B91C1C</span><br /><span class="ok">6.47 ✓</span></div>
+              </div>
+            </div>
+
+            <h3 class="spec-h">Gold rules in practice</h3>
+            <div class="rules">
+              <div class="rule">
+                <span class="demo" style="background: var(--gold-400); color: var(--brand-navy)">Most popular</span
+                ><span><b class="ok">✓ Do</b> navy text on gold (7.21 : 1)</span>
+              </div>
+              <div class="rule">
+                <span class="demo" style="color: var(--gold-400); border: 1px solid var(--line)">Most popular</span
+                ><span><b class="no">✗ Don't</b> gold text on white (1.66 : 1)</span>
+              </div>
+              <div class="rule">
+                <span class="demo num" style="font-size: 24px">25<span class="sfx">+</span></span
+                ><span><b class="ok">✓ Do</b> gold-600 suffix on big numbers only</span>
+              </div>
+              <div class="rule">
+                <span class="demo" style="background: var(--gold-50); color: var(--gold-700)">Note</span
+                ><span><b class="ok">✓ Do</b> gold-700 text on gold-50 (5.16 : 1)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TYPOGRAPHY ================= -->
+        <section id="type">
+          <p class="frame-label">Foundations / Typography</p>
+          <div class="frame">
+            <h2 class="spec-title">Typography</h2>
+            <p class="spec-sub">
+              Manrope for headings and every number, Inter for reading. Both ship the Vietnamese subset, self-hosted.
+            </p>
+            <div class="fonts">
+              <div class="fontcard">
+                <span class="label">Display & numbers</span>
+                <div class="big num" style="font-family: var(--font-display)">Manrope 0123</div>
+                <p class="small">Weights 600 · 700 · 800 · tabular figures · Vietnamese ✓</p>
+              </div>
+              <div class="fontcard">
+                <span class="label">Body & UI</span>
+                <div class="big" style="font-family: var(--font-body); font-weight: 600">Inter Aa</div>
+                <p class="small">Weights 400 · 500 · 600 · optical sizing · Vietnamese ✓ (Đà Nẵng · Hồ Chí Minh)</p>
+              </div>
+            </div>
+            <h3 class="spec-h">Number scale <span class="anno">numbers-first</span></h3>
+            <div class="type-row">
+              <div class="lab"><b>num-hero</b>Manrope 800 · 96/56</div>
+              <div class="num" style="font-size: 96px">25<span class="sfx">+</span></div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>num-xl</b>Manrope 800 · 64/44</div>
+              <div class="num" style="font-size: 64px">20<span class="sfx">+</span></div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>num-lg</b>Manrope 800 · 44/32</div>
+              <div class="num" style="font-size: 44px">8 services</div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>num-md</b>Manrope 700 · 28/24</div>
+              <div class="num" style="font-size: 28px; font-weight: 700; color: var(--blue-600)">2 languages</div>
+            </div>
+            <h3 class="spec-h">Text scale</h3>
+            <div class="type-row">
+              <div class="lab"><b>display</b>Manrope 800 · 64/40</div>
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-weight: 800;
+                  font-size: 56px;
+                  line-height: 1.05;
+                  letter-spacing: -0.03em;
+                  color: var(--ink-900);
+                "
+              >
+                Build smarter software.
+              </div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>h1</b>Manrope 800 · 48/34</div>
+              <div class="h1">Careers</div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>h2</b>Manrope 700 · 38/28</div>
+              <div class="h2">A proven process, visible every sprint.</div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>h3</b>Manrope 700 · 24/20</div>
+              <div class="h3">Product Engineering</div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>lead</b>Inter 400 · 20/18</div>
+              <div class="lead">
+                We turn ideas into market-ready products and bring AI into the systems you already run.
+              </div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>body</b>Inter 400 · 17/16</div>
+              <div style="font-size: 17px; max-width: 680px">
+                Every engagement is shaped around your requirements. We start from your goals, data and systems — then
+                build the right mix of agents, apps and integrations.
+              </div>
+            </div>
+            <div class="type-row">
+              <div class="lab"><b>label</b>Inter 600 · 13 · caps</div>
+              <div class="label">Selected work</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= SPACING / RADIUS / ICONS ================= -->
+        <section id="space">
+          <p class="frame-label">Foundations / Spacing · Radius · Elevation · Icons</p>
+          <div class="frame">
+            <h2 class="spec-title">Spacing, shape & icons</h2>
+            <p class="spec-sub">
+              4px base, 12-column grid, 1200px content width. Flat: borders before shadows. One outline icon set.
+            </p>
+            <h3 class="spec-h">Spacing scale</h3>
+            <div class="space-row">
+              <div><span style="width: 4px; height: 4px"></span>4</div>
+              <div><span style="width: 8px; height: 8px"></span>8</div>
+              <div><span style="width: 12px; height: 12px"></span>12</div>
+              <div><span style="width: 16px; height: 16px"></span>16</div>
+              <div><span style="width: 24px; height: 24px"></span>24</div>
+              <div><span style="width: 32px; height: 32px"></span>32</div>
+              <div><span style="width: 48px; height: 48px"></span>48</div>
+              <div><span style="width: 64px; height: 64px"></span>64</div>
+              <div><span style="width: 96px; height: 96px"></span>96 section</div>
+            </div>
+            <h3 class="spec-h">Radius</h3>
+            <div class="radius-row">
+              <div style="border-radius: 8px">sm · 8</div>
+              <div style="border-radius: 12px">md · 12</div>
+              <div style="border-radius: 20px">lg · 20</div>
+              <div style="border-radius: 999px">full</div>
+            </div>
+            <h3 class="spec-h">Elevation</h3>
+            <div class="shadow-row">
+              <div style="background: #fff">border only ★</div>
+              <div style="background: #fff; box-shadow: var(--shadow-1)">shadow-1</div>
+              <div style="background: #fff; box-shadow: var(--shadow-2); border-color: transparent">
+                shadow-2 (hover)
+              </div>
+            </div>
+            <h3 class="spec-h">Icons — outline, 24px, 1.75 stroke</h3>
+            <div class="icons-row">
+              <div>
+                <svg class="ico lg"><use href="#i-code" /></svg>code
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-spark" /></svg>AI
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-chart" /></svg>analytics
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-users" /></svg>team
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-cloud" /></svg>cloud
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-zap" /></svg>automation
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-shield" /></svg>security
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-globe" /></svg>global
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-cap" /></svg>education
+              </div>
+              <div>
+                <svg class="ico lg"><use href="#i-msg" /></svg>chat
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= BUTTONS & NAV ================= -->
+        <section id="buttons">
+          <p class="frame-label">Components / Buttons & Navigation</p>
+          <div class="frame">
+            <h2 class="spec-title">Buttons & navigation</h2>
+            <p class="spec-sub">
+              48px tall, 12px radius. Only one gold "highlight" button per page. Hover the buttons to see states.
+            </p>
+            <div class="comp-grid">
+              <div class="comp-cell">
+                <span class="note">Primary · blue-600</span
+                ><a class="btn btn-primary" href="#"
+                  >Email your brief <svg class="ico sm"><use href="#i-arrow" /></svg
+                ></a>
+              </div>
+              <div class="comp-cell">
+                <span class="note">Secondary · outline</span><a class="btn btn-secondary" href="#">Explore services</a>
+              </div>
+              <div class="comp-cell">
+                <span class="note">Highlight · gold (hero only)</span
+                ><a class="btn btn-highlight" href="#">Get in touch</a>
+              </div>
+              <div class="comp-cell">
+                <span class="note">Text link</span
+                ><a class="btn-link" href="#"
+                  >See our services <svg class="ico sm"><use href="#i-arrow" /></svg
+                ></a>
+              </div>
+              <div class="comp-cell">
+                <span class="note">Disabled</span><button class="btn" disabled>Sending…</button>
+              </div>
+              <div class="comp-cell on-dark" style="background: var(--brand-navy); border-style: solid">
+                <span class="note" style="color: var(--blue-200)">On dark band</span>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <a class="btn btn-primary" href="#">Get in touch</a><a class="btn btn-secondary" href="#">Careers</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="spec-h">Navigation bar · 72px · white · active link = blue text + gold underline</h3>
+            <div style="border: 1px solid var(--line); border-radius: 12px; overflow: hidden">
+              <div class="nav">
+                <a class="logo" href="#"><img src="assets/xt-mark.png" alt="" />XionTechs</a>
+                <ul>
+                  <li><a class="active" href="#">Services</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Clients</a></li>
+                  <li><a href="#">Process</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+                <span class="lang"
+                  ><svg class="ico sm"><use href="#i-globe" /></svg>EN / VI</span
+                >
+                <a class="btn btn-primary btn-sm" href="#">Get in touch</a>
+              </div>
+            </div>
+            <h3 class="spec-h">Section header</h3>
+            <div class="sec-head">
+              <p class="label"><i></i>03 · Our services</p>
+              <h2 class="h2">Technology solutions that transform your business</h2>
+              <p class="lead">Eight services, from product engineering to cloud computing.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= STATS ================= -->
+        <section id="stats">
+          <p class="frame-label">Components / Stat tiles (numbers-first core)</p>
+          <div class="frame">
+            <h2 class="spec-title">Stat tiles</h2>
+            <p class="spec-sub">
+              Number (Manrope 800, tabular) + gold-600 suffix + uppercase label + optional context. Counts up once on
+              scroll.
+            </p>
+            <h3 class="spec-h">Strip variant</h3>
+            <div class="stats" style="--cols: 3" data-count-group>
+              <div class="stat">
+                <div class="bar"></div>
+                <div class="num"><span data-count="25">25</span><span class="sfx">+</span></div>
+                <div class="lab">Years of leadership experience</div>
+              </div>
+              <div class="stat">
+                <div class="bar"></div>
+                <div class="num"><span data-count="20">20</span><span class="sfx">+</span></div>
+                <div class="lab">Tech stack expertise</div>
+              </div>
+              <div class="stat">
+                <div class="bar"></div>
+                <div class="num"><span data-count="3">3</span></div>
+                <div class="lab">Office locations</div>
+                <div class="ctx">Plano (USA) · Ho Chi Minh City (Vietnam)</div>
+              </div>
+            </div>
+            <h3 class="spec-h">Card variant</h3>
+            <div class="comp-grid">
+              <div class="stat-card">
+                <div class="num" style="color: var(--blue-600)">2</div>
+                <div class="lab">Countries · USA · Vietnam</div>
+              </div>
+              <div class="stat-card">
+                <div class="num">2<span class="sfx"> lang</span></div>
+                <div class="lab">English · Tiếng Việt</div>
+              </div>
+              <div class="stat-card" style="background: var(--gold-50); border-color: var(--gold-200)">
+                <div class="num">8</div>
+                <div class="lab gold">Services · highlight</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= CARDS / CHIPS / MEDIA ================= -->
+        <section id="cards">
+          <p class="frame-label">Components / Cards · Chips · Media</p>
+          <div class="frame">
+            <h2 class="spec-title">Cards, chips & media</h2>
+            <p class="spec-sub">
+              Cards start with an icon or a number. Images keep fixed ratios and never upscale (real photos stay small
+              until originals arrive).
+            </p>
+            <div class="comp-grid">
+              <article class="card">
+                <div class="icon-box">
+                  <svg class="ico"><use href="#i-spark" /></svg>
+                </div>
+                <h3 class="h3">AI-Powered Solutions</h3>
+                <p class="small">Agents, automation and predictive analytics — on Microsoft or custom stacks.</p>
+              </article>
+              <article class="card">
+                <div class="num">10</div>
+                <h3 class="h3">Smart-school features</h3>
+                <p class="small">Personalized learning, AI assessment, scheduling and more.</p>
+              </article>
+              <figure>
+                <div class="media" style="aspect-ratio: 4/3">
+                  <img src="assets/ai-training.webp" alt="Hands-on AI training at XionTech" /><span
+                    class="chip chip-h numchip"
+                    >AI workshop</span
+                  >
+                </div>
+                <figcaption>Real photo · 4:3 · ≤120 KB · lazy</figcaption>
+              </figure>
+            </div>
+            <h3 class="spec-h">Chips</h3>
+            <div class="chips">
+              <span class="chip chip-n">Neutral tag</span><span class="chip chip-b">Brand tag</span
+              ><span class="chip chip-h">Featured</span
+              ><span class="chip chip-s"
+                ><svg class="ico sm"><use href="#i-check" /></svg>Ready</span
+              ><span class="chip chip-more">& more</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TABS / FAQ / INPUTS ================= -->
+        <section id="forms">
+          <p class="frame-label">Components / Tabs · Accordion · Inputs</p>
+          <div class="frame">
+            <h2 class="spec-title">Tabs, FAQ & inputs</h2>
+            <div class="comp-grid" style="grid-template-columns: 1fr 1fr 1fr">
+              <div class="comp-cell">
+                <span class="note">Tabs · active = blue + gold underline</span>
+                <div class="tabs" role="tablist">
+                  <button role="tab" aria-selected="true">Analytics</button
+                  ><button role="tab" aria-selected="false">Onboarding</button
+                  ><button role="tab" aria-selected="false">Approvals</button>
+                </div>
+              </div>
+              <div class="comp-cell acc">
+                <span class="note">Accordion (FAQ)</span>
+                <details open>
+                  <summary>
+                    Do I need detailed requirements?<svg class="ico"><use href="#i-plus" /></svg>
+                  </summary>
+                  <p>No. Our Discovery phase turns an idea into goals, scope and a plan.</p>
+                </details>
+                <details>
+                  <summary>
+                    How do you keep data secure?<svg class="ico"><use href="#i-plus" /></svg>
+                  </summary>
+                  <p>Security automation and continuous scanning.</p>
+                </details>
+              </div>
+              <div class="comp-cell">
+                <span class="note">Inputs · focus + error</span>
+                <div class="field">
+                  <label for="i1">Work email</label><input id="i1" placeholder="you@company.com" />
+                </div>
+                <div class="field err">
+                  <label for="i2">Full name *</label><input id="i2" aria-invalid="true" /><span class="msg"
+                    ><svg class="ico sm"><use href="#i-alert" /></svg>This field is required.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= 4-D PROCESS ================= -->
+        <section id="fourd">
+          <p class="frame-label">Signature / 4-D Process Transformation (white theme — ported from variants.html)</p>
+          <div class="frame">
+            <div class="fourd" data-fourd>
+              <div class="fd-head">
+                <div class="sec-head">
+                  <p class="label"><i></i>4-D process</p>
+                  <h2 class="h2">How we get IT done</h2>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" data-play>Pause</button>
+              </div>
+              <div class="fd-stage">
+                <canvas class="fd-canvas" aria-hidden="true"></canvas>
+                <ul class="fd-ship" aria-label="What we deploy">
+                  <li>Apps</li>
+                  <li>AI robotics</li>
+                  <li>IoT</li>
+                  <li>Smart platform</li>
+                </ul>
+              </div>
+              <div class="fd-line">
+                <div class="track"><i class="fill"></i></div>
+                <ol class="stops">
+                  <li class="stop">
+                    <button type="button" data-stop="0">
+                      <span class="dot"></span><span class="n">01</span><span class="nm">Discovery</span>
+                    </button>
+                    <p>Strategic alignment of your business goals with technical solutions.</p>
+                  </li>
+                  <li class="stop">
+                    <button type="button" data-stop="1">
+                      <span class="dot"></span><span class="n">02</span><span class="nm">Design</span>
+                    </button>
+                    <p>Custom solutions built on our integrated engineering platform.</p>
+                  </li>
+                  <li class="stop">
+                    <button type="button" data-stop="2">
+                      <span class="dot"></span><span class="n">03</span><span class="nm">Development</span>
+                    </button>
+                    <p>Agile implementation with transparent communication.</p>
+                  </li>
+                  <li class="stop">
+                    <button type="button" data-stop="3">
+                      <span class="dot"></span><span class="n">04</span><span class="nm">Deployment</span>
+                    </button>
+                    <p>Data-driven performance monitoring with ongoing support.</p>
+                  </li>
+                </ol>
+                <p
+                  class="sr"
+                  aria-live="polite"
+                  data-live
+                  style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"
+                ></p>
+              </div>
+            </div>
+            <p class="small" style="margin-top: 24px; color: var(--ink-500)">
+              Agile practices and an AI-driven workflow, with metric-driven project management.
+            </p>
+            <p class="note" style="margin-top: 12px">
+              Gray dots = ink-400 (decorative only) · fitted icons = blue-600 · current stage = gold dot with navy ring
+              · inactive text = ink-500.
+            </p>
+          </div>
+        </section>
+
+        <!-- ================= PROJECT VISUALIZATION ================= -->
+        <section id="pv">
+          <p class="frame-label">Signature / Project Visualization — 2 window types</p>
+          <div class="frame">
+            <div class="sec-head">
+              <p class="label"><i></i>Selected work</p>
+              <h2 class="h2">Every project: tag → title → numbers → product window.</h2>
+            </div>
+            <div class="tabs" role="tablist" style="margin-top: 28px" data-pv-tabs>
+              <button role="tab" aria-selected="true" data-pv="0">App window · our products</button
+              ><button role="tab" aria-selected="false" data-pv="1">Agent chat · client work</button>
+            </div>
+
+            <!-- 1. App window: our products for schools -->
+            <div class="pv pv-panel" data-panel="0">
+              <div>
+                <span class="chip chip-h tag">Our product · Education</span>
+                <h3 class="h2" style="font-size: 32px">AI-powered platform for smart schools.</h3>
+                <div class="pv-nums two">
+                  <div>
+                    <div class="num">3</div>
+                    <span>Products for schools</span>
+                  </div>
+                  <div>
+                    <div class="num">10</div>
+                    <span>Platform features</span>
+                  </div>
+                </div>
+                <div class="chips">
+                  <span class="chip chip-n">Personalized learning</span><span class="chip chip-n">AI assessment</span
+                  ><span class="chip chip-n">Intelligent scheduling</span><span class="chip chip-more">& more</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 16px; align-items: flex-end">
+                <div class="win" style="flex: 1">
+                  <div class="win-bar"><i></i><i></i><i></i><span>School platform · Dashboard</span></div>
+                  <div class="win-body">
+                    <div class="mini-kpis">
+                      <div><small>To mark</small><b>3</b></div>
+                      <div><small>Classes today</small><b>5</b></div>
+                      <div><small>Tasks</small><b>4</b></div>
+                    </div>
+                    <div class="rowlist">
+                      <div><span>Wellbeing note — Class 5B</span><span class="chip chip-h chip-xs">Due</span></div>
+                      <div><span>Attendance — Period 2</span><span class="chip chip-s chip-xs">Done</span></div>
+                      <div><span>Notice to parents</span><span class="chip chip-n chip-xs">Draft</span></div>
+                    </div>
+                  </div>
+                  <div class="win-cap">Illustrative — fictional data</div>
+                </div>
+                <div class="phone">
+                  <div class="top">Parent app</div>
+                  <div class="in">
+                    <div class="bubble-u">Leave request for tomorrow, please.</div>
+                    <div class="ac">
+                      <h5>
+                        <svg class="ico sm" style="color: var(--blue-600)"><use href="#i-file" /></svg>Leave request
+                      </h5>
+                      <dl>
+                        <dt>Date</dt>
+                        <dd>Tomorrow</dd>
+                        <dt>Reason</dt>
+                        <dd>Medical</dd>
+                      </dl>
+                      <div class="acts"><span class="btn btn-primary btn-sm btn-xs">Confirm</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Agent chat window: client work, described in general terms -->
+            <div class="pv pv-panel" data-panel="1" hidden>
+              <div>
+                <span class="chip chip-b tag">Client work · Education</span>
+                <h3 class="h2" style="font-size: 32px">Multi-school apps for parents and staff.</h3>
+                <div class="pv-nums two">
+                  <div>
+                    <div class="num">2</div>
+                    <span>Audiences</span>
+                  </div>
+                  <div>
+                    <div class="num">3</div>
+                    <span>Assistant tasks</span>
+                  </div>
+                </div>
+                <div class="chips">
+                  <span class="chip chip-n">Pay fees</span><span class="chip chip-n">Update details</span
+                  ><span class="chip chip-n">Notifications</span>
+                </div>
+              </div>
+              <div class="win">
+                <div class="win-bar"><i></i><i></i><i></i><span>Parent app · AI assistant</span></div>
+                <div class="win-body" style="display: grid; gap: 10px">
+                  <div class="bubble-u">Pay this term's fees for my son.</div>
+                  <div class="ac">
+                    <h5>Confirm payment</h5>
+                    <dl>
+                      <dt>Student</dt>
+                      <dd>Grade 5</dd>
+                      <dt>Term</dt>
+                      <dd>Term 2</dd>
+                      <dt>Amount</dt>
+                      <dd>$1,250</dd>
+                    </dl>
+                    <div class="acts">
+                      <span class="btn btn-primary btn-sm btn-xs">Confirm</span
+                      ><span class="btn btn-secondary btn-sm btn-xs">Cancel</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="win-cap">Illustrative — fictional data</div>
+              </div>
+            </div>
+
+            <p class="note" style="margin-top: 24px">
+              Numbers are true capability counts from the content. Client product names are never shown.
+            </p>
+          </div>
+        </section>
+
+        <!-- ================= HOME PAGE MOCKUP ================= -->
+        <section id="page">
+          <p class="frame-label">Pages / Home — desktop (all components assembled)</p>
+          <div class="frame flush page">
+            <div class="nav" style="padding-inline: max(32px, calc((100% - 1120px) / 2 + 32px))">
+              <a class="logo" href="#"><img src="assets/xt-mark.png" alt="" />XionTechs</a>
+              <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+              <span class="lang"
+                ><svg class="ico sm"><use href="#i-globe" /></svg>EN / VI</span
+              >
+              <a class="btn btn-primary btn-sm" href="#">Get in touch</a>
+            </div>
+
+            <!-- hero -->
+            <div class="hero">
+              <div class="wrap">
+                <div class="hero-grid">
+                  <div>
+                    <span class="eyebrow"><i></i>Get IT Done</span>
+                    <h1>
+                      Crafting <em><span class="mark">secure</span></em> and innovative IT solutions
+                    </h1>
+                    <p class="lead">
+                      XionTechs is an AI-powered IT services and products team. We build secure, high-performance
+                      software from Texas and Vietnam.
+                    </p>
+                    <div class="ctas">
+                      <a class="btn btn-highlight" href="#"
+                        >Get in touch <svg class="ico sm"><use href="#i-arrow" /></svg></a
+                      ><a class="btn btn-secondary" href="#">Explore services</a>
+                    </div>
+                  </div>
+                  <div class="hero-visual">
+                    <div class="win main">
+                      <div class="win-bar"><i></i><i></i><i></i><span>Sprint 6 · Your product</span></div>
+                      <div class="win-body">
+                        <div class="mini-kpis">
+                          <div><small>Stories done</small><b>18</b></div>
+                          <div><small>Demo</small><b>Fri</b></div>
+                          <div><small>On track</small><b style="color: var(--success)">✓</b></div>
+                        </div>
+                        <div class="rowlist">
+                          <div><span>AI search assistant</span><span class="chip chip-s chip-xs">Shipped</span></div>
+                          <div><span>Admin dashboard</span><span class="chip chip-b chip-xs">In review</span></div>
+                          <div>
+                            <span>Payment integration</span><span class="chip chip-h chip-xs">In progress</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="float f1">
+                      <div class="num">8</div>
+                      <small>Services</small>
+                    </div>
+                    <div class="float f2">
+                      <div class="num" style="font-size: 28px">2</div>
+                      <small>Countries</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero-stats stats" style="--cols: 3">
+                  <div class="stat">
+                    <div class="bar"></div>
+                    <div class="num"><span data-count="25">25</span><span class="sfx">+</span></div>
+                    <div class="lab">Years of leadership experience</div>
+                  </div>
+                  <div class="stat">
+                    <div class="bar"></div>
+                    <div class="num"><span data-count="20">20</span><span class="sfx">+</span></div>
+                    <div class="lab">Tech stack expertise</div>
+                  </div>
+                  <div class="stat">
+                    <div class="bar"></div>
+                    <div class="num"><span data-count="3">3</span></div>
+                    <div class="lab">Office locations</div>
+                    <div class="ctx">Plano (USA) · Ho Chi Minh City (Vietnam)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- services -->
+            <div class="sec alt">
+              <div class="wrap">
+                <div class="sec-head">
+                  <p class="label"><i></i>Our services</p>
+                  <h2 class="h2">Technology solutions that transform your business</h2>
+                </div>
+                <div class="svc-grid">
+                  <article class="card">
+                    <div class="icon-box">
+                      <svg class="ico"><use href="#i-code" /></svg>
+                    </div>
+                    <h3 class="h3">Product Engineering</h3>
+                    <p class="small">MVP to scale.</p>
+                  </article>
+                  <article class="card">
+                    <div class="icon-box" style="background: var(--gold-100); color: var(--brand-navy)">
+                      <svg class="ico"><use href="#i-spark" /></svg>
+                    </div>
+                    <h3 class="h3">AI-Powered Solutions</h3>
+                    <p class="small">Agents & automation.</p>
+                  </article>
+                  <article class="card">
+                    <div class="icon-box">
+                      <svg class="ico"><use href="#i-chart" /></svg>
+                    </div>
+                    <h3 class="h3">AI-Driven Analytics</h3>
+                    <p class="small">Data into decisions.</p>
+                  </article>
+                  <article class="card">
+                    <div class="icon-box">
+                      <svg class="ico"><use href="#i-users" /></svg>
+                    </div>
+                    <h3 class="h3">Staffing</h3>
+                    <p class="small">Engineers in your team.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4-D (compact reference) -->
+            <div class="sec">
+              <div class="wrap">
+                <div class="sec-head">
+                  <p class="label"><i></i>4-D process</p>
+                  <h2 class="h2">How we get IT done</h2>
+                  <p class="lead">The animated 4-D component sits here (see the Signature frame above).</p>
+                </div>
+                <div class="stats" style="margin-top: 40px">
+                  <div class="stat">
+                    <div class="bar"></div>
+                    <div class="num" style="font-size: 44px">01</div>
+                    <div class="lab">Discovery</div>
+                  </div>
+                  <div class="stat">
+                    <div class="bar"></div>
+                    <div class="num" style="font-size: 44px">02</div>
+                    <div class="lab">Design</div>
+                  </div>
+                  <div class="stat">
+                    <div class="bar"></div>
+                    <div class="num" style="font-size: 44px">03</div>
+                    <div class="lab">Development</div>
+                  </div>
+                  <div class="stat">
+                    <div class="bar" style="background: var(--blue-600)"></div>
+                    <div class="num" style="font-size: 44px; color: var(--blue-600)">04</div>
+                    <div class="lab">Deployment</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- selected work (project viz) -->
+            <div class="sec alt">
+              <div class="wrap">
+                <div class="sec-head">
+                  <p class="label"><i></i>Products for schools</p>
+                  <h2 class="h2">Our products for schools</h2>
+                  <p class="lead">
+                    Products of our own for schools, built on the same engineering we bring to client work.
+                  </p>
+                </div>
+                <div class="pv">
+                  <div>
+                    <span class="chip chip-h tag">Our product · Education</span>
+                    <h3 class="h2" style="font-size: 30px">AI-powered platform for smart schools.</h3>
+                    <div class="pv-nums two">
+                      <div>
+                        <div class="num">3</div>
+                        <span>Products</span>
+                      </div>
+                      <div>
+                        <div class="num">10</div>
+                        <span>Features</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="win">
+                    <div class="win-bar"><i></i><i></i><i></i><span>School platform · Dashboard</span></div>
+                    <div class="win-body">
+                      <div class="mini-kpis">
+                        <div><small>To mark</small><b>3</b></div>
+                        <div><small>Classes</small><b>5</b></div>
+                        <div><small>Tasks</small><b>4</b></div>
+                      </div>
+                      <div class="rowlist">
+                        <div><span>Class update — 5B</span><span class="chip chip-h chip-xs">Preview</span></div>
+                        <div><span>Attendance — Period 2</span><span class="chip chip-s chip-xs">Done</span></div>
+                      </div>
+                    </div>
+                    <div class="win-cap">Illustrative — fictional data</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- industries with images -->
+            <div class="sec">
+              <div class="wrap">
+                <div class="sec-head">
+                  <p class="label"><i></i>Clients and domains</p>
+                  <h2 class="h2">Who we build for</h2>
+                  <p class="lead">
+                    Varkey Education · CyberHive. Our domain knowledge runs deepest in EdTech, healthcare and logistics.
+                  </p>
+                </div>
+                <div class="ind-grid">
+                  <article class="ind">
+                    <div class="media"><div class="ph">Image · 4:3 · education</div></div>
+                    <div>
+                      <span class="chip chip-h" style="height: 24px; font-size: 11px">Deepest experience</span>
+                      <h3 class="h3" style="margin-top: 10px">EdTech</h3>
+                      <p class="small">Multi-school apps for parents and staff.</p>
+                    </div>
+                  </article>
+                  <article class="ind">
+                    <div class="media"><div class="ph">Image · 4:3 · logistics</div></div>
+                    <div>
+                      <h3 class="h3">Logistics</h3>
+                      <p class="small">Domain knowledge from client work.</p>
+                    </div>
+                  </article>
+                  <article class="ind">
+                    <div class="media"><div class="ph">Image · 4:3 · healthcare</div></div>
+                    <div>
+                      <h3 class="h3">Healthcare</h3>
+                      <p class="small">Domain knowledge from client work.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- inside xiontech (real photos, small) -->
+            <div class="sec alt">
+              <div class="wrap">
+                <div class="sec-head">
+                  <p class="label"><i></i>Inside XionTechs</p>
+                  <h2 class="h2">The team behind your product.</h2>
+                  <p class="lead">Real photos only — kept small until high-resolution originals arrive.</p>
+                </div>
+                <div class="gallery">
+                  <figure>
+                    <div class="media">
+                      <img src="assets/team-at-work.webp" alt="The team at our AI workshop" loading="lazy" />
+                    </div>
+                    <figcaption>AI workshop</figcaption>
+                  </figure>
+                  <figure>
+                    <div class="media">
+                      <img src="assets/ai-training.webp" alt="Hands-on AI training" loading="lazy" />
+                    </div>
+                    <figcaption>Hands-on AI training</figcaption>
+                  </figure>
+                  <figure>
+                    <div class="media">
+                      <img src="assets/sessions-1.webp" alt="Company-wide knowledge sharing" loading="lazy" />
+                    </div>
+                    <figcaption>Knowledge sharing</figcaption>
+                  </figure>
+                  <figure>
+                    <div class="media">
+                      <img src="assets/recognition.webp" alt="Recognizing great work" loading="lazy" />
+                    </div>
+                    <figcaption>Recognizing great work</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA band -->
+            <div class="sec" style="padding-bottom: 0">
+              <div class="wrap">
+                <div class="band on-dark">
+                  <div>
+                    <h2>Tell us what you are <span class="y">building.</span></h2>
+                    <p>Send a brief and we reply by email within 24 business hours.</p>
+                  </div>
+                  <a class="btn btn-primary" href="#"
+                    >Email your brief <svg class="ico sm"><use href="#i-arrow" /></svg
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- footer -->
+            <footer class="foot">
+              <div class="wrap">
+                <div>
+                  <a class="logo" href="#"><img src="assets/xt-mark.png" alt="" />XionTechs</a>
+                  <p style="margin-top: 12px">Plano, Texas · Ho Chi Minh City</p>
+                  <p class="slogan">Get IT Done</p>
+                </div>
+                <div>
+                  <h6>Links</h6>
+                  <ul>
+                    <li>Careers</li>
+                    <li>Privacy policy</li>
+                    <li>Terms of service</li>
+                  </ul>
+                </div>
+                <div>
+                  <h6>Social</h6>
+                  <ul>
+                    <li>Facebook</li>
+                    <li>LinkedIn</li>
+                  </ul>
+                </div>
+                <div>
+                  <h6>Contact</h6>
+                  <ul>
+                    <li>contact@xiontechs.com</li>
+                    <li>+1 469 322 9899</li>
+                    <li>+84 908 107 552</li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="board.js"></script>
+  </body>
+</html>

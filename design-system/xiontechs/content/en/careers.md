@@ -40,13 +40,13 @@ Must communicate: five concrete reasons a developer would pick this team.
 
 Source: live Careers page, word for word. "Generative AI" and "Agile methodologies" lowercased to match the rest of the site.
 
-| Perk | Copy |
-|---|---|
-| Innovative environment | Be inspired by the visionary spirit of Xion as you work with cutting-edge technologies to create transformative IT systems. |
-| Empowering culture | Be part of a "Beyond Employees Culture" that values startup spirit, innovation, and a "Get IT Done" mindset, where everyone belongs. |
-| Continuous growth | Gain access to structured training, knowledge resources, and role-specific onboarding to help you succeed from day one. |
-| Tech that excites | Tackle challenging projects using AI/ML, generative AI, cloud computing, and Agile methodologies in a mature engineering environment. |
-| Real impact | Build secure, high-quality solutions that drive digital transformation and empower businesses and innovators worldwide. |
+| Perk                   | Copy                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Innovative environment | Be inspired by the visionary spirit of Xion as you work with cutting-edge technologies to create transformative IT systems.           |
+| Empowering culture     | Be part of a "Beyond Employees Culture" that values startup spirit, innovation, and a "Get IT Done" mindset, where everyone belongs.  |
+| Continuous growth      | Gain access to structured training, knowledge resources, and role-specific onboarding to help you succeed from day one.               |
+| Tech that excites      | Tackle challenging projects using AI/ML, generative AI, cloud computing, and Agile methodologies in a mature engineering environment. |
+| Real impact            | Build secure, high-quality solutions that drive digital transformation and empower businesses and innovators worldwide.               |
 
 ---
 
@@ -58,14 +58,14 @@ Source: newxion.com/aboutus, the seven values and their mottos, word for word wi
 
 - Heading: Seven values, one way of working
 
-| Value | Motto |
-|---|---|
-| Quality first | Never compromise on quality. |
-| Startup spirit | Stay agile, think like an owner. |
-| Client centricity | Our clients' success is our success. |
-| Integrity first | Do the right thing, always. |
-| Innovation driven | Innovate with purpose. |
-| "Get IT done" attitude | Own it, deliver it, improve it. |
+| Value                   | Motto                                   |
+| ----------------------- | --------------------------------------- |
+| Quality first           | Never compromise on quality.            |
+| Startup spirit          | Stay agile, think like an owner.        |
+| Client centricity       | Our clients' success is our success.    |
+| Integrity first         | Do the right thing, always.             |
+| Innovation driven       | Innovate with purpose.                  |
+| "Get IT done" attitude  | Own it, deliver it, improve it.         |
 | People-centered culture | People are at the heart of our success. |
 
 ---

@@ -48,9 +48,13 @@ src/
     index.astro         # /      (en, default locale, no prefix)
     [lang]/index.astro  # /vi/
   styles/global.css     # Tailwind entry + design tokens (@theme)
-design-system/xiontechs/MASTER.md   # design rules (colors, type, components, checklist)
+design-system/xiontechs/
+  MASTER.md           # design rules: tokens, components, checklist (single source)
+  pages/              # per-page overrides of MASTER (only when needed)
+  content/            # page copy en/vi, sitemap, open data
+  preview/            # visual board: open preview/index.html in a browser
 _bmad/                  # BMAD config + runtime scripts
-_bmad-output/           # BMAD planning artifacts: brief, PRD, architecture, tickets (committed)
+_bmad-output/           # BMAD process artifacts only: brief, PRD, architecture, tickets (committed)
 .claude/skills/         # agent skills for Claude Code
 .agents/skills/         # same skills for Codex and other AGENTS.md-based tools
 ```
