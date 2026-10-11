@@ -164,7 +164,7 @@ Display and heading line heights already include the +0.05 Vietnamese allowance,
 
 1. Numbers use **Manrope 800 with `font-variant-numeric: tabular-nums lining-nums`**, so digits don't jump in count-up animations.
 2. **Anatomy of a stat:** `number` (ink-900) + `suffix/unit` (`+`, `%`, `x`) in **gold-600** at the same size + `label` (`label` style, ink-500) **under** the number + optional **context line** (`small`, ink-500, which must be true).
-3. A **gold bar** (4×32px, `gold-400`) may sit above or beside a hero number as the brand accent.
+3. A short bar (4×32px) sits above a stat number. It is `blue-600` when several stats or the gold hero button share the screen (gold rule 3); `gold-400` only for a lone hero number.
 4. Every number must be **true**. A number marked `[DUMMY]` in `content/` is not shipped; the tile is omitted until it is confirmed.
 5. Round for readability: "25+", "3", "20+". No false precision.
 
@@ -295,7 +295,7 @@ First focusable element on every page: "Skip to content", visually hidden until 
 
 ```
 ┌─────────────────────────┐
-│ ▬ (gold bar 4×32)        │
+│ ▬ (bar 4×32, blue-600)   │
 │ 25+                      │  ← num-xl, ink-900; "+" gold-600
 │ YEARS OF LEADERSHIP      │  ← label, ink-500
 │ [context, if true]       │  ← small, ink-500 (optional context)
