@@ -28,3 +28,7 @@ export function stripLocale(pathname: string, lang: Locale): string {
   if (lang === defaultLocale) return pathname;
   return pathname.replace(new RegExp(`^/${lang}(?=/|$)`), '') || '/';
 }
+
+/** `getStaticPaths` result for pages under `src/pages/[lang]/`: every locale except the default. */
+export const prefixedLocalePaths = () =>
+  locales.filter((lang) => lang !== defaultLocale).map((lang) => ({ params: { lang } }));

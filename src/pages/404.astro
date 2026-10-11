@@ -1,0 +1,36 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Button from '../components/ui/Button.astro';
+import Container from '../components/ui/Container.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { defaultLocale, getDictionary, locales } from '../i18n';
+
+// MASTER §5.15. Cloudflare Pages serves this one 404.html for every unknown URL, including /vi/...,
+// so the page carries every locale's message, each with its own `lang` and link home.
+const t = getDictionary(defaultLocale);
+---
+
+<BaseLayout lang={defaultLocale} title={t.notFound.metaTitle} description={t.notFound.description} noindex>
+  <Container class="py-24 lg:py-32">
+    <span class="mb-6 block h-1 w-8 rounded-full bg-blue-600" aria-hidden="true"></span>
+    <p class="font-display text-num-hero text-ink-900">404</p>
+    <div class="mt-10 grid gap-12 md:grid-cols-2">
+      {locales.map((l) => {
+        const n = getDictionary(l).notFound;
+        return (
+          <section lang={l}>
+            {l === defaultLocale ? (
+              <h1 class="font-display text-h2 text-ink-900">{n.heading}</h1>
+            ) : (
+              <h2 class="font-display text-h2 text-ink-900">{n.heading}</h2>
+            )}
+            <p class="text-lead text-ink-500 mt-4">{n.text}</p>
+            <Button href={getRelativeLocaleUrl(l)} class="mt-8">
+              {n.button}
+            </Button>
+          </section>
+        );
+      })}
+    </div>
+  </Container>
+</BaseLayout>

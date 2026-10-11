@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { company } from '../data/company';
+import { getDictionary, type Locale } from '../i18n';
+import Container from './ui/Container.astro';
+import Icon, { type IconName } from './ui/Icon.astro';
+import Section from './ui/Section.astro';
+import SectionHeader from './ui/SectionHeader.astro';
+
+// /careers — copy from design-system/xiontechs/content/{en,vi}/careers.md.
+// The CV inbox defaults to the main inbox until a careers address is confirmed (content/open-data.md #1).
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const c = t.careers;
+const cvHref = `mailto:${company.email}?subject=${encodeURIComponent(c.cvSubject)}`;
+---
+
+<BaseLayout lang={lang} title={c.meta.title} description={c.meta.description}>
+  <section aria-labelledby="careers-title" class="pt-16 pb-12 lg:pt-24">
+    <Container>
+      <h1 id="careers-title" class="font-display text-h1 text-ink-900">
+        {c.heading}
+      </h1>
+      <p class="text-lead text-ink-500 mt-6 max-w-3xl">{c.intro}</p>
+    </Container>
+  </section>
+
+  <Section id="roles" labelledby="roles-title" surface>
+    <div class="border-line rounded-lg border bg-white p-6 lg:p-10">
+      <h2 id="roles-title" class="font-display text-h2 text-ink-900">
+        {c.rolesHeading}
+      </h2>
+      <p class="text-body text-ink-700 mt-4 max-w-2xl">{c.rolesText}</p>
+      <p class="text-body text-ink-700 mt-6 flex flex-wrap items-center gap-2">
+        <Icon name="mail" class="size-5 text-blue-600" />
+        {c.cvPrefix}
+        <a href={cvHref} class="font-semibold text-blue-600 underline-offset-4 hover:underline">
+          {company.email}
+        </a>
+      </p>
+    </div>
+  </Section>
+
+  <Section id="why-join" labelledby="why-join-title">
+    <SectionHeader id="why-join-title" heading={c.perksHeading} />
+    <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {c.perks.map((p) => (
+        <li class="border-line rounded-lg border bg-white p-6 lg:p-8">
+          <span class="inline-flex size-12 items-center justify-center rounded-md bg-blue-50 text-blue-600">
+            <Icon name={p.icon as IconName} />
+          </span>
+          <h3 class="font-display text-h3 text-ink-900 mt-5">{p.title}</h3>
+          <p class="text-small text-ink-500 mt-3">{p.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section id="values" labelledby="values-title" surface>
+    <SectionHeader id="values-title" heading={c.valuesHeading} />
+    <ol class="divide-line border-line mt-10 divide-y border-y">
+      {c.values.map((v, i) => (
+        <li class="grid gap-1 py-5 sm:grid-cols-[4rem_1fr_1fr] sm:items-baseline sm:gap-6">
+          <span class="font-display text-num-md text-blue-600 tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="font-display text-h3 text-ink-900">{v.name}</h3>
+          <p class="text-body text-ink-700">{v.motto}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section id="where" labelledby="where-title">
+    <SectionHeader id="where-title" heading={c.whereHeading} lead={c.whereText} />
+    <address class="text-body text-ink-700 mt-6 flex items-start gap-3 not-italic">
+      <Icon name="pin" class="mt-1 size-5 shrink-0 text-blue-600" />
+      {c.address}
+    </address>
+  </Section>
+</BaseLayout>

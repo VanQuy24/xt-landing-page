@@ -1,0 +1,35 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getDictionary, type Locale } from '../i18n';
+import Container from './ui/Container.astro';
+import Icon from './ui/Icon.astro';
+
+// Legal pages (MASTER §2.5). The text is English in every locale; other locales show a short note above it.
+interface Props {
+  lang: Locale;
+  doc: 'privacy-policy' | 'terms-of-service';
+}
+
+const { lang, doc } = Astro.props;
+const t = getDictionary(lang);
+const copy = doc === 'privacy-policy' ? t.legal.privacy : t.legal.terms;
+const entry = await getEntry('legal', doc);
+if (!entry) throw new Error(`Missing legal text: ${doc}`);
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang={lang} title={copy.metaTitle} description={copy.description}>
+  <Container class="pt-16 pb-24 lg:pt-24">
+    <h1 class="font-display text-h1 text-ink-900">{copy.title}</h1>
+    {t.legal.onlyEnglish && (
+      <p class="bg-gold-50 text-small text-gold-700 mt-6 flex max-w-prose items-center gap-3 rounded-md px-4 py-3 font-semibold">
+        <Icon name="globe" class="size-5 shrink-0" />
+        {t.legal.onlyEnglish}
+      </p>
+    )}
+    <article lang="en" class="prose-legal mt-10">
+      <Content />
+    </article>
+  </Container>
+</BaseLayout>

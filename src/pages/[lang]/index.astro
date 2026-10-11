@@ -1,10 +1,9 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import HomePage from '../../components/HomePage.astro';
-import { defaultLocale, isLocale, locales } from '../../i18n';
+import { isLocale, prefixedLocalePaths } from '../../i18n';
 
-export const getStaticPaths = (() =>
-  locales.filter((lang) => lang !== defaultLocale).map((lang) => ({ params: { lang } }))) satisfies GetStaticPaths;
+export const getStaticPaths = prefixedLocalePaths satisfies GetStaticPaths;
 
 const { lang } = Astro.params;
 if (!isLocale(lang)) throw new Error(`Unknown locale: ${lang}`);

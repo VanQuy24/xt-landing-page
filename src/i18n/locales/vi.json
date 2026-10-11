@@ -283,5 +283,99 @@
     "terms": "Điều khoản dịch vụ",
     "socialLabel": "Mạng xã hội",
     "legal": "© 2026 XIONTECH JOINT STOCK COMPANY · Giấy phép kinh doanh 0318883639 · D-U-N-S 665533815"
+  },
+  "careers": {
+    "meta": {
+      "title": "Tuyển dụng - XionTechs",
+      "description": "Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí Minh. Hiện chưa có vị trí tuyển dụng. Gửi CV để tham gia đợt tuyển dụng tiếp theo."
+    },
+    "heading": "Tuyển dụng",
+    "intro": "Tại XionTechs, bạn sẽ là một phần của đội ngũ có tư duy cầu tiến, nơi sự đổi mới và hợp tác phát triển mạnh. Môi trường làm việc truyền cảm hứng, hòa nhập, hỗ trợ bạn phát triển, làm chủ công việc và tạo ra tác động thật.",
+    "rolesHeading": "Vị trí đang tuyển",
+    "rolesText": "Hiện chưa có vị trí tuyển dụng. Đợt tuyển dụng mới sẽ sớm bắt đầu.",
+    "cvPrefix": "Gửi CV của bạn đến",
+    "cvSubject": "CV",
+    "perksHeading": "Vì sao gia nhập XionTechs",
+    "perks": [
+      {
+        "icon": "spark",
+        "title": "Môi trường đổi mới",
+        "body": "Làm việc với công nghệ tiên tiến để xây dựng những hệ thống CNTT tạo ra thay đổi, cùng tầm nhìn của Xion."
+      },
+      {
+        "icon": "users",
+        "title": "Văn hóa trao quyền",
+        "body": "Trở thành một phần của văn hóa \"Beyond Employees\", nơi đề cao tinh thần khởi nghiệp, sự đổi mới và tư duy \"Get IT Done\", nơi ai cũng thuộc về."
+      },
+      {
+        "icon": "chart",
+        "title": "Phát triển liên tục",
+        "body": "Được đào tạo bài bản, có tài liệu chuyên môn và chương trình hội nhập theo từng vị trí, để bạn làm tốt ngay từ ngày đầu."
+      },
+      {
+        "icon": "code",
+        "title": "Công nghệ hấp dẫn",
+        "body": "Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile, trong một môi trường kỹ thuật trưởng thành."
+      },
+      {
+        "icon": "globe",
+        "title": "Tác động thật",
+        "body": "Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới trên toàn thế giới."
+      }
+    ],
+    "valuesHeading": "Bảy giá trị, một cách làm việc",
+    "values": [
+      {
+        "name": "Chất lượng là trên hết",
+        "motto": "Không bao giờ thỏa hiệp về chất lượng."
+      },
+      {
+        "name": "Tinh thần khởi nghiệp",
+        "motto": "Luôn linh hoạt, nghĩ như người chủ."
+      },
+      {
+        "name": "Lấy khách hàng làm trung tâm",
+        "motto": "Thành công của khách hàng là thành công của chúng tôi."
+      },
+      {
+        "name": "Chính trực là trên hết",
+        "motto": "Luôn làm điều đúng đắn."
+      },
+      {
+        "name": "Đổi mới có mục đích",
+        "motto": "Đổi mới vì một mục tiêu rõ ràng."
+      },
+      {
+        "name": "Tinh thần \"Get IT done\"",
+        "motto": "Nhận việc, hoàn thành, và làm tốt hơn."
+      },
+      {
+        "name": "Văn hóa lấy con người làm trung tâm",
+        "motto": "Con người là cốt lõi của thành công."
+      }
+    ],
+    "whereHeading": "Nơi bạn sẽ làm việc",
+    "whereText": "Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam.",
+    "address": "Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Chính sách bảo mật",
+      "metaTitle": "Chính sách bảo mật - XionTechs",
+      "description": "Cách XIONTECH JOINT STOCK COMPANY thu thập, sử dụng và bảo vệ dữ liệu cá nhân trên website, ứng dụng và dịch vụ CNTT của mình."
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ",
+      "metaTitle": "Điều khoản dịch vụ - XionTechs",
+      "description": "Các điều khoản áp dụng khi sử dụng website, ứng dụng và dịch vụ CNTT của XIONTECH JOINT STOCK COMPANY."
+    },
+    "onlyEnglish": "Văn bản pháp lý này hiện chỉ có bằng tiếng Anh."
+  },
+  "notFound": {
+    "metaTitle": "Không tìm thấy trang - XionTechs",
+    "description": "Trang này không có trên website XionTechs.",
+    "heading": "Không tìm thấy trang",
+    "text": "Trang này có thể đã được chuyển khi website được làm mới.",
+    "button": "Về trang chủ"
   }
 }

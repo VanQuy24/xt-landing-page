@@ -1,0 +1,12 @@
+---
+import type { GetStaticPaths } from 'astro';
+import LegalPage from '../../components/LegalPage.astro';
+import { isLocale, prefixedLocalePaths } from '../../i18n';
+
+export const getStaticPaths = prefixedLocalePaths satisfies GetStaticPaths;
+
+const { lang } = Astro.params;
+if (!isLocale(lang)) throw new Error(`Unknown locale: ${lang}`);
+---
+
+<LegalPage lang={lang} doc="privacy-policy" />

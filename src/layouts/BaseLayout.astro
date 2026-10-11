@@ -10,9 +10,11 @@ interface Props {
   lang: Locale;
   title: string;
   description: string;
+  /** Keep the page out of search results (404). */
+  noindex?: boolean;
 }
 
-const { lang, title, description } = Astro.props;
+const { lang, title, description, noindex = false } = Astro.props;
 const t = getDictionary(lang);
 
 const path = stripLocale(Astro.url.pathname, lang);
@@ -27,6 +29,7 @@ const canonical = getAbsoluteLocaleUrl(lang, path);
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     {locales.map((l) => (
       <link rel="alternate" hreflang={l} href={getAbsoluteLocaleUrl(l, path)} />
