@@ -278,7 +278,8 @@ document.querySelectorAll('[data-fourd]').forEach((sec) => {
         l = 0.06 + 0.86 * Math.exp(-4.5 * u) + 0.05 * Math.sin(u * 47) * (1 - u);
       const px = x0 + u * bw,
         py = y0 + (1 - l) * bh;
-      s ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+      if (s) ctx.lineTo(px, py);
+      else ctx.moveTo(px, py);
     }
     ctx.stroke();
     ctx.fillStyle = '#5B6676';
@@ -367,7 +368,8 @@ document.querySelectorAll('[data-fourd]').forEach((sec) => {
       li.classList.toggle('reached', i <= k);
       li.classList.toggle('now', i === k);
       const b = li.querySelector('button');
-      i === k ? b.setAttribute('aria-current', 'step') : b.removeAttribute('aria-current');
+      if (i === k) b.setAttribute('aria-current', 'step');
+      else b.removeAttribute('aria-current');
     });
     sec.querySelector('[data-live]').textContent = names[k];
     draw(0);
