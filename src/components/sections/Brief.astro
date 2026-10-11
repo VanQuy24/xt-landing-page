@@ -37,14 +37,18 @@ const contacts: { icon: IconName; label: string; value: string; href?: string }[
       <h3 class="text-label text-ink-500 uppercase">{b.contactLabel}</h3>
       <dl class="divide-line border-line mt-4 divide-y border-y">
         {contacts.map((c) => (
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 py-3">
-            <dt class="text-ink-500 flex w-40 items-center gap-3">
+          <div class="flex flex-wrap items-center gap-x-4 py-1">
+            <dt class="text-ink-500 flex min-h-11 w-40 items-center gap-3">
               <Icon name={c.icon} class="size-5 text-blue-600" />
               {c.label}
             </dt>
             <dd class="text-ink-900 font-semibold">
               {c.href ? (
-                <a href={c.href} dir="ltr" class="hover:text-blue-600 hover:underline">
+                <a
+                  href={c.href}
+                  dir="ltr"
+                  class="inline-flex min-h-11 items-center hover:text-blue-600 hover:underline"
+                >
                   {c.value}
                 </a>
               ) : (

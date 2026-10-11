@@ -25,11 +25,17 @@ const links = [
   { href: getRelativeLocaleUrl(lang, 'careers'), label: t.nav.careers },
 ];
 const contact = `${home}#contact`;
+// Highlight the nav item for the page being viewed (anchors on Home are not tracked).
+const current = (href: string) =>
+  !href.includes('#') && Astro.url.pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
 ---
 
 <header data-header class="sticky top-0 z-50 border-b border-transparent bg-white transition-colors duration-150">
   <Container class="flex h-18 items-center gap-6">
-    <a href={home} class="font-display text-h4 text-brand-navy flex shrink-0 items-center gap-2 font-extrabold">
+    <a
+      href={home}
+      class="font-display text-h4 text-brand-navy flex min-h-11 shrink-0 items-center gap-2 font-extrabold"
+    >
       <Image src={mark} alt="" height={28} densities={[1, 2]} class="h-7 w-auto" loading="eager" />
       XionTechs
     </a>
@@ -40,7 +46,8 @@ const contact = `${home}#contact`;
           <li>
             <a
               href={l.href}
-              class="text-ink-700 inline-flex h-11 items-center px-3 text-[15px] font-medium transition-colors duration-150 hover:text-blue-600"
+              aria-current={current(l.href) ? 'page' : undefined}
+              class="text-ink-700 aria-[current=page]:after:bg-gold-400 relative inline-flex h-11 items-center px-3 text-[15px] font-medium transition-colors duration-150 after:absolute after:inset-x-3 after:bottom-1.5 after:h-0.5 after:rounded-full hover:text-blue-600 aria-[current=page]:text-blue-600"
             >
               {l.label}
             </a>
@@ -84,7 +91,11 @@ const contact = `${home}#contact`;
       <ul class="divide-line divide-y">
         {links.map((l) => (
           <li>
-            <a href={l.href} class="text-ink-900 flex h-14 items-center text-lg font-medium">
+            <a
+              href={l.href}
+              aria-current={current(l.href) ? 'page' : undefined}
+              class="text-ink-900 flex h-14 items-center text-lg font-medium aria-[current=page]:text-blue-600"
+            >
               {l.label}
             </a>
           </li>
@@ -112,6 +123,8 @@ const contact = `${home}#contact`;
     button.querySelector<HTMLElement>('[data-when-closed]')!.hidden = open;
     button.querySelector<HTMLElement>('[data-when-open]')!.hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
+    // Keep keyboard and screen-reader focus inside the open menu.
+    for (const el of document.querySelectorAll<HTMLElement>('main, footer')) el.inert = open;
   };
 
   button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
