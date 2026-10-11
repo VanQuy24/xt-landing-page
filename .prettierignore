@@ -6,5 +6,3 @@ package-lock.json
 .claude/skills/
 .agents/
 _bmad/
-# Standalone design board (hand-authored, not shipped); formatting it quadruples its length.
-design-system/xiontechs/preview/
