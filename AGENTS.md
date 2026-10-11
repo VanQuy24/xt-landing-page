@@ -31,7 +31,7 @@ XionTechs marketing landing page. Astro 7 static output, Tailwind CSS 4, TypeScr
 
 - Never hardcode user-visible text, `alt` text or meta text in components; add the key to both `src/i18n/locales/en.json` and `vi.json` and read it via `getDictionary(lang)`. `en.json` defines the type, so a key missing from `vi.json` fails `astro check`.
 - Build internal links with `getRelativeLocaleUrl(lang, path)` from `astro:i18n`, never a hand-written `/vi/...` string.
-- Use theme tokens only (`bg-primary`, `text-accent`, `font-display`, ...) defined in `@theme` in `src/styles/global.css`; never arbitrary hex values or font names in markup. Change a token there and in `MASTER.md` together.
+- Use theme tokens only (`bg-brand-navy`, `text-ink-700`, `text-h2`, `font-display`, ...; the default Tailwind palette is cleared) defined in `@theme` in `src/styles/global.css`; never arbitrary hex values or font names in markup. Change a token there and in `MASTER.md` together.
 - Load fonts only through the `fonts` array in `astro.config.mjs` (self-hosted); never a Google Fonts `<link>` or `@import`. Every font must ship the `vietnamese` subset.
 - Use `astro:assets` `<Image>` for images in `src/assets/`; `public/` is only for files that need a fixed URL (favicon, robots.txt).
 

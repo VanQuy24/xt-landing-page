@@ -11,9 +11,9 @@ interface Props {
 const { lang } = Astro.props;
 ---
 
-<header class="border-border border-b">
+<header class="border-line border-b">
   <Container class="flex flex-wrap items-center justify-between gap-4 py-4">
-    <a href={getRelativeLocaleUrl(lang)} class="font-display text-primary text-xl font-bold">
+    <a href={getRelativeLocaleUrl(lang)} class="font-display text-h3 text-brand-navy">
       XionTechs
     </a>
     <LanguageSwitcher lang={lang} />

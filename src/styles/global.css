@@ -1,28 +1,130 @@
 @import 'tailwindcss';
 
 /*
- * Design tokens — source: design-system/xiontechs/MASTER.md.
- * Use these via Tailwind utilities (bg-primary, text-accent, font-display, ...).
+ * Design tokens — source: design-system/xiontechs/MASTER.md (§1–§3, §7).
+ * Use these via Tailwind utilities (bg-brand-navy, text-ink-700, text-h2, rounded-lg, ...).
  * Never hardcode hex values or font names in components.
- * Spacing, radius and shadows use Tailwind defaults (they match MASTER.md).
+ * The default Tailwind palette is cleared so only brand colors exist.
  */
 @theme {
-  --color-primary: #0f172a;
-  --color-on-primary: #ffffff;
-  --color-secondary: #334155;
-  --color-accent: #0369a1;
-  --color-background: #f8fafc;
-  --color-foreground: #020617;
-  --color-muted: #e8ecf1;
-  --color-border: #e2e8f0;
-  --color-destructive: #dc2626;
-  --color-ring: #0f172a;
+  --color-*: initial;
+  --color-white: #ffffff;
+
+  /* Brand (sampled from the logo) */
+  --color-brand-navy: #173762;
+  --color-brand-gold: #fcc00a;
+
+  /* Blue scale (logo navy hue) */
+  --color-blue-50: #e9f6ff;
+  --color-blue-100: #dbe9fc;
+  --color-blue-200: #b8d3f9;
+  --color-blue-300: #81b3f9;
+  --color-blue-400: #5d8ed1;
+  --color-blue-500: #406fb0;
+  --color-blue-600: #295896;
+  --color-blue-700: #154481;
+  --color-blue-900: #173762;
+  --color-blue-950: #0f2440;
+
+  /* Gold scale (logo gold hue) — never text on white below gold-700 */
+  --color-gold-50: #fff8d4;
+  --color-gold-100: #fff0cc;
+  --color-gold-200: #ffe08d;
+  --color-gold-300: #ffcc4f;
+  --color-gold-400: #fcc00a;
+  --color-gold-500: #d5a20a;
+  --color-gold-600: #ae7d00;
+  --color-gold-700: #8f5f00;
+
+  /* Neutrals — ink-400 is non-text only */
+  --color-surface: #f7f9fc;
+  --color-line: #e3e8ef;
+  --color-ink-400: #8a94a6;
+  --color-ink-500: #5b6676;
+  --color-ink-700: #334155;
+  --color-ink-900: #0f1b2d;
+
+  /* Semantic */
+  --color-success: #15803d;
+  --color-danger: #b91c1c;
+
+  /* Type scale: fluid between 375px and 1280px viewports (MASTER §2.2) */
+  --text-num-hero: clamp(3.5rem, 2.464rem + 4.42vw, 6rem);
+  --text-num-hero--line-height: 1;
+  --text-num-hero--letter-spacing: -0.03em;
+  --text-num-hero--font-weight: 800;
+  --text-num-xl: clamp(2.75rem, 2.232rem + 2.21vw, 4rem);
+  --text-num-xl--line-height: 1;
+  --text-num-xl--letter-spacing: -0.02em;
+  --text-num-xl--font-weight: 800;
+  --text-num-lg: clamp(2rem, 1.689rem + 1.326vw, 2.75rem);
+  --text-num-lg--line-height: 1.05;
+  --text-num-lg--letter-spacing: -0.02em;
+  --text-num-lg--font-weight: 800;
+  --text-num-md: clamp(1.5rem, 1.396rem + 0.442vw, 1.75rem);
+  --text-num-md--line-height: 1.1;
+  --text-num-md--letter-spacing: -0.01em;
+  --text-num-md--font-weight: 700;
+  --text-display: clamp(2.5rem, 1.878rem + 2.652vw, 4rem);
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.03em;
+  --text-display--font-weight: 800;
+  --text-h1: clamp(2.125rem, 1.762rem + 1.547vw, 3rem);
+  --text-h1--line-height: 1.15;
+  --text-h1--letter-spacing: -0.025em;
+  --text-h1--font-weight: 800;
+  --text-h2: clamp(1.75rem, 1.491rem + 1.105vw, 2.375rem);
+  --text-h2--line-height: 1.2;
+  --text-h2--letter-spacing: -0.02em;
+  --text-h2--font-weight: 700;
+  --text-h3: clamp(1.25rem, 1.146rem + 0.442vw, 1.5rem);
+  --text-h3--line-height: 1.3;
+  --text-h3--letter-spacing: -0.01em;
+  --text-h3--font-weight: 700;
+  --text-h4: clamp(1.0625rem, 1.037rem + 0.11vw, 1.125rem);
+  --text-h4--line-height: 1.35;
+  --text-h4--font-weight: 600;
+  --text-lead: clamp(1.125rem, 1.073rem + 0.221vw, 1.25rem);
+  --text-lead--line-height: 1.55;
+  --text-body: clamp(1rem, 0.974rem + 0.11vw, 1.0625rem);
+  --text-body--line-height: 1.65;
+  --text-small: clamp(0.875rem, 0.849rem + 0.11vw, 0.9375rem);
+  --text-small--line-height: 1.55;
+  --text-label: clamp(0.75rem, 0.724rem + 0.11vw, 0.8125rem);
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.06em;
+  --text-label--font-weight: 600;
+
+  /* Shape & elevation (MASTER §3.3) */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-1: 0 1px 2px rgb(15 27 45 / 6%);
+  --shadow-2: 0 12px 32px rgb(15 27 45 / 8%);
+
+  /* Layout: 1200px content width (MASTER §3.1) */
+  --container-content: 1200px;
+
+  /* Motion (MASTER §7); durations use duration-150 / -250 / -600 */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Font variables are injected by <Font /> (see `fonts` in astro.config.mjs). */
 @theme inline {
-  --font-sans: var(--font-open-sans), system-ui, sans-serif;
-  --font-display: var(--font-montserrat), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-manrope), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 88px; /* sticky 72px nav + 16px, so anchors aren't hidden */
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue-600);
+    outline-offset: 2px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
