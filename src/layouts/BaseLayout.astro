@@ -39,10 +39,10 @@ const canonical = getAbsoluteLocaleUrl(lang, path);
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={lang} />
 
-    <Font cssVariable="--font-montserrat" preload />
-    <Font cssVariable="--font-open-sans" preload />
+    <Font cssVariable="--font-manrope" preload />
+    <Font cssVariable="--font-inter" preload />
   </head>
-  <body class="bg-background text-foreground min-h-dvh font-sans antialiased">
+  <body class="text-body text-ink-700 min-h-dvh bg-white font-sans antialiased">
     <slot />
   </body>
 </html>

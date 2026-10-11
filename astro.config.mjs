@@ -21,15 +21,15 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.google(),
-      name: 'Montserrat',
-      cssVariable: '--font-montserrat',
-      weights: ['500 700'],
+      name: 'Manrope',
+      cssVariable: '--font-manrope',
+      weights: ['500 800'],
       subsets: ['latin', 'latin-ext', 'vietnamese'],
     },
     {
       provider: fontProviders.google(),
-      name: 'Open Sans',
-      cssVariable: '--font-open-sans',
+      name: 'Inter',
+      cssVariable: '--font-inter',
       weights: ['400 700'],
       subsets: ['latin', 'latin-ext', 'vietnamese'],
     },
