@@ -20,13 +20,11 @@ Every `[DUMMY: ...]` marker in `content/`, as of 2026-10-11. Markers that ask fo
 | 12  | `vi/privacy.md:5`                      | Top                         | Professional legal translation of the privacy policy. Don't machine-translate it.                                                 | Director                                          |
 | 13  | `vi/terms.md:5`                        | Top                         | Professional legal translation of the terms of service. Don't machine-translate it.                                               | Director                                          |
 | 14  | `sitemap.md:59`                        | URLs that must keep working | Which app store listings or apps link the live privacy and support URLs.                                                          | Director                                          |
-| 15  | `MASTER.md:254`                        | 4.2 Image optimization      | High-resolution originals (≥1600px long edge) for the four "Who we are" company photos.                                           | Marketing / HR                                    |
 
 ## By person
 
 - **Sales:** 5, 6, 7, 8, 9, and maybe 4. Most of these are approvals from clients.
-- **HR:** 1, 2, and maybe 15.
-- **Marketing:** 15.
+- **HR:** 1, 2.
 - **Director:** 3, 10, 11, 12, 13, 14, and maybe 4.
 
 Items 8 and 9 decide whether section 6 ships. If no real quote arrives, `en/home.md` says to remove the whole Testimonials section.
