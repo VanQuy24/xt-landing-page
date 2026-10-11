@@ -286,5 +286,99 @@
     "terms": "Terms of service",
     "socialLabel": "Social",
     "legal": "© 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815"
+  },
+  "careers": {
+    "meta": {
+      "title": "Careers - XionTechs",
+      "description": "Join the XionTechs engineering team in Ho Chi Minh City. No open roles right now. Send your CV for the next recruitment campaign."
+    },
+    "heading": "Careers",
+    "intro": "At XionTechs, you'll be part of a forward-thinking team where innovation and collaboration thrive. Enjoy an inspiring and inclusive environment designed to support growth, ownership, and impactful work.",
+    "rolesHeading": "Open roles",
+    "rolesText": "Currently no job offers available. Be patient! We are going to have a new recruitment campaign soon.",
+    "cvPrefix": "Send your CV to",
+    "cvSubject": "CV",
+    "perksHeading": "Why join us",
+    "perks": [
+      {
+        "icon": "spark",
+        "title": "Innovative environment",
+        "body": "Be inspired by the visionary spirit of Xion as you work with cutting-edge technologies to create transformative IT systems."
+      },
+      {
+        "icon": "users",
+        "title": "Empowering culture",
+        "body": "Be part of a \"Beyond Employees Culture\" that values startup spirit, innovation, and a \"Get IT Done\" mindset, where everyone belongs."
+      },
+      {
+        "icon": "chart",
+        "title": "Continuous growth",
+        "body": "Gain access to structured training, knowledge resources, and role-specific onboarding to help you succeed from day one."
+      },
+      {
+        "icon": "code",
+        "title": "Tech that excites",
+        "body": "Tackle challenging projects using AI/ML, generative AI, cloud computing, and Agile methodologies in a mature engineering environment."
+      },
+      {
+        "icon": "globe",
+        "title": "Real impact",
+        "body": "Build secure, high-quality solutions that drive digital transformation and empower businesses and innovators worldwide."
+      }
+    ],
+    "valuesHeading": "Seven values, one way of working",
+    "values": [
+      {
+        "name": "Quality first",
+        "motto": "Never compromise on quality."
+      },
+      {
+        "name": "Startup spirit",
+        "motto": "Stay agile, think like an owner."
+      },
+      {
+        "name": "Client centricity",
+        "motto": "Our clients' success is our success."
+      },
+      {
+        "name": "Integrity first",
+        "motto": "Do the right thing, always."
+      },
+      {
+        "name": "Innovation driven",
+        "motto": "Innovate with purpose."
+      },
+      {
+        "name": "\"Get IT done\" attitude",
+        "motto": "Own it, deliver it, improve it."
+      },
+      {
+        "name": "People-centered culture",
+        "motto": "People are at the heart of our success."
+      }
+    ],
+    "whereHeading": "Where you would work",
+    "whereText": "Our engineering team works in Ho Chi Minh City, Vietnam.",
+    "address": "Floor 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "metaTitle": "Privacy Policy - XionTechs",
+      "description": "How XIONTECH JOINT STOCK COMPANY collects, uses and protects personal data across its websites, applications and IT services."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "metaTitle": "Terms of Service - XionTechs",
+      "description": "The terms that govern the use of XIONTECH JOINT STOCK COMPANY websites, applications and IT services."
+    },
+    "onlyEnglish": ""
+  },
+  "notFound": {
+    "metaTitle": "Page not found - XionTechs",
+    "description": "This page is not on the XionTechs site.",
+    "heading": "Page not found",
+    "text": "This page may have moved when the site was rebuilt.",
+    "button": "Back to home"
   }
 }

@@ -1,0 +1,12 @@
+# Cloudflare Pages redirects. Old live URLs that apps and app-store listings may link to
+# (design-system/xiontechs/content/sitemap.md, "URLs that must keep working").
+/support /#contact 301
+/support/ /#contact 301
+/about-us / 301
+/about-us/ / 301
+/contact-us /#contact 301
+/contact-us/ /#contact 301
+/faqs /#faq 301
+/faqs/ /#faq 301
+/faq /#faq 301
+/faq/ /#faq 301
