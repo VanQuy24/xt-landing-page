@@ -4,13 +4,13 @@ Decided in the grilling session of 2026-10-11. The site exists to get a brief se
 
 ## Pages
 
-| Page | English URL | Vietnamese URL | Why it earns its place | Content |
-|---|---|---|---|---|
-| Home | `/` | `/vi/` | The one page that sells. It holds everything a buyer needs before sending a brief: services, products, clients, process, FAQ and the form. | `en/home.md`, `vi/home.md` |
-| Careers | `/careers` | `/vi/careers` | A second goal, hiring. The live site has five real perks and the seven values, and candidates are a different reader from buyers, so they get their own page instead of a Home section. | `en/careers.md`, `vi/careers.md` |
-| Privacy policy | `/privacy-policy` | `/vi/privacy-policy` | The form collects names and emails, so a privacy policy is required. The live text exists. | `en/privacy.md`, `vi/privacy.md` |
-| Terms of service | `/terms-of-service` | `/vi/terms-of-service` | Linked from the footer. The live text exists and costs nothing to keep. | `en/terms.md`, `vi/terms.md` |
-| 404 | any unknown URL | any unknown `/vi/` URL | Catches old links and typos. | `en/404.md`, `vi/404.md` |
+| Page             | English URL         | Vietnamese URL         | Why it earns its place                                                                                                                                                                  | Content                          |
+| ---------------- | ------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Home             | `/`                 | `/vi/`                 | The one page that sells. It holds everything a buyer needs before sending a brief: services, products, clients, process, FAQ and the form.                                              | `en/home.md`, `vi/home.md`       |
+| Careers          | `/careers`          | `/vi/careers`          | A second goal, hiring. The live site has five real perks and the seven values, and candidates are a different reader from buyers, so they get their own page instead of a Home section. | `en/careers.md`, `vi/careers.md` |
+| Privacy policy   | `/privacy-policy`   | `/vi/privacy-policy`   | The form collects names and emails, so a privacy policy is required. The live text exists.                                                                                              | `en/privacy.md`, `vi/privacy.md` |
+| Terms of service | `/terms-of-service` | `/vi/terms-of-service` | Linked from the footer. The live text exists and costs nothing to keep.                                                                                                                 | `en/terms.md`, `vi/terms.md`     |
+| 404              | any unknown URL     | any unknown `/vi/` URL | Catches old links and typos.                                                                                                                                                            | `en/404.md`, `vi/404.md`         |
 
 ## Navigation
 
@@ -32,21 +32,21 @@ Footer, on every page:
 
 ## Merged into Home
 
-| Live page | Where its content went |
-|---|---|
-| About us | "Why choose us" (section 8) and the name line in "Who we are" (section 9). The values went to Careers. The fake team and testimonials are cut. |
-| Contact us | "Send a brief" (section 11): form, phones, WhatsApp, email, addresses. |
-| FAQs | Four of the ten questions, in section 10. |
-| Support | Office hours and reply time in section 11. License number and D-U-N-S in the footer. |
+| Live page  | Where its content went                                                                                                                         |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| About us   | "Why choose us" (section 8) and the name line in "Who we are" (section 9). The values went to Careers. The fake team and testimonials are cut. |
+| Contact us | "Send a brief" (section 11): form, phones, WhatsApp, email, addresses.                                                                         |
+| FAQs       | Four of the ten questions, in section 10.                                                                                                      |
+| Support    | Office hours and reply time in section 11. License number and D-U-N-S in the footer.                                                           |
 
 ## Cut
 
-| What | Why |
-|---|---|
-| Blog | All posts are theme demo text dated 13 Feb 2023. No real posts exist. |
-| Case studies page | It never existed. The links point to the Webteck theme demo. |
-| Cookie policy page | Cookies are a section of the privacy policy already. |
-| Job detail pages | No open roles. Add when a role opens. |
+| What                   | Why                                                                                                          |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Blog                   | All posts are theme demo text dated 13 Feb 2023. No real posts exist.                                        |
+| Case studies page      | It never existed. The links point to the Webteck theme demo.                                                 |
+| Cookie policy page     | Cookies are a section of the privacy policy already.                                                         |
+| Job detail pages       | No open roles. Add when a role opens.                                                                        |
 | Mountain theme wording | It came from the earlier draft, not the live site. Only one line about the name survives, in Home section 9. |
 
 ## URLs that must keep working

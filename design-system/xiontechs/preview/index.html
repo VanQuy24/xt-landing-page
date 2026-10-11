@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* =========================================================================
-   TOKENS — exactly as defined in planning-artifacts/xiontech-design-system.md
+   TOKENS — exactly as defined in design-system/xiontechs/MASTER.md
    ========================================================================= */
 :root {
   /* brand (sampled from xt-logo.png) */
@@ -145,7 +145,7 @@ button { font: inherit; cursor: pointer; }
 .sec-head .h2 { margin: 12px 0; }
 
 /* stat tile */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stats { display: grid; grid-template-columns: repeat(var(--cols, 4), 1fr); }
 .stat { padding: 8px 28px; border-inline-start: 1px solid var(--line); }
 .stat:first-child { border-inline-start: 0; padding-inline-start: 0; }
 .stat .bar { width: 32px; height: 4px; background: var(--gold-400); border-radius: 2px; margin-bottom: 18px; }
@@ -203,7 +203,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
 .fd-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
 .fd-stage { position: relative; margin-top: 28px; background: var(--surface); border-radius: var(--r-lg); border: 1px solid var(--line); }
 .fd-canvas { display: block; width: 100%; height: 360px; }
-.fd-ship { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; padding: 0 0 18px; text-align: center; font-weight: 600; font-size: 15px; color: var(--ink-400); transition: color var(--dur-slow); }
+.fd-ship { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; padding: 0 0 18px; text-align: center; font-weight: 600; font-size: 15px; color: var(--ink-500); transition: color var(--dur-slow); }
 .fourd[data-stage="3"] .fd-ship { color: var(--brand-navy); }
 .fd-line { margin-top: 36px; position: relative; }
 .fd-line .track { position: absolute; top: 9px; inset-inline: 12.5%; height: 2px; background: var(--line); }
@@ -214,10 +214,9 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
 .stop.reached .dot { background: var(--blue-600); border-color: var(--blue-600); }
 .stop.now .dot { background: var(--gold-400); border-color: var(--brand-navy); box-shadow: 0 0 0 4px var(--gold-100); transform: scale(1.15); }
 .stop .n { font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--blue-600); }
-.stop .nm { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--ink-400); transition: color var(--dur-base); }
+.stop .nm { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--ink-500); transition: color var(--dur-base); }
 .stop.now .nm { color: var(--ink-900); }
-.stop .kpi { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--blue-600); font-variant-numeric: tabular-nums; }
-.stop p { font-size: 14px; color: var(--ink-400); max-width: 250px; margin: 6px auto 0; line-height: 1.5; transition: color var(--dur-base); }
+.stop p { font-size: 14px; color: var(--ink-500); max-width: 250px; margin: 6px auto 0; line-height: 1.5; transition: color var(--dur-base); }
 .stop.now p { color: var(--ink-700); }
 
 /* =========================================================================
@@ -350,7 +349,6 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
   .fd-ship, .stops { font-size: 12px; }
   .stops p { display: none; }
   .stop .nm { font-size: 13px; }
-  .stop .kpi { font-size: 11px; }
   .board-top > span { display: none; }
   .board-top { gap: 12px; white-space: nowrap; }
   img, canvas, svg { max-width: 100%; }
@@ -379,7 +377,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
 </svg>
 
 <header class="board-top">
-  <b>XionTech Design System</b><span class="pill">v1 · plan preview</span><span>Minimal · White · Logo navy + gold · Numbers & images first</span>
+  <b>XionTech Design System</b><span class="pill">v1.1 · matches MASTER.md</span><span>Minimal · White · Logo navy + gold · Numbers & images first</span>
   <a href="#page">Jump to Home mockup ↓</a>
 </header>
 
@@ -444,7 +442,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
           <div class="sw"><div class="chip" style="background:#fff;border-bottom:1px solid var(--line)"></div><div class="meta"><b>white</b><span>#FFFFFF</span><br>Page bg</div></div>
           <div class="sw"><div class="chip" style="background:var(--surface)"></div><div class="meta"><b>surface</b><span>#F7F9FC</span><br>Alt section</div></div>
           <div class="sw"><div class="chip" style="background:var(--line)"></div><div class="meta"><b>line</b><span>#E3E8EF</span><br>Borders</div></div>
-          <div class="sw"><div class="chip" style="background:var(--ink-400);color:#fff"></div><div class="meta"><b>ink-400</b><span>#8A94A6</span><br>3.06 disabled</div></div>
+          <div class="sw"><div class="chip" style="background:var(--ink-400);color:#fff"></div><div class="meta"><b>ink-400</b><span>#8A94A6</span><br>3.06 non-text only</div></div>
           <div class="sw"><div class="chip" style="background:var(--ink-500);color:#fff">Aa</div><div class="meta"><b>ink-500</b><span>#5B6676</span><br><span class="ok">5.82 ✓</span> muted</div></div>
           <div class="sw"><div class="chip" style="background:var(--ink-700);color:#fff">Aa</div><div class="meta"><b>ink-700</b><span>#334155</span><br><span class="ok">10.35 ✓</span> body</div></div>
           <div class="sw"><div class="chip" style="background:var(--ink-900);color:#fff">Aa</div><div class="meta"><b>ink-900</b><span>#0F1B2D</span><br><span class="ok">17.28 ✓</span> heading</div></div>
@@ -457,7 +455,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
           <div class="rule"><span class="demo" style="background:var(--gold-400);color:var(--brand-navy)">Most popular</span><span><b class="ok">✓ Do</b> navy text on gold (7.21 : 1)</span></div>
           <div class="rule"><span class="demo" style="color:var(--gold-400);border:1px solid var(--line)">Most popular</span><span><b class="no">✗ Don't</b> gold text on white (1.66 : 1)</span></div>
           <div class="rule"><span class="demo num" style="font-size:24px">25<span class="sfx">+</span></span><span><b class="ok">✓ Do</b> gold-600 suffix on big numbers only</span></div>
-          <div class="rule"><span class="demo" style="background:var(--gold-50);color:var(--gold-700)">Note</span><span><b class="ok">✓ Do</b> gold-700 text on gold-50 (5.5 : 1)</span></div>
+          <div class="rule"><span class="demo" style="background:var(--gold-50);color:var(--gold-700)">Note</span><span><b class="ok">✓ Do</b> gold-700 text on gold-50 (5.16 : 1)</span></div>
         </div>
       </div>
     </section>
@@ -467,7 +465,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
       <p class="frame-label">Foundations / Typography</p>
       <div class="frame">
         <h2 class="spec-title">Typography</h2>
-        <p class="spec-sub">Manrope for headings and every number, Inter for reading. Both support Vietnamese; Arabic uses Noto Kufi / Noto Sans Arabic.</p>
+        <p class="spec-sub">Manrope for headings and every number, Inter for reading. Both ship the Vietnamese subset, self-hosted.</p>
         <div class="fonts">
           <div class="fontcard"><span class="label">Display & numbers</span><div class="big num" style="font-family:var(--font-display)">Manrope 0123</div><p class="small">Weights 600 · 700 · 800 · tabular figures · Vietnamese ✓</p></div>
           <div class="fontcard"><span class="label">Body & UI</span><div class="big" style="font-family:var(--font-body);font-weight:600">Inter Aa</div><p class="small">Weights 400 · 500 · 600 · optical sizing · Vietnamese ✓ (Đà Nẵng · Hồ Chí Minh)</p></div>
@@ -475,11 +473,11 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
         <h3 class="spec-h">Number scale <span class="anno">numbers-first</span></h3>
         <div class="type-row"><div class="lab"><b>num-hero</b>Manrope 800 · 96/56</div><div class="num" style="font-size:96px">25<span class="sfx">+</span></div></div>
         <div class="type-row"><div class="lab"><b>num-xl</b>Manrope 800 · 64/44</div><div class="num" style="font-size:64px">20<span class="sfx">+</span></div></div>
-        <div class="type-row"><div class="lab"><b>num-lg</b>Manrope 800 · 44/32</div><div class="num" style="font-size:44px">15 agents</div></div>
-        <div class="type-row"><div class="lab"><b>num-md</b>Manrope 700 · 28/24</div><div class="num" style="font-size:28px;font-weight:700;color:var(--blue-600)">3 languages</div></div>
+        <div class="type-row"><div class="lab"><b>num-lg</b>Manrope 800 · 44/32</div><div class="num" style="font-size:44px">8 services</div></div>
+        <div class="type-row"><div class="lab"><b>num-md</b>Manrope 700 · 28/24</div><div class="num" style="font-size:28px;font-weight:700;color:var(--blue-600)">2 languages</div></div>
         <h3 class="spec-h">Text scale</h3>
         <div class="type-row"><div class="lab"><b>display</b>Manrope 800 · 64/40</div><div style="font-family:var(--font-display);font-weight:800;font-size:56px;line-height:1.05;letter-spacing:-.03em;color:var(--ink-900)">Build smarter software.</div></div>
-        <div class="type-row"><div class="lab"><b>h1</b>Manrope 800 · 48/34</div><div class="h1">Our work</div></div>
+        <div class="type-row"><div class="lab"><b>h1</b>Manrope 800 · 48/34</div><div class="h1">Careers</div></div>
         <div class="type-row"><div class="lab"><b>h2</b>Manrope 700 · 38/28</div><div class="h2">A proven process, visible every sprint.</div></div>
         <div class="type-row"><div class="lab"><b>h3</b>Manrope 700 · 24/20</div><div class="h3">Product Engineering</div></div>
         <div class="type-row"><div class="lab"><b>lead</b>Inter 400 · 20/18</div><div class="lead">We turn ideas into market-ready products and bring AI into the systems you already run.</div></div>
@@ -516,24 +514,24 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
         <h2 class="spec-title">Buttons & navigation</h2>
         <p class="spec-sub">48px tall, 12px radius. Only one gold "highlight" button per page. Hover the buttons to see states.</p>
         <div class="comp-grid">
-          <div class="comp-cell"><span class="note">Primary · blue-600</span><a class="btn btn-primary" href="#">Start a conversation <svg class="ico sm"><use href="#i-arrow"/></svg></a></div>
+          <div class="comp-cell"><span class="note">Primary · blue-600</span><a class="btn btn-primary" href="#">Email your brief <svg class="ico sm"><use href="#i-arrow"/></svg></a></div>
           <div class="comp-cell"><span class="note">Secondary · outline</span><a class="btn btn-secondary" href="#">Explore services</a></div>
-          <div class="comp-cell"><span class="note">Highlight · gold (max 1 per page)</span><a class="btn btn-highlight" href="#">Book a discovery call</a></div>
-          <div class="comp-cell"><span class="note">Text link</span><a class="btn-link" href="#">See all our work <svg class="ico sm"><use href="#i-arrow"/></svg></a></div>
+          <div class="comp-cell"><span class="note">Highlight · gold (hero only)</span><a class="btn btn-highlight" href="#">Get in touch</a></div>
+          <div class="comp-cell"><span class="note">Text link</span><a class="btn-link" href="#">See our services <svg class="ico sm"><use href="#i-arrow"/></svg></a></div>
           <div class="comp-cell"><span class="note">Disabled</span><button class="btn" disabled>Sending…</button></div>
-          <div class="comp-cell on-dark" style="background:var(--brand-navy);border-style:solid"><span class="note" style="color:var(--blue-200)">On dark band</span><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#">Talk to us</a><a class="btn btn-secondary" href="#">Careers</a></div></div>
+          <div class="comp-cell on-dark" style="background:var(--brand-navy);border-style:solid"><span class="note" style="color:var(--blue-200)">On dark band</span><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#">Get in touch</a><a class="btn btn-secondary" href="#">Careers</a></div></div>
         </div>
         <h3 class="spec-h">Navigation bar · 72px · white · active link = blue text + gold underline</h3>
         <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden">
           <div class="nav">
-            <a class="logo" href="#"><img src="assets/xt-mark.png" alt="">XionTech</a>
-            <ul><li><a href="#">Services</a></li><li><a class="active" href="#">Our Work</a></li><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">FAQ</a></li></ul>
-            <span class="lang"><svg class="ico sm"><use href="#i-globe"/></svg>EN</span>
-            <a class="btn btn-primary btn-sm" href="#">Let's talk</a>
+            <a class="logo" href="#"><img src="assets/xt-mark.png" alt="">XionTechs</a>
+            <ul><li><a class="active" href="#">Services</a></li><li><a href="#">Products</a></li><li><a href="#">Clients</a></li><li><a href="#">Process</a></li><li><a href="#">FAQ</a></li><li><a href="#">Careers</a></li></ul>
+            <span class="lang"><svg class="ico sm"><use href="#i-globe"/></svg>EN / VI</span>
+            <a class="btn btn-primary btn-sm" href="#">Get in touch</a>
           </div>
         </div>
         <h3 class="spec-h">Section header</h3>
-        <div class="sec-head"><p class="label"><i></i>02 · Selected work</p><h2 class="h2">Real solutions for clients worldwide.</h2><p class="lead">Examples, not a menu — every engagement is shaped around your requirements.</p></div>
+        <div class="sec-head"><p class="label"><i></i>03 · Our services</p><h2 class="h2">Technology solutions that transform your business</h2><p class="lead">Eight services, from product engineering to cloud computing.</p></div>
       </div>
     </section>
 
@@ -544,17 +542,16 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
         <h2 class="spec-title">Stat tiles</h2>
         <p class="spec-sub">Number (Manrope 800, tabular) + gold-600 suffix + uppercase label + optional context. Counts up once on scroll.</p>
         <h3 class="spec-h">Strip variant</h3>
-        <div class="stats" data-count-group>
-          <div class="stat"><div class="bar"></div><div class="num"><span data-count="25">25</span><span class="sfx">+</span></div><div class="lab">Years of leadership</div></div>
-          <div class="stat"><div class="bar"></div><div class="num"><span data-count="3">3</span></div><div class="lab">Offices</div><div class="ctx">Dallas · Da Nang · HCMC</div></div>
-          <div class="stat"><div class="bar"></div><div class="num"><span data-count="20">20</span><span class="sfx">+</span></div><div class="lab">Technologies</div></div>
-          <div class="stat"><div class="bar"></div><div class="num"><span data-count="15">15</span></div><div class="lab">AI agents built</div><div class="ctx">D365 + Copilot Studio</div></div>
+        <div class="stats" style="--cols:3" data-count-group>
+          <div class="stat"><div class="bar"></div><div class="num"><span data-count="25">25</span><span class="sfx">+</span></div><div class="lab">Years of leadership experience</div></div>
+          <div class="stat"><div class="bar"></div><div class="num"><span data-count="20">20</span><span class="sfx">+</span></div><div class="lab">Tech stack expertise</div></div>
+          <div class="stat"><div class="bar"></div><div class="num"><span data-count="3">3</span></div><div class="lab">Office locations</div><div class="ctx">Plano (USA) · Ho Chi Minh City (Vietnam)</div></div>
         </div>
         <h3 class="spec-h">Card variant</h3>
         <div class="comp-grid">
-          <div class="stat-card"><div class="num" style="color:var(--blue-600)">2</div><div class="lab" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin-top:10px">Platforms with built-in agents</div></div>
-          <div class="stat-card"><div class="num">3<span class="sfx"> lang</span></div><div class="lab" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin-top:10px">English · Tiếng Việt · العربية</div></div>
-          <div class="stat-card" style="background:var(--gold-50);border-color:var(--gold-200)"><div class="num">7</div><div class="lab" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-700);margin-top:10px">Platform layers · highlight</div></div>
+          <div class="stat-card"><div class="num" style="color:var(--blue-600)">2</div><div class="lab" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin-top:10px">Countries · USA · Vietnam</div></div>
+          <div class="stat-card"><div class="num">2<span class="sfx"> lang</span></div><div class="lab" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin-top:10px">English · Tiếng Việt</div></div>
+          <div class="stat-card" style="background:var(--gold-50);border-color:var(--gold-200)"><div class="num">8</div><div class="lab" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-700);margin-top:10px">Services · highlight</div></div>
         </div>
       </div>
     </section>
@@ -567,7 +564,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
         <p class="spec-sub">Cards start with an icon or a number. Images keep fixed ratios and never upscale (real photos stay small until originals arrive).</p>
         <div class="comp-grid">
           <article class="card"><div class="icon-box"><svg class="ico"><use href="#i-spark"/></svg></div><h3 class="h3">AI-Powered Solutions</h3><p class="small">Agents, automation and predictive analytics — on Microsoft or custom stacks.</p></article>
-          <article class="card"><div class="num">15</div><h3 class="h3">HR agents in Teams</h3><p class="small">Dynamics 365 F&amp;O connected to Copilot Studio.</p></article>
+          <article class="card"><div class="num">10</div><h3 class="h3">Smart-school features</h3><p class="small">Personalized learning, AI assessment, scheduling and more.</p></article>
           <figure><div class="media" style="aspect-ratio:4/3"><img src="assets/ai-training.webp" alt="Hands-on AI training at XionTech"><span class="chip chip-h numchip">AI workshop</span></div><figcaption>Real photo · 4:3 · ≤120 KB · lazy</figcaption></figure>
         </div>
         <h3 class="spec-h">Chips</h3>
@@ -594,8 +591,7 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
       <div class="frame">
         <div class="fourd" data-fourd>
           <div class="fd-head">
-            <div class="sec-head"><p class="label"><i></i>How we work</p><h2 class="h2">4-D Process</h2><p class="lead">How we get IT done — raw problem in, delivered product out.</p>
-              <div class="chips" style="margin-top:16px"><span class="chip chip-n">Agile practices</span><span class="chip chip-n">BMAD-METHOD</span><span class="chip chip-n">V-Model</span><span class="chip chip-n">Metric-driven</span></div>
+            <div class="sec-head"><p class="label"><i></i>4-D process</p><h2 class="h2">How we get IT done</h2>
             </div>
             <button type="button" class="btn btn-secondary btn-sm" data-play>Pause</button>
           </div>
@@ -606,137 +602,65 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
           <div class="fd-line">
             <div class="track"><i class="fill"></i></div>
             <ol class="stops">
-              <li class="stop"><button type="button" data-stop="0"><span class="dot"></span><span class="n">01</span><span class="nm">Discovery</span><span class="kpi">[n] weeks</span></button><p>Strategic alignment of your business goals with technical solutions.</p></li>
-              <li class="stop"><button type="button" data-stop="1"><span class="dot"></span><span class="n">02</span><span class="nm">Design</span><span class="kpi">[n] prototypes</span></button><p>A custom solution — UX, UI and architecture — around your challenges.</p></li>
-              <li class="stop"><button type="button" data-stop="2"><span class="dot"></span><span class="n">03</span><span class="nm">Development</span><span class="kpi">[n]-week sprints</span></button><p>Agile implementation with transparent communication and testing.</p></li>
-              <li class="stop"><button type="button" data-stop="3"><span class="dot"></span><span class="n">04</span><span class="nm">Deployment</span><span class="kpi">[n] releases</span></button><p>Performance monitoring with ongoing support for long-term success.</p></li>
+              <li class="stop"><button type="button" data-stop="0"><span class="dot"></span><span class="n">01</span><span class="nm">Discovery</span></button><p>Strategic alignment of your business goals with technical solutions.</p></li>
+              <li class="stop"><button type="button" data-stop="1"><span class="dot"></span><span class="n">02</span><span class="nm">Design</span></button><p>Custom solutions built on our integrated engineering platform.</p></li>
+              <li class="stop"><button type="button" data-stop="2"><span class="dot"></span><span class="n">03</span><span class="nm">Development</span></button><p>Agile implementation with transparent communication.</p></li>
+              <li class="stop"><button type="button" data-stop="3"><span class="dot"></span><span class="n">04</span><span class="nm">Deployment</span></button><p>Data-driven performance monitoring with ongoing support.</p></li>
             </ol>
             <p class="sr" aria-live="polite" data-live style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
           </div>
         </div>
-        <p class="note" style="margin-top:24px">Gray dots = ink-400 · fitted icons = blue-600 · current stage = gold dot with navy ring · "[n]" = stage numbers to be confirmed by the team.</p>
+        <p class="small" style="margin-top:24px;color:var(--ink-500)">Agile practices and an AI-driven workflow, with metric-driven project management.</p>
+        <p class="note" style="margin-top:12px">Gray dots = ink-400 (decorative only) · fitted icons = blue-600 · current stage = gold dot with navy ring · inactive text = ink-500.</p>
       </div>
     </section>
 
     <!-- ================= PROJECT VISUALIZATION ================= -->
     <section id="pv">
-      <p class="frame-label">Signature / Project Visualization — 6 window types</p>
+      <p class="frame-label">Signature / Project Visualization — 2 window types</p>
       <div class="frame">
-        <div class="sec-head"><p class="label"><i></i>Selected work</p><h2 class="h2">Every project: tag → title → 3 numbers → product window.</h2></div>
+        <div class="sec-head"><p class="label"><i></i>Selected work</p><h2 class="h2">Every project: tag → title → numbers → product window.</h2></div>
         <div class="tabs" role="tablist" style="margin-top:28px" data-pv-tabs>
-          <button role="tab" aria-selected="true" data-pv="0">ParentXP & StaffXP</button><button role="tab" aria-selected="false" data-pv="1">HR agents</button><button role="tab" aria-selected="false" data-pv="2">A2UI</button><button role="tab" aria-selected="false" data-pv="3">Autonomous</button><button role="tab" aria-selected="false" data-pv="4">AI + IoT</button><button role="tab" aria-selected="false" data-pv="5">XT Smart Platform</button>
+          <button role="tab" aria-selected="true" data-pv="0">App window · our products</button><button role="tab" aria-selected="false" data-pv="1">Agent chat · client work</button>
         </div>
 
-        <!-- 1. App + agent chat -->
+        <!-- 1. App window: our products for schools -->
         <div class="pv pv-panel" data-panel="0">
           <div>
-            <span class="chip chip-b tag">Case study · Education · Pro-code</span>
-            <h3 class="h2" style="font-size:32px">Agent-first platforms: every feature, one conversation away.</h3>
-            <div class="pv-nums"><div><div class="num">2</div><span>Platforms</span></div><div><div class="num">6<span class="sfx">+</span></div><span>Staff modules</span></div><div><div class="num">3</div><span>Languages</span></div></div>
-            <div class="chips"><span class="chip chip-n">Leave requests</span><span class="chip chip-n">Attendance</span><span class="chip chip-n">Timetables</span><span class="chip chip-n">Agent chat</span><span class="chip chip-more">& more</span></div>
+            <span class="chip chip-h tag">Our product · Education</span>
+            <h3 class="h2" style="font-size:32px">AI-powered platform for smart schools.</h3>
+            <div class="pv-nums" style="grid-template-columns:repeat(2,1fr)"><div><div class="num">3</div><span>Products for schools</span></div><div><div class="num">10</div><span>Platform features</span></div></div>
+            <div class="chips"><span class="chip chip-n">Personalized learning</span><span class="chip chip-n">AI assessment</span><span class="chip chip-n">Intelligent scheduling</span><span class="chip chip-more">& more</span></div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-end">
             <div class="win" style="flex:1">
-              <div class="win-bar"><i></i><i></i><i></i><span>StaffXP · Dashboard</span></div>
+              <div class="win-bar"><i></i><i></i><i></i><span>School platform · Dashboard</span></div>
               <div class="win-body">
                 <div class="mini-kpis"><div><small>To mark</small><b>3</b></div><div><small>Classes today</small><b>5</b></div><div><small>Tasks</small><b>4</b></div></div>
                 <div class="rowlist"><div><span>Wellbeing note — Class 5B</span><span class="chip chip-h" style="height:22px;font-size:11px">Due</span></div><div><span>Attendance — Period 2</span><span class="chip chip-s" style="height:22px;font-size:11px">Done</span></div><div><span>Notice to parents</span><span class="chip chip-n" style="height:22px;font-size:11px">Draft</span></div></div>
               </div>
               <div class="win-cap">Illustrative — fictional data</div>
             </div>
-            <div class="phone"><div class="top">ParentXP</div><div class="in"><div class="bubble-u">Leave request for tomorrow, please.</div><div class="ac"><h5><svg class="ico sm" style="color:var(--blue-600)"><use href="#i-file"/></svg>Leave request</h5><dl><dt>Date</dt><dd>Tomorrow</dd><dt>Reason</dt><dd>Medical</dd></dl><div class="acts"><span class="btn btn-primary btn-sm" style="height:30px;font-size:12px">Confirm</span></div></div></div></div>
+            <div class="phone"><div class="top">Parent app</div><div class="in"><div class="bubble-u">Leave request for tomorrow, please.</div><div class="ac"><h5><svg class="ico sm" style="color:var(--blue-600)"><use href="#i-file"/></svg>Leave request</h5><dl><dt>Date</dt><dd>Tomorrow</dd><dt>Reason</dt><dd>Medical</dd></dl><div class="acts"><span class="btn btn-primary btn-sm" style="height:30px;font-size:12px">Confirm</span></div></div></div></div>
           </div>
         </div>
 
-        <!-- 2. HR agents / adaptive card -->
+        <!-- 2. Agent chat window: client work, described in general terms -->
         <div class="pv pv-panel" data-panel="1" hidden>
           <div>
-            <span class="chip chip-b tag">Low-code · Dynamics 365 F&amp;O + Copilot Studio</span>
-            <h3 class="h2" style="font-size:32px">15 HR agents in Microsoft Teams.</h3>
-            <div class="pv-nums"><div><div class="num">15</div><span>Agents</span></div><div><div class="num">1</div><span>ERP integrated</span></div><div><div class="num">0</div><span>ERP changes</span></div></div>
-            <div class="chips"><span class="chip chip-n">Leave</span><span class="chip chip-n">Goals</span><span class="chip chip-n">Learning</span><span class="chip chip-n">Open jobs</span><span class="chip chip-more">+ 11 more</span></div>
+            <span class="chip chip-b tag">Client work · Education</span>
+            <h3 class="h2" style="font-size:32px">Multi-school apps for parents and staff.</h3>
+            <div class="pv-nums" style="grid-template-columns:repeat(2,1fr)"><div><div class="num">2</div><span>Audiences</span></div><div><div class="num">3</div><span>Assistant tasks</span></div></div>
+            <div class="chips"><span class="chip chip-n">Pay fees</span><span class="chip chip-n">Update details</span><span class="chip chip-n">Notifications</span></div>
           </div>
-          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Microsoft Teams · HR agent</span></div>
+          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Parent app · AI assistant</span></div>
             <div class="win-body" style="display:grid;gap:10px">
-              <div class="bubble-u">Assign "Onboarding 101" to my new hires.</div>
-              <div class="ac"><h5>Confirm course assignment</h5><dl><dt>Course</dt><dd>Onboarding 101</dd><dt>Type</dt><dd>Required</dd><dt>People</dt><dd>3 team members</dd></dl><div class="acts"><span class="btn btn-primary btn-sm" style="height:32px;font-size:12px">Confirm</span><span class="btn btn-secondary btn-sm" style="height:32px;font-size:12px">Cancel</span></div></div>
-            </div><div class="win-cap">Illustrative Adaptive Card — fictional data</div></div>
-        </div>
-
-        <!-- 3. A2UI -->
-        <div class="pv pv-panel" data-panel="2" hidden>
-          <div>
-            <span class="chip chip-b tag">A2UI · Agent-driven UI</span>
-            <h3 class="h2" style="font-size:32px">The conversation builds the screen.</h3>
-            <div class="pv-nums"><div><div class="num">3</div><span>Example flows</span></div><div><div class="num">1</div><span>Live canvas</span></div><div><div class="num">0</div><span>Menus to hunt</span></div></div>
-          </div>
-          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Your workspace</span></div>
-            <div class="win-body" style="display:grid;grid-template-columns:1.3fr 1fr;gap:12px">
-              <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px">
-                <b style="font-size:13px;color:var(--ink-900)">Q3 revenue by region · % of target</b>
-                <div class="bars" style="margin-top:12px">
-                  <div><span>N. America</span><span class="t"><i style="width:92%"></i></span><b>92%</b></div>
-                  <div><span>Europe</span><span class="t"><i style="width:78%"></i></span><b>78%</b></div>
-                  <div><span>Middle East ▲</span><span class="t"><i class="g" style="width:64%"></i></span><b>64%</b></div>
-                  <div><span>APAC</span><span class="t"><i style="width:85%"></i></span><b>85%</b></div>
-                </div>
-                <p class="note" style="margin-top:8px">▲ below 70% target — labelled, never color alone</p>
-              </div>
-              <div style="display:grid;gap:8px;align-content:start"><div class="bubble-u">Flag regions below target.</div><div class="bubble-a">One region is below 70% — flagged on the canvas.</div></div>
+              <div class="bubble-u">Pay this term's fees for my son.</div>
+              <div class="ac"><h5>Confirm payment</h5><dl><dt>Student</dt><dd>Grade 5</dd><dt>Term</dt><dd>Term 2</dd><dt>Amount</dt><dd>$1,250</dd></dl><div class="acts"><span class="btn btn-primary btn-sm" style="height:32px;font-size:12px">Confirm</span><span class="btn btn-secondary btn-sm" style="height:32px;font-size:12px">Cancel</span></div></div>
             </div><div class="win-cap">Illustrative — fictional data</div></div>
         </div>
 
-        <!-- 4. Automation -->
-        <div class="pv pv-panel" data-panel="3" hidden>
-          <div>
-            <span class="chip chip-b tag">Pro-code · Autonomous agents</span>
-            <h3 class="h2" style="font-size:32px">Agents that work in the background.</h3>
-            <div class="pv-nums"><div><div class="num">3</div><span>Trigger types</span></div><div><div class="num">0</div><span>Chats needed</span></div><div><div class="num">∞</div><span>Processes fit</span></div></div>
-          </div>
-          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Agent runs</span></div>
-            <div class="win-body"><div class="flow3">
-              <div><span class="chip chip-b" style="height:22px;font-size:11px">Scheduled</span><h5>Report aggregation</h5><ol><li><em>1</em>Runs at set time</li><li><em>2</em>Collects data</li><li><em class="done">✓</em>Delivers report</li></ol></div>
-              <div><span class="chip chip-b" style="height:22px;font-size:11px">Recurring</span><h5>Attendance check</h5><ol><li><em>1</em>Runs automatically</li><li><em>2</em>Checks records</li><li><em class="done">✓</em>Reports results</li></ol></div>
-              <div><span class="chip chip-h" style="height:22px;font-size:11px">Event</span><h5>Request approval</h5><ol><li><em>1</em>Request submitted</li><li><em>2</em>Checks policy</li><li><em class="done">✓</em>Auto-approves</li></ol></div>
-            </div></div><div class="win-cap">Illustrative</div></div>
-        </div>
-
-        <!-- 5. IoT -->
-        <div class="pv pv-panel" data-panel="4" hidden>
-          <div>
-            <span class="chip chip-h tag">Own platform · AI + IoT</span>
-            <h3 class="h2" style="font-size:32px">AI that sees and senses the physical space.</h3>
-            <div class="pv-nums"><div><div class="num">3</div><span>Capabilities</span></div><div><div class="num">2</div><span>Sensor types</span></div><div><div class="num">5</div><span>Settings fit</span></div></div>
-          </div>
-          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Camera 03 · Classroom</span></div>
-            <div class="win-body">
-              <div class="cam"><span class="live">● Live</span>
-                <span class="p" style="left:14%"></span><span class="p" style="left:38%"></span><span class="p" style="left:60%"></span><span class="p" style="left:75%"></span>
-                <span class="box" style="left:11%;top:32%;width:16%;height:46%;border-color:var(--blue-300)"><b style="background:var(--blue-300)">Focused</b></span>
-                <span class="box" style="left:35%;top:30%;width:16%;height:48%;border-color:var(--gold-400)"><b style="background:var(--gold-400)">▲ Phone in use</b></span>
-                <span class="box" style="left:57%;top:32%;width:31%;height:46%;border-color:var(--gold-400)"><b style="background:var(--gold-400)">▲ Talking</b></span>
-              </div>
-              <div class="sens"><div><span><small>Temperature</small><b>24.6°C</b></span><svg viewBox="0 0 84 20" width="70" height="20"><path d="M0 14 L12 12 L24 13 L36 9 L48 10 L60 7 L72 8 L84 6" fill="none" stroke="var(--blue-600)" stroke-width="1.6"/></svg></div><div><span><small>People present</small><b>28</b></span><svg viewBox="0 0 84 20" width="70" height="20"><path d="M0 16 L12 15 L24 8 L36 6 L48 6 L60 5 L72 6 L84 5" fill="none" stroke="var(--blue-600)" stroke-width="1.6"/></svg></div></div>
-            </div><div class="win-cap">Illustrative mockup — no real footage or people</div></div>
-        </div>
-
-        <!-- 6. Architecture -->
-        <div class="pv pv-panel" data-panel="5" hidden>
-          <div>
-            <span class="chip chip-h tag">Own platform · XT Smart Platform</span>
-            <h3 class="h2" style="font-size:32px">AI agents, IoT and data in one ecosystem.</h3>
-            <div class="pv-nums"><div><div class="num">7</div><span>Layers</span></div><div><div class="num">6</div><span>Apps</span></div><div><div class="num">5</div><span>Device types</span></div></div>
-          </div>
-          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Platform architecture · simplified, 5 of 7 layers</span></div>
-            <div class="win-body"><div class="arch">
-              <div class="ly"><b>Apps</b><div class="chips"><span class="chip chip-n">Parent Hub</span><span class="chip chip-n">Buddy360 Robots</span><span class="chip chip-n">AI Wellbeing</span><span class="chip chip-n">AI Curriculum Hub</span><span class="chip chip-n">Academic Reports</span><span class="chip chip-n">IoT Teacher Coach</span></div></div>
-              <div class="ly agents"><b>Agents</b><div class="chips"><span class="chip chip-h">Supervisor</span><span class="chip chip-b">Policy</span><span class="chip chip-b">Buddy</span><span class="chip chip-b">Wellbeing</span><span class="chip chip-b">Academic reports</span></div></div>
-              <div class="ly"><b>AI & app services</b><div class="chips"><span class="chip chip-n">Speech AI</span><span class="chip chip-n">ML / SLM / LLM</span><span class="chip chip-n">MCP server</span><span class="chip chip-n">Back-end</span></div></div>
-              <div class="ly"><b>Infrastructure & data</b><div class="chips"><span class="chip chip-n">Auth</span><span class="chip chip-n">API gateway</span><span class="chip chip-n">IoT hub</span><span class="chip chip-n">Intelligent edge</span><span class="chip chip-n">Data platform</span></div></div>
-              <div class="ly"><b>Devices</b><div class="chips"><span class="chip chip-n">Robots</span><span class="chip chip-n">Phones</span><span class="chip chip-n">Wearables</span><span class="chip chip-n">Cameras</span><span class="chip chip-n">Sensors</span></div></div>
-            </div></div><div class="win-cap">Built in HTML — translatable · full diagram available on /work</div></div>
-        </div>
-        <p class="note" style="margin-top:24px">All numbers are candidates for the team to confirm — only true numbers go live.</p>
+        <p class="note" style="margin-top:24px">Numbers are true capability counts from the content. Client product names are never shown.</p>
       </div>
     </section>
 
@@ -745,20 +669,20 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
       <p class="frame-label">Pages / Home — desktop (all components assembled)</p>
       <div class="frame flush page">
         <div class="nav" style="padding-inline:max(32px, calc((100% - 1120px)/2 + 32px))">
-          <a class="logo" href="#"><img src="assets/xt-mark.png" alt="">XionTech</a>
-          <ul><li><a href="#">Services</a></li><li><a href="#">Our Work</a></li><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">FAQ</a></li></ul>
-          <span class="lang"><svg class="ico sm"><use href="#i-globe"/></svg>EN</span>
-          <a class="btn btn-primary btn-sm" href="#">Let's talk</a>
+          <a class="logo" href="#"><img src="assets/xt-mark.png" alt="">XionTechs</a>
+          <ul><li><a href="#">Services</a></li><li><a href="#">Products</a></li><li><a href="#">Clients</a></li><li><a href="#">Process</a></li><li><a href="#">FAQ</a></li><li><a href="#">Careers</a></li></ul>
+          <span class="lang"><svg class="ico sm"><use href="#i-globe"/></svg>EN / VI</span>
+          <a class="btn btn-primary btn-sm" href="#">Get in touch</a>
         </div>
 
         <!-- hero -->
         <div class="hero"><div class="wrap">
           <div class="hero-grid">
             <div>
-              <span class="eyebrow"><i></i>Get IT Done · AI-first engineering</span>
-              <h1>Build smarter software, <em><span class="mark">AI-first</span></em> from day one.</h1>
-              <p class="lead">We turn ideas into market-ready products and bring AI into the systems you already run — for clients worldwide.</p>
-              <div class="ctas"><a class="btn btn-highlight" href="#">Start a conversation <svg class="ico sm"><use href="#i-arrow"/></svg></a><a class="btn btn-secondary" href="#">Explore services</a></div>
+              <span class="eyebrow"><i></i>Get IT Done</span>
+              <h1>Crafting <em><span class="mark">secure</span></em> and innovative IT solutions</h1>
+              <p class="lead">XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.</p>
+              <div class="ctas"><a class="btn btn-highlight" href="#">Get in touch <svg class="ico sm"><use href="#i-arrow"/></svg></a><a class="btn btn-secondary" href="#">Explore services</a></div>
             </div>
             <div class="hero-visual">
               <div class="win main"><div class="win-bar"><i></i><i></i><i></i><span>Sprint 6 · Your product</span></div>
@@ -766,33 +690,31 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
                   <div class="mini-kpis"><div><small>Stories done</small><b>18</b></div><div><small>Demo</small><b>Fri</b></div><div><small>On track</small><b style="color:var(--success)">✓</b></div></div>
                   <div class="rowlist"><div><span>AI search assistant</span><span class="chip chip-s" style="height:22px;font-size:11px">Shipped</span></div><div><span>Admin dashboard</span><span class="chip chip-b" style="height:22px;font-size:11px">In review</span></div><div><span>Payment integration</span><span class="chip chip-h" style="height:22px;font-size:11px">In progress</span></div></div>
                 </div></div>
-              <div class="float f1"><div class="num">15</div><small>AI agents built</small></div>
-              <div class="float f2"><div class="num" style="font-size:28px">3</div><small>Languages</small></div>
+              <div class="float f1"><div class="num">8</div><small>Services</small></div>
+              <div class="float f2"><div class="num" style="font-size:28px">2</div><small>Countries</small></div>
             </div>
           </div>
-          <div class="hero-stats stats">
-            <div class="stat"><div class="bar"></div><div class="num"><span data-count="25">25</span><span class="sfx">+</span></div><div class="lab">Years of leadership</div></div>
-            <div class="stat"><div class="bar"></div><div class="num"><span data-count="3">3</span></div><div class="lab">Offices</div><div class="ctx">Dallas · Da Nang · HCMC</div></div>
-            <div class="stat"><div class="bar"></div><div class="num"><span data-count="20">20</span><span class="sfx">+</span></div><div class="lab">Technologies</div></div>
-            <div class="stat"><div class="bar"></div><div class="num"><span data-count="4">4</span></div><div class="lab">Regions served</div><div class="ctx">Americas · Europe · ME · APAC</div></div>
+          <div class="hero-stats stats" style="--cols:3">
+            <div class="stat"><div class="bar"></div><div class="num"><span data-count="25">25</span><span class="sfx">+</span></div><div class="lab">Years of leadership experience</div></div>
+            <div class="stat"><div class="bar"></div><div class="num"><span data-count="20">20</span><span class="sfx">+</span></div><div class="lab">Tech stack expertise</div></div>
+            <div class="stat"><div class="bar"></div><div class="num"><span data-count="3">3</span></div><div class="lab">Office locations</div><div class="ctx">Plano (USA) · Ho Chi Minh City (Vietnam)</div></div>
           </div>
         </div></div>
 
         <!-- services -->
         <div class="sec alt"><div class="wrap">
-          <div class="sec-head"><p class="label"><i></i>01 · What we do</p><h2 class="h2">8 services. One accountable partner.</h2></div>
+          <div class="sec-head"><p class="label"><i></i>Our services</p><h2 class="h2">Technology solutions that transform your business</h2></div>
           <div class="svc-grid">
             <article class="card"><div class="icon-box"><svg class="ico"><use href="#i-code"/></svg></div><h3 class="h3">Product Engineering</h3><p class="small">MVP to scale.</p></article>
             <article class="card"><div class="icon-box" style="background:var(--gold-100);color:var(--brand-navy)"><svg class="ico"><use href="#i-spark"/></svg></div><h3 class="h3">AI-Powered Solutions</h3><p class="small">Agents & automation.</p></article>
             <article class="card"><div class="icon-box"><svg class="ico"><use href="#i-chart"/></svg></div><h3 class="h3">AI-Driven Analytics</h3><p class="small">Data into decisions.</p></article>
             <article class="card"><div class="icon-box"><svg class="ico"><use href="#i-users"/></svg></div><h3 class="h3">Staffing</h3><p class="small">Engineers in your team.</p></article>
           </div>
-          <p style="margin-top:24px"><a class="btn-link" href="#">See all 8 services <svg class="ico sm"><use href="#i-arrow"/></svg></a></p>
-        </div></div>
+                  </div></div>
 
         <!-- 4-D (compact reference) -->
         <div class="sec"><div class="wrap">
-          <div class="sec-head"><p class="label"><i></i>02 · How we work</p><h2 class="h2">4-D Process — visible every sprint.</h2><p class="lead">The animated 4-D component sits here (see the Signature frame above).</p></div>
+          <div class="sec-head"><p class="label"><i></i>4-D process</p><h2 class="h2">How we get IT done</h2><p class="lead">The animated 4-D component sits here (see the Signature frame above).</p></div>
           <div class="stats" style="margin-top:40px">
             <div class="stat"><div class="bar"></div><div class="num" style="font-size:44px">01</div><div class="lab">Discovery</div></div>
             <div class="stat"><div class="bar"></div><div class="num" style="font-size:44px">02</div><div class="lab">Design</div></div>
@@ -803,31 +725,30 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
 
         <!-- selected work (project viz) -->
         <div class="sec alt"><div class="wrap">
-          <div class="sec-head"><p class="label"><i></i>03 · Selected work</p><h2 class="h2">Real solutions for clients worldwide.</h2><p class="lead">Selected examples — not the full list.</p></div>
+          <div class="sec-head"><p class="label"><i></i>Products for schools</p><h2 class="h2">Our products for schools</h2><p class="lead">Products of our own for schools, built on the same engineering we bring to client work.</p></div>
           <div class="pv">
             <div>
-              <span class="chip chip-b tag">Case study · Education · Pro-code</span>
-              <h3 class="h2" style="font-size:30px">Agent-first platforms.</h3>
-              <div class="pv-nums"><div><div class="num">2</div><span>Platforms</span></div><div><div class="num">15</div><span>HR agents</span></div><div><div class="num">3</div><span>Languages</span></div></div>
-              <a class="btn-link" href="#">See all our work <svg class="ico sm"><use href="#i-arrow"/></svg></a>
+              <span class="chip chip-h tag">Our product · Education</span>
+              <h3 class="h2" style="font-size:30px">AI-powered platform for smart schools.</h3>
+              <div class="pv-nums" style="grid-template-columns:repeat(2,1fr)"><div><div class="num">3</div><span>Products</span></div><div><div class="num">10</div><span>Features</span></div></div>
             </div>
-            <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>StaffXP · Dashboard</span></div><div class="win-body"><div class="mini-kpis"><div><small>To mark</small><b>3</b></div><div><small>Classes</small><b>5</b></div><div><small>Tasks</small><b>4</b></div></div><div class="rowlist"><div><span>Class update — 5B</span><span class="chip chip-h" style="height:22px;font-size:11px">Preview</span></div><div><span>Attendance — Period 2</span><span class="chip chip-s" style="height:22px;font-size:11px">Done</span></div></div></div><div class="win-cap">Illustrative — fictional data</div></div>
+            <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>School platform · Dashboard</span></div><div class="win-body"><div class="mini-kpis"><div><small>To mark</small><b>3</b></div><div><small>Classes</small><b>5</b></div><div><small>Tasks</small><b>4</b></div></div><div class="rowlist"><div><span>Class update — 5B</span><span class="chip chip-h" style="height:22px;font-size:11px">Preview</span></div><div><span>Attendance — Period 2</span><span class="chip chip-s" style="height:22px;font-size:11px">Done</span></div></div></div><div class="win-cap">Illustrative — fictional data</div></div>
           </div>
         </div></div>
 
         <!-- industries with images -->
         <div class="sec"><div class="wrap">
-          <div class="sec-head"><p class="label"><i></i>04 · Industries</p><h2 class="h2">Built for your industry.</h2></div>
+          <div class="sec-head"><p class="label"><i></i>Clients and domains</p><h2 class="h2">Who we build for</h2><p class="lead">Varkey Education · CyberHive. Our domain knowledge runs deepest in EdTech, healthcare and logistics.</p></div>
           <div class="ind-grid">
-            <article class="ind"><div class="media"><div class="ph">Image · 4:3 · education</div></div><div><span class="chip chip-h" style="height:24px;font-size:11px">Deepest experience</span><h3 class="h3" style="margin-top:10px">Education</h3><p class="small">Platforms with AI agents built in.</p></div></article>
-            <article class="ind"><div class="media"><div class="ph">Image · 4:3 · enterprise</div></div><div><h3 class="h3">Enterprise & HR</h3><p class="small">Self-service and HR agents on ERPs.</p></div></article>
-            <article class="ind"><div class="media"><div class="ph">Image · 4:3 · healthcare</div></div><div><h3 class="h3">Healthcare</h3><p class="small">Privacy-first digital tools.</p></div></article>
+            <article class="ind"><div class="media"><div class="ph">Image · 4:3 · education</div></div><div><span class="chip chip-h" style="height:24px;font-size:11px">Deepest experience</span><h3 class="h3" style="margin-top:10px">EdTech</h3><p class="small">Multi-school apps for parents and staff.</p></div></article>
+            <article class="ind"><div class="media"><div class="ph">Image · 4:3 · logistics</div></div><div><h3 class="h3">Logistics</h3><p class="small">Domain knowledge from client work.</p></div></article>
+            <article class="ind"><div class="media"><div class="ph">Image · 4:3 · healthcare</div></div><div><h3 class="h3">Healthcare</h3><p class="small">Domain knowledge from client work.</p></div></article>
           </div>
         </div></div>
 
         <!-- inside xiontech (real photos, small) -->
         <div class="sec alt"><div class="wrap">
-          <div class="sec-head"><p class="label"><i></i>05 · Inside XionTech</p><h2 class="h2">The team behind your product.</h2><p class="lead">Real photos only — kept small until high-resolution originals arrive.</p></div>
+          <div class="sec-head"><p class="label"><i></i>Inside XionTechs</p><h2 class="h2">The team behind your product.</h2><p class="lead">Real photos only — kept small until high-resolution originals arrive.</p></div>
           <div class="gallery">
             <figure><div class="media"><img src="assets/team-at-work.webp" alt="The team at our AI workshop" loading="lazy"></div><figcaption>AI workshop</figcaption></figure>
             <figure><div class="media"><img src="assets/ai-training.webp" alt="Hands-on AI training" loading="lazy"></div><figcaption>Hands-on AI training</figcaption></figure>
@@ -838,14 +759,14 @@ figcaption { font-size: 13px; color: var(--ink-500); margin-top: 8px; }
 
         <!-- CTA band -->
         <div class="sec" style="padding-bottom:0"><div class="wrap">
-          <div class="band on-dark"><div><h2>Your requirements, <span class="y">our next build.</span></h2><p>We reply within 1 business day.</p></div><a class="btn btn-primary" href="#">Start a conversation <svg class="ico sm"><use href="#i-arrow"/></svg></a></div>
+          <div class="band on-dark"><div><h2>Tell us what you are <span class="y">building.</span></h2><p>Send a brief and we reply by email within 24 business hours.</p></div><a class="btn btn-primary" href="#">Email your brief <svg class="ico sm"><use href="#i-arrow"/></svg></a></div>
         </div></div>
 
         <!-- footer -->
         <footer class="foot"><div class="wrap">
-          <div><a class="logo" href="#"><img src="assets/xt-mark.png" alt="">XionTech</a><p style="margin-top:12px">AI-first product engineering, AI-powered solutions and dedicated teams.</p><p class="slogan">Get IT Done</p></div>
-          <div><h6>Services</h6><ul><li>Product Engineering</li><li>AI Solutions</li><li>Staffing</li></ul></div>
-          <div><h6>Company</h6><ul><li>About</li><li>Our Work</li><li>Careers</li></ul></div>
+          <div><a class="logo" href="#"><img src="assets/xt-mark.png" alt="">XionTechs</a><p style="margin-top:12px">Plano, Texas · Ho Chi Minh City</p><p class="slogan">Get IT Done</p></div>
+          <div><h6>Links</h6><ul><li>Careers</li><li>Privacy policy</li><li>Terms of service</li></ul></div>
+          <div><h6>Social</h6><ul><li>Facebook</li><li>LinkedIn</li></ul></div>
           <div><h6>Contact</h6><ul><li>contact@xiontechs.com</li><li>+1 469 322 9899</li><li>+84 908 107 552</li></ul></div>
         </div></footer>
       </div>

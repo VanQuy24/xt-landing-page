@@ -49,12 +49,12 @@ Must communicate: a long track record, wide technical range and real offices.
 
 Source: live home stats. The office line is rewritten because the live text names Dallas and Da Nang, which the team corrected: no Da Nang office, and the US office is in Plano. The "24/7" claim is cut because the live Support page gives Monday to Friday, 9:00 to 18:00 ICT.
 
-| Number | Label | Detail line |
-|---|---|---|
-| 25+ | Years of leadership experience | Our leadership team brings decades of expertise in IT services and product engineering across multiple industries and technology transformations. |
-| 20+ | Tech stack expertise | From AI/ML and cloud solutions to microservices and front-end frameworks. |
-| 3 | Office locations | Plano (USA) and two offices in Ho Chi Minh City (Vietnam). [UPDATE: one HCMC office is moving. If the move leaves two offices, change the number to 2.] |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.] |
+| Number                                  | Label                                          | Detail line                                                                                                                                             |
+| --------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 25+                                     | Years of leadership experience                 | Our leadership team brings decades of expertise in IT services and product engineering across multiple industries and technology transformations.       |
+| 20+                                     | Tech stack expertise                           | From AI/ML and cloud solutions to microservices and front-end frameworks.                                                                               |
+| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam). [UPDATE: one HCMC office is moving. If the move leaves two offices, change the number to 2.] |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                      |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 
@@ -69,16 +69,16 @@ Source: live home "Our services", all 8, word for word. "Staffings Service" fixe
 - Section label: Our services
 - Heading: Technology solutions that transform your business
 
-| Service | Description |
-|---|---|
-| Product engineering | Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation. |
-| AI-driven analytics | Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes. |
-| Product co-creation | Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives. |
-| Staffing services | Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery. |
-| Custom app development | Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage. |
-| Low-code solutions | Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications. |
-| AI-powered solutions | Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth. |
-| Cloud computing | Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs. |
+| Service                | Description                                                                                                                                                                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Product engineering    | Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation.                  |
+| AI-driven analytics    | Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes. |
+| Product co-creation    | Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives.                                        |
+| Staffing services      | Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery.                                                 |
+| Custom app development | Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage.                                      |
+| Low-code solutions     | Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications.              |
+| AI-powered solutions   | Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth.                                     |
+| Cloud computing        | Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs.                       |
 
 [CONTENT-LEAD: tighten. Several descriptions open with "Transform" or "Accelerate" and use filler like "seamless" and "competitive advantage".]
 
@@ -98,6 +98,7 @@ Source: newxion.com/solutions for the platform and timetabling, reworded lightly
 An integrated digital ecosystem that uses artificial intelligence to improve learning, streamline administration and raise student engagement. It delivers personalized learning paths, real-time analytics, automated grading and smart resource management.
 
 Features:
+
 - Personalized learning
 - Smart classroom management
 - AI-powered assessment
@@ -161,10 +162,10 @@ Source: none yet. The live testimonials, Alex Farnandes, Andrew D. Smith and oth
 
 - Heading: What clients say
 
-| Client | Quote | Person |
-|---|---|---|
+| Client           | Quote                                         | Person                           |
+| ---------------- | --------------------------------------------- | -------------------------------- |
 | Varkey Education | [DUMMY: approved quote from Varkey Education] | [DUMMY: name and role, approved] |
-| CyberHive | [DUMMY: approved quote from CyberHive] | [DUMMY: name and role, approved] |
+| CyberHive        | [DUMMY: approved quote from CyberHive]        | [DUMMY: name and role, approved] |
 
 Remove the whole section before launch if no real quote arrives.
 
@@ -179,12 +180,12 @@ Source: live home "4-D process", word for word. The note under the steps replace
 - Section label: 4-D process
 - Heading: How we get IT done
 
-| Step | Name | Copy |
-|---|---|---|
-| 01 | Discovery | Strategic alignment of your business goals with technical solutions. We define clear, measurable outcomes. |
-| 02 | Design | Custom solutions built on our integrated engineering platform. We address your specific business challenges. |
-| 03 | Development | Agile implementation with transparent communication. We ensure quality through comprehensive testing. |
-| 04 | Deployment | Data-driven performance monitoring with ongoing support. We ensure efficiency while focusing on long-term success. |
+| Step | Name        | Copy                                                                                                               |
+| ---- | ----------- | ------------------------------------------------------------------------------------------------------------------ |
+| 01   | Discovery   | Strategic alignment of your business goals with technical solutions. We define clear, measurable outcomes.         |
+| 02   | Design      | Custom solutions built on our integrated engineering platform. We address your specific business challenges.       |
+| 03   | Development | Agile implementation with transparent communication. We ensure quality through comprehensive testing.              |
+| 04   | Deployment  | Data-driven performance monitoring with ongoing support. We ensure efficiency while focusing on long-term success. |
 
 - Note: Agile practices and an AI-driven workflow, with metric-driven project management.
 
@@ -202,11 +203,11 @@ Source: live home "Why choose us", word for word. "Integrity Ethical Standards" 
 - Heading: Our priority, our commitment, our solutions
 - Intro: Choose XionTechs for integrated solutions, industry experience, and metric-driven delivery. We bring product ideas to life through collaborative creation and a "Get IT Done" attitude.
 
-| Point | Copy |
-|---|---|
-| Client centricity focus | XionTechs emphasizes a client-first approach, focusing on providing exceptional experiences and valuable outcomes. |
+| Point                           | Copy                                                                                                                                |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Client centricity focus         | XionTechs emphasizes a client-first approach, focusing on providing exceptional experiences and valuable outcomes.                  |
 | Integrity and ethical standards | With an integrity mindset, XionTechs operates with honesty and transparency, maintaining the highest ethical standards in all work. |
-| High quality delivery | XionTechs is responsible for providing high-quality solutions that are reliable and efficient, exceeding industry standards. |
+| High quality delivery           | XionTechs is responsible for providing high-quality solutions that are reliable and efficient, exceeding industry standards.        |
 
 ---
 
@@ -261,6 +262,7 @@ Source: form labels and messages from the earlier draft, `source/en/form.json`. 
 - Intro: Send a brief and we reply by email within 24 business hours.
 
 Form:
+
 - Your name (required)
 - Work email (required)
 - Service (optional): Choose a service · Product engineering · AI-driven analytics · Product co-creation · Staffing services · Custom app development · Low-code solutions · AI-powered solutions · Cloud computing
@@ -268,6 +270,7 @@ Form:
 - Button: Send brief
 
 Form messages:
+
 - Bad email: That email looks incomplete. Check it and send again.
 - Missing fields: Fill in all three required fields so we know where to start.
 - Sending: Sending your brief…
@@ -277,6 +280,7 @@ Form messages:
 [DUMMY: the inbox the form sends to. Default is contact@xiontechs.com. Confirm it and pick the form service.]
 
 Other ways to reach us:
+
 - USA: +1 469 322 9899
 - Vietnam: +84 908 107 552
 - WhatsApp: +1 469 439 9345
@@ -284,6 +288,7 @@ Other ways to reach us:
 - Office hours: Monday to Friday, 9:00 to 18:00 (ICT, GMT+7)
 
 Offices:
+
 - Plano: 7950 Legacy Drive, Suite 400, Plano, TX 75024, USA
 - Ho Chi Minh City: Floor 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam
 - Ho Chi Minh City: Floor 15, B1 Building, 279 Nguyen Tri Phuong, Ho Chi Minh City, Vietnam [UPDATE: this office is moving. Put in the new address and recheck the office count in section 2.]

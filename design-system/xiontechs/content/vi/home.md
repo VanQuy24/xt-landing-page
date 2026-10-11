@@ -32,12 +32,12 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 2. Numbers
 
-| Number | Label | Detail line |
-|---|---|---|
-| 25+ | Năm kinh nghiệm lãnh đạo | Đội ngũ lãnh đạo có hàng chục năm kinh nghiệm về dịch vụ CNTT và phát triển sản phẩm, qua nhiều ngành và nhiều đợt chuyển đổi công nghệ. |
-| 20+ | Nền tảng công nghệ thành thạo | Từ AI/ML và cloud đến microservices và front-end framework. |
-| 3 | Văn phòng | Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam). [UPDATE: same as English] |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.] |
+| Number                                  | Label                                          | Detail line                                                                                                                              |
+| --------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 25+                                     | Năm kinh nghiệm lãnh đạo                       | Đội ngũ lãnh đạo có hàng chục năm kinh nghiệm về dịch vụ CNTT và phát triển sản phẩm, qua nhiều ngành và nhiều đợt chuyển đổi công nghệ. |
+| 20+                                     | Nền tảng công nghệ thành thạo                  | Từ AI/ML và cloud đến microservices và front-end framework.                                                                              |
+| 3                                       | Văn phòng                                      | Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam). [UPDATE: same as English]                                                    |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                       |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 
@@ -48,16 +48,16 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 - Section label: Dịch vụ
 - Heading: Giải pháp công nghệ giúp doanh nghiệp của bạn đổi mới
 
-| Service | Description |
-|---|---|
-| Phát triển sản phẩm | Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường nhờ năng lực kỹ thuật toàn diện. Chúng tôi xây dựng giải pháp có khả năng mở rộng, lấy người dùng làm trung tâm, hướng tới thành công thương mại và sự khác biệt trên thị trường. |
-| Phân tích dữ liệu bằng AI | Biến dữ liệu thô thành thông tin hữu ích bằng AI và kỹ thuật trực quan hóa. Giải pháp của chúng tôi tìm ra các quy luật ẩn, tối ưu vận hành và giúp ra quyết định dựa trên dữ liệu, với kết quả đo lường được. |
-| Đồng kiến tạo sản phẩm | Đẩy nhanh đổi mới bằng cách kết hợp hiểu biết chuyên ngành của bạn với năng lực kỹ thuật của chúng tôi, để phát triển giải pháp riêng theo đúng mục tiêu kinh doanh. |
-| Cung ứng nhân sự | Có ngay nhân sự công nghệ chuyên môn khi cần, với hình thức linh hoạt. Kỹ sư của chúng tôi hòa nhập vào đội ngũ của bạn để đẩy nhanh tiến độ dự án. |
-| Phát triển ứng dụng theo yêu cầu | Phát triển giải pháp theo đúng yêu cầu riêng và hiện đại hóa hệ thống cũ. Ứng dụng của chúng tôi tăng hiệu quả, loại bỏ quy trình thủ công và tạo lợi thế cạnh tranh. |
-| Giải pháp low-code | Chuyển đổi nhanh hơn với các nền tảng như Power Platform, Make, n8n, Retool và Bubble. Giải pháp low-code giúp triển khai nhanh, giảm chi phí và cho phép đội ngũ của bạn tự tạo ứng dụng. |
-| Giải pháp ứng dụng AI | Dùng trí tuệ nhân tạo để đổi mới vận hành: tự động hóa thông minh, phân tích dự báo, giao diện hội thoại và tự động hóa quy trình bằng AI. |
-| Điện toán đám mây | Giải pháp trên Azure, AWS và GCP cho việc chuyển đổi, tối ưu và tích hợp tài nguyên cloud. Chúng tôi giúp tăng khả năng mở rộng, tăng bảo mật và tối ưu chi phí vận hành. |
+| Service                          | Description                                                                                                                                                                                                                             |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Phát triển sản phẩm              | Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường nhờ năng lực kỹ thuật toàn diện. Chúng tôi xây dựng giải pháp có khả năng mở rộng, lấy người dùng làm trung tâm, hướng tới thành công thương mại và sự khác biệt trên thị trường. |
+| Phân tích dữ liệu bằng AI        | Biến dữ liệu thô thành thông tin hữu ích bằng AI và kỹ thuật trực quan hóa. Giải pháp của chúng tôi tìm ra các quy luật ẩn, tối ưu vận hành và giúp ra quyết định dựa trên dữ liệu, với kết quả đo lường được.                          |
+| Đồng kiến tạo sản phẩm           | Đẩy nhanh đổi mới bằng cách kết hợp hiểu biết chuyên ngành của bạn với năng lực kỹ thuật của chúng tôi, để phát triển giải pháp riêng theo đúng mục tiêu kinh doanh.                                                                    |
+| Cung ứng nhân sự                 | Có ngay nhân sự công nghệ chuyên môn khi cần, với hình thức linh hoạt. Kỹ sư của chúng tôi hòa nhập vào đội ngũ của bạn để đẩy nhanh tiến độ dự án.                                                                                     |
+| Phát triển ứng dụng theo yêu cầu | Phát triển giải pháp theo đúng yêu cầu riêng và hiện đại hóa hệ thống cũ. Ứng dụng của chúng tôi tăng hiệu quả, loại bỏ quy trình thủ công và tạo lợi thế cạnh tranh.                                                                   |
+| Giải pháp low-code               | Chuyển đổi nhanh hơn với các nền tảng như Power Platform, Make, n8n, Retool và Bubble. Giải pháp low-code giúp triển khai nhanh, giảm chi phí và cho phép đội ngũ của bạn tự tạo ứng dụng.                                              |
+| Giải pháp ứng dụng AI            | Dùng trí tuệ nhân tạo để đổi mới vận hành: tự động hóa thông minh, phân tích dự báo, giao diện hội thoại và tự động hóa quy trình bằng AI.                                                                                              |
+| Điện toán đám mây                | Giải pháp trên Azure, AWS và GCP cho việc chuyển đổi, tối ưu và tích hợp tài nguyên cloud. Chúng tôi giúp tăng khả năng mở rộng, tăng bảo mật và tối ưu chi phí vận hành.                                                               |
 
 ---
 
@@ -71,6 +71,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 Một hệ sinh thái số tích hợp, dùng trí tuệ nhân tạo để nâng cao việc học, đơn giản hóa quản lý và tăng sự gắn kết của học sinh. Nền tảng mang lại lộ trình học cá nhân hóa, phân tích theo thời gian thực, chấm điểm tự động và quản lý tài nguyên thông minh.
 
 Tính năng:
+
 - Học tập cá nhân hóa
 - Quản lý lớp học thông minh
 - Đánh giá bằng AI
@@ -124,10 +125,10 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 
 - Heading: Khách hàng nói gì về chúng tôi
 
-| Client | Quote | Person |
-|---|---|---|
+| Client           | Quote                                         | Person                           |
+| ---------------- | --------------------------------------------- | -------------------------------- |
 | Varkey Education | [DUMMY: approved quote from Varkey Education] | [DUMMY: name and role, approved] |
-| CyberHive | [DUMMY: approved quote from CyberHive] | [DUMMY: name and role, approved] |
+| CyberHive        | [DUMMY: approved quote from CyberHive]        | [DUMMY: name and role, approved] |
 
 [VI-REVIEW: a real quote is shown in its original language, with a Vietnamese translation if needed.]
 
@@ -138,12 +139,12 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 - Section label: Quy trình 4-D
 - Heading: Cách chúng tôi "Get IT Done"
 
-| Step | Name | Copy |
-|---|---|---|
-| 01 | Khám phá | Gắn mục tiêu kinh doanh của bạn với giải pháp kỹ thuật. Chúng tôi xác định kết quả rõ ràng, đo lường được. |
-| 02 | Thiết kế | Giải pháp riêng, xây dựng trên nền tảng kỹ thuật tích hợp của chúng tôi, giải quyết đúng thách thức kinh doanh của bạn. |
-| 03 | Phát triển | Triển khai theo Agile, trao đổi minh bạch. Chúng tôi đảm bảo chất lượng bằng kiểm thử toàn diện. |
-| 04 | Vận hành | Theo dõi hiệu năng dựa trên dữ liệu và hỗ trợ liên tục. Chúng tôi đảm bảo hiệu quả và hướng tới thành công lâu dài. |
+| Step | Name       | Copy                                                                                                                    |
+| ---- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 01   | Khám phá   | Gắn mục tiêu kinh doanh của bạn với giải pháp kỹ thuật. Chúng tôi xác định kết quả rõ ràng, đo lường được.              |
+| 02   | Thiết kế   | Giải pháp riêng, xây dựng trên nền tảng kỹ thuật tích hợp của chúng tôi, giải quyết đúng thách thức kinh doanh của bạn. |
+| 03   | Phát triển | Triển khai theo Agile, trao đổi minh bạch. Chúng tôi đảm bảo chất lượng bằng kiểm thử toàn diện.                        |
+| 04   | Vận hành   | Theo dõi hiệu năng dựa trên dữ liệu và hỗ trợ liên tục. Chúng tôi đảm bảo hiệu quả và hướng tới thành công lâu dài.     |
 
 - Note: Thực hành Agile và quy trình làm việc ứng dụng AI, quản lý dự án bằng số liệu.
 
@@ -159,11 +160,11 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 - Heading: Ưu tiên, cam kết và giải pháp của chúng tôi
 - Intro: Chọn XionTechs để có giải pháp tích hợp, kinh nghiệm ngành và cách làm dựa trên số liệu. Chúng tôi biến ý tưởng sản phẩm thành hiện thực bằng sự hợp tác cùng kiến tạo và tinh thần "Get IT Done".
 
-| Point | Copy |
-|---|---|
-| Lấy khách hàng làm trung tâm | XionTechs đặt khách hàng lên hàng đầu, tập trung mang lại trải nghiệm tốt và kết quả có giá trị. |
+| Point                           | Copy                                                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Lấy khách hàng làm trung tâm    | XionTechs đặt khách hàng lên hàng đầu, tập trung mang lại trải nghiệm tốt và kết quả có giá trị.                          |
 | Chính trực và chuẩn mực đạo đức | Với tinh thần chính trực, XionTechs làm việc trung thực, minh bạch và giữ chuẩn mực đạo đức cao nhất trong mọi công việc. |
-| Chất lượng bàn giao cao | XionTechs chịu trách nhiệm mang lại giải pháp chất lượng cao, ổn định và hiệu quả, vượt chuẩn ngành. |
+| Chất lượng bàn giao cao         | XionTechs chịu trách nhiệm mang lại giải pháp chất lượng cao, ổn định và hiệu quả, vượt chuẩn ngành.                      |
 
 ---
 
@@ -206,6 +207,7 @@ XionTechs đo lường giá trị bằng các chỉ số về tốc độ, chấ
 - Intro: Gửi yêu cầu và chúng tôi sẽ trả lời qua email trong vòng 24 giờ làm việc.
 
 Form:
+
 - Họ tên (bắt buộc)
 - Email công việc (bắt buộc)
 - Dịch vụ (không bắt buộc): Chọn dịch vụ · Phát triển sản phẩm · Phân tích dữ liệu bằng AI · Đồng kiến tạo sản phẩm · Cung ứng nhân sự · Phát triển ứng dụng theo yêu cầu · Giải pháp low-code · Giải pháp ứng dụng AI · Điện toán đám mây
@@ -213,6 +215,7 @@ Form:
 - Button: Gửi yêu cầu
 
 Form messages:
+
 - Bad email: Email có vẻ chưa đầy đủ. Vui lòng kiểm tra và gửi lại.
 - Missing fields: Vui lòng điền đủ ba ô bắt buộc để chúng tôi biết bắt đầu từ đâu.
 - Sending: Đang gửi yêu cầu…
@@ -222,6 +225,7 @@ Form messages:
 [DUMMY: the inbox the form sends to. Default is contact@xiontechs.com. Confirm it and pick the form service.]
 
 Other ways to reach us:
+
 - Mỹ: +1 469 322 9899
 - Việt Nam: +84 908 107 552
 - WhatsApp: +1 469 439 9345
@@ -229,6 +233,7 @@ Other ways to reach us:
 - Giờ làm việc: Thứ Hai đến Thứ Sáu, 9:00 đến 18:00 (giờ Việt Nam, GMT+7)
 
 Offices:
+
 - Plano: 7950 Legacy Drive, Suite 400, Plano, TX 75024, USA
 - TP. Hồ Chí Minh: Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh
 - TP. Hồ Chí Minh: Tầng 15, Tòa nhà B1, 279 Nguyễn Tri Phương, TP. Hồ Chí Minh [UPDATE: same as English]

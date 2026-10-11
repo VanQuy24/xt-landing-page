@@ -3,7 +3,7 @@
 
 ## xt-landing-page
 
-XionTechs marketing landing page. Astro 7 static output, Tailwind CSS 4, TypeScript strict, npm, locales `en` (default, no URL prefix) and `vi` (`/vi/`). Work is planned and built with BMAD skills; planning artifacts and tickets live in `_bmad-output/`. Design rules live in `design-system/xiontechs/MASTER.md`.
+XionTechs marketing landing page. Astro 7 static output, Tailwind CSS 4, TypeScript strict, npm, locales `en` (default, no URL prefix) and `vi` (`/vi/`). Work is planned and built with BMAD skills; planning artifacts and tickets live in `_bmad-output/`. Design lives in `design-system/xiontechs/`: rules in `MASTER.md`, page copy in `content/`, visual board in `preview/`. `_bmad-output/` holds BMAD process artifacts only, never design rules.
 
 ## Policy
 
@@ -19,6 +19,7 @@ XionTechs marketing landing page. Astro 7 static output, Tailwind CSS 4, TypeScr
 - Locale routing: `src/pages/index.astro` (en) and `src/pages/[lang]/index.astro` (other locales) both render `HomePage`.
 - Locale list: `src/i18n/config.ts` — also imported by `astro.config.mjs`, so keep it free of other imports.
 - Before building or changing UI, read `design-system/xiontechs/MASTER.md` and use the `ui-ux-pro-max` skill; a `design-system/xiontechs/pages/<page>.md` overrides MASTER for that page.
+- Page copy comes from `design-system/xiontechs/content/{en,vi}/`; navigation and pages from `content/sitemap.md`. Never ship a `[DUMMY: ...]` item; open items are tracked in `content/open-data.md`.
 
 ## Running and verifying
 
@@ -36,9 +37,10 @@ XionTechs marketing landing page. Astro 7 static output, Tailwind CSS 4, TypeScr
 
 ## Known pitfalls
 
-- Poppins (the design system's original heading suggestion) has no Vietnamese subset and breaks diacritics; the heading font is Montserrat.
+- Poppins and Figtree have no Vietnamese subset and break diacritics; the fonts are Manrope (headings, numbers) and Inter (body).
 - Astro `<Font>` CSS variables must not share a name with a Tailwind `@theme` token (e.g. `--font-display`) — the variable resolves to itself. Astro font variables are named after the font (`--font-montserrat`).
 - `eslint-plugin-jsx-a11y` does not support ESLint 10; do not add it. Check accessibility with the `MASTER.md` pre-delivery checklist.
 - `npx ui-ux-pro-max-cli update` reinstalls `slides`, `banner-design`, `design` and `ui-styling` skills; delete them afterwards — `ui-styling` pushes shadcn/React.
+- `ui-ux-pro-max` with `--persist` regenerates `design-system/xiontechs/MASTER.md` and wipes the hand-written rules; never run it with `--persist` for `xiontechs`; write page overrides in `pages/` by hand.
 
 <!-- /bmad:context -->
