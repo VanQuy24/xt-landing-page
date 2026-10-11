@@ -1,0 +1,45 @@
+---
+import Icon from './Icon.astro';
+
+// MASTER §6.2 "Agent chat window": the user asks, the assistant answers with a card (UI, not text). Decorative.
+interface Props {
+  bar: string;
+  ask: string;
+  card: string;
+  rows: { k: string; v: string }[];
+  confirm: string;
+}
+
+const { bar, ask, card, rows, confirm } = Astro.props;
+---
+
+<div class="border-line shadow-2 overflow-hidden rounded-lg border bg-white" aria-hidden="true">
+  <div class="border-line text-small text-ink-500 flex h-9 items-center gap-2 border-b px-4">
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="ms-2 truncate font-semibold">{bar}</span>
+  </div>
+  <div class="bg-surface grid gap-4 p-4 sm:p-6">
+    <p data-step class="text-small ms-auto max-w-[80%] rounded-lg rounded-ee-sm bg-blue-600 px-4 py-3 text-white">
+      {ask}
+    </p>
+    <div data-step style="--i:1" class="border-line max-w-sm rounded-lg rounded-es-sm border bg-white p-4">
+      <p class="text-ink-900 flex items-center gap-2 font-semibold">
+        <Icon name="file" class="size-5 text-blue-600" />
+        {card}
+      </p>
+      <dl class="text-small mt-3 grid grid-cols-[auto_1fr] gap-x-6 gap-y-1">
+        {rows.map((r) => (
+          <>
+            <dt class="text-ink-500">{r.k}</dt>
+            <dd class="text-ink-900 font-semibold">{r.v}</dd>
+          </>
+        ))}
+      </dl>
+      <span class="mt-4 inline-flex h-9 items-center rounded-md bg-blue-600 px-4 text-sm font-semibold text-white">
+        {confirm}
+      </span>
+    </div>
+  </div>
+</div>

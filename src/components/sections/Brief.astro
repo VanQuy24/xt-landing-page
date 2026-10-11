@@ -1,0 +1,72 @@
+---
+import { company, telHref, whatsappHref } from '../../data/company';
+import { getDictionary, type Locale } from '../../i18n';
+import Button from '../ui/Button.astro';
+import Icon, { type IconName } from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §11, contact block (MASTER §5.13). The brief goes by email until a form service is chosen.
+interface Props {
+  lang: Locale;
+}
+
+const t = getDictionary(Astro.props.lang);
+const b = t.brief;
+const mailto = `mailto:${company.email}?subject=${encodeURIComponent(b.subject)}`;
+const contacts: { icon: IconName; label: string; value: string; href?: string }[] = [
+  { icon: 'phone', label: b.usa, value: company.phones.usa, href: telHref(company.phones.usa) },
+  { icon: 'phone', label: b.vietnam, value: company.phones.vietnam, href: telHref(company.phones.vietnam) },
+  { icon: 'message', label: b.whatsapp, value: company.phones.whatsapp, href: whatsappHref(company.phones.whatsapp) },
+  { icon: 'mail', label: b.email, value: company.email, href: `mailto:${company.email}` },
+  { icon: 'clock', label: b.hours, value: b.hoursValue },
+];
+---
+
+<Section id="contact" labelledby="contact-title">
+  <div class="grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-5">
+      <SectionHeader id="contact-title" label={b.label} heading={b.heading} lead={b.intro} />
+      <Button href={mailto} class="mt-8">
+        <Icon name="mail" class="size-5" />
+        {b.cta}
+      </Button>
+    </div>
+
+    <div class="lg:col-span-7">
+      <h3 class="text-label text-ink-500 uppercase">{b.contactLabel}</h3>
+      <dl class="divide-line border-line mt-4 divide-y border-y">
+        {contacts.map((c) => (
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 py-3">
+            <dt class="text-ink-500 flex w-40 items-center gap-3">
+              <Icon name={c.icon} class="size-5 text-blue-600" />
+              {c.label}
+            </dt>
+            <dd class="text-ink-900 font-semibold">
+              {c.href ? (
+                <a href={c.href} dir="ltr" class="hover:text-blue-600 hover:underline">
+                  {c.value}
+                </a>
+              ) : (
+                c.value
+              )}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <h3 class="text-label text-ink-500 mt-10 uppercase">{b.officesLabel}</h3>
+      <ul class="mt-4 grid gap-4 sm:grid-cols-3">
+        {b.offices.map((o) => (
+          <li class="border-line rounded-lg border p-5">
+            <p class="text-h4 text-ink-900 flex items-center gap-2">
+              <Icon name="pin" class="size-5 text-blue-600" />
+              {o.city}
+            </p>
+            <address class="text-small text-ink-500 mt-2 not-italic">{o.address}</address>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</Section>

@@ -1,0 +1,66 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import ChatWindow from '../ui/ChatWindow.astro';
+import Chip from '../ui/Chip.astro';
+import ProjectShowcase from '../ui/ProjectShowcase.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §5 (MASTER §5.10): client names as text, never logos or product names.
+// The CyberHive line is left out until it is written (content/open-data.md #7).
+interface Props {
+  lang: Locale;
+}
+
+const t = getDictionary(Astro.props.lang);
+const c = t.clients;
+---
+
+<Section id="clients" labelledby="clients-title" surface>
+  <SectionHeader id="clients-title" label={c.label} heading={c.heading} />
+
+  <div class="border-line mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-y py-6">
+    <h3 class="sr-only">{c.namesLabel}</h3>
+    <ul class="divide-line flex flex-wrap items-center divide-x">
+      {c.names.map((n) => (
+        <li class="font-display text-h3 text-ink-700 px-6 first:ps-0">{n}</li>
+      ))}
+    </ul>
+    <div class="flex flex-wrap items-center gap-2 lg:ms-auto">
+      <h3 class="text-label text-ink-500 me-2 uppercase">{c.domainsLabel}</h3>
+      <ul class="flex flex-wrap gap-2">
+        {c.domains.map((d) => (
+          <li>
+            <Chip>{d}</Chip>
+          </li>
+        ))}
+        <li>
+          <Chip tone="more">{c.more}</Chip>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-body text-ink-700 mt-6 max-w-3xl">
+    {c.domainsBody} {c.visit}
+  </p>
+
+  <div class="mt-14">
+    <ProjectShowcase
+      tag={c.work.tag}
+      title={c.work.title}
+      body={c.work.body}
+      numbers={c.work.numbers}
+      chips={c.work.chips}
+      caption={t.a11y.illustrative}
+      reverse
+    >
+      <ChatWindow
+        bar={c.window.bar}
+        ask={c.window.ask}
+        card={c.window.card}
+        rows={c.window.rows}
+        confirm={c.window.confirm}
+      />
+    </ProjectShowcase>
+  </div>
+</Section>

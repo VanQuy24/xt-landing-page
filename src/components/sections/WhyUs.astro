@@ -1,0 +1,28 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import Icon, { type IconName } from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §8.
+interface Props {
+  lang: Locale;
+}
+
+const t = getDictionary(Astro.props.lang);
+---
+
+<Section id="why" labelledby="why-title" surface>
+  <SectionHeader id="why-title" label={t.why.label} heading={t.why.heading} lead={t.why.intro} />
+  <ul class="mt-12 grid gap-6 md:grid-cols-3">
+    {t.why.items.map((w) => (
+      <li class="border-line rounded-lg border bg-white p-6 lg:p-8">
+        <span class="inline-flex size-12 items-center justify-center rounded-md bg-blue-50 text-blue-600">
+          <Icon name={w.icon as IconName} />
+        </span>
+        <h3 class="font-display text-h3 text-ink-900 mt-5">{w.title}</h3>
+        <p class="text-small text-ink-500 mt-3">{w.body}</p>
+      </li>
+    ))}
+  </ul>
+</Section>

@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import { getDictionary, type Locale } from '../../i18n';
+import aiTraining from '../../assets/ai-training.webp';
+import recognition from '../../assets/recognition.webp';
+import sessions from '../../assets/sessions-1.webp';
+import teamAtWork from '../../assets/team-at-work.webp';
+import Icon from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §9. Real XionTechs photos; they are small crops, so they stay ≤ 300px wide (MASTER §4.2).
+interface Props {
+  lang: Locale;
+}
+
+const t = getDictionary(Astro.props.lang);
+const a = t.about;
+const photos = [teamAtWork, aiTraining, sessions, recognition].map((src, i) => ({ src, ...a.photos[i] }));
+---
+
+<Section id="about" labelledby="about-title">
+  <div class="grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-6">
+      <SectionHeader id="about-title" label={a.label} heading={a.heading} />
+      <p class="text-body text-ink-700 mt-6">{a.body}</p>
+      <ul class="mt-6 space-y-3">
+        {a.bullets.map((b) => (
+          <li class="text-ink-700 flex items-start gap-3">
+            <Icon name="check" class="mt-0.5 size-5 shrink-0 text-blue-600" />
+            {b}
+          </li>
+        ))}
+      </ul>
+      <p class="text-body text-ink-900 mt-8 font-semibold">{a.name}</p>
+      <p class="text-small text-ink-500 mt-2 flex items-start gap-2">
+        <Icon name="pin" class="mt-0.5 size-4 shrink-0" />
+        {a.place}
+      </p>
+    </div>
+    <ul class="grid grid-cols-2 gap-4 lg:col-span-6">
+      {photos.map((p) => (
+        <li>
+          <figure>
+            <Image
+              src={p.src}
+              alt={p.alt}
+              width={300}
+              widths={[150, 300]}
+              sizes="(min-width: 1024px) 280px, 45vw"
+              class="aspect-[3/4] w-full rounded-md object-cover"
+            />
+            <figcaption class="text-small text-ink-500 mt-2">{p.caption}</figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Section>

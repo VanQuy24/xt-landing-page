@@ -1,7 +1,9 @@
 ---
 import { Font } from 'astro:assets';
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
-import { defaultLocale, locales, stripLocale, type Locale } from '../i18n';
+import Footer from '../components/sections/Footer.astro';
+import Header from '../components/sections/Header.astro';
+import { defaultLocale, getDictionary, locales, stripLocale, type Locale } from '../i18n';
 import '../styles/global.css';
 
 interface Props {
@@ -11,6 +13,7 @@ interface Props {
 }
 
 const { lang, title, description } = Astro.props;
+const t = getDictionary(lang);
 
 const path = stripLocale(Astro.url.pathname, lang);
 const canonical = getAbsoluteLocaleUrl(lang, path);
@@ -43,6 +46,16 @@ const canonical = getAbsoluteLocaleUrl(lang, path);
     <Font cssVariable="--font-inter" preload />
   </head>
   <body class="text-body text-ink-700 min-h-dvh bg-white font-sans antialiased">
-    <slot />
+    <a
+      href="#main"
+      class="sr-only z-70 rounded-md bg-blue-600 px-5 py-3 font-semibold text-white focus:not-sr-only focus:fixed focus:start-4 focus:top-4"
+    >
+      {t.a11y.skip}
+    </a>
+    <Header lang={lang} />
+    <main id="main" tabindex="-1" class="focus:outline-none">
+      <slot />
+    </main>
+    <Footer lang={lang} />
   </body>
 </html>

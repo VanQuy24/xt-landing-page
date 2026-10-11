@@ -1,0 +1,58 @@
+---
+// MASTER §5.6, strip variant. The final value is server-rendered; the script counts up once when visible.
+interface Stat {
+  value: number;
+  suffix: string;
+  label: string;
+  context?: string;
+}
+
+interface Props {
+  items: Stat[];
+  label: string;
+  class?: string;
+}
+
+const { items, label, class: className } = Astro.props;
+---
+
+<dl aria-label={label} class:list={['grid gap-y-8 sm:grid-cols-3', className]}>
+  {items.map((s) => (
+    <div class="border-line flex flex-col sm:border-s sm:px-7 sm:first:border-s-0 sm:first:ps-0">
+      <dt class="text-label text-ink-500 mt-3 uppercase">{s.label}</dt>
+      <dd class="-order-1 flex flex-col">
+        <span class="mb-4 h-1 w-8 rounded-full bg-blue-600" aria-hidden="true" />
+        <span class="font-display text-num-xl text-ink-900 tabular-nums lining-nums">
+          <span data-count={s.value}>{s.value}</span>
+          {s.suffix && <span class="text-gold-600">{s.suffix}</span>}
+        </span>
+      </dd>
+      {s.context && <dd class="text-small text-ink-500 mt-1">{s.context}</dd>}
+    </div>
+  ))}
+</dl>
+
+<script>
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          io.unobserve(e.target);
+          const el = e.target as HTMLElement;
+          const to = Number(el.dataset.count);
+          const start = performance.now();
+          const step = (now: number) => {
+            const p = Math.min((now - start) / 1200, 1);
+            el.textContent = String(Math.round(to * (1 - Math.pow(1 - p, 3))));
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.4 },
+    );
+    document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => io.observe(el));
+  }
+</script>
