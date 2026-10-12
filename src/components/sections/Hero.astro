@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import heroCircuit from '../../assets/hero-circuit.jpg';
+import heroCity from '../../assets/hero-hcmc.jpg';
 import { getDictionary, type Locale } from '../../i18n';
 import Button from '../ui/Button.astro';
 import Container from '../ui/Container.astro';
@@ -8,7 +8,8 @@ import Icon from '../ui/Icon.astro';
 import StatStrip from '../ui/StatStrip.astro';
 
 // Home §1 Hero + §2 Numbers. The gold Highlight button is used here and nowhere else (MASTER §5.1).
-// The image is abstract free-licensed stock with no people (MASTER §4.1), credited in content/en/home.md §1.
+// Full-bleed scenic stock with no people (MASTER §4.1), credited in content/en/home.md §1. A navy shade
+// fades out from the top so white text stays ≥ 4.5:1 over the sky while the sunrise over the city stays bright.
 interface Props {
   lang: Locale;
 }
@@ -16,39 +17,46 @@ interface Props {
 const t = getDictionary(Astro.props.lang);
 ---
 
-<section aria-labelledby="hero-title" class="pt-16 pb-16 lg:pt-24 lg:pb-24">
+<section aria-labelledby="hero-title" class="relative isolate overflow-hidden">
+  <Image
+    src={heroCity}
+    alt=""
+    width={1920}
+    widths={[768, 1280, 1920, 2400]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 -z-20 size-full object-cover object-bottom"
+  />
+  <div
+    class="from-blue-950/80 via-blue-950/55 absolute inset-0 -z-10 bg-linear-to-b to-transparent"
+    aria-hidden="true"
+  ></div>
   <Container>
-    <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
-      <div class="max-w-4xl lg:col-span-7">
-        <p class="text-label flex items-center gap-3 text-blue-600 uppercase">
-          <span class="h-1 w-8 rounded-full bg-blue-600" aria-hidden="true"></span>
-          {t.hero.eyebrow}
-        </p>
-        <h1 id="hero-title" class="font-display text-display text-ink-900 mt-5">
-          {t.hero.title}
-        </h1>
-        <p class="text-lead text-ink-500 mt-6 max-w-2xl">{t.hero.subtitle}</p>
-        <div class="mt-10 flex flex-wrap gap-3">
-          <Button href="#contact" variant="highlight">
-            {t.hero.cta}
-            <Icon name="arrow" class="size-5" />
-          </Button>
-          <Button href="#services" variant="secondary">
-            {t.hero.secondary}
-          </Button>
-        </div>
+    <div class="mx-auto flex min-h-[640px] max-w-3xl flex-col items-center pt-20 pb-64 text-center sm:min-h-[720px] lg:pt-28 lg:pb-80">
+      <p class="text-label flex items-center gap-3 text-white uppercase">
+        <span class="bg-gold-400 h-1 w-8 rounded-full" aria-hidden="true"></span>
+        {t.hero.eyebrow}
+        <span class="bg-gold-400 h-1 w-8 rounded-full" aria-hidden="true"></span>
+      </p>
+      <h1 id="hero-title" class="font-display text-display mt-5 text-white">
+        {t.hero.title}
+      </h1>
+      <p class="text-lead mt-6 max-w-2xl text-blue-50">{t.hero.subtitle}</p>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <Button href="#contact" variant="highlight">
+          {t.hero.cta}
+          <Icon name="arrow" class="size-5" />
+        </Button>
+        <Button href="#services" variant="light">
+          {t.hero.secondary}
+        </Button>
       </div>
-      <Image
-        src={heroCircuit}
-        alt=""
-        width={960}
-        widths={[480, 720, 960, 1200]}
-        sizes="(min-width: 1024px) 480px, 100vw"
-        loading="eager"
-        fetchpriority="high"
-        class="aspect-video w-full rounded-md object-cover lg:col-span-5 lg:aspect-square"
-      />
     </div>
-    <StatStrip items={t.numbers.items} label={t.numbers.label} class="border-line mt-16 border-t pt-10 lg:mt-20" />
+  </Container>
+</section>
+<section aria-label={t.numbers.label} class="pt-12 pb-16 lg:pt-16 lg:pb-24">
+  <Container>
+    <StatStrip items={t.numbers.items} label={t.numbers.label} />
   </Container>
 </section>

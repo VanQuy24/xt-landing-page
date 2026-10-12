@@ -302,7 +302,7 @@
     "featured": {
       "title": "Nhà mới, tầm cao mới: Văn phòng tầng 7 của chúng tôi",
       "body": "Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.",
-      "place": "Tầng 7, TP. Hồ Chí Minh",
+      "place": "Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh",
       "buildingAlt": "Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh",
       "photos": [
         {
@@ -317,7 +317,10 @@
           "id": "new-office-3",
           "alt": "Toàn đội làm việc tại văn phòng mới"
         }
-      ]
+      ],
+      "tag": "Văn phòng mới",
+      "directions": "Chỉ đường",
+      "directionsLabel": "Chỉ đường đến văn phòng mới trên Google Maps (mở tab mới)"
     },
     "items": [
       {
@@ -388,7 +391,7 @@
       },
       {
         "city": "TP. Hồ Chí Minh",
-        "address": "Tầng 15, Tòa nhà B1, 279 Nguyễn Tri Phương, TP. Hồ Chí Minh"
+        "address": "Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh"
       }
     ]
   },

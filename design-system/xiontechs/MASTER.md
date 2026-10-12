@@ -232,13 +232,13 @@ For `/privacy-policy` and `/terms-of-service`:
 
 ### 4.1 What images are for
 
-| Image type                 | Source                                             | Where                                       |
-| -------------------------- | -------------------------------------------------- | ------------------------------------------- |
-| **Product mockups**        | Built in HTML/SVG (crisp, translatable, light)     | Home §4 and §5 (Project Visualization §6.2) |
-| **Real company photos**    | XionTech's own (team, office, events, robots)      | Home, Careers                               |
-| **Icons**                  | One outline set (Lucide), 24px grid, 1.75px stroke | Everywhere                                  |
-| Stock photos               | **Avoid.** Never as "our team / office / clients"  | Rare                                        |
-| Abstract stock (no people) | Free-licensed, credited in content/en/home.md      | Home hero only                              |
+| Image type                          | Source                                             | Where                                       |
+| ----------------------------------- | -------------------------------------------------- | ------------------------------------------- |
+| **Product mockups**                 | Built in HTML/SVG (crisp, translatable, light)     | Home §4 and §5 (Project Visualization §6.2) |
+| **Real company photos**             | XionTech's own (team, office, events, robots)      | Home, Careers                               |
+| **Icons**                           | One outline set (Lucide), 24px grid, 1.75px stroke | Everywhere                                  |
+| Stock photos                        | **Avoid.** Never as "our team / office / clients"  | Rare                                        |
+| Scenic stock (landscape, no people) | Free-licensed, credited in content/en/home.md      | Home hero only                              |
 
 ### 4.2 Image optimization rules
 
@@ -250,7 +250,7 @@ For `/privacy-policy` and `/terms-of-service`:
 | **Never upscale**    | Display at or below native resolution. The Home §9 photos are AI-enhanced versions of the old low-res crops (1:1, 1200px sources): served at ≤ 300px CSS, 2x density. Replace them with real originals when they arrive. |
 | **Aspect ratios**    | Fixed set: **16:9**, **4:3**, **1:1**, **3:4**. `<Image>` writes width/height, so space is reserved (CLS < 0.1).                                                                                                         |
 | **Loading**          | Above-the-fold image: `loading="eager"` + `fetchpriority="high"`. Everything else: lazy (the `<Image>` default). No blur placeholders.                                                                                   |
-| **Treatment**        | Natural color, no filters, no duotone (the decorative Home hero render, §4.1, is the one exception). Rounded `radius-md`. Optional 1px `line` border on white backgrounds so light photos don't float.                   |
+| **Treatment**        | Natural color, no filters, no duotone. Rounded `radius-md`. Optional 1px `line` border on white backgrounds so light photos don't float.                                                                                 |
 | **Alt text**         | Every meaningful image gets alt text in both languages via the i18n dictionaries. Decorative images use `alt=""`.                                                                                                        |
 | **Originals needed** | High-resolution originals (≥ 1600px long edge) of the company photos.                                                                                                                                                    |
 
@@ -356,9 +356,9 @@ Same header and footer. Centered block: `num-hero` "404" (ink-900, gold bar abov
 
 ### 5.16 News (Home §9a)
 
-White section with a 1px `line` top border, section header (§5.5) first. **Featured block**: 3:4 photo left (`lg` 4 of 12 columns, `radius-md`); right side has a highlight chip "Latest" (§5.9) instead of a date, `h3`, body, a pin place line (`small`, ink-500) and a row of three 4:3 thumbnails. Then **3 cards** in a 3-column grid (stacked on mobile), newest first: white, 1px `line`, `radius-lg`, 4:3 image on top, then `<time datetime>` (`small`, ink-500, formatted per locale with `Intl.DateTimeFormat`, `dateStyle: 'medium'`, UTC), `h3`, `small` body. **No links** on the block or the cards. Card images take the card's `radius-lg` top corners (a card exception to the photo `radius-md`). The workshop name keeps `lang="vi"` in the English page. Each item in the dictionaries has an `id` that picks its image and date in `News.astro`, so order and count can change safely. News is intentionally not in the header nav. All images lazy, with `widths` + `sizes` and never above 2× display size (§4.2).
+White section with a 1px `line` top border, section header (§5.5) first. **Featured block**: one `surface` card, `radius-lg`, 1/3 photo (the new-office building, cover, fills the text height on `lg`; 4:3 above it on mobile) and 2/3 text: "Latest" highlight chip + "New office" brand chip, `h2`-size title, body, a `line`-topped address row (pin, full address, "Get directions" link to Google Maps in a new tab) and three 1:1 office thumbnails. Then **3 cards** in a 3-column grid (stacked on mobile), newest first: white, 1px `line`, `radius-lg`, 4:3 image on top, then `<time datetime>` (`small`, ink-500, formatted per locale with `Intl.DateTimeFormat`, `dateStyle: 'medium'`, UTC), `h3`, `small` body. **No links** on the block or the cards. Card images take the card's `radius-lg` top corners (a card exception to the photo `radius-md`). The workshop name keeps `lang="vi"` in the English page. Each item in the dictionaries has an `id` that picks its image and date in `News.astro`, so order and count can change safely. News is intentionally not in the header nav. All images lazy, with `widths` + `sizes` and never above 2× display size (§4.2).
 
-**Home hero (§1):** 7/5 split from `lg`: text left, decorative abstract image right (1:1, `radius-md`, `alt=""`, eager + `fetchpriority="high"`); below `lg` the image stacks under the buttons at 16:9.
+**Home hero (§1):** full-bleed scenic photo behind the centered headline (decorative, `alt=""`, eager + `fetchpriority="high"`, `object-cover`). A `blue-950` shade fades from 80% at the top to transparent at the bottom so white text and the white secondary button stay ≥ 4.5:1 over the sky. Gold highlight + `light` buttons. The numbers strip sits below on white.
 
 ---
 

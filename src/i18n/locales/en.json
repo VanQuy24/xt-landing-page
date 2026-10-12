@@ -302,7 +302,7 @@
     "featured": {
       "title": "New Home, New Heights: Our 7th-Floor Office",
       "body": "Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.",
-      "place": "7th floor, Ho Chi Minh City",
+      "place": "Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam",
       "buildingAlt": "The building of our new Ho Chi Minh City office",
       "photos": [
         {
@@ -317,7 +317,10 @@
           "id": "new-office-3",
           "alt": "The full team at work in the new office"
         }
-      ]
+      ],
+      "tag": "New office",
+      "directions": "Get directions",
+      "directionsLabel": "Get directions to our new office in Google Maps (opens in a new tab)"
     },
     "items": [
       {
@@ -388,7 +391,7 @@
       },
       {
         "city": "Ho Chi Minh City",
-        "address": "Floor 15, B1 Building, 279 Nguyen Tri Phuong, Ho Chi Minh City, Vietnam"
+        "address": "Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam"
       }
     ]
   },

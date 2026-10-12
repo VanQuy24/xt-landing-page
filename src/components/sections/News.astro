@@ -13,7 +13,7 @@ import Icon from '../ui/Icon.astro';
 import Section from '../ui/Section.astro';
 import SectionHeader from '../ui/SectionHeader.astro';
 
-// Home §9a (MASTER §5.16): featured new-office block + 3 dated cards, newest first. No links.
+// Home §9a (MASTER §5.16): featured new-office card (with a Google Maps directions link) + 3 dated cards, newest first.
 interface Props {
   lang: Locale;
 }
@@ -48,7 +48,10 @@ function dateFor(id: string) {
   return date;
 }
 
-const thumbs = n.featured.photos.map((p) => ({ src: imageFor(p.id), alt: p.alt }));
+// Featured: the building of the new office leads; the office photos follow as thumbnails.
+const photos = n.featured.photos.map((p) => ({ id: p.id, src: imageFor(p.id), alt: p.alt }));
+const thumbs = ['new-office-3', 'new-office-2', 'new-office-1'].flatMap((id) => photos.filter((p) => p.id === id));
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('54 Nguyễn Văn Thủ, Tân Định, Hồ Chí Minh')}`;
 const items = n.items
   .map((item) => {
     const [before, after] = item.body.split('{workshop}');
@@ -60,33 +63,50 @@ const items = n.items
 <Section id="news" labelledby="news-title" class="border-line border-t">
   <SectionHeader id="news-title" label={n.label} heading={n.heading} />
 
-  <article class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-center">
-    <Image
-      src={officeBuilding}
-      alt={n.featured.buildingAlt}
-      width={720}
-      widths={[360, 720]}
-      sizes="(min-width: 1280px) 380px, (min-width: 1024px) 30vw, (min-width: 640px) 384px, calc(100vw - 2rem)"
-      class="aspect-3/4 w-full rounded-md object-cover sm:max-w-sm lg:col-span-4 lg:max-w-none"
-    />
-    <div class="lg:col-span-8">
-      <Chip tone="highlight">{n.latest}</Chip>
-      <h3 class="font-display text-h3 text-ink-900 mt-4">{n.featured.title}</h3>
-      <p class="text-body text-ink-700 mt-3 max-w-2xl">{n.featured.body}</p>
-      <p class="text-small text-ink-500 mt-3 flex items-start gap-2">
-        <Icon name="pin" class="mt-0.5 size-4 shrink-0" />
-        {n.featured.place}
-      </p>
-      <ul class="mt-8 grid grid-cols-3 gap-4">
+  <article class="bg-surface mt-10 overflow-hidden rounded-lg lg:grid lg:grid-cols-3">
+    <div class="relative lg:col-span-1">
+      <Image
+        src={officeBuilding}
+        alt={n.featured.buildingAlt}
+        width={764}
+        widths={[382, 764]}
+        sizes="(min-width: 1280px) 400px, (min-width: 1024px) 33vw, 100vw"
+        class="aspect-4/3 w-full object-cover object-[center_30%] lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+      />
+    </div>
+    <div class="flex flex-col justify-center p-6 sm:p-8 lg:col-span-2 lg:p-10">
+      <div class="flex flex-wrap gap-2">
+        <Chip tone="highlight">{n.latest}</Chip>
+        <Chip tone="brand">{n.featured.tag}</Chip>
+      </div>
+      <h3 class="font-display text-h2 text-ink-900 mt-5">{n.featured.title}</h3>
+      <p class="text-body text-ink-700 mt-4">{n.featured.body}</p>
+      <div class="border-line mt-6 border-t pt-6">
+        <p class="text-body text-ink-900 flex items-start gap-3 font-medium">
+          <Icon name="pin" class="mt-1 size-5 shrink-0 text-blue-600" />
+          {n.featured.place}
+        </p>
+        <a
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={n.featured.directionsLabel}
+          class="text-small mt-3 ms-8 inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:underline hover:underline-offset-4"
+        >
+          {n.featured.directions}
+          <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+      <ul class="mt-6 flex gap-3">
         {thumbs.map((p) => (
           <li>
             <Image
               src={p.src}
               alt={p.alt}
-              width={520}
-              widths={[260, 520]}
-              sizes="(min-width: 1280px) 250px, (min-width: 1024px) 20vw, calc((100vw - 4rem) / 3)"
-              class="aspect-4/3 w-full rounded-md object-cover"
+              width={192}
+              widths={[96, 192]}
+              sizes="96px"
+              class="aspect-square size-20 rounded-md object-cover sm:size-24"
             />
           </li>
         ))}
