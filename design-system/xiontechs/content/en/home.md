@@ -38,6 +38,7 @@ Source: headline from live home. Subline from the earlier draft, `source/en/hero
 - Headline: Crafting secure and innovative IT solutions
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
+- Image: abstract circuit board lit in gold, no people. Decorative: `alt=""` (MASTER §4.2). Photo by Brecht Corbeel on Unsplash, https://unsplash.com/photos/futuristic-circuit-board-with-glowing-pathways-and-central-processor-jBe65HKtuds, Unsplash License (free, no attribution required; credited here).
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Tech made simple. Solutions, made powerful." and "Perfect IT solutions for your business". The live banner line "Empowering tech innovators with next-generation IT solutions" can be a fourth headline or a second subline.]
 
@@ -226,6 +227,36 @@ Source: heading, paragraph and bullets from live home "Who we are". The broken b
   - Make informed decisions based on data-driven insights
 - Name line: The name Xion is inspired by a mountain, a high place that people reach together.
 - Place line: Our engineers work in Ho Chi Minh City, Vietnam. Our US office is in Plano, Texas.
+
+---
+
+## 9a. News
+
+Must communicate: the team is active right now: a new office, workshops and client visits.
+
+Source: newxion.com/newsroom, fetched 2026-10-12. New-office photos and title from the team, 2026-10-12. Live copy is kept word for word; only "XionTech" is changed to "XionTechs". The Town Hall, Lunar New Year and AI in Action posts are not used.
+
+- Section label: Newsroom
+- Heading: Latest from XionTechs
+- Featured (chip "Latest", no date):
+  - Title: New Home, New Heights: Our 7th-Floor Office
+  - Body: Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.
+  - Place line: 7th floor, Ho Chi Minh City
+  - Photos: the building (alt: The building of our new Ho Chi Minh City office); moving day (alt: Team members setting up desks and monitors on moving day); desks (alt: Engineers at work in the new office); full team (alt: The full team at work in the new office)
+- Item, 2026-07-31:
+  - Title: Work Smart, Play Sharp
+  - Body: On July 31, we organized the "Thực Chiến AI với Agentic Workflow" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.
+  - Photo alt: A team member presenting the Agentic Workflow workshop to colleagues
+- Item, 2025-10-10:
+  - Title: Showcasing AI Robotics: Client Visit Spotlight
+  - Body: Our esteemed client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.
+  - Photo alt: XionTechs engineers presenting to visiting clients in a meeting room
+- Item, 2025-04-08:
+  - Title: Advancing Together: Project Kickoff Highlights
+  - Body: Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.
+  - Photo alt: The project team giving a thumbs up in front of the XionTech sign
+
+[UPDATE: the new office's street address is not confirmed; only "7th floor, Ho Chi Minh City" is shown.]
 
 ---
 

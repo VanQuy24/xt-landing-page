@@ -25,6 +25,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 - Headline: Kiến tạo giải pháp CNTT an toàn và đổi mới
 - Subline: XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.
 - Button: Liên hệ
+- Image: bảng mạch điện tử trừu tượng phát sáng ánh vàng, trang trí (`alt=""`). Credit as in `en/home.md` §1.
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Công nghệ đơn giản. Giải pháp mạnh mẽ." and "Giải pháp CNTT phù hợp cho doanh nghiệp của bạn". The live banner line "Trao quyền cho những nhà đổi mới công nghệ bằng giải pháp CNTT thế hệ mới" can be a fourth headline or a second subline.]
 
@@ -179,6 +180,32 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
   - Ra quyết định dựa trên dữ liệu
 - Name line: Cái tên Xion lấy cảm hứng từ một ngọn núi, một nơi cao mà mọi người cùng nhau chinh phục.
 - Place line: Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam. Văn phòng tại Mỹ đặt ở Plano, Texas.
+
+---
+
+## 9a. News
+
+- Section label: Tin tức
+- Heading: Tin mới từ XionTechs
+- Featured (chip "Mới nhất", no date):
+  - Title: Nhà mới, tầm cao mới: Văn phòng tầng 7 của chúng tôi
+  - Body: Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.
+  - Place line: Tầng 7, TP. Hồ Chí Minh
+  - Photos: tòa nhà (alt: Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh); ngày chuyển văn phòng (alt: Thành viên sắp xếp bàn làm việc và màn hình trong ngày chuyển văn phòng); bàn làm việc (alt: Kỹ sư làm việc tại văn phòng mới); toàn đội (alt: Toàn đội làm việc tại văn phòng mới)
+- Item, 2026-07-31:
+  - Title: Làm việc thông minh, giải trí hết mình
+  - Body: Ngày 31/7, chúng tôi tổ chức workshop "Thực Chiến AI với Agentic Workflow", nơi các thành viên chia sẻ kinh nghiệm thực tế và trình bày cách họ ứng dụng các công cụ AI trong công việc hằng ngày.
+  - Photo alt: Một thành viên trình bày tại workshop Agentic Workflow cho đồng nghiệp
+- Item, 2025-10-10:
+  - Title: Giới thiệu AI Robotics: Khách hàng đến thăm
+  - Body: Khách hàng quý giá của chúng tôi đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.
+  - Photo alt: Kỹ sư XionTechs thuyết trình cho khách hàng đến thăm trong phòng họp
+- Item, 2025-04-08:
+  - Title: Cùng nhau tiến bước: Điểm nhấn buổi khởi động dự án
+  - Body: Khách hàng của chúng tôi đã đến thăm Besco Delivery Center tại TP. Hồ Chí Minh để trao đổi yêu cầu dự án và chính thức khởi động một dự án giáo dục quy mô lớn.
+  - Photo alt: Đội dự án giơ ngón cái trước biển hiệu XionTech
+
+[UPDATE: same as English. The new office's street address is not confirmed.]
 
 ---
 

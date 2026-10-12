@@ -33,9 +33,22 @@
   "numbers": {
     "label": "XionTechs qua những con số",
     "items": [
-      { "value": 25, "suffix": "+", "label": "Năm kinh nghiệm lãnh đạo" },
-      { "value": 20, "suffix": "+", "label": "Nền tảng công nghệ thành thạo" },
-      { "value": 3, "suffix": "", "label": "Văn phòng", "context": "Plano (Mỹ) · TP. Hồ Chí Minh (Việt Nam)" }
+      {
+        "value": 25,
+        "suffix": "+",
+        "label": "Năm kinh nghiệm lãnh đạo"
+      },
+      {
+        "value": 20,
+        "suffix": "+",
+        "label": "Nền tảng công nghệ thành thạo"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Văn phòng",
+        "context": "Plano (Mỹ) · TP. Hồ Chí Minh (Việt Nam)"
+      }
     ]
   },
   "services": {
@@ -107,8 +120,14 @@
       ]
     },
     "numbers": [
-      { "value": "10", "label": "Tính năng nền tảng" },
-      { "value": "2", "label": "Sản phẩm cho trường học" }
+      {
+        "value": "10",
+        "label": "Tính năng nền tảng"
+      },
+      {
+        "value": "2",
+        "label": "Sản phẩm cho trường học"
+      }
     ],
     "timetabling": {
       "title": "Xếp thời khóa biểu bằng AI",
@@ -117,14 +136,35 @@
     "window": {
       "bar": "Nền tảng trường học · Tổng quan",
       "kpis": [
-        { "label": "Cần chấm", "value": "3" },
-        { "label": "Tiết hôm nay", "value": "5" },
-        { "label": "Việc cần làm", "value": "4" }
+        {
+          "label": "Cần chấm",
+          "value": "3"
+        },
+        {
+          "label": "Tiết hôm nay",
+          "value": "5"
+        },
+        {
+          "label": "Việc cần làm",
+          "value": "4"
+        }
       ],
       "rows": [
-        { "text": "Ghi chú học sinh — Lớp 5B", "status": "Đến hạn", "tone": "highlight" },
-        { "text": "Điểm danh — Tiết 2", "status": "Xong", "tone": "success" },
-        { "text": "Thời khóa biểu — tuần tới", "status": "Nháp", "tone": "neutral" }
+        {
+          "text": "Ghi chú học sinh — Lớp 5B",
+          "status": "Đến hạn",
+          "tone": "highlight"
+        },
+        {
+          "text": "Điểm danh — Tiết 2",
+          "status": "Xong",
+          "tone": "success"
+        },
+        {
+          "text": "Thời khóa biểu — tuần tới",
+          "status": "Nháp",
+          "tone": "neutral"
+        }
       ]
     }
   },
@@ -138,8 +178,14 @@
       "title": "Ứng dụng đa trường cho phụ huynh và nhân viên",
       "body": "Phụ huynh trò chuyện với trợ lý AI để đóng học phí, cập nhật thông tin và nhận thông báo.",
       "numbers": [
-        { "value": "2", "label": "Nhóm người dùng" },
-        { "value": "3", "label": "Tác vụ của trợ lý" }
+        {
+          "value": "2",
+          "label": "Nhóm người dùng"
+        },
+        {
+          "value": "3",
+          "label": "Tác vụ của trợ lý"
+        }
       ],
       "chips": ["Đóng học phí", "Cập nhật thông tin", "Thông báo"]
     },
@@ -148,9 +194,18 @@
       "ask": "Đóng học phí học kỳ này cho con tôi.",
       "card": "Xác nhận thanh toán",
       "rows": [
-        { "k": "Học sinh", "v": "Lớp 5" },
-        { "k": "Học kỳ", "v": "Học kỳ 2" },
-        { "k": "Số tiền", "v": "$1,250" }
+        {
+          "k": "Học sinh",
+          "v": "Lớp 5"
+        },
+        {
+          "k": "Học kỳ",
+          "v": "Học kỳ 2"
+        },
+        {
+          "k": "Số tiền",
+          "v": "$1,250"
+        }
       ],
       "confirm": "Xác nhận"
     },
@@ -222,10 +277,68 @@
     "name": "Cái tên Xion lấy cảm hứng từ một ngọn núi, một nơi cao mà mọi người cùng nhau chinh phục.",
     "place": "Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam. Văn phòng tại Mỹ đặt ở Plano, Texas.",
     "photos": [
-      { "alt": "Đội ngũ XionTechs tại một buổi workshop về AI", "caption": "Workshop AI" },
-      { "alt": "Buổi đào tạo AI thực hành tại XionTechs", "caption": "Đào tạo AI thực hành" },
-      { "alt": "Buổi chia sẻ kiến thức toàn công ty", "caption": "Chia sẻ kiến thức" },
-      { "alt": "Thành viên được ghi nhận vì đóng góp xuất sắc", "caption": "Ghi nhận đóng góp" }
+      {
+        "alt": "Đội ngũ XionTechs tại một buổi workshop về AI",
+        "caption": "Workshop AI"
+      },
+      {
+        "alt": "Buổi đào tạo AI thực hành tại XionTechs",
+        "caption": "Đào tạo AI thực hành"
+      },
+      {
+        "alt": "Buổi chia sẻ kiến thức toàn công ty",
+        "caption": "Chia sẻ kiến thức"
+      },
+      {
+        "alt": "Thành viên được ghi nhận vì đóng góp xuất sắc",
+        "caption": "Ghi nhận đóng góp"
+      }
+    ]
+  },
+  "news": {
+    "label": "Tin tức",
+    "heading": "Tin mới từ XionTechs",
+    "latest": "Mới nhất",
+    "featured": {
+      "title": "Nhà mới, tầm cao mới: Văn phòng tầng 7 của chúng tôi",
+      "body": "Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.",
+      "place": "Tầng 7, TP. Hồ Chí Minh",
+      "buildingAlt": "Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh",
+      "photos": [
+        {
+          "id": "new-office-2",
+          "alt": "Thành viên sắp xếp bàn làm việc và màn hình trong ngày chuyển văn phòng"
+        },
+        {
+          "id": "new-office-1",
+          "alt": "Kỹ sư làm việc tại văn phòng mới"
+        },
+        {
+          "id": "new-office-3",
+          "alt": "Toàn đội làm việc tại văn phòng mới"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "agentic-workshop",
+        "title": "Làm việc thông minh, giải trí hết mình",
+        "body": "Ngày 31/7, chúng tôi tổ chức workshop \"{workshop}\", nơi các thành viên chia sẻ kinh nghiệm thực tế và trình bày cách họ ứng dụng các công cụ AI trong công việc hằng ngày.",
+        "alt": "Một thành viên trình bày tại workshop Agentic Workflow cho đồng nghiệp",
+        "workshop": "Thực Chiến AI với Agentic Workflow"
+      },
+      {
+        "id": "client-visit",
+        "title": "Giới thiệu AI Robotics: Khách hàng đến thăm",
+        "body": "Khách hàng quý giá của chúng tôi đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.",
+        "alt": "Kỹ sư XionTechs thuyết trình cho khách hàng đến thăm trong phòng họp"
+      },
+      {
+        "id": "kickoff",
+        "title": "Cùng nhau tiến bước: Điểm nhấn buổi khởi động dự án",
+        "body": "Khách hàng của chúng tôi đã đến thăm Besco Delivery Center tại TP. Hồ Chí Minh để trao đổi yêu cầu dự án và chính thức khởi động một dự án giáo dục quy mô lớn.",
+        "alt": "Đội dự án giơ ngón cái trước biển hiệu XionTech"
+      }
     ]
   },
   "faq": {
@@ -265,12 +378,18 @@
     "hoursValue": "Thứ Hai đến Thứ Sáu, 9:00 đến 18:00 (giờ Việt Nam, GMT+7)",
     "officesLabel": "Văn phòng",
     "offices": [
-      { "city": "Plano", "address": "7950 Legacy Drive, Suite 400, Plano, TX 75024, USA" },
+      {
+        "city": "Plano",
+        "address": "7950 Legacy Drive, Suite 400, Plano, TX 75024, USA"
+      },
       {
         "city": "TP. Hồ Chí Minh",
         "address": "Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh"
       },
-      { "city": "TP. Hồ Chí Minh", "address": "Tầng 15, Tòa nhà B1, 279 Nguyễn Tri Phương, TP. Hồ Chí Minh" }
+      {
+        "city": "TP. Hồ Chí Minh",
+        "address": "Tầng 15, Tòa nhà B1, 279 Nguyễn Tri Phương, TP. Hồ Chí Minh"
+      }
     ]
   },
   "footer": {
