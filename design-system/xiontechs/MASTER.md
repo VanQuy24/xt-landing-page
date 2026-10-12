@@ -241,17 +241,17 @@ For `/privacy-policy` and `/terms-of-service`:
 
 ### 4.2 Image optimization rules
 
-| Rule                 | Spec                                                                                                                                                                                                                     |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Pipeline**         | Images live in `src/assets/` and render through `astro:assets` `<Image>` / `<Picture>` (AVIF first, WebP fallback). SVG for icons and logos. `public/` only for fixed URLs.                                              |
-| **Responsive sizes** | Every image declares `widths` + `sizes` and is served at 1×/2× of its rendered width. No image larger than 2× its display size.                                                                                          |
-| **Weight budget**    | Hero/primary image ≤ **180 KB** · content photo ≤ **120 KB** · thumbnail ≤ **40 KB** · **total images per page ≤ 1 MB** on first load.                                                                                   |
-| **Never upscale**    | Display at or below native resolution. The Home §9 photos are AI-enhanced versions of the old low-res crops (1:1, 1200px sources): served at ≤ 300px CSS, 2x density. Replace them with real originals when they arrive. |
-| **Aspect ratios**    | Fixed set: **16:9**, **4:3**, **1:1**, **3:4**. `<Image>` writes width/height, so space is reserved (CLS < 0.1).                                                                                                         |
-| **Loading**          | Above-the-fold image: `loading="eager"` + `fetchpriority="high"`. Everything else: lazy (the `<Image>` default). No blur placeholders.                                                                                   |
-| **Treatment**        | Natural color, no filters, no duotone. Rounded `radius-md`. Optional 1px `line` border on white backgrounds so light photos don't float.                                                                                 |
-| **Alt text**         | Every meaningful image gets alt text in both languages via the i18n dictionaries. Decorative images use `alt=""`.                                                                                                        |
-| **Originals needed** | High-resolution originals (≥ 1600px long edge) of the company photos.                                                                                                                                                    |
+| Rule                 | Spec                                                                                                                                                                                                             |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pipeline**         | Images live in `src/assets/` and render through `astro:assets` `<Image>` / `<Picture>` (AVIF first, WebP fallback). SVG for icons and logos. `public/` only for fixed URLs.                                      |
+| **Responsive sizes** | Every image declares `widths` + `sizes` and is served at 1×/2× of its rendered width. No image larger than 2× its display size.                                                                                  |
+| **Weight budget**    | Hero/primary image ≤ **180 KB** · content photo ≤ **120 KB** · thumbnail ≤ **40 KB** · **total images per page ≤ 1 MB** on first load.                                                                           |
+| **Never upscale**    | Display at or below native resolution. The Home §9 photos are 1:1 crops of real iPhone originals at 1200px, in sRGB with metadata stripped, served at ≤ 300px CSS, 2x density. Originals live in `docs/images/`. |
+| **Aspect ratios**    | Fixed set: **16:9**, **4:3**, **1:1**, **3:4**. `<Image>` writes width/height, so space is reserved (CLS < 0.1).                                                                                                 |
+| **Loading**          | Above-the-fold image: `loading="eager"` + `fetchpriority="high"`. Everything else: lazy (the `<Image>` default). No blur placeholders.                                                                           |
+| **Treatment**        | Natural color, no filters, no duotone. Rounded `radius-md`. Optional 1px `line` border on white backgrounds so light photos don't float.                                                                         |
+| **Alt text**         | Every meaningful image gets alt text in both languages via the i18n dictionaries. Decorative images use `alt=""`.                                                                                                |
+| **Originals**        | High-resolution originals (≥ 1600px long edge) of the company photos. Never ship AI-enhanced or AI-generated photos. They invent text and logos.                                                                 |
 
 ### 4.3 Iconography
 
