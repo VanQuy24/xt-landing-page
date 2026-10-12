@@ -342,7 +342,10 @@
         "body": "Khách hàng của chúng tôi đã đến thăm Besco Delivery Center tại TP. Hồ Chí Minh để trao đổi yêu cầu dự án và chính thức khởi động một dự án giáo dục quy mô lớn.",
         "alt": "Đội dự án giơ ngón cái trước biển hiệu XionTech"
       }
-    ]
+    ],
+    "listLabel": "Tin khác",
+    "prev": "Tin trước",
+    "next": "Tin tiếp theo"
   },
   "faq": {
     "label": "Hỏi đáp",

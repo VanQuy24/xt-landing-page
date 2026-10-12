@@ -236,7 +236,7 @@ Must communicate: the team is active right now: a new office, workshops and clie
 
 Source: newxion.com/newsroom, fetched 2026-10-12. New-office photos and title from the team, 2026-10-12. Live copy is kept word for word; only "XionTech" is changed to "XionTechs". The Town Hall, Lunar New Year and AI in Action posts are not used.
 
-- Section label: Newsroom
+- Section label: News
 - Heading: Latest from XionTechs
 - Featured (chip "Latest", no date):
   - Title: New Home, New Heights: Our 7th-Floor Office

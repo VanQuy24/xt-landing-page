@@ -296,7 +296,7 @@
     ]
   },
   "news": {
-    "label": "Newsroom",
+    "label": "News",
     "heading": "Latest from XionTechs",
     "latest": "Latest",
     "featured": {
@@ -342,7 +342,10 @@
         "body": "Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.",
         "alt": "The project team giving a thumbs up in front of the XionTech sign"
       }
-    ]
+    ],
+    "listLabel": "More news",
+    "prev": "Previous news",
+    "next": "Next news"
   },
   "faq": {
     "label": "FAQ",

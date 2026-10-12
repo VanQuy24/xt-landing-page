@@ -114,31 +114,82 @@ const items = n.items
     </div>
   </article>
 
-  <ul class="mt-12 grid gap-6 md:grid-cols-3">
-    {items.map((item) => (
-      <li>
-        <article class="border-line h-full overflow-hidden rounded-lg border bg-white">
-          <Image
-            src={item.src}
-            alt={item.alt}
-            width={800}
-            widths={[400, 800]}
-            sizes="(min-width: 1280px) 384px, (min-width: 768px) 30vw, 100vw"
-            class="aspect-4/3 w-full object-cover"
-          />
-          <div class="p-6">
-            <time datetime={item.date} class="text-small text-ink-500">
+  <div class="mt-14" data-news-scroller>
+    <div class="flex items-center justify-between gap-4">
+      <h3 class="text-label text-ink-500 uppercase">{n.listLabel}</h3>
+      <div class="hidden gap-2 md:flex">
+        <button
+          type="button"
+          data-dir="-1"
+          aria-label={n.prev}
+          class="border-line text-ink-700 hover:border-blue-200 hover:text-blue-600 grid size-11 cursor-pointer place-items-center rounded-full border transition duration-150 disabled:cursor-default disabled:opacity-40"
+        >
+          <Icon name="arrow" class="size-5 rotate-180" />
+        </button>
+        <button
+          type="button"
+          data-dir="1"
+          aria-label={n.next}
+          class="border-line text-ink-700 hover:border-blue-200 hover:text-blue-600 grid size-11 cursor-pointer place-items-center rounded-full border transition duration-150 disabled:cursor-default disabled:opacity-40"
+        >
+          <Icon name="arrow" class="size-5" />
+        </button>
+      </div>
+    </div>
+    <ul
+      data-track
+      tabindex="0"
+      aria-label={n.listLabel}
+      class="mt-5 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [scrollbar-width:none] focus-visible:outline-offset-4 [&::-webkit-scrollbar]:hidden"
+    >
+      {items.map((item) => (
+        <li class="w-[82%] shrink-0 snap-start last:snap-end sm:w-[55%] lg:w-[38%]">
+          <article>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              width={800}
+              widths={[400, 800]}
+              sizes="(min-width: 1280px) 440px, (min-width: 1024px) 38vw, (min-width: 640px) 55vw, 82vw"
+              class="aspect-16/9 w-full rounded-md object-cover"
+            />
+            <time datetime={item.date} class="text-label text-ink-500 mt-4 block uppercase">
               {dateFormat.format(new Date(item.date))}
             </time>
-            <h3 class="font-display text-h3 text-ink-900 mt-2">{item.title}</h3>
-            <p class="text-small text-ink-700 mt-3">
+            <h4 class="font-display text-h4 text-ink-900 mt-2">{item.title}</h4>
+            <p class="text-small text-ink-500 mt-2 line-clamp-2">
               {item.before}
               {item.workshop && <span lang="vi">{item.workshop}</span>}
               {item.after}
             </p>
-          </div>
-        </article>
-      </li>
-    ))}
-  </ul>
+          </article>
+        </li>
+      ))}
+    </ul>
+  </div>
 </Section>
+
+<script>
+  // Prev/next buttons for the horizontal news list; touch, trackpad and keyboard scroll natively.
+  document.querySelectorAll<HTMLElement>('[data-news-scroller]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('[data-track]');
+    const buttons = root.querySelectorAll<HTMLButtonElement>('button[data-dir]');
+    if (!track) return;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 1;
+      buttons.forEach((b) => {
+        b.disabled = b.dataset.dir === '-1' ? track.scrollLeft <= 0 : track.scrollLeft >= max;
+      });
+    };
+    buttons.forEach((b) =>
+      b.addEventListener('click', () => {
+        const step = track.clientWidth * 0.8 * Number(b.dataset.dir);
+        track.scrollBy({ left: step, behavior: smooth ? 'smooth' : 'auto' });
+      }),
+    );
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+</script>
