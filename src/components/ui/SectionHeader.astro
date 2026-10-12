@@ -1,5 +1,5 @@
 ---
-// MASTER §5.5: kicker (label) → h2 → lead.
+// MASTER §5.5: optional kicker (label) → h2 → lead. Pass a label only when it says something the heading doesn't.
 interface Props {
   label?: string;
   heading: string;
@@ -12,13 +12,8 @@ const { label, heading, lead, id, class: className } = Astro.props;
 ---
 
 <div class:list={['max-w-3xl', className]}>
-  {label && (
-    <p class="text-label flex items-center gap-3 text-blue-600 uppercase">
-      <span class="h-1 w-8 rounded-full bg-blue-600" aria-hidden="true" />
-      {label}
-    </p>
-  )}
-  <h2 id={id} class="font-display text-h2 text-ink-900 mt-4">
+  {label && <p class="text-label mb-4 text-blue-600">{label}</p>}
+  <h2 id={id} class="font-display text-h2 text-ink-900">
     {heading}
   </h2>
   {lead && <p class="text-lead text-ink-500 mt-4">{lead}</p>}

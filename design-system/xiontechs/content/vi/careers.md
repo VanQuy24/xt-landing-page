@@ -31,8 +31,8 @@ Meta description: Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí 
 | Môi trường đổi mới  | Làm việc với công nghệ tiên tiến để xây dựng những hệ thống CNTT tạo ra thay đổi, cùng tầm nhìn của Xion.                                      |
 | Văn hóa trao quyền  | Trở thành một phần của văn hóa "Beyond Employees", nơi đề cao tinh thần khởi nghiệp, sự đổi mới và tư duy "Get IT Done", nơi ai cũng thuộc về. |
 | Phát triển liên tục | Được đào tạo bài bản, có tài liệu chuyên môn và chương trình hội nhập theo từng vị trí, để bạn làm tốt ngay từ ngày đầu.                       |
-| Công nghệ hấp dẫn   | Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile, trong một môi trường kỹ thuật trưởng thành.               |
-| Tác động thật       | Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới trên toàn thế giới.                 |
+| Công nghệ hấp dẫn   | Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile.                                                           |
+| Tác động thật       | Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới.                                    |
 
 ---
 

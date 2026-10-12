@@ -9,9 +9,9 @@ import Hero from './sections/Hero.astro';
 import Process from './sections/Process.astro';
 import Products from './sections/Products.astro';
 import Services from './sections/Services.astro';
-import WhyUs from './sections/WhyUs.astro';
 
-// Section order follows design-system/xiontechs/content/en/home.md. §6 Testimonials ships only
+// Section order follows design-system/xiontechs/content/en/home.md: our own products first, then services.
+// §8 Why choose us was cut on 2026-10-12. §6 Testimonials ships only
 // once an approved quote exists (content/open-data.md #8, #9).
 interface Props {
   lang: Locale;
@@ -23,11 +23,10 @@ const t = getDictionary(lang);
 
 <BaseLayout lang={lang} title={t.meta.title} description={t.meta.description}>
   <Hero lang={lang} />
-  <Services lang={lang} />
   <Products lang={lang} />
+  <Services lang={lang} />
   <Clients lang={lang} />
   <Process lang={lang} />
-  <WhyUs lang={lang} />
   <About lang={lang} />
   <Faq lang={lang} />
   <Brief lang={lang} />

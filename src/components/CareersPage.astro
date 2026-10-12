@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { company } from '../data/company';
 import { getDictionary, type Locale } from '../i18n';
 import Container from './ui/Container.astro';
-import Icon, { type IconName } from './ui/Icon.astro';
+import Icon from './ui/Icon.astro';
 import Section from './ui/Section.astro';
 import SectionHeader from './ui/SectionHeader.astro';
 
@@ -47,14 +47,11 @@ const cvHref = `mailto:${company.email}?subject=${encodeURIComponent(c.cvSubject
 
   <Section id="why-join" labelledby="why-join-title">
     <SectionHeader id="why-join-title" heading={c.perksHeading} />
-    <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <ul class="border-line mt-10 grid border-t sm:grid-cols-2 sm:gap-x-12">
       {c.perks.map((p) => (
-        <li class="border-line rounded-lg border bg-white p-6 lg:p-8">
-          <span class="inline-flex size-12 items-center justify-center rounded-md bg-blue-50 text-blue-600">
-            <Icon name={p.icon as IconName} />
-          </span>
-          <h3 class="font-display text-h3 text-ink-900 mt-5">{p.title}</h3>
-          <p class="text-small text-ink-500 mt-3">{p.body}</p>
+        <li class="border-line border-b py-5 lg:py-6">
+          <h3 class="font-display text-h3 text-ink-900">{p.title}</h3>
+          <p class="text-body text-ink-700 mt-2 max-w-xl">{p.body}</p>
         </li>
       ))}
     </ul>

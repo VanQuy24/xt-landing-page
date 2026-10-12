@@ -17,8 +17,8 @@ const { lang } = Astro.props;
 const t = getDictionary(lang);
 const home = getRelativeLocaleUrl(lang);
 const links = [
-  { href: `${home}#services`, label: t.nav.services },
   { href: `${home}#products`, label: t.nav.products },
+  { href: `${home}#services`, label: t.nav.services },
   { href: `${home}#clients`, label: t.nav.clients },
   { href: `${home}#process`, label: t.nav.process },
   { href: `${home}#faq`, label: t.nav.faq },

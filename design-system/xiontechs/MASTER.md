@@ -142,21 +142,21 @@ Rejected: **Poppins** and **Figtree**: no Vietnamese subset, diacritics break. E
 
 ### 2.2 Type scale (desktop → mobile, fluid with `clamp()`)
 
-| Token      | Font / weight | Size desktop / mobile | Line height | Tracking          | Use                              |
-| ---------- | ------------- | --------------------- | ----------- | ----------------- | -------------------------------- |
-| `num-hero` | Manrope 800   | 96 / 56 px            | 1.0         | -0.03em           | One headline number per page max |
-| `num-xl`   | Manrope 800   | 64 / 44               | 1.0         | -0.02em           | Stat tiles                       |
-| `num-lg`   | Manrope 800   | 44 / 32               | 1.05        | -0.02em           | Card metrics                     |
-| `num-md`   | Manrope 700   | 28 / 24               | 1.1         | -0.01em           | Inline KPIs, mockup numbers      |
-| `display`  | Manrope 800   | 64 / 40               | 1.1         | -0.03em           | Hero headline                    |
-| `h1`       | Manrope 800   | 48 / 34               | 1.15        | -0.025em          | Page title                       |
-| `h2`       | Manrope 700   | 38 / 28               | 1.2         | -0.02em           | Section title                    |
-| `h3`       | Manrope 700   | 24 / 20               | 1.3         | -0.01em           | Card title                       |
-| `h4`       | Inter 600     | 18 / 17               | 1.35        | 0                 | Small headings                   |
-| `lead`     | Inter 400     | 20 / 18               | 1.55        | 0                 | Section intro (≤ 2 lines)        |
-| `body`     | Inter 400     | 17 / 16               | 1.65        | 0                 | Paragraphs (min 16px on mobile)  |
-| `small`    | Inter 400     | 15 / 14               | 1.55        | 0                 | Card body, captions              |
-| `label`    | Inter 600     | 13 / 12               | 1.3         | 0.06em, UPPERCASE | Kickers, stat labels             |
+| Token      | Font / weight | Size desktop / mobile | Line height | Tracking | Use                              |
+| ---------- | ------------- | --------------------- | ----------- | -------- | -------------------------------- |
+| `num-hero` | Manrope 800   | 96 / 56 px            | 1.0         | -0.03em  | One headline number per page max |
+| `num-xl`   | Manrope 800   | 64 / 44               | 1.0         | -0.02em  | Stat tiles                       |
+| `num-lg`   | Manrope 800   | 44 / 32               | 1.05        | -0.02em  | Card metrics                     |
+| `num-md`   | Manrope 700   | 28 / 24               | 1.1         | -0.01em  | Inline KPIs, mockup numbers      |
+| `display`  | Manrope 800   | 64 / 40               | 1.1         | -0.03em  | Hero headline                    |
+| `h1`       | Manrope 800   | 48 / 34               | 1.15        | -0.025em | Page title                       |
+| `h2`       | Manrope 700   | 38 / 28               | 1.2         | -0.02em  | Section title                    |
+| `h3`       | Manrope 700   | 24 / 20               | 1.3         | -0.01em  | Card title                       |
+| `h4`       | Inter 600     | 18 / 17               | 1.35        | 0        | Small headings                   |
+| `lead`     | Inter 400     | 20 / 18               | 1.55        | 0        | Section intro (≤ 2 lines)        |
+| `body`     | Inter 400     | 17 / 16               | 1.65        | 0        | Paragraphs (min 16px on mobile)  |
+| `small`    | Inter 400     | 15 / 14               | 1.55        | 0        | Card body, captions              |
+| `label`    | Inter 600     | 13 / 12               | 1.3         | 0.01em   | Kickers, stat labels             |
 
 Display and heading line heights already include the +0.05 Vietnamese allowance, so stacked marks (ế, ỗ) are not clipped.
 
@@ -171,7 +171,7 @@ Display and heading line heights already include the +0.05 Vietnamese allowance,
 ### 2.4 Text rules
 
 - Max line length **68 characters** for body; leads max 2 lines.
-- Headings: sentence case. No ALL CAPS except `label`.
+- Headings and labels: sentence case. No ALL CAPS. It reads as template chrome and turns the slogan "Get IT Done" into "GET IT DONE".
 
 ### 2.5 Prose (legal pages, long text)
 
@@ -289,7 +289,7 @@ First focusable element on every page: "Skip to content", visually hidden until 
 
 ### 5.5 Section header
 
-`label` (kicker, `blue-600`) → `h2` (ink-900) → `lead` (ink-500, ≤ 2 lines). Optional **number badge** left of the kicker (e.g. "01"). Left-aligned by default; centered only for short, symmetric sections. Every Home section has an `id` matching the nav anchors.
+Optional `label` (kicker, `blue-600`) → `h2` (ink-900) → `lead` (ink-500, ≤ 2 lines). Use a kicker only when it says something the heading does not, such as the method name "4-D process" over "How we get IT done". A kicker that repeats its heading ("FAQ" over "Frequently asked questions") is left out. No decorative bar or number badge before it. Left-aligned by default; centered only for short, symmetric sections. Every Home section has an `id` matching the nav anchors.
 
 ### 5.6 ⭐ Stat / KPI tile (numbers-first core)
 
@@ -297,7 +297,7 @@ First focusable element on every page: "Skip to content", visually hidden until 
 ┌─────────────────────────┐
 │ ▬ (bar 4×32, blue-600)   │
 │ 25+                      │  ← num-xl, ink-900; "+" gold-600
-│ YEARS OF LEADERSHIP      │  ← label, ink-500
+│ Years of leadership      │  ← label, ink-500
 │ [context, if true]       │  ← small, ink-500 (optional context)
 └─────────────────────────┘
 ```
@@ -309,9 +309,9 @@ First focusable element on every page: "Skip to content", visually hidden until 
 
 Image (fixed aspect, `radius-md`) + caption (`small`, ink-500) + optional overlay **number chip** (gold-400 bg, navy text). Hover: image scale 1.02 inside the frame (no layout shift).
 
-### 5.8 Cards (service / why-us)
+### 5.8 Cards and lists
 
-White, 1px `line`, `radius-lg`, padding 32px. Anatomy: **icon or number** (top) → `h3` → `small` body (≤ 3 lines) → optional link. Hover: border `blue-200` + `shadow-2`. Whole card clickable when it links (stretched link).
+A card is for a separate object, such as a product. White, 1px `line`, `radius-lg`, padding 32px. Anatomy: `h3` → `body` → optional link. No icon chip on top. Sets of peers (services, careers perks, offices) are a flat list instead: rows with a 1px `line` divider, two columns from `sm` up, `h3` + `body` in each row. Hover: border `blue-200` + `shadow-2`. Whole card clickable when it links (stretched link).
 
 ### 5.9 Chips & badges
 
@@ -342,12 +342,12 @@ Until a form service is chosen, the brief is sent by email:
 
 - Section header (§5.5) → one **primary button** "Email your brief" → `mailto:contact@xiontechs.com` with a prefilled subject (from i18n).
 - Beside it (desktop) / below (mobile): a contact list with icons: USA phone, Vietnam phone, WhatsApp, email (`tel:` / `mailto:` / `https://wa.me/` links, kept left-to-right), office hours, reply time.
-- Offices as two or three small cards: city (`h4`) + address (`small`, `<address>`).
+- Offices as a plain list in up to three columns, no card: city (`h4`) + address (`small`, `<address>`).
 - When a form service is added later: inputs 48px, 1.5px border `line` → focus `blue-600` + 4px `blue-100` ring; label above (Inter 600 14px); error text below in `danger` with icon; space for the error is reserved so the layout doesn't shift.
 
 ### 5.14 Footer & dark band
 
-The only dark surfaces: **CTA band** and **footer**, both `brand-navy` bg, white text, gold used once (for example the slogan "Get IT Done" or a gold bar). Footer content per `content/sitemap.md`: contact, offices, links (Careers · Privacy policy · Terms of service), social, legal line in `small` at ≥ 4.5:1 (white at 80% opacity minimum).
+The only dark surfaces: **CTA band** and **footer**, both `brand-navy` bg, white text, gold used once (for example the slogan "Get IT Done" or a gold bar). Footer content per `content/sitemap.md`, in three unequal columns: brand and slogan; contact (phones, email, offices line); links (Careers · Privacy policy · Terms of service) with the social icons under them. The footer keeps the contact details because on Careers and the legal pages it is the only place they appear. Then the legal line in `small` at ≥ 4.5:1 (white at 80% opacity minimum).
 
 ### 5.15 404 page
 
@@ -363,12 +363,12 @@ Same header and footer. Centered block: `num-hero` "404" (ink-900, gold bar abov
 
 **Story:** a dot field that turns into what we ship, told as a machine-learning run:
 
-| Stage          | Visual state (canvas)                                                                          | Meaning                                      |
-| -------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| 01 Discovery   | ~720 points scattered: noise, clumps, streaks, outliers; mixed markers (dots, crosses, rings)  | Raw, messy input: the client's problem space |
-| 02 Design      | Points cleaned into **4 tidy dot columns**                                                     | Structured: the solution is designed         |
-| 03 Development | Points pull toward 4 icon shapes, noise shrinks; a small **loss curve** drops (top end corner) | Building, with visible progress              |
-| 04 Deployment  | Points fit 4 solid icons: **Apps · AI robotics · IoT · Smart platform** (labelled)             | Delivered result                             |
+| Stage          | Visual state (canvas)                                                                                       | Meaning                                      |
+| -------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 01 Discovery   | ~720 points scattered: noise, clumps, streaks, outliers; mixed markers (dots, crosses, rings)               | Raw, messy input: the client's problem space |
+| 02 Design      | Points cleaned into **4 tidy dot columns**                                                                  | Structured: the solution is designed         |
+| 03 Development | Points pull toward 4 icon shapes, noise shrinks; a small **loss curve** drops (top end corner)              | Building, with visible progress              |
+| 04 Deployment  | Points fit 4 solid icons, unlabelled until the list of what we deploy is confirmed (`content/open-data.md`) | Delivered result                             |
 
 **White-theme color mapping:**
 
@@ -421,8 +421,8 @@ Same header and footer. Centered block: `num-hero` "404" (ink-900, gold bar abov
 
 Rules:
 
-- **Key numbers row:** 2–3 numbers max, real and approved. If no real number exists, use a **capability count** that is true. If none is true, drop the row (don't invent).
-- **Product window = built UI** in HTML/CSS with fictional data and generic names, never a client screenshot. Labelled "Illustrative". Decorative parts `aria-hidden`; the meaning is in the title, numbers and chips.
+- **Key numbers row:** 2–3 numbers max, real and approved. If none exists, drop the row. Never count the list or chips shown next to it ("10 features" beside ten features). That adds weight, not proof.
+- **Product window = built UI** in HTML/CSS with fictional data and generic names, never a client screenshot. Labelled "Illustrative". The text inside the window stays in English in every locale, like a real product screen; only the caption is translated. Decorative parts `aria-hidden`; the meaning is in the title, numbers and chips.
 - Window chrome: white, 1px `line`, `radius-lg`, `shadow-2`, a 36px top bar (three `line` dots or a generic label). Inside, the UI uses the same tokens.
 - Layout: desktop = text + numbers at the start (5/12 columns), window at the end (7/12); alternate sides between projects. Mobile = stacked (numbers → window → chips).
 - Motion: the window's content **animates once** when scrolled into view (cards slide in, the chat reply streams). It never loops. Off under reduced motion.

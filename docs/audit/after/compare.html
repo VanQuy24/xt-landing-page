@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Before and after</title>
+    <style>
+      :root {
+        --bg: #f7f9fc;
+        --ink: #0f1b2d;
+        --muted: #5b6676;
+        --line: #e3e8ef;
+        --accent: #295896;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          15px/1.5 system-ui,
+          sans-serif;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        padding: 12px 16px;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        margin: 0 auto 0 0;
+        font-size: 18px;
+      }
+      button {
+        font: inherit;
+        padding: 6px 14px;
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--accent);
+        cursor: pointer;
+      }
+      button[aria-pressed='true'] {
+        background: var(--accent);
+        color: #fff;
+      }
+      section {
+        padding: 24px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+      h2 {
+        margin: 0 0 4px;
+        font-size: 20px;
+      }
+      p.what {
+        margin: 0 0 16px;
+        color: var(--muted);
+        max-width: 80ch;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .pair.narrow {
+        grid-template-columns: repeat(2, minmax(0, 390px));
+      }
+      figure {
+        margin: 0;
+      }
+      figcaption {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .empty {
+        padding: 24px;
+        border: 1px dashed var(--muted);
+        color: var(--muted);
+      }
+      @media (max-width: 700px) {
+        .pair,
+        .pair.narrow {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>XionTechs home, before and after</h1>
+      <button type="button" data-w="1440" aria-pressed="true">1440px</button>
+      <button type="button" data-w="390" aria-pressed="false">390px</button>
+    </header>
+    <main id="list"></main>
+    <script>
+      const sections = [
+        ['hero', 'Hero', 'P0-3, P1-1, P1-4. New headline, no all-caps label, every number has a detail line.'],
+        [
+          'products',
+          'Products for schools',
+          'P1-3, P1-11. Now right after the hero. No count tiles, no list of 10 features, no icon on the timetabling card.',
+        ],
+        [
+          'services',
+          'Services',
+          'P1-2, P1-5, P1-10. A flat two-column list replaces 8 icon cards. One plain sentence per service.',
+        ],
+        [
+          'clients',
+          'Clients',
+          'P1-1, P1-3. No label above the heading, no count tiles. Varkey and CyberHive are untouched, since P0-2 is your call.',
+        ],
+        [
+          'process',
+          '4-D process',
+          'P1-7. The kicker stays because it names the method. The animation lost its IoT labels.',
+        ],
+        ['why', 'Why choose us', 'P0-4. Cut. Three identical cards with claims nobody can check.'],
+        ['about', 'Who we are', 'P0-1, P0-3. Real photos, and a heading with facts in place of "consumer-centric".'],
+        ['faq', 'FAQ', 'P1-1. The "FAQ" label over "Frequently asked questions" is gone.'],
+        ['contact', 'Contact', 'P1-1, P1-5. No label. Offices are a plain list now, not cards.'],
+        [
+          'footer',
+          'Footer',
+          'P1-8. Three unequal columns. Contact details stay, because Careers and the legal pages have no other contact block.',
+        ],
+        [
+          'careers',
+          'Careers page',
+          'P1-2, P1-5. Perks are a list without icon cards. Two copy cuts, "mature" and "worldwide".',
+        ],
+      ];
+      const list = document.getElementById('list');
+      function render(w) {
+        list.innerHTML = '';
+        for (const [id, name, what] of sections) {
+          const s = document.createElement('section');
+          const after =
+            id === 'why'
+              ? '<div class="empty">Section removed</div>'
+              : `<img loading="lazy" src="after-${id}-${w}.png" alt="${name} after, ${w}px">`;
+          s.innerHTML = `<h2>${name}</h2><p class="what">${what}</p>
+            <div class="pair ${w === '390' ? 'narrow' : ''}">
+              <figure><figcaption>Before, live site</figcaption><img loading="lazy" src="../before/before-${id}-${w}.png" alt="${name} before, ${w}px"></figure>
+              <figure><figcaption>After, localhost</figcaption>${after}</figure>
+            </div>`;
+          list.append(s);
+        }
+      }
+      for (const b of document.querySelectorAll('button[data-w]')) {
+        b.addEventListener('click', () => {
+          for (const o of document.querySelectorAll('button[data-w]')) o.setAttribute('aria-pressed', String(o === b));
+          render(b.dataset.w);
+        });
+      }
+      render('1440');
+    </script>
+  </body>
+</html>

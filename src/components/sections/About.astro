@@ -22,7 +22,7 @@ const photos = [teamAtWork, aiTraining, sessions, recognition].map((src, i) => (
 <Section id="about" labelledby="about-title">
   <div class="grid gap-12 lg:grid-cols-12">
     <div class="lg:col-span-6">
-      <SectionHeader id="about-title" label={a.label} heading={a.heading} />
+      <SectionHeader id="about-title" heading={a.heading} />
       <p class="text-body text-ink-700 mt-6">{a.body}</p>
       <ul class="mt-6 space-y-3">
         {a.bullets.map((b) => (

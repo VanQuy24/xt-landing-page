@@ -14,7 +14,7 @@ const t = getDictionary(Astro.props.lang);
 
 <Section id="faq" labelledby="faq-title" surface>
   <div class="grid gap-10 lg:grid-cols-12">
-    <SectionHeader id="faq-title" label={t.faq.label} heading={t.faq.heading} class="lg:col-span-4" />
+    <SectionHeader id="faq-title" heading={t.faq.heading} class="lg:col-span-4" />
     <div class="divide-line border-line divide-y border-y lg:col-span-8">
       {t.faq.items.map((f) => (
         <details class="group">

@@ -92,7 +92,7 @@
   --text-small--line-height: 1.55;
   --text-label: clamp(0.75rem, 0.724rem + 0.11vw, 0.8125rem);
   --text-label--line-height: 1.3;
-  --text-label--letter-spacing: 0.06em;
+  --text-label--letter-spacing: 0.01em;
   --text-label--font-weight: 600;
 
   /* Shape & elevation (MASTER §3.3) */

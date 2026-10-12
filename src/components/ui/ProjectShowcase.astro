@@ -1,13 +1,13 @@
 ---
 import Chip from './Chip.astro';
 
-// MASTER §6.2: tag → title → 2–3 numbers → product window (slot) → chips → "Illustrative" caption.
+// MASTER §6.2: tag → title → real, approved numbers (if any) → product window (slot) → chips → "Illustrative" caption.
 interface Props {
   tag: string;
   tagTone?: 'brand' | 'highlight';
   title: string;
   body?: string;
-  numbers: { value: string; label: string }[];
+  numbers?: { value: string; label: string }[];
   chips?: string[];
   more?: string;
   caption: string;
@@ -15,7 +15,7 @@ interface Props {
   reverse?: boolean;
 }
 
-const { tag, tagTone = 'brand', title, body, numbers, chips = [], more, caption, reverse = false } = Astro.props;
+const { tag, tagTone = 'brand', title, body, numbers = [], chips = [], more, caption, reverse = false } = Astro.props;
 ---
 
 <article class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
@@ -23,16 +23,18 @@ const { tag, tagTone = 'brand', title, body, numbers, chips = [], more, caption,
     <Chip tone={tagTone}>{tag}</Chip>
     <h3 class="font-display text-h2 text-ink-900 mt-4">{title}</h3>
     {body && <p class="text-body text-ink-700 mt-3">{body}</p>}
-    <dl class="border-line my-6 grid grid-cols-2 border-y">
-      {numbers.map((n) => (
-        <div class="border-line flex flex-col py-4 not-first:border-s not-first:ps-5">
-          <dt class="text-label text-ink-500 mt-1 uppercase">{n.label}</dt>
-          <dd class="font-display text-num-lg text-ink-900 -order-1 tabular-nums">{n.value}</dd>
-        </div>
-      ))}
-    </dl>
+    {numbers.length > 0 && (
+      <dl class="border-line my-6 grid grid-cols-2 border-y">
+        {numbers.map((n) => (
+          <div class="border-line flex flex-col py-4 not-first:border-s not-first:ps-5">
+            <dt class="text-label text-ink-500 mt-1">{n.label}</dt>
+            <dd class="font-display text-num-lg text-ink-900 -order-1 tabular-nums">{n.value}</dd>
+          </div>
+        ))}
+      </dl>
+    )}
     {chips.length > 0 && (
-      <ul class="flex flex-wrap gap-2">
+      <ul class="mt-6 flex flex-wrap gap-2">
         {chips.map((c) => (
           <li>
             <Chip>{c}</Chip>

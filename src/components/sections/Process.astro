@@ -29,15 +29,8 @@ const p = t.process;
     </div>
 
     <div class="border-line bg-surface mt-8 hidden rounded-lg border group-data-[enhanced]:block">
+      <!-- No text labels under the shapes until we confirm what we deploy (content/open-data.md, IoT). -->
       <canvas data-canvas aria-hidden="true" class="block h-60 w-full lg:h-90"></canvas>
-      <ul
-        aria-label={p.shipLabel}
-        class="text-small text-ink-500 group-data-[stage=3]:text-brand-navy grid grid-cols-4 px-2 pb-4 text-center font-semibold transition-colors duration-300"
-      >
-        {p.ship.map((s) => (
-          <li>{s}</li>
-        ))}
-      </ul>
     </div>
 
     <div class="relative mt-10">

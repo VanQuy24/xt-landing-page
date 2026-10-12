@@ -26,7 +26,7 @@ const contacts: { icon: IconName; label: string; value: string; href?: string }[
 <Section id="contact" labelledby="contact-title">
   <div class="grid gap-12 lg:grid-cols-12">
     <div class="lg:col-span-5">
-      <SectionHeader id="contact-title" label={b.label} heading={b.heading} lead={b.intro} />
+      <SectionHeader id="contact-title" heading={b.heading} lead={b.intro} />
       <Button href={mailto} class="mt-8">
         <Icon name="mail" class="size-5" />
         {b.cta}
@@ -34,7 +34,7 @@ const contacts: { icon: IconName; label: string; value: string; href?: string }[
     </div>
 
     <div class="lg:col-span-7">
-      <h3 class="text-label text-ink-500 uppercase">{b.contactLabel}</h3>
+      <h3 class="text-label text-ink-500">{b.contactLabel}</h3>
       <dl class="divide-line border-line mt-4 divide-y border-y">
         {contacts.map((c) => (
           <div class="flex flex-wrap items-center gap-x-4 py-1">
@@ -59,10 +59,10 @@ const contacts: { icon: IconName; label: string; value: string; href?: string }[
         ))}
       </dl>
 
-      <h3 class="text-label text-ink-500 mt-10 uppercase">{b.officesLabel}</h3>
-      <ul class="mt-4 grid gap-4 sm:grid-cols-3">
+      <h3 class="text-label text-ink-500 mt-10">{b.officesLabel}</h3>
+      <ul class="mt-4 grid gap-6 sm:grid-cols-3">
         {b.offices.map((o) => (
-          <li class="border-line rounded-lg border p-5">
+          <li>
             <p class="text-h4 text-ink-900 flex items-center gap-2">
               <Icon name="pin" class="size-5 text-blue-600" />
               {o.city}

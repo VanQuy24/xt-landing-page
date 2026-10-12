@@ -2,6 +2,8 @@
 
 Page: `home` · URL: `/vi/` · Language: Vietnamese
 
+Page order on the site, decided 2026-10-12: 1 Hero and 2 Numbers, 4 Products, 3 Services, 5 Clients, 7 4-D process, 9 Who we are, 10 FAQ, 11 Send a brief. Section 8 is cut. Our own products come before services because they show work and need no client approval.
+
 [VI-REVIEW] New translation of `en/home.md`. The live site has no Vietnamese version. A native speaker checks every line before launch, then removes this marker.
 
 The English file is the source of truth for what each section must communicate, where the copy comes from, and the open markers. This file holds only the Vietnamese copy, in the same order, with the same `[DUMMY: ...]` and `[DESIGN-DEPENDENT: ...]` markers. `[VI-REVIEW: ...]` marks a question that only applies to the Vietnamese version. Brand names, product names, client names, numbers, phones and addresses stay as in English. Terms that Vietnamese tech buyers use in English (AI, AI/ML, low-code, cloud, Agile, EdTech, ROI) stay in English.
@@ -22,7 +24,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 1. Hero
 
-- Headline: Kiến tạo giải pháp CNTT an toàn và đổi mới
+- Headline: Nền tảng trường học và phần mềm theo yêu cầu
 - Subline: XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.
 - Button: Liên hệ
 
@@ -32,12 +34,12 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 2. Numbers
 
-| Number                                  | Label                                          | Detail line                                                                                                                              |
-| --------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 25+                                     | Năm kinh nghiệm lãnh đạo                       | Đội ngũ lãnh đạo có hàng chục năm kinh nghiệm về dịch vụ CNTT và phát triển sản phẩm, qua nhiều ngành và nhiều đợt chuyển đổi công nghệ. |
-| 20+                                     | Nền tảng công nghệ thành thạo                  | Từ AI/ML và cloud đến microservices và front-end framework.                                                                              |
-| 3                                       | Văn phòng                                      | Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam). [UPDATE: same as English]                                                    |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                       |
+| Number                                  | Label                                          | Detail line                                                                                                                                                                                                           |
+| --------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 25+                                     | Năm kinh nghiệm lãnh đạo                       | Kinh nghiệm của đội ngũ lãnh đạo về dịch vụ CNTT và phát triển sản phẩm. [DUMMY: does 25+ count one person's career or several people's years added together? The detail line names neither until this is confirmed.] |
+| 20+                                     | Công nghệ chúng tôi sử dụng                    | Từ AI/ML và cloud đến microservices và front-end framework.                                                                                                                                                           |
+| 3                                       | Văn phòng                                      | Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam). [UPDATE: one HCMC office is moving. If the move leaves two offices, change the number to 2.]                                                              |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                                                                                    |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 
@@ -45,19 +47,18 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 3. Services
 
-- Section label: Dịch vụ
-- Heading: Giải pháp công nghệ giúp doanh nghiệp của bạn đổi mới
+- Heading: Những việc bạn có thể thuê chúng tôi làm
 
-| Service                          | Description                                                                                                                                                                                                                             |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phát triển sản phẩm              | Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường nhờ năng lực kỹ thuật toàn diện. Chúng tôi xây dựng giải pháp có khả năng mở rộng, lấy người dùng làm trung tâm, hướng tới thành công thương mại và sự khác biệt trên thị trường. |
-| Phân tích dữ liệu bằng AI        | Biến dữ liệu thô thành thông tin hữu ích bằng AI và kỹ thuật trực quan hóa. Giải pháp của chúng tôi tìm ra các quy luật ẩn, tối ưu vận hành và giúp ra quyết định dựa trên dữ liệu, với kết quả đo lường được.                          |
-| Đồng kiến tạo sản phẩm           | Đẩy nhanh đổi mới bằng cách kết hợp hiểu biết chuyên ngành của bạn với năng lực kỹ thuật của chúng tôi, để phát triển giải pháp riêng theo đúng mục tiêu kinh doanh.                                                                    |
-| Cung ứng nhân sự                 | Có ngay nhân sự công nghệ chuyên môn khi cần, với hình thức linh hoạt. Kỹ sư của chúng tôi hòa nhập vào đội ngũ của bạn để đẩy nhanh tiến độ dự án.                                                                                     |
-| Phát triển ứng dụng theo yêu cầu | Phát triển giải pháp theo đúng yêu cầu riêng và hiện đại hóa hệ thống cũ. Ứng dụng của chúng tôi tăng hiệu quả, loại bỏ quy trình thủ công và tạo lợi thế cạnh tranh.                                                                   |
-| Giải pháp low-code               | Chuyển đổi nhanh hơn với các nền tảng như Power Platform, Make, n8n, Retool và Bubble. Giải pháp low-code giúp triển khai nhanh, giảm chi phí và cho phép đội ngũ của bạn tự tạo ứng dụng.                                              |
-| Giải pháp ứng dụng AI            | Dùng trí tuệ nhân tạo để đổi mới vận hành: tự động hóa thông minh, phân tích dự báo, giao diện hội thoại và tự động hóa quy trình bằng AI.                                                                                              |
-| Điện toán đám mây                | Giải pháp trên Azure, AWS và GCP cho việc chuyển đổi, tối ưu và tích hợp tài nguyên cloud. Chúng tôi giúp tăng khả năng mở rộng, tăng bảo mật và tối ưu chi phí vận hành.                                                               |
+| Service                          | Description                                                                                                                              |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Phát triển sản phẩm              | Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường, mở rộng được theo số người dùng.                                                  |
+| Phân tích dữ liệu bằng AI        | Dùng AI và trực quan hóa dữ liệu để tìm ra quy luật trong dữ liệu của bạn, rồi biến chúng thành quyết định đo lường được.                |
+| Đồng kiến tạo sản phẩm           | Hiểu biết chuyên ngành của bạn kết hợp với năng lực kỹ thuật của chúng tôi, để xây dựng sản phẩm theo đúng mục tiêu kinh doanh.          |
+| Cung ứng nhân sự                 | Kỹ sư có chuyên môn tham gia vào đội ngũ của bạn khi cần, để đẩy nhanh tiến độ dự án.                                                    |
+| Phát triển ứng dụng theo yêu cầu | Ứng dụng theo đúng yêu cầu của bạn, và hiện đại hóa hệ thống cũ để giảm việc thủ công.                                                   |
+| Giải pháp low-code               | Triển khai nhanh hơn, chi phí thấp hơn trên Power Platform, Make, n8n, Retool và Bubble, với công cụ để đội ngũ của bạn tự tạo ứng dụng. |
+| Giải pháp ứng dụng AI            | Tự động hóa thông minh, phân tích dự báo và giao diện hội thoại, xây dựng bằng AI.                                                       |
+| Điện toán đám mây                | Chuyển đổi, tối ưu và tích hợp tài nguyên cloud trên Azure, AWS và GCP.                                                                  |
 
 ---
 
@@ -70,6 +71,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 Một hệ sinh thái số tích hợp, dùng trí tuệ nhân tạo để nâng cao việc học, đơn giản hóa quản lý và tăng sự gắn kết của học sinh. Nền tảng mang lại lộ trình học cá nhân hóa, phân tích theo thời gian thực, chấm điểm tự động và quản lý tài nguyên thông minh.
 
+[DUMMY: which of these features are live today. The site hides this list until then and shows only the platform description.]
 Tính năng:
 
 - Học tập cá nhân hóa
@@ -148,6 +150,8 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 
 - Note: Thực hành Agile và quy trình làm việc ứng dụng AI, quản lý dự án bằng số liệu.
 
+[DUMMY: what we deploy. The 4-D animation used to label its last stage "Apps · AI robotics · IoT · Smart platform". IoT is not a listed service, so the site shows the shapes without labels until this is confirmed.]
+
 [DESIGN-DEPENDENT: how the four steps are presented, and whether they show one at a time. The copy is the same either way.]
 
 [VI-REVIEW: the English step names (Discovery, Design, Development, Deployment) all start with D, which is the point of "4-D". Decide whether to keep the English names here, or the Vietnamese ones above.]
@@ -155,6 +159,8 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 ---
 
 ## 8. Why choose us
+
+Cut from the site on 2026-10-12: three identical cards with claims a buyer cannot check (audit P0-4). The copy stays below for reference. The values on the Careers page cover integrity and quality.
 
 - Section label: Vì sao chọn chúng tôi
 - Heading: Ưu tiên, cam kết và giải pháp của chúng tôi
@@ -170,9 +176,8 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 
 ## 9. Who we are
 
-- Section label: Về chúng tôi
-- Heading: Giải pháp công nghệ lấy người dùng làm trung tâm
-- Paragraph: XionTechs chuyên cung cấp giải pháp công nghệ lấy người dùng làm trung tâm, giúp doanh nghiệp phát triển trong thời đại số. Chúng tôi kết hợp chuyên môn kỹ thuật với hiểu biết sâu về ngành để tạo ra giải pháp phù hợp, mang lại kết quả đo lường được và tăng trưởng bền vững.
+- Heading: Đội ngũ của chúng tôi tại TP. Hồ Chí Minh và Plano
+- Paragraph: XionTechs chuyên cung cấp giải pháp công nghệ, giúp doanh nghiệp phát triển trong thời đại số. Chúng tôi kết hợp chuyên môn kỹ thuật với hiểu biết sâu về ngành để tạo ra giải pháp phù hợp, mang lại kết quả đo lường được và tăng trưởng bền vững.
 - Bullets:
   - Tìm cơ hội tăng trưởng và mở rộng thị trường
   - Nâng cao hiệu quả vận hành và giảm lãng phí
@@ -189,8 +194,12 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 **XionTechs cung cấp những dịch vụ nào?**
 XionTechs cung cấp dịch vụ phát triển sản phẩm số, phân tích dữ liệu, đồng kiến tạo sản phẩm và cung ứng nhân sự. Các dịch vụ này ứng dụng công nghệ mới như AI/ML và AI tạo sinh. XionTechs tập trung vào các ngành EdTech, y tế, logistics và quỹ đầu tư tư nhân.
 
+Section 5 lists EdTech, healthcare and logistics only. [DUMMY: is private equity a sector we work in? If not, drop it from this answer.]
+
 **Các bạn bảo vệ dữ liệu như thế nào?**
 Với tinh thần chính trực, XionTechs trung thực và minh bạch trong mọi giao dịch, bảo vệ dữ liệu khách hàng bằng chuẩn mực đạo đức và cách làm có trách nhiệm. Tự động hóa bảo mật và quét liên tục giúp bảo vệ dữ liệu thêm một lớp.
+
+[DUMMY: which security practices and certifications are real. This answer talks about integrity, not security, while the hero promises secure software.]
 
 **Các bạn triển khai dự án như thế nào?**
 Chúng tôi làm theo quy trình 4-D: Khám phá, Thiết kế, Phát triển và Vận hành. Đội ngũ làm việc theo Agile với quy trình ứng dụng AI, và quản lý dự án bằng số liệu, để bạn theo dõi chất lượng và tiến độ bằng con số.
@@ -202,11 +211,10 @@ XionTechs đo lường giá trị bằng các chỉ số về tốc độ, chấ
 
 ## 11. Send a brief
 
-- Section label: Hợp tác cùng chúng tôi
 - Heading: Hãy cho chúng tôi biết bạn đang xây dựng gì
 - Intro: Gửi yêu cầu và chúng tôi sẽ trả lời qua email trong vòng 24 giờ làm việc.
 
-Form:
+Form (later, once a form service is chosen; until then the site uses an "Email your brief" mail link, MASTER §5.13):
 
 - Họ tên (bắt buộc)
 - Email công việc (bắt buộc)

@@ -2,6 +2,8 @@
 
 Page: `home` · URL: `/` · Language: English
 
+Page order on the site, decided 2026-10-12: 1 Hero and 2 Numbers, 4 Products, 3 Services, 5 Clients, 7 4-D process, 9 Who we are, 10 FAQ, 11 Send a brief. Section 8 is cut. Our own products come before services because they show work and need no client approval.
+
 The one page that sells. Its goal is a sent brief. Every section either proves XionTechs is real and has built software like the visitor's, or moves them to the form.
 
 How to read this file:
@@ -33,9 +35,9 @@ Source: live nav, cut down to the sections on this page. Decided 2026-10-11.
 
 Must communicate: XionTechs builds secure software, it is AI-powered, and the next step is to get in touch.
 
-Source: headline from live home. Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
+Source: headline rewritten on 2026-10-12 from facts already on this page, because the live headline could front any IT company (audit P0-3). Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
 
-- Headline: Crafting secure and innovative IT solutions
+- Headline: School platforms and custom software
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
 
@@ -49,12 +51,12 @@ Must communicate: a long track record, wide technical range and real offices.
 
 Source: live home stats. The office line is rewritten because the live text names Dallas and Da Nang, which the team corrected: no Da Nang office, and the US office is in Plano. The "24/7" claim is cut because the live Support page gives Monday to Friday, 9:00 to 18:00 ICT.
 
-| Number                                  | Label                                          | Detail line                                                                                                                                             |
-| --------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 25+                                     | Years of leadership experience                 | Our leadership team brings decades of expertise in IT services and product engineering across multiple industries and technology transformations.       |
-| 20+                                     | Tech stack expertise                           | From AI/ML and cloud solutions to microservices and front-end frameworks.                                                                               |
-| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam). [UPDATE: one HCMC office is moving. If the move leaves two offices, change the number to 2.] |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                      |
+| Number                                  | Label                                          | Detail line                                                                                                                                                                                                           |
+| --------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 25+                                     | Years of leadership experience                 | Our leadership team's experience in IT services and product engineering. [DUMMY: does 25+ count one person's career or several people's years added together? The detail line names neither until this is confirmed.] |
+| 20+                                     | Technologies we work with                      | From AI/ML and cloud to microservices and front-end frameworks.                                                                                                                                                       |
+| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam). [UPDATE: one HCMC office is moving. If the move leaves two offices, change the number to 2.]                                                               |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                                                                                    |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 
@@ -64,23 +66,20 @@ Source: live home stats. The office line is rewritten because the live text name
 
 Must communicate: what XionTechs can be hired for.
 
-Source: live home "Our services", all 8, word for word. "Staffings Service" fixed to "Staffing services".
+Source: live home "Our services", all 8, service names word for word. Descriptions rewritten on 2026-10-12 to one sentence each, making no claim the live copy did not make (audit P1-10).
 
-- Section label: Our services
-- Heading: Technology solutions that transform your business
+- Heading: What you can hire us for
 
-| Service                | Description                                                                                                                                                                                                                         |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Product engineering    | Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation.                  |
-| AI-driven analytics    | Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes. |
-| Product co-creation    | Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives.                                        |
-| Staffing services      | Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery.                                                 |
-| Custom app development | Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage.                                      |
-| Low-code solutions     | Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications.              |
-| AI-powered solutions   | Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth.                                     |
-| Cloud computing        | Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs.                       |
-
-[CONTENT-LEAD: tighten. Several descriptions open with "Transform" or "Accelerate" and use filler like "seamless" and "competitive advantage".]
+| Service                | Description                                                                                                                      |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Product engineering    | We turn a product idea into a market-ready digital product that scales with its users.                                           |
+| AI-driven analytics    | We use AI and data visualization to find patterns in your data and turn them into decisions you can measure.                     |
+| Product co-creation    | Your domain knowledge and our engineering, combined into a product built around your business goals.                             |
+| Staffing services      | Skilled engineers who join your team when you need them, to speed up delivery.                                                   |
+| Custom app development | Apps built to your requirements, and modernization of legacy systems to cut manual work.                                         |
+| Low-code solutions     | Faster, lower-cost delivery on Power Platform, Make, n8n, Retool and Bubble, with tools your team can use to build its own apps. |
+| AI-powered solutions   | Intelligent automation, predictive analytics and conversational interfaces, built with AI.                                       |
+| Cloud computing        | Migration, optimization and integration of cloud resources on Azure, AWS and GCP.                                                |
 
 ---
 
@@ -97,6 +96,7 @@ Source: newxion.com/solutions for the platform and timetabling, reworded lightly
 
 An integrated digital ecosystem that uses artificial intelligence to improve learning, streamline administration and raise student engagement. It delivers personalized learning paths, real-time analytics, automated grading and smart resource management.
 
+[DUMMY: which of these features are live today. The site hides this list until then and shows only the platform description.]
 Features:
 
 - Personalized learning
@@ -189,11 +189,15 @@ Source: live home "4-D process", word for word. The note under the steps replace
 
 - Note: Agile practices and an AI-driven workflow, with metric-driven project management.
 
+[DUMMY: what we deploy. The 4-D animation used to label its last stage "Apps · AI robotics · IoT · Smart platform". IoT is not a listed service, so the site shows the shapes without labels until this is confirmed.]
+
 [DESIGN-DEPENDENT: how the four steps are presented, and whether they show one at a time. The copy is the same either way.]
 
 ---
 
 ## 8. Why choose us
+
+Cut from the site on 2026-10-12: three identical cards with claims a buyer cannot check (audit P0-4). The copy stays below for reference. The values on the Careers page cover integrity and quality.
 
 Must communicate: what a client can count on.
 
@@ -217,9 +221,8 @@ Must communicate: a real company whose name means something, with engineers in V
 
 Source: heading, paragraph and bullets from live home "Who we are". The broken bullet "market presence Enhance" is split back into two bullets with no words changed. The team approved the name line on 2026-10-11 as the one plain mention of the mountain. All other mountain wording from the draft is cut.
 
-- Section label: Who we are
-- Heading: We deliver consumer-centric tech solutions
-- Paragraph: XionTechs specializes in delivering consumer-centric technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth. [CONTENT-LEAD: tighten. "Thrive in today's digital landscape" says nothing specific.]
+- Heading: Our team in Ho Chi Minh City and Plano
+- Paragraph: XionTechs specializes in delivering technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth. [CONTENT-LEAD: tighten. "Thrive in today's digital landscape" says nothing specific.]
 - Bullets:
   - Identify growth opportunities and expand market presence
   - Enhance operational efficiency and reduce waste
@@ -240,8 +243,12 @@ Source: live FAQs page, answers word for word with spelling fixed. [CONTENT-LEAD
 **What services does XionTechs offer?**
 XionTechs offers digital product engineering, digital insights and analytics, product co-creation, and staffing services. These services leverage emerging technologies like AI/ML and generative AI. XionTechs focuses on industries such as EdTech, healthcare, logistics, and private equity.
 
+Section 5 lists EdTech, healthcare and logistics only. [DUMMY: is private equity a sector we work in? If not, drop it from this answer.]
+
 **How do you ensure data security?**
 With an integrity mindset, XionTechs maintains honesty and transparency in all dealings, ensuring client data is protected through ethical standards and responsible practices. Security automation and continuous scanning further enhance data protection.
+
+[DUMMY: which security practices and certifications are real. This answer talks about integrity, not security, while the hero promises secure software.]
 
 **How do you run a project?**
 We follow the 4-D process: Discovery, Design, Development and Deployment. The team works with Agile practices and an AI-driven workflow, and project management is metric-driven, so you read quality and progress in numbers.
@@ -257,11 +264,10 @@ Must communicate: the visitor can start today, a real person answers, and here i
 
 Source: form labels and messages from the earlier draft, `source/en/form.json`. The service list matches section 3. Phones, email and addresses from live xiontechs.com. WhatsApp number from newxion.com, approved by the team on 2026-10-11. Office hours and reply time from the live Support page.
 
-- Section label: Work with us
 - Heading: Tell us what you are building
 - Intro: Send a brief and we reply by email within 24 business hours.
 
-Form:
+Form (later, once a form service is chosen; until then the site uses an "Email your brief" mail link, MASTER §5.13):
 
 - Your name (required)
 - Work email (required)

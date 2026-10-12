@@ -17,7 +17,7 @@ const c = t.clients;
 ---
 
 <Section id="clients" labelledby="clients-title" surface>
-  <SectionHeader id="clients-title" label={c.label} heading={c.heading} />
+  <SectionHeader id="clients-title" heading={c.heading} />
 
   <div class="border-line mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-y py-6">
     <h3 class="sr-only">{c.namesLabel}</h3>
@@ -27,7 +27,7 @@ const c = t.clients;
       ))}
     </ul>
     <div class="flex flex-wrap items-center gap-2 lg:ms-auto">
-      <h3 class="text-label text-ink-500 me-2 uppercase">{c.domainsLabel}</h3>
+      <h3 class="text-label text-ink-500 me-2">{c.domainsLabel}</h3>
       <ul class="flex flex-wrap gap-2">
         {c.domains.map((d) => (
           <li>
@@ -49,7 +49,6 @@ const c = t.clients;
       tag={c.work.tag}
       title={c.work.title}
       body={c.work.body}
-      numbers={c.work.numbers}
       chips={c.work.chips}
       caption={t.a11y.illustrative}
       reverse

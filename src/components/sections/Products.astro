@@ -1,12 +1,12 @@
 ---
 import { getDictionary, type Locale } from '../../i18n';
 import AppWindow from '../ui/AppWindow.astro';
-import Icon from '../ui/Icon.astro';
 import ProjectShowcase from '../ui/ProjectShowcase.astro';
 import Section from '../ui/Section.astro';
 import SectionHeader from '../ui/SectionHeader.astro';
 
 // Home §4. Buddy360 is left out until its line and photo are confirmed (content/open-data.md #4, #5).
+// The feature list returns once we know which features are live (content/open-data.md).
 interface Props {
   lang: Locale;
 }
@@ -16,37 +16,15 @@ const p = t.products;
 ---
 
 <Section id="products" labelledby="products-title">
-  <SectionHeader id="products-title" label={p.label} heading={p.heading} lead={p.intro} />
+  <SectionHeader id="products-title" heading={p.heading} lead={p.intro} />
   <div class="mt-12">
-    <ProjectShowcase
-      tag={p.tag}
-      title={p.platform.title}
-      body={p.platform.body}
-      numbers={p.numbers}
-      caption={t.a11y.illustrative}
-    >
+    <ProjectShowcase tag={p.tag} title={p.platform.title} body={p.platform.body} caption={t.a11y.illustrative}>
       <AppWindow bar={p.window.bar} kpis={p.window.kpis} rows={p.window.rows} />
     </ProjectShowcase>
   </div>
 
-  <div class="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-12">
-    <div class="lg:col-span-7">
-      <h3 class="text-label text-ink-500 uppercase">{p.platform.featuresLabel}</h3>
-      <ul class="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
-        {p.platform.features.map((f) => (
-          <li class="text-ink-700 flex items-start gap-3">
-            <Icon name="check" class="mt-0.5 size-5 shrink-0 text-blue-600" />
-            {f}
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div class="border-line rounded-lg border bg-white p-6 lg:col-span-5 lg:p-8">
-      <span class="inline-flex size-12 items-center justify-center rounded-md bg-blue-50 text-blue-600">
-        <Icon name="clock" />
-      </span>
-      <h3 class="font-display text-h3 text-ink-900 mt-5">{p.timetabling.title}</h3>
-      <p class="text-small text-ink-500 mt-3">{p.timetabling.body}</p>
-    </div>
-  </div>
+  <article class="border-line mt-16 max-w-2xl rounded-lg border bg-white p-6 lg:p-8">
+    <h3 class="font-display text-h3 text-ink-900">{p.timetabling.title}</h3>
+    <p class="text-body text-ink-700 mt-3">{p.timetabling.body}</p>
+  </article>
 </Section>
