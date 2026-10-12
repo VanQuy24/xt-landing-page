@@ -21,6 +21,7 @@ const links = [
   { href: `${home}#products`, label: t.nav.products },
   { href: `${home}#clients`, label: t.nav.clients },
   { href: `${home}#process`, label: t.nav.process },
+  { href: `${home}#news`, label: t.nav.news },
   { href: `${home}#faq`, label: t.nav.faq },
   { href: getRelativeLocaleUrl(lang, 'careers'), label: t.nav.careers },
 ];
@@ -40,14 +41,14 @@ const current = (href: string) =>
       XionTechs
     </a>
 
-    <nav aria-label={t.a11y.primaryNav} class="mx-auto hidden lg:block">
+    <nav aria-label={t.a11y.primaryNav} class="mx-auto hidden xl:block">
       <ul class="flex items-center gap-1">
         {links.map((l) => (
           <li>
             <a
               href={l.href}
               aria-current={current(l.href) ? 'page' : undefined}
-              class="text-ink-700 aria-[current=page]:after:bg-gold-400 relative inline-flex h-11 items-center px-3 text-[15px] font-medium transition-colors duration-150 after:absolute after:inset-x-3 after:bottom-1.5 after:h-0.5 after:rounded-full hover:text-blue-600 aria-[current=page]:text-blue-600"
+              class="text-ink-700 aria-[current=page]:after:bg-gold-400 relative inline-flex h-11 items-center px-3 text-[15px] whitespace-nowrap font-medium transition-colors duration-150 after:absolute after:inset-x-3 after:bottom-1.5 after:h-0.5 after:rounded-full hover:text-blue-600 aria-[current=page]:text-blue-600"
             >
               {l.label}
             </a>
@@ -56,7 +57,7 @@ const current = (href: string) =>
       </ul>
     </nav>
 
-    <div class="ms-auto flex items-center gap-3 lg:ms-0">
+    <div class="ms-auto flex items-center gap-3 xl:ms-0">
       <LanguageSwitcher lang={lang} />
       <div class="hidden lg:block">
         <Button href={contact} size="sm">
@@ -68,7 +69,7 @@ const current = (href: string) =>
         data-menu-button
         aria-expanded="false"
         aria-controls="mobile-menu"
-        class="text-ink-900 inline-flex size-11 cursor-pointer items-center justify-center rounded-md lg:hidden"
+        class="text-ink-900 inline-flex size-11 cursor-pointer items-center justify-center rounded-md xl:hidden"
       >
         <span data-when-closed>
           <span class="sr-only">{t.a11y.menuOpen}</span>
@@ -85,7 +86,7 @@ const current = (href: string) =>
   <div
     id="mobile-menu"
     hidden
-    class="border-line fixed inset-x-0 top-18 bottom-0 z-60 overflow-y-auto border-t bg-white px-4 pb-8 lg:hidden"
+    class="border-line fixed inset-x-0 top-18 bottom-0 z-60 overflow-y-auto border-t bg-white px-4 pb-8 xl:hidden"
   >
     <nav aria-label={t.a11y.primaryNav}>
       <ul class="divide-line divide-y">
