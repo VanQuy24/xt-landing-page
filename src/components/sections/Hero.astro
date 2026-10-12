@@ -1,11 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import { getDictionary, type Locale } from '../../i18n';
+import heroTeam from '../../assets/hero-team.webp';
 import Button from '../ui/Button.astro';
 import Container from '../ui/Container.astro';
 import Icon from '../ui/Icon.astro';
 import StatStrip from '../ui/StatStrip.astro';
 
 // Home §1 Hero + §2 Numbers. The gold Highlight button is used here and nowhere else (MASTER §5.1).
+// The photo is the real team in the Ho Chi Minh City office, the one picture only we can show (MASTER §4.2).
 interface Props {
   lang: Locale;
 }
@@ -15,21 +18,36 @@ const t = getDictionary(Astro.props.lang);
 
 <section aria-labelledby="hero-title" class="pt-16 pb-16 lg:pt-24 lg:pb-24">
   <Container>
-    <div class="max-w-4xl">
-      <p class="font-display text-h4 font-extrabold text-blue-600">{t.hero.eyebrow}</p>
-      <h1 id="hero-title" class="font-display text-display text-ink-900 mt-5">
-        {t.hero.title}
-      </h1>
-      <p class="text-lead text-ink-500 mt-6 max-w-2xl">{t.hero.subtitle}</p>
-      <div class="mt-10 flex flex-wrap gap-3">
-        <Button href="#contact" variant="highlight">
-          {t.hero.cta}
-          <Icon name="arrow" class="size-5" />
-        </Button>
-        <Button href="#services" variant="secondary">
-          {t.hero.secondary}
-        </Button>
+    <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+      <div class="lg:col-span-7">
+        <!-- avoid-ai-design-ignore: SD5 CP1. The team chose this headline and its accent line on 2026-10-12. -->
+        <h1 id="hero-title" class="font-display text-display text-ink-900 text-balance">
+          <span class="block">{t.hero.title}</span>
+          <span class="block text-blue-600">{t.hero.accent}</span>
+        </h1>
+        <p class="text-lead text-ink-500 mt-6 max-w-2xl">{t.hero.subtitle}</p>
+        <div class="mt-10 flex flex-wrap gap-3">
+          <Button href="#contact" variant="highlight">
+            {t.hero.cta}
+            <Icon name="arrow" class="size-5" />
+          </Button>
+          <Button href="#services" variant="secondary">
+            {t.hero.secondary}
+          </Button>
+        </div>
       </div>
+      <figure class="lg:col-span-5">
+        <Image
+          src={heroTeam}
+          alt={t.hero.photoAlt}
+          widths={[480, 720, 960]}
+          sizes="(min-width: 1024px) 480px, 100vw"
+          loading="eager"
+          fetchpriority="high"
+          class="border-line aspect-4/3 w-full rounded-md border object-cover"
+        />
+        <figcaption class="text-small text-ink-500 mt-3">{t.hero.photoCaption}</figcaption>
+      </figure>
     </div>
     <StatStrip items={t.numbers.items} label={t.numbers.label} class="border-line mt-16 border-t pt-10 lg:mt-20" />
   </Container>

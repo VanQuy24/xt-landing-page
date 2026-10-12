@@ -24,11 +24,13 @@
     "cta": "Get in touch"
   },
   "hero": {
-    "eyebrow": "Get IT Done",
-    "title": "School platforms and custom software",
-    "subtitle": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.",
+    "title": "Where intelligence meets identity.",
+    "accent": "Get IT done.",
+    "subtitle": "AI-powered software for schools and growing businesses, built from Texas and Vietnam.",
     "cta": "Get in touch",
-    "secondary": "Explore services"
+    "secondary": "Explore services",
+    "photoAlt": "The XionTechs team giving a thumbs up at a company-wide knowledge sharing session, with the Ho Chi Minh City skyline behind them",
+    "photoCaption": "Company-wide knowledge sharing, Ho Chi Minh City"
   },
   "numbers": {
     "label": "XionTechs in numbers",
@@ -233,13 +235,17 @@
     ]
   },
   "footer": {
-    "slogan": "Get IT Done",
     "line": "AI-powered IT services and products",
     "contactLabel": "Contact",
-    "offices": "Plano, Texas, USA · Ho Chi Minh City, Vietnam",
     "linksLabel": "Company",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
+    "timesLabel": "Local time",
+    "plano": "Plano, Texas",
+    "hcmc": "Ho Chi Minh City",
+    "open": "In working hours",
+    "closed": "Outside working hours",
+    "hours": "Mon–Fri, 9:00–18:00 local time",
     "legal": "© 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815"
   },
   "careers": {

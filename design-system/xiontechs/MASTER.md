@@ -307,6 +307,8 @@ Optional `label` (kicker, `blue-600`) → `h2` (ink-900) → `lead` (ink-500, �
 
 ### 5.7 Image frame / media card
 
+Home hero: headline, lead and buttons in 7/12 columns, the team photo `src/assets/hero-team.webp` in 5/12, with a caption that says what and where. The photo is 4:3 with `radius-md` and a 1px `line` border, and loads with `loading="eager"` and `fetchpriority="high"`. On mobile the photo sits under the buttons. It is a real photo of our office, never stock or AI-made (§4.2).
+
 Image (fixed aspect, `radius-md`) + caption (`small`, ink-500) + optional overlay **number chip** (gold-400 bg, navy text). Hover: image scale 1.02 inside the frame (no layout shift).
 
 ### 5.8 Cards and lists
@@ -338,16 +340,16 @@ Only rendered when an approved quote exists (`content/en/home.md` §6). Quote in
 
 ### 5.13 Contact block ("Send a brief", Home §11)
 
-Until a form service is chosen, the brief is sent by email:
+The block sits on the navy CTA band (§5.14): white heading, `white/80` lead, `blue-200` icons and labels, `white/15` dividers, white focus ring. Until a form service is chosen, the brief is sent by email:
 
-- Section header (§5.5) → one **primary button** "Email your brief" → `mailto:contact@xiontechs.com` with a prefilled subject (from i18n).
+- Section header (§5.5) → one **light button**, white on navy, "Email your brief" → `mailto:contact@xiontechs.com` with a prefilled subject (from i18n).
 - Beside it (desktop) / below (mobile): a contact list with icons: USA phone, Vietnam phone, WhatsApp, email (`tel:` / `mailto:` / `https://wa.me/` links, kept left-to-right), office hours, reply time.
 - Offices as a plain list in up to three columns, no card: city (`h4`) + address (`small`, `<address>`).
 - When a form service is added later: inputs 48px, 1.5px border `line` → focus `blue-600` + 4px `blue-100` ring; label above (Inter 600 14px); error text below in `danger` with icon; space for the error is reserved so the layout doesn't shift.
 
 ### 5.14 Footer & dark band
 
-The only dark surfaces: **CTA band** and **footer**, both `brand-navy` bg, white text, gold used once (for example the slogan "Get IT Done" or a gold bar). Footer content per `content/sitemap.md`, in three unequal columns: brand and slogan; contact (phones, email, offices line); links (Careers · Privacy policy · Terms of service) with the social icons under them. The footer keeps the contact details because on Careers and the legal pages it is the only place they appear. Then the legal line in `small` at ≥ 4.5:1 (white at 80% opacity minimum).
+The only dark surfaces: **CTA band** and **footer**. On Home the CTA band is the contact block (§5.13); it is the page's one color moment, and no other section goes navy. The footer starts with a `white/15` top rule so the band and the footer read as two blocks. Both are both `brand-navy` bg, white text, gold used once (for example the slogan "Get IT Done" or a gold bar). The footer uses `blue-950`, one step darker than the navy contact band, plus a `white/15` top rule, so the two never merge. Footer content per `content/sitemap.md`, in three columns. First, the real logo (`src/assets/xt-logo.webp`) on a white `radius-md` tile, because its navy strokes vanish on navy, with the one-line description. Second, local time in Plano and Ho Chi Minh City with a status line: a `gold-400` dot and "In working hours" from Monday to Friday, 9:00 to 18:00 local time, otherwise a dim dot and "Outside working hours". A small script with IANA time zones handles daylight saving; without JavaScript only the static hours line shows. Third, the links (Contact · Careers · Privacy policy · Terms of service) with the social icons under them. Phones, email and offices appear only in the Home contact block (§5.13); the footer's "Contact" link goes there from every page. The logo already carries "Get IT Done", so the gold slogan line is gone. Then the legal line in `small` at ≥ 4.5:1 (white at 80% opacity minimum).
 
 ### 5.15 404 page
 

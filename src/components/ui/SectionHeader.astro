@@ -5,16 +5,18 @@ interface Props {
   heading: string;
   lead?: string;
   id?: string;
+  /** Light text for the navy band. */
+  onDark?: boolean;
   class?: string;
 }
 
-const { label, heading, lead, id, class: className } = Astro.props;
+const { label, heading, lead, id, onDark = false, class: className } = Astro.props;
 ---
 
 <div class:list={['max-w-3xl', className]}>
-  {label && <p class="text-label mb-4 text-blue-600">{label}</p>}
-  <h2 id={id} class="font-display text-h2 text-ink-900">
+  {label && <p class:list={['text-label mb-4', onDark ? 'text-blue-200' : 'text-blue-600']}>{label}</p>}
+  <h2 id={id} class:list={['font-display text-h2', onDark ? 'text-white' : 'text-ink-900']}>
     {heading}
   </h2>
-  {lead && <p class="text-lead text-ink-500 mt-4">{lead}</p>}
+  {lead && <p class:list={['text-lead mt-4', onDark ? 'text-white/80' : 'text-ink-500']}>{lead}</p>}
 </div>

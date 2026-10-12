@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "XionTechs - Get IT Done",
-    "description": "XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Plano, Texas và TP. Hồ Chí Minh, Việt Nam."
+    "description": "XionTechs làm dịch vụ và sản phẩm IT dùng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Plano, Texas và TP. Hồ Chí Minh, Việt Nam."
   },
   "a11y": {
-    "skip": "Chuyển đến nội dung",
-    "primaryNav": "Điều hướng chính",
+    "skip": "Đến nội dung chính",
+    "primaryNav": "Menu chính",
     "menuOpen": "Mở menu",
     "menuClose": "Đóng menu",
     "home": "Trang chủ XionTechs",
-    "illustrative": "Minh họa — dữ liệu giả định",
-    "external": "mở trong thẻ mới",
+    "illustrative": "Minh họa, số liệu giả định",
+    "external": "mở thẻ mới",
     "ogAlt": "Logo XionTechs và tiêu đề: Kiến tạo giải pháp CNTT an toàn và đổi mới"
   },
   "nav": {
@@ -24,83 +24,82 @@
     "cta": "Liên hệ"
   },
   "hero": {
-    "eyebrow": "Get IT Done",
-    "title": "Nền tảng trường học và phần mềm theo yêu cầu",
-    "subtitle": "XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.",
-    "cta": "Liên hệ",
-    "secondary": "Xem dịch vụ"
+    "title": "Nơi trí tuệ gặp bản sắc.",
+    "accent": "Get IT done.",
+    "subtitle": "Phần mềm dùng AI cho trường học và doanh nghiệp đang lớn, làm từ Texas và Việt Nam.",
+    "cta": "Liên hệ ngay",
+    "secondary": "Khám phá dịch vụ",
+    "photoAlt": "Team XionTechs giơ ngón cái trong buổi chia sẻ kiến thức toàn công ty, phía sau là toàn cảnh TP. Hồ Chí Minh",
+    "photoCaption": "Chia sẻ kiến thức toàn công ty, TP. Hồ Chí Minh"
   },
   "numbers": {
-    "label": "XionTechs qua những con số",
+    "label": "XionTechs qua các con số",
     "items": [
       {
         "value": 25,
         "suffix": "+",
-        "label": "Năm kinh nghiệm lãnh đạo",
-        "context": "Kinh nghiệm của đội ngũ lãnh đạo về dịch vụ CNTT và phát triển sản phẩm."
+        "label": "Năm kinh nghiệm của ban lãnh đạo",
+        "context": "Trong dịch vụ IT và phát triển sản phẩm."
       },
       {
         "value": 20,
         "suffix": "+",
-        "label": "Công nghệ chúng tôi sử dụng",
-        "context": "Từ AI/ML và cloud đến microservices và front-end framework."
+        "label": "Công nghệ chúng tôi dùng",
+        "context": "Từ AI/ML, cloud đến microservices và front-end framework."
       },
       {
         "value": 3,
         "suffix": "",
         "label": "Văn phòng",
-        "context": "Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam)."
+        "context": "Một ở Plano (Mỹ), hai ở TP. Hồ Chí Minh (Việt Nam)."
       }
     ]
   },
   "services": {
-    "heading": "Những việc bạn có thể thuê chúng tôi làm",
+    "heading": "Bạn cần gì, chúng tôi làm được",
     "items": [
       {
         "title": "Phát triển sản phẩm",
-        "body": "Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường, mở rộng được theo số người dùng."
+        "body": "Từ ý tưởng đến sản phẩm số sẵn sàng ra thị trường, đủ sức lớn cùng người dùng của bạn."
       },
       {
         "title": "Phân tích dữ liệu bằng AI",
-        "body": "Dùng AI và trực quan hóa dữ liệu để tìm ra quy luật trong dữ liệu của bạn, rồi biến chúng thành quyết định đo lường được."
+        "body": "AI và biểu đồ trực quan tìm ra quy luật trong dữ liệu của bạn, biến chúng thành quyết định đo được."
       },
       {
-        "title": "Đồng kiến tạo sản phẩm",
-        "body": "Hiểu biết chuyên ngành của bạn kết hợp với năng lực kỹ thuật của chúng tôi, để xây dựng sản phẩm theo đúng mục tiêu kinh doanh."
+        "title": "Đồng phát triển sản phẩm",
+        "body": "Bạn hiểu thị trường, chúng tôi giỏi kỹ thuật. Cùng nhau làm sản phẩm bám sát mục tiêu kinh doanh của bạn."
       },
       {
-        "title": "Cung ứng nhân sự",
-        "body": "Kỹ sư có chuyên môn tham gia vào đội ngũ của bạn khi cần, để đẩy nhanh tiến độ dự án."
+        "title": "Cung ứng nhân sự IT",
+        "body": "Kỹ sư giỏi vào team của bạn đúng lúc cần, để dự án về đích nhanh hơn."
       },
       {
-        "title": "Phát triển ứng dụng theo yêu cầu",
-        "body": "Ứng dụng theo đúng yêu cầu của bạn, và hiện đại hóa hệ thống cũ để giảm việc thủ công."
+        "title": "App theo yêu cầu",
+        "body": "App may đo theo đúng quy trình của bạn. Chúng tôi cũng làm mới hệ thống cũ, cắt bớt việc thủ công."
       },
       {
         "title": "Giải pháp low-code",
-        "body": "Triển khai nhanh hơn, chi phí thấp hơn trên Power Platform, Make, n8n, Retool và Bubble, với công cụ để đội ngũ của bạn tự tạo ứng dụng."
+        "body": "Ra mắt nhanh hơn, tiết kiệm hơn với Power Platform, Make, n8n, Retool và Bubble. Team của bạn cũng tự xây app trên chính các nền tảng này."
       },
       {
         "title": "Giải pháp ứng dụng AI",
-        "body": "Tự động hóa thông minh, phân tích dự báo và giao diện hội thoại, xây dựng bằng AI."
+        "body": "Tự động hóa thông minh, phân tích dự báo và trợ lý hội thoại, chạy bằng AI."
       },
-      {
-        "title": "Điện toán đám mây",
-        "body": "Chuyển đổi, tối ưu và tích hợp tài nguyên cloud trên Azure, AWS và GCP."
-      }
+      { "title": "Giải pháp cloud", "body": "Đưa hệ thống lên cloud, tối ưu và tích hợp mượt trên Azure, AWS và GCP." }
     ]
   },
   "products": {
-    "heading": "Sản phẩm của chúng tôi cho trường học",
-    "intro": "Những sản phẩm riêng dành cho trường học, xây dựng trên cùng nền tảng kỹ thuật chúng tôi dùng cho dự án khách hàng.",
+    "heading": "Sản phẩm riêng cho trường học",
+    "intro": "Chúng tôi tự làm sản phẩm cho trường học, bằng chính đội kỹ thuật làm dự án cho khách hàng.",
     "tag": "Sản phẩm của chúng tôi · Giáo dục",
     "platform": {
-      "title": "Nền tảng trường học thông minh ứng dụng AI",
-      "body": "Một hệ sinh thái số tích hợp, dùng trí tuệ nhân tạo để nâng cao việc học, đơn giản hóa quản lý và tăng sự gắn kết của học sinh. Nền tảng mang lại lộ trình học cá nhân hóa, phân tích theo thời gian thực, chấm điểm tự động và quản lý tài nguyên thông minh."
+      "title": "Nền tảng trường học thông minh dùng AI",
+      "body": "Hệ thống số tích hợp, dùng AI để học sinh học tốt hơn và hứng thú hơn, nhà trường quản lý gọn hơn. Nền tảng có lộ trình học riêng cho từng em, số liệu theo thời gian thực, chấm điểm tự động và quản lý tài nguyên thông minh."
     },
     "timetabling": {
       "title": "Xếp thời khóa biểu bằng AI",
-      "body": "Hệ thống xếp lịch thông minh, tự động tạo và tối ưu thời khóa biểu. Hệ thống so sánh các thời khóa biểu tạo từ những đầu vào và ràng buộc khác nhau, trò chuyện với người dùng để hiểu mục tiêu xếp lịch, và báo cáo về việc sử dụng phòng học và sức chứa."
+      "body": "Hệ thống tự tạo và tối ưu thời khóa biểu. Nó so sánh các phương án từ nhiều đầu vào và ràng buộc, trao đổi với người dùng về mục tiêu xếp lịch, rồi báo cáo mức dùng phòng học và sức chứa."
     },
     "window": {
       "bar": "School platform · Dashboard",
@@ -122,8 +121,8 @@
     "names": ["Varkey Education", "CyberHive"],
     "work": {
       "tag": "Dự án khách hàng · Giáo dục",
-      "title": "Ứng dụng đa trường cho phụ huynh và nhân viên",
-      "body": "Phụ huynh trò chuyện với trợ lý AI để đóng học phí, cập nhật thông tin và nhận thông báo.",
+      "title": "App cho phụ huynh và nhân viên ở nhiều trường",
+      "body": "Phụ huynh nhắn với trợ lý AI để đóng học phí, cập nhật thông tin và nhận thông báo.",
       "chips": ["Đóng học phí", "Cập nhật thông tin", "Thông báo"]
     },
     "window": {
@@ -139,51 +138,48 @@
     },
     "domainsLabel": "Lĩnh vực",
     "domains": ["EdTech", "Y tế", "Logistics"],
-    "domainsBody": "Chúng tôi am hiểu sâu nhất về EdTech, y tế và logistics.",
-    "more": "và hơn nữa",
-    "visit": "Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát triển của chúng tôi tại TP. Hồ Chí Minh để tìm hiểu ứng dụng AI và robot trong giáo dục."
+    "domainsBody": "Chúng tôi hiểu sâu nhất về EdTech, y tế và logistics.",
+    "more": "và lĩnh vực khác",
+    "visit": "Tháng 10/2025, một khách hàng đến trung tâm phát triển của chúng tôi ở TP. Hồ Chí Minh để tìm hiểu AI và robot trong giáo dục."
   },
   "process": {
     "label": "Quy trình 4-D",
     "heading": "Cách chúng tôi \"Get IT Done\"",
     "steps": [
       {
-        "name": "Khám phá",
-        "body": "Gắn mục tiêu kinh doanh của bạn với giải pháp kỹ thuật. Chúng tôi xác định kết quả rõ ràng, đo lường được."
+        "name": "Discovery",
+        "body": "Gắn mục tiêu kinh doanh của bạn với giải pháp kỹ thuật. Chúng tôi chốt kết quả rõ ràng, đo được."
       },
       {
-        "name": "Thiết kế",
-        "body": "Giải pháp riêng, xây dựng trên nền tảng kỹ thuật tích hợp của chúng tôi, giải quyết đúng thách thức kinh doanh của bạn."
+        "name": "Design",
+        "body": "Thiết kế giải pháp riêng trên nền tảng kỹ thuật tích hợp của chúng tôi, nhắm đúng bài toán kinh doanh của bạn."
       },
+      { "name": "Development", "body": "Làm theo Agile, trao đổi minh bạch. Chúng tôi kiểm thử kỹ để giữ chất lượng." },
       {
-        "name": "Phát triển",
-        "body": "Triển khai theo Agile, trao đổi minh bạch. Chúng tôi đảm bảo chất lượng bằng kiểm thử toàn diện."
-      },
-      {
-        "name": "Vận hành",
-        "body": "Theo dõi hiệu năng dựa trên dữ liệu và hỗ trợ liên tục. Chúng tôi đảm bảo hiệu quả và hướng tới thành công lâu dài."
+        "name": "Deployment",
+        "body": "Theo dõi hiệu năng bằng dữ liệu và hỗ trợ lâu dài. Chúng tôi giữ hệ thống chạy hiệu quả và tính đường dài."
       }
     ],
-    "note": "Thực hành Agile và quy trình làm việc ứng dụng AI, quản lý dự án bằng số liệu.",
+    "note": "Làm theo Agile với AI workflow, quản lý dự án bằng số liệu.",
     "pause": "Tạm dừng",
     "play": "Phát",
     "loss": "sai số"
   },
   "about": {
-    "heading": "Đội ngũ của chúng tôi tại TP. Hồ Chí Minh và Plano",
-    "body": "XionTechs chuyên cung cấp giải pháp công nghệ, giúp doanh nghiệp phát triển trong thời đại số. Chúng tôi kết hợp chuyên môn kỹ thuật với hiểu biết sâu về ngành để tạo ra giải pháp phù hợp, mang lại kết quả đo lường được và tăng trưởng bền vững.",
+    "heading": "Từ TP. Hồ Chí Minh đến Plano",
+    "body": "XionTechs làm giải pháp công nghệ giúp doanh nghiệp phát triển trong môi trường số. Chúng tôi kết hợp kỹ thuật với hiểu biết về ngành để làm giải pháp vừa với từng khách hàng, cho kết quả đo được và tăng trưởng bền vững.",
     "bullets": [
-      "Tìm cơ hội tăng trưởng và mở rộng thị trường",
-      "Nâng cao hiệu quả vận hành và giảm lãng phí",
+      "Tìm cơ hội tăng trưởng, mở rộng thị trường",
+      "Vận hành hiệu quả hơn, bớt lãng phí",
       "Ra quyết định dựa trên dữ liệu"
     ],
-    "name": "Cái tên Xion lấy cảm hứng từ một ngọn núi, một nơi cao mà mọi người cùng nhau chinh phục.",
-    "place": "Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam. Văn phòng tại Mỹ đặt ở Plano, Texas.",
+    "name": "Tên Xion lấy cảm hứng từ một ngọn núi, nơi cao mà mọi người cùng nhau leo lên.",
+    "place": "Kỹ sư của chúng tôi làm việc ở TP. Hồ Chí Minh, Việt Nam. Văn phòng ở Mỹ đặt tại Plano, Texas.",
     "photos": [
-      { "alt": "Đội ngũ XionTechs tại một buổi workshop về AI", "caption": "Workshop AI" },
-      { "alt": "Buổi đào tạo AI thực hành tại XionTechs", "caption": "Đào tạo AI thực hành" },
+      { "alt": "Team XionTechs tại một buổi workshop về AI", "caption": "Workshop AI" },
+      { "alt": "Buổi thực hành AI tại XionTechs", "caption": "Thực hành AI" },
       { "alt": "Buổi chia sẻ kiến thức toàn công ty", "caption": "Chia sẻ kiến thức" },
-      { "alt": "Thành viên được ghi nhận vì đóng góp xuất sắc", "caption": "Ghi nhận đóng góp" }
+      { "alt": "XionTechs ghi nhận một thành viên làm tốt", "caption": "Ghi nhận đóng góp" }
     ]
   },
   "faq": {
@@ -191,25 +187,25 @@
     "items": [
       {
         "q": "XionTechs cung cấp những dịch vụ nào?",
-        "a": "XionTechs cung cấp dịch vụ phát triển sản phẩm số, phân tích dữ liệu, đồng kiến tạo sản phẩm và cung ứng nhân sự. Các dịch vụ này ứng dụng công nghệ mới như AI/ML và AI tạo sinh. XionTechs tập trung vào các ngành EdTech, y tế, logistics và quỹ đầu tư tư nhân."
+        "a": "Chúng tôi làm phát triển sản phẩm số, phân tích dữ liệu, cùng phát triển sản phẩm và cung cấp nhân sự. Các dịch vụ này dùng công nghệ mới như AI/ML và generative AI. Chúng tôi tập trung vào EdTech, y tế, logistics và quỹ đầu tư tư nhân."
       },
       {
-        "q": "Các bạn bảo vệ dữ liệu như thế nào?",
-        "a": "Với tinh thần chính trực, XionTechs trung thực và minh bạch trong mọi giao dịch, bảo vệ dữ liệu khách hàng bằng chuẩn mực đạo đức và cách làm có trách nhiệm. Tự động hóa bảo mật và quét liên tục giúp bảo vệ dữ liệu thêm một lớp."
+        "q": "XionTechs bảo vệ dữ liệu ra sao?",
+        "a": "Chúng tôi làm việc trung thực, minh bạch và bảo vệ dữ liệu khách hàng theo chuẩn mực đạo đức và cách làm có trách nhiệm. Chúng tôi cũng tự động hóa bảo mật và quét liên tục để thêm một lớp bảo vệ."
       },
       {
-        "q": "Các bạn triển khai dự án như thế nào?",
-        "a": "Chúng tôi làm theo quy trình 4-D: Khám phá, Thiết kế, Phát triển và Vận hành. Đội ngũ làm việc theo Agile với quy trình ứng dụng AI, và quản lý dự án bằng số liệu, để bạn theo dõi chất lượng và tiến độ bằng con số."
+        "q": "Một dự án ở XionTechs chạy thế nào?",
+        "a": "Chúng tôi theo quy trình 4-D: Discovery, Design, Development và Deployment. Team làm theo Agile với AI workflow và quản lý dự án bằng số liệu, nên bạn theo dõi chất lượng và tiến độ bằng con số."
       },
       {
-        "q": "Các bạn đo lường và chứng minh giá trị như thế nào?",
-        "a": "XionTechs đo lường giá trị bằng các chỉ số về tốc độ, chất lượng, tác động sản phẩm và mức độ tự chủ của đội ngũ. Cách làm dựa trên số liệu này giúp minh bạch, rõ trách nhiệm, cho thấy kết quả cụ thể và chứng minh ROI."
+        "q": "XionTechs đo và chứng minh giá trị thế nào?",
+        "a": "Chúng tôi đo bằng các chỉ số về tốc độ, chất lượng, tác động lên sản phẩm và mức tự chủ của team. Đo bằng số giúp mọi thứ minh bạch, rõ trách nhiệm, có kết quả cụ thể và chứng minh ROI."
       }
     ]
   },
   "brief": {
-    "heading": "Hãy cho chúng tôi biết bạn đang xây dựng gì",
-    "intro": "Gửi yêu cầu và chúng tôi sẽ trả lời qua email trong vòng 24 giờ làm việc.",
+    "heading": "Bạn đang ấp ủ dự án gì?",
+    "intro": "Gửi ý tưởng cho chúng tôi. Bạn nhận phản hồi qua email trong 24 giờ làm việc.",
     "cta": "Gửi yêu cầu qua email",
     "subject": "Yêu cầu dự án",
     "contactLabel": "Cách liên hệ khác",
@@ -230,81 +226,82 @@
     ]
   },
   "footer": {
-    "slogan": "Get IT Done",
-    "line": "Dịch vụ và sản phẩm CNTT ứng dụng AI",
+    "line": "Dịch vụ và sản phẩm IT dùng AI",
     "contactLabel": "Liên hệ",
-    "offices": "Plano, Texas, Mỹ · TP. Hồ Chí Minh, Việt Nam",
     "linksLabel": "Công ty",
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản dịch vụ",
+    "timesLabel": "Giờ địa phương",
+    "plano": "Plano, Texas",
+    "hcmc": "TP. Hồ Chí Minh",
+    "open": "Đang trong giờ làm việc",
+    "closed": "Ngoài giờ làm việc",
+    "hours": "Thứ Hai–Thứ Sáu, 9:00–18:00 giờ địa phương",
     "legal": "© 2026 XIONTECH JOINT STOCK COMPANY · Giấy phép kinh doanh 0318883639 · D-U-N-S 665533815"
   },
   "careers": {
     "meta": {
       "title": "Tuyển dụng - XionTechs",
-      "description": "Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí Minh. Hiện chưa có vị trí tuyển dụng. Gửi CV để tham gia đợt tuyển dụng tiếp theo."
+      "description": "Làm kỹ sư tại XionTechs ở TP. Hồ Chí Minh. Hiện chưa có vị trí mở. Gửi CV để chúng tôi liên hệ ở đợt tuyển tới."
     },
     "heading": "Tuyển dụng",
-    "intro": "Tại XionTechs, bạn sẽ là một phần của đội ngũ có tư duy cầu tiến, nơi sự đổi mới và hợp tác phát triển mạnh. Môi trường làm việc truyền cảm hứng, hòa nhập, hỗ trợ bạn phát triển, làm chủ công việc và tạo ra tác động thật.",
+    "intro": "Ở XionTechs, bạn làm trong một team cầu tiến, thích thử cái mới và làm việc ăn ý với nhau. Môi trường cởi mở, ai cũng có chỗ. Chúng tôi hỗ trợ bạn phát triển, làm chủ công việc và làm những việc có tác động thật.",
     "rolesHeading": "Vị trí đang tuyển",
-    "rolesText": "Hiện chưa có vị trí tuyển dụng. Đợt tuyển dụng mới sẽ sớm bắt đầu.",
-    "cvPrefix": "Gửi CV của bạn đến",
+    "rolesText": "Hiện chưa có vị trí nào. Đợt tuyển mới sẽ sớm mở.",
+    "cvPrefix": "Gửi CV đến",
     "cvSubject": "CV",
-    "perksHeading": "Vì sao gia nhập XionTechs",
+    "perksHeading": "Vì sao nên về team XionTechs",
     "perks": [
       {
         "title": "Môi trường đổi mới",
-        "body": "Làm việc với công nghệ tiên tiến để xây dựng những hệ thống CNTT tạo ra thay đổi, cùng tầm nhìn của Xion."
+        "body": "Làm với công nghệ mới để xây những hệ thống IT tạo ra thay đổi, theo tầm nhìn của Xion."
       },
       {
         "title": "Văn hóa trao quyền",
-        "body": "Trở thành một phần của văn hóa \"Beyond Employees\", nơi đề cao tinh thần khởi nghiệp, sự đổi mới và tư duy \"Get IT Done\", nơi ai cũng thuộc về."
+        "body": "Văn hóa \"Beyond Employees\" coi trọng tinh thần startup, sự đổi mới và tư duy \"Get IT Done\". Ai cũng có chỗ ở đây."
       },
       {
-        "title": "Phát triển liên tục",
-        "body": "Được đào tạo bài bản, có tài liệu chuyên môn và chương trình hội nhập theo từng vị trí, để bạn làm tốt ngay từ ngày đầu."
+        "title": "Học hỏi liên tục",
+        "body": "Có đào tạo bài bản, tài liệu chuyên môn và onboarding theo từng vị trí, để bạn làm tốt từ ngày đầu."
       },
-      {
-        "title": "Công nghệ hấp dẫn",
-        "body": "Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile."
-      },
+      { "title": "Công nghệ đáng làm", "body": "Làm dự án khó với AI/ML, generative AI, cloud và Agile." },
       {
         "title": "Tác động thật",
-        "body": "Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới."
+        "body": "Xây phần mềm an toàn, chất lượng cao, giúp doanh nghiệp và những người làm đổi mới chuyển đổi số."
       }
     ],
     "valuesHeading": "Bảy giá trị, một cách làm việc",
     "values": [
-      { "name": "Chất lượng là trên hết", "motto": "Không bao giờ thỏa hiệp về chất lượng." },
-      { "name": "Tinh thần khởi nghiệp", "motto": "Luôn linh hoạt, nghĩ như người chủ." },
-      { "name": "Lấy khách hàng làm trung tâm", "motto": "Thành công của khách hàng là thành công của chúng tôi." },
-      { "name": "Chính trực là trên hết", "motto": "Luôn làm điều đúng đắn." },
-      { "name": "Đổi mới có mục đích", "motto": "Đổi mới vì một mục tiêu rõ ràng." },
-      { "name": "Tinh thần \"Get IT done\"", "motto": "Nhận việc, hoàn thành, và làm tốt hơn." },
-      { "name": "Văn hóa lấy con người làm trung tâm", "motto": "Con người là cốt lõi của thành công." }
+      { "name": "Chất lượng là trên hết", "motto": "Không thỏa hiệp về chất lượng." },
+      { "name": "Tinh thần startup", "motto": "Linh hoạt, nghĩ như người chủ." },
+      { "name": "Lấy khách hàng làm trung tâm", "motto": "Khách hàng thành công thì chúng tôi thành công." },
+      { "name": "Chính trực là trên hết", "motto": "Luôn làm điều đúng." },
+      { "name": "Đổi mới có mục đích", "motto": "Đổi mới khi có lý do rõ ràng." },
+      { "name": "Tinh thần \"Get IT done\"", "motto": "Nhận việc, làm xong, làm tốt hơn." },
+      { "name": "Văn hóa lấy con người làm trung tâm", "motto": "Con người là gốc của thành công." }
     ],
     "whereHeading": "Nơi bạn sẽ làm việc",
-    "whereText": "Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam.",
+    "whereText": "Team kỹ sư của chúng tôi làm việc ở TP. Hồ Chí Minh, Việt Nam.",
     "address": "Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh"
   },
   "legal": {
     "privacy": {
       "title": "Chính sách bảo mật",
       "metaTitle": "Chính sách bảo mật - XionTechs",
-      "description": "Cách XIONTECH JOINT STOCK COMPANY thu thập, sử dụng và bảo vệ dữ liệu cá nhân trên website, ứng dụng và dịch vụ CNTT của mình."
+      "description": "Cách XIONTECH JOINT STOCK COMPANY thu thập, dùng và bảo vệ dữ liệu cá nhân trên website, app và dịch vụ IT."
     },
     "terms": {
       "title": "Điều khoản dịch vụ",
       "metaTitle": "Điều khoản dịch vụ - XionTechs",
-      "description": "Các điều khoản áp dụng khi sử dụng website, ứng dụng và dịch vụ CNTT của XIONTECH JOINT STOCK COMPANY."
+      "description": "Điều khoản khi bạn dùng website, app và dịch vụ IT của XIONTECH JOINT STOCK COMPANY."
     },
-    "onlyEnglish": "Văn bản pháp lý này hiện chỉ có bằng tiếng Anh."
+    "onlyEnglish": "Văn bản pháp lý này hiện chỉ có bản tiếng Anh."
   },
   "notFound": {
     "metaTitle": "Không tìm thấy trang - XionTechs",
     "description": "Trang này không có trên website XionTechs.",
     "heading": "Không tìm thấy trang",
-    "text": "Trang này có thể đã được chuyển khi website được làm mới.",
+    "text": "Trang này có thể đã đổi địa chỉ khi website làm lại.",
     "button": "Về trang chủ"
   }
 }

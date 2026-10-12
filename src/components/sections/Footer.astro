@@ -1,58 +1,77 @@
 ---
+import { Image } from 'astro:assets';
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { company, telHref } from '../../data/company';
+import logo from '../../assets/xt-logo.webp';
+import { company } from '../../data/company';
 import { getDictionary, type Locale } from '../../i18n';
 import Container from '../ui/Container.astro';
 import Icon from '../ui/Icon.astro';
 
-// MASTER §5.14: navy band, gold used once (the slogan). Three unequal columns: brand, contact, company.
+// MASTER §5.14. `blue-950`, one step darker than the navy contact band, so the two never merge.
+// Three columns: logo, local time in both offices, links and socials.
+// Phones, email and offices live only in the Home contact band; the footer links there instead of repeating them.
 interface Props {
   lang: Locale;
 }
 
 const { lang } = Astro.props;
 const t = getDictionary(lang);
+const f = t.footer;
 const links = [
+  { href: `${getRelativeLocaleUrl(lang)}#contact`, label: f.contactLabel },
   { href: getRelativeLocaleUrl(lang, 'careers'), label: t.nav.careers },
-  { href: getRelativeLocaleUrl(lang, 'privacy-policy'), label: t.footer.privacy },
-  { href: getRelativeLocaleUrl(lang, 'terms-of-service'), label: t.footer.terms },
+  { href: getRelativeLocaleUrl(lang, 'privacy-policy'), label: f.privacy },
+  { href: getRelativeLocaleUrl(lang, 'terms-of-service'), label: f.terms },
+];
+// IANA zones, so the browser applies daylight saving for Plano (Central Time). Vietnam has none.
+const offices = [
+  { city: f.plano, tz: 'America/Chicago' },
+  { city: f.hcmc, tz: 'Asia/Ho_Chi_Minh' },
 ];
 const heading = 'text-label text-blue-200';
 const link = 'inline-flex min-h-11 items-center hover:text-white hover:underline';
 ---
 
-<footer class="bg-brand-navy text-small text-white/80">
-  <Container class="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[2fr_1.5fr_1fr]">
+<footer class="bg-blue-950 text-small border-t border-white/15 text-white/80">
+  <Container class="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.2fr_1.6fr_1fr]">
     <div>
-      <p class="font-display text-h3 text-white">XionTechs</p>
-      <p class="mt-2">{t.footer.line}</p>
-      <p class="font-display text-gold-400 mt-4 text-lg font-extrabold">{t.footer.slogan}</p>
+      <a
+        href={getRelativeLocaleUrl(lang)}
+        aria-label={t.a11y.home}
+        class="inline-block rounded-md bg-white p-2 transition-opacity duration-150 hover:opacity-90"
+      >
+        <Image src={logo} alt="" width={96} densities={[1, 2]} class="size-24" />
+      </a>
+      <p class="mt-4">{f.line}</p>
     </div>
 
     <div>
-      <h2 class={heading}>{t.footer.contactLabel}</h2>
-      <ul class="mt-2">
-        <li>
-          <a class={link} href={telHref(company.phones.usa)}>
-            {company.phones.usa}
-          </a>
-        </li>
-        <li>
-          <a class={link} href={telHref(company.phones.vietnam)}>
-            {company.phones.vietnam}
-          </a>
-        </li>
-        <li>
-          <a class={link} href={`mailto:${company.email}`}>
-            {company.email}
-          </a>
-        </li>
+      <h2 class={heading}>{f.timesLabel}</h2>
+      <ul
+        class="mt-4 grid gap-6 sm:grid-cols-2"
+        data-office-clocks
+        data-lang={lang}
+        data-open={f.open}
+        data-closed={f.closed}
+      >
+        {offices.map((o) => (
+          <li data-tz={o.tz}>
+            <p class="font-semibold text-white">{o.city}</p>
+            <p data-live hidden class="mt-1">
+              <time class="font-display text-num-md text-white tabular-nums" data-time></time>
+              <span class="mt-2 flex items-center gap-2">
+                <span class="size-2 shrink-0 rounded-full bg-white/40" data-dot aria-hidden="true"></span>
+                <span data-status></span>
+              </span>
+            </p>
+            <p class="mt-1 text-white/60">{f.hours}</p>
+          </li>
+        ))}
       </ul>
-      <p class="mt-3">{t.footer.offices}</p>
     </div>
 
     <div>
-      <h2 class={heading}>{t.footer.linksLabel}</h2>
+      <h2 class={heading}>{f.linksLabel}</h2>
       <ul class="mt-2">
         {links.map((l) => (
           <li>
@@ -81,7 +100,7 @@ const link = 'inline-flex min-h-11 items-center hover:text-white hover:underline
   </Container>
   <div class="border-t border-white/15">
     <Container class="py-6 text-xs">
-      <p>{t.footer.legal}</p>
+      <p>{f.legal}</p>
     </Container>
   </div>
 </footer>
@@ -90,4 +109,46 @@ const link = 'inline-flex min-h-11 items-center hover:text-white hover:underline
   footer :focus-visible {
     outline-color: white;
   }
+  /* In working hours: the gold "now" dot (MASTER P3). Outside them: the dim dot from the markup. */
+  footer :global([data-open='true'] [data-dot]) {
+    background: var(--color-gold-400);
+  }
 </style>
+
+<script>
+  // Live local time per office, refreshed every 30 s. Working hours: Mon–Fri 9:00–18:00 local (MASTER §5.14).
+  // Without JS the static hours line shows on its own.
+  const list = document.querySelector<HTMLElement>('[data-office-clocks]');
+  if (list) {
+    const lang = list.dataset.lang === 'vi' ? 'vi-VN' : 'en-US';
+    const { open, closed } = list.dataset as { open: string; closed: string };
+    const items = [...list.querySelectorAll<HTMLElement>('[data-tz]')].map((li) => {
+      const timeZone = li.dataset.tz!;
+      return {
+        li,
+        show: new Intl.DateTimeFormat(lang, {
+          timeZone,
+          weekday: 'short',
+          hour: '2-digit',
+          minute: '2-digit',
+          hourCycle: 'h23',
+        }),
+        parts: new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'short', hour: 'numeric', hourCycle: 'h23' }),
+      };
+    });
+    const tick = () => {
+      const now = new Date();
+      for (const { li, show, parts } of items) {
+        const p = Object.fromEntries(parts.formatToParts(now).map((x) => [x.type, x.value]));
+        const hour = Number(p.hour);
+        const isOpen = !['Sat', 'Sun'].includes(p.weekday) && hour >= 9 && hour < 18;
+        li.dataset.open = String(isOpen);
+        li.querySelector('[data-time]')!.textContent = show.format(now);
+        li.querySelector('[data-status]')!.textContent = isOpen ? open : closed;
+        li.querySelector<HTMLElement>('[data-live]')!.hidden = false;
+      }
+    };
+    tick();
+    setInterval(tick, 30_000);
+  }
+</script>

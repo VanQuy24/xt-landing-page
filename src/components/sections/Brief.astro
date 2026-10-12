@@ -6,7 +6,8 @@ import Icon, { type IconName } from '../ui/Icon.astro';
 import Section from '../ui/Section.astro';
 import SectionHeader from '../ui/SectionHeader.astro';
 
-// Home §11, contact block (MASTER §5.13). The brief goes by email until a form service is chosen.
+// Home §11, contact block (MASTER §5.13) on the navy CTA band (MASTER §5.14), the one color moment above the footer.
+// The brief goes by email until a form service is chosen.
 interface Props {
   lang: Locale;
 }
@@ -23,31 +24,31 @@ const contacts: { icon: IconName; label: string; value: string; href?: string }[
 ];
 ---
 
-<Section id="contact" labelledby="contact-title">
+<Section id="contact" labelledby="contact-title" navy>
   <div class="grid gap-12 lg:grid-cols-12">
     <div class="lg:col-span-5">
-      <SectionHeader id="contact-title" heading={b.heading} lead={b.intro} />
-      <Button href={mailto} class="mt-8">
+      <SectionHeader id="contact-title" heading={b.heading} lead={b.intro} onDark />
+      <Button href={mailto} variant="light" class="mt-8">
         <Icon name="mail" class="size-5" />
         {b.cta}
       </Button>
     </div>
 
     <div class="lg:col-span-7">
-      <h3 class="text-label text-ink-500">{b.contactLabel}</h3>
-      <dl class="divide-line border-line mt-4 divide-y border-y">
+      <h3 class="text-label text-blue-200">{b.contactLabel}</h3>
+      <dl class="mt-4 divide-y divide-white/15 border-y border-white/15">
         {contacts.map((c) => (
           <div class="flex flex-wrap items-center gap-x-4 py-1">
-            <dt class="text-ink-500 flex min-h-11 w-40 items-center gap-3">
-              <Icon name={c.icon} class="size-5 text-blue-600" />
+            <dt class="flex min-h-11 w-40 items-center gap-3 text-white/70">
+              <Icon name={c.icon} class="size-5 text-blue-200" />
               {c.label}
             </dt>
-            <dd class="text-ink-900 font-semibold">
+            <dd class="font-semibold text-white">
               {c.href ? (
                 <a
                   href={c.href}
                   dir="ltr"
-                  class="inline-flex min-h-11 items-center hover:text-blue-600 hover:underline"
+                  class="inline-flex min-h-11 items-center hover:text-blue-200 hover:underline"
                 >
                   {c.value}
                 </a>
@@ -59,18 +60,25 @@ const contacts: { icon: IconName; label: string; value: string; href?: string }[
         ))}
       </dl>
 
-      <h3 class="text-label text-ink-500 mt-10">{b.officesLabel}</h3>
+      <h3 class="text-label mt-10 text-blue-200">{b.officesLabel}</h3>
       <ul class="mt-4 grid gap-6 sm:grid-cols-3">
         {b.offices.map((o) => (
           <li>
-            <p class="text-h4 text-ink-900 flex items-center gap-2">
-              <Icon name="pin" class="size-5 text-blue-600" />
+            <p class="text-h4 flex items-center gap-2 text-white">
+              <Icon name="pin" class="size-5 text-blue-200" />
               {o.city}
             </p>
-            <address class="text-small text-ink-500 mt-2 not-italic">{o.address}</address>
+            <address class="text-small mt-2 text-white/75 not-italic">{o.address}</address>
           </li>
         ))}
       </ul>
     </div>
   </div>
 </Section>
+
+<style>
+  /* The global blue-600 ring disappears on navy. */
+  :global(#contact :focus-visible) {
+    outline-color: white;
+  }
+</style>

@@ -1,21 +1,23 @@
 ---
 import Container from './Container.astro';
 
-// One Home section: anchor id, vertical rhythm (96px / 64px) and optional surface background.
+// One Home section: anchor id, vertical rhythm (96px / 64px) and a white, surface or navy background.
+// Navy is for the CTA band only (MASTER §5.14).
 interface Props {
   id: string;
   labelledby?: string;
   surface?: boolean;
+  navy?: boolean;
   class?: string;
 }
 
-const { id, labelledby, surface = false, class: className } = Astro.props;
+const { id, labelledby, surface = false, navy = false, class: className } = Astro.props;
 ---
 
 <section
   id={id}
   aria-labelledby={labelledby}
-  class:list={['py-16 lg:py-24', surface ? 'bg-surface' : 'bg-white', className]}
+  class:list={['py-16 lg:py-24', navy ? 'bg-brand-navy text-white' : surface ? 'bg-surface' : 'bg-white', className]}
 >
   <Container>
     <slot />
