@@ -144,19 +144,23 @@ const items = n.items
     >
       {items.map((item) => (
         <li class="w-[82%] shrink-0 snap-start last:snap-end sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-          <article>
-            <Image
-              src={item.src}
-              alt={item.alt}
-              width={800}
-              widths={[400, 800]}
-              sizes="(min-width: 1280px) 384px, (min-width: 1024px) 31vw, (min-width: 640px) 47vw, 82vw"
-              class="aspect-16/9 w-full rounded-md object-cover"
-            />
+          <article class="group">
+            <div class="overflow-hidden rounded-md">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={800}
+                widths={[400, 800]}
+                sizes="(min-width: 1280px) 384px, (min-width: 1024px) 31vw, (min-width: 640px) 47vw, 82vw"
+                class="ease-out aspect-16/9 w-full object-cover transition-transform duration-250 group-hover:scale-[1.04]"
+              />
+            </div>
             <time datetime={item.date} class="text-label text-ink-500 mt-4 block uppercase">
               {dateFormat.format(new Date(item.date))}
             </time>
-            <h4 class="font-display text-h4 text-ink-900 mt-2">{item.title}</h4>
+            <h4 class="font-display text-h4 text-ink-900 mt-2 transition-colors duration-150 group-hover:text-blue-600">
+              {item.title}
+            </h4>
             <p class="text-small text-ink-500 mt-2 line-clamp-2">
               {item.before}
               {item.workshop && <span lang="vi">{item.workshop}</span>}
