@@ -2,37 +2,39 @@
 
 Page: `careers` · URL: `/vi/careers` · Language: Vietnamese
 
-[VI-REVIEW] New translation of `en/careers.md`. A native speaker checks every line before launch, then removes this marker. The English file holds the sources and the job of each section.
+[VI-REVIEW] Vietnamese copy written on 2026-10-12 as native text, not a line-by-line translation of `en/careers.md`. A native speaker checks every line before launch, then removes this marker. The English file holds the sources and the job of each section. Terms and voice follow `../vi-glossary.md`.
 
 Meta title: Tuyển dụng - XionTechs
-Meta description: Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí Minh. Hiện chưa có vị trí tuyển dụng. Gửi CV để tham gia đợt tuyển dụng tiếp theo.
+Meta description: Làm kỹ sư tại XionTechs ở TP. Hồ Chí Minh. Hiện chưa có vị trí mở. Gửi CV để chúng tôi liên hệ ở đợt tuyển tới.
 
 ---
 
 ## 1. Intro
 
 - Heading: Tuyển dụng
-- Paragraph: Tại XionTechs, bạn sẽ là một phần của đội ngũ có tư duy cầu tiến, nơi sự đổi mới và hợp tác phát triển mạnh. Môi trường làm việc truyền cảm hứng, hòa nhập, hỗ trợ bạn phát triển, làm chủ công việc và tạo ra tác động thật.
+- Paragraph: Ở XionTechs, bạn làm trong một team cầu tiến, thích thử cái mới và làm việc ăn ý với nhau. Môi trường cởi mở, ai cũng có chỗ. Chúng tôi hỗ trợ bạn phát triển, làm chủ công việc và làm những việc có tác động thật.
 
 ---
 
 ## 2. Open roles
 
 - Heading: Vị trí đang tuyển
-- Text: Hiện chưa có vị trí tuyển dụng. Đợt tuyển dụng mới sẽ sớm bắt đầu.
-- Call to action: Gửi CV của bạn đến [DUMMY: confirm the CV inbox. Default is contact@xiontechs.com, or a careers@ address].
+- Text: Hiện chưa có vị trí nào. Đợt tuyển mới sẽ sớm mở.
+- Call to action: Gửi CV đến [DUMMY: confirm the CV inbox. Default is contact@xiontechs.com, or a careers@ address].
 
 ---
 
 ## 3. Why join us
 
-| Perk                | Copy                                                                                                                                           |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Môi trường đổi mới  | Làm việc với công nghệ tiên tiến để xây dựng những hệ thống CNTT tạo ra thay đổi, cùng tầm nhìn của Xion.                                      |
-| Văn hóa trao quyền  | Trở thành một phần của văn hóa "Beyond Employees", nơi đề cao tinh thần khởi nghiệp, sự đổi mới và tư duy "Get IT Done", nơi ai cũng thuộc về. |
-| Phát triển liên tục | Được đào tạo bài bản, có tài liệu chuyên môn và chương trình hội nhập theo từng vị trí, để bạn làm tốt ngay từ ngày đầu.                       |
-| Công nghệ hấp dẫn   | Giải quyết những dự án thử thách với AI/ML, AI tạo sinh, điện toán đám mây và Agile.                                                           |
-| Tác động thật       | Xây dựng giải pháp an toàn, chất lượng cao, thúc đẩy chuyển đổi số cho doanh nghiệp và những người đổi mới.                                    |
+- Heading: Vì sao nên về team XionTechs
+
+| Perk               | Copy                                                                                                              |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| Môi trường đổi mới | Làm với công nghệ mới để xây những hệ thống IT tạo ra thay đổi, theo tầm nhìn của Xion.                           |
+| Văn hóa trao quyền | Văn hóa "Beyond Employees" coi trọng tinh thần startup, sự đổi mới và tư duy "Get IT Done". Ai cũng có chỗ ở đây. |
+| Học hỏi liên tục   | Có đào tạo bài bản, tài liệu chuyên môn và onboarding theo từng vị trí, để bạn làm tốt từ ngày đầu.               |
+| Công nghệ đáng làm | Làm dự án khó với AI/ML, generative AI, cloud và Agile.                                                           |
+| Tác động thật      | Xây phần mềm an toàn, chất lượng cao, giúp doanh nghiệp và những người làm đổi mới chuyển đổi số.                 |
 
 ---
 
@@ -40,19 +42,20 @@ Meta description: Gia nhập đội ngũ kỹ sư XionTechs tại TP. Hồ Chí 
 
 - Heading: Bảy giá trị, một cách làm việc
 
-| Value                               | Motto                                                  |
-| ----------------------------------- | ------------------------------------------------------ |
-| Chất lượng là trên hết              | Không bao giờ thỏa hiệp về chất lượng.                 |
-| Tinh thần khởi nghiệp               | Luôn linh hoạt, nghĩ như người chủ.                    |
-| Lấy khách hàng làm trung tâm        | Thành công của khách hàng là thành công của chúng tôi. |
-| Chính trực là trên hết              | Luôn làm điều đúng đắn.                                |
-| Đổi mới có mục đích                 | Đổi mới vì một mục tiêu rõ ràng.                       |
-| Tinh thần "Get IT done"             | Nhận việc, hoàn thành, và làm tốt hơn.                 |
-| Văn hóa lấy con người làm trung tâm | Con người là cốt lõi của thành công.                   |
+| Value                               | Motto                                           |
+| ----------------------------------- | ----------------------------------------------- |
+| Chất lượng là trên hết              | Không thỏa hiệp về chất lượng.                  |
+| Tinh thần startup                   | Linh hoạt, nghĩ như người chủ.                  |
+| Lấy khách hàng làm trung tâm        | Khách hàng thành công thì chúng tôi thành công. |
+| Chính trực là trên hết              | Luôn làm điều đúng.                             |
+| Đổi mới có mục đích                 | Đổi mới khi có lý do rõ ràng.                   |
+| Tinh thần "Get IT done"             | Nhận việc, làm xong, làm tốt hơn.               |
+| Văn hóa lấy con người làm trung tâm | Con người là gốc của thành công.                |
 
 ---
 
 ## 5. Where you would work
 
-- Text: Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam.
+- Heading: Nơi bạn sẽ làm việc
+- Text: Team kỹ sư của chúng tôi làm việc ở TP. Hồ Chí Minh, Việt Nam.
 - Address: Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh [UPDATE: same as English]

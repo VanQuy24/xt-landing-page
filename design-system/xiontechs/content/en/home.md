@@ -35,10 +35,11 @@ Source: live nav, cut down to the sections on this page. Decided 2026-10-11.
 
 Must communicate: XionTechs builds secure software, it is AI-powered, and the next step is to get in touch.
 
-Source: headline rewritten on 2026-10-12 from facts already on this page, because the live headline could front any IT company (audit P0-3). Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
+Source: headline, accent line and subline chosen by the team on 2026-10-12, replacing the audit version "School platforms and custom software".
 
-- Headline: School platforms and custom software
-- Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
+- Headline: Where intelligence meets identity.
+- Accent line: Get IT done.
+- Subline: AI-powered software for schools and growing businesses, built from Texas and Vietnam.
 - Button: Get in touch
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Tech made simple. Solutions, made powerful." and "Perfect IT solutions for your business". The live banner line "Empowering tech innovators with next-generation IT solutions" can be a fourth headline or a second subline.]
@@ -303,15 +304,17 @@ Offices:
 
 ## Footer
 
-Must communicate: the legal entity behind the site, how to reach it, and the legal pages.
+Must communicate: the legal entity behind the site, where to reach it, and the legal pages.
 
 Source: legal name, license and D-U-N-S from the live Support and legal pages. Socials and "Get IT Done" from live home.
 
-- Brand: XionTechs · Get IT Done
+- Brand: the XionTechs logo, which carries "Get IT Done"
+- Local time: Plano, Texas and Ho Chi Minh City, each with "In working hours" or "Outside working hours". Working hours are Monday to Friday, 9:00 to 18:00 local time in both offices, per the team brief of 2026-10-12.
 - Line: AI-powered IT services and products
-- Contact: +1 469 322 9899 · +84 908 107 552 · contact@xiontechs.com
-- Offices: Plano, Texas, USA · Ho Chi Minh City, Vietnam
-- Links: Careers · Privacy policy · Terms of service
+- Links: Contact (goes to section 11) · Careers · Privacy policy · Terms of service
+
+Phones, email and offices are not repeated here. They sit in section 11, right above the footer. Decided 2026-10-12.
+
 - Social: Facebook (facebook.com/xiontechs) · LinkedIn (linkedin.com/company/xiontechs)
 - Legal line: © 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815
 

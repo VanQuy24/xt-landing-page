@@ -24,9 +24,9 @@ Header, on every page:
 
 Footer, on every page:
 
-- Contact: both phones, email
-- Offices: Plano, Texas · Ho Chi Minh City
-- Links: Careers · Privacy policy · Terms of service
+- Logo and one-line description
+- Local time in Plano and Ho Chi Minh City, with working-hours status
+- Links: Contact (to Home section 11) · Careers · Privacy policy · Terms of service
 - Social: Facebook, LinkedIn
 - Legal line: © 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815
 
