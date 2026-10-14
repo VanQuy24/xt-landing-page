@@ -26,7 +26,7 @@
   },
   "hero": {
     "eyebrow": "Get IT Done",
-    "title": "Crafting secure and innovative IT solutions",
+    "title": "School platforms and custom software",
     "subtitle": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.",
     "cta": "Get in touch",
     "secondary": "Explore services"
@@ -42,59 +42,59 @@
       {
         "value": 20,
         "suffix": "+",
-        "label": "Tech stack expertise"
+        "label": "Technologies we work with"
       },
       {
         "value": 3,
         "suffix": "",
         "label": "Office locations",
-        "context": "Plano (USA) · Ho Chi Minh City (Vietnam)"
+        "context": "Plano (USA) and two offices in Ho Chi Minh City (Vietnam)."
       }
     ]
   },
   "services": {
     "label": "Our services",
-    "heading": "Technology solutions that transform your business",
+    "heading": "What you can hire us for",
     "items": [
       {
         "icon": "code",
         "title": "Product engineering",
-        "body": "Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation."
+        "body": "We turn a product idea into a market-ready digital product that scales with its users."
       },
       {
         "icon": "chart",
         "title": "AI-driven analytics",
-        "body": "Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes."
+        "body": "We use AI and data visualization to find patterns in your data and turn them into decisions you can measure."
       },
       {
         "icon": "users",
         "title": "Product co-creation",
-        "body": "Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives."
+        "body": "Your domain knowledge and our engineering, combined into a product built around your business goals."
       },
       {
         "icon": "briefcase",
         "title": "Staffing services",
-        "body": "Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery."
+        "body": "Skilled engineers who join your team when you need them, to speed up delivery."
       },
       {
         "icon": "window",
         "title": "Custom app development",
-        "body": "Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage."
+        "body": "Apps built to your requirements, and modernization of legacy systems to cut manual work."
       },
       {
         "icon": "zap",
         "title": "Low-code solutions",
-        "body": "Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications."
+        "body": "Faster, lower-cost delivery on Power Platform, Make, n8n, Retool and Bubble, with tools your team can use to build its own apps."
       },
       {
         "icon": "spark",
         "title": "AI-powered solutions",
-        "body": "Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth."
+        "body": "Intelligent automation, predictive analytics and conversational interfaces, built with AI."
       },
       {
         "icon": "cloud",
         "title": "Cloud computing",
-        "body": "Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs."
+        "body": "Migration, optimization and integration of cloud resources on Azure, AWS and GCP."
       }
     ]
   },
@@ -268,8 +268,8 @@
   },
   "about": {
     "label": "Who we are",
-    "heading": "We deliver consumer-centric tech solutions",
-    "body": "XionTechs specializes in delivering consumer-centric technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth.",
+    "heading": "Our team in Ho Chi Minh City and Plano",
+    "body": "XionTechs specializes in delivering technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth.",
     "bullets": [
       "Identify growth opportunities and expand market presence",
       "Enhance operational efficiency and reduce waste",
@@ -442,12 +442,12 @@
       {
         "icon": "code",
         "title": "Tech that excites",
-        "body": "Tackle challenging projects using AI/ML, generative AI, cloud computing, and Agile methodologies in a mature engineering environment."
+        "body": "Tackle challenging projects using AI/ML, generative AI, cloud computing, and Agile methodologies."
       },
       {
         "icon": "globe",
         "title": "Real impact",
-        "body": "Build secure, high-quality solutions that drive digital transformation and empower businesses and innovators worldwide."
+        "body": "Build secure, high-quality solutions that drive digital transformation for businesses and innovators."
       }
     ],
     "valuesHeading": "Seven values, one way of working",
