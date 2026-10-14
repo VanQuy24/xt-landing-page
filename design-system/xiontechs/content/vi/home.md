@@ -22,7 +22,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 1. Hero
 
-- Headline: Kiến tạo giải pháp CNTT an toàn và đổi mới
+- Headline: Nơi trí tuệ gặp bản sắc.
 - Subline: XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.
 - Button: Liên hệ
 - Image: TP. Hồ Chí Minh lúc bình minh bên sông Sài Gòn, trang trí (`alt=""`). Credit as in `en/home.md` §1.
