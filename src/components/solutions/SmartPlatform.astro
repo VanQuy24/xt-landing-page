@@ -1,0 +1,123 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import Chip from '../ui/Chip.astro';
+import Icon from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import Stage from './Stage.astro';
+import Grader from './Grader.astro';
+import Timetabling from './Timetabling.astro';
+import Xss from './Xss.astro';
+
+// Solutions §4 (pages/solutions.md): XT Smart Platform is the umbrella. Intro text, then a full-width platform
+// map (six core areas, a few example items each: the rest is roadmap, never listed as built;
+// AI items marked with a spark) links down to the three AI products shown below it as compact showcases:
+// 4a Smart timetabling, 4b Grader agent, 4c XSS. The map is real content (not aria-hidden); its cards
+// rise in once when scrolled into view.
+interface Props {
+  lang: Locale;
+  surface?: boolean;
+}
+
+const { lang, surface = false } = Astro.props;
+const t = getDictionary(lang);
+const p = t.solutions.smart;
+// Category top bars (decoration only; the card title is the label), one distinct brand token per area.
+const bars = ['bg-blue-600', 'bg-gold-500', 'bg-brand-navy', 'bg-blue-400', 'bg-gold-700', 'bg-ink-700'];
+const n = p.numbers[0];
+// Items differ in shape across areas (some AI, some linked, one highlighted), so give them one type.
+type Item = { label: string; ai?: boolean; href?: string; highlight?: boolean };
+const categories = p.categories as { name: string; items: Item[] }[];
+---
+
+<Section id="xt-smart-platform" labelledby="xt-smart-platform-title" surface={surface}>
+  <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-12">
+    <div class="lg:col-span-7">
+      <Chip tone="brand">{p.tag}</Chip>
+      <h2 id="xt-smart-platform-title" class="font-display text-h4 mt-4 font-bold text-blue-600">
+        {p.title}
+      </h2>
+      <p class="font-display text-h2 text-ink-900 mt-2">{p.hook}</p>
+      <p class="text-body text-ink-700 mt-3 max-w-2xl">{p.body}</p>
+    </div>
+    <div class="lg:col-span-5">
+      {n && (
+        <dl class="border-line flex flex-col border-y py-4">
+          <dt class="text-label text-ink-500 mt-1 uppercase">{n.label}</dt>
+          <dd class="font-display text-num-lg text-ink-900 -order-1 tabular-nums">{n.value}</dd>
+        </dl>
+      )}
+      <ul class="mt-6 flex flex-wrap gap-2">
+        {p.chips.map((c) => (
+          <li>
+            <Chip>{c}</Chip>
+          </li>
+        ))}
+        <li>
+          <Chip tone="more">{t.solutions.more}</Chip>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <Stage accent="blue" class="mt-10 lg:mt-12">
+    <div data-viz="map" role="group" aria-label={p.mapLabel} class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+      {categories.map((c, i) => (
+        <div
+          data-s="rise"
+          data-on
+          style={`--i:${i}`}
+          class="border-line shadow-1 flex flex-col overflow-hidden rounded-lg border bg-white"
+        >
+          <span aria-hidden="true" class:list={['block h-1.5', bars[i]]} />
+          <div class="p-4 lg:p-5">
+            <h3 class="font-display text-h4 text-ink-900 font-bold break-words hyphens-auto">{c.name}</h3>
+            <ul class="text-small mt-3 grid gap-2.5">
+              {c.items.map((it) => (
+                <li
+                  class:list={[
+                    'flex items-start gap-2',
+                    it.ai || it.highlight ? 'text-ink-900 font-semibold' : 'text-ink-700',
+                  ]}
+                >
+                  {it.ai ? (
+                    <Icon name="spark" class="mt-0.5 size-4 shrink-0 text-blue-600" />
+                  ) : (
+                    <span aria-hidden="true" class="bg-ink-400 mx-1.5 mt-2 size-1 shrink-0 rounded-full" />
+                  )}
+                  <span>
+                    {it.href ? (
+                      <a href={`#${it.href}`} class="text-blue-600 underline underline-offset-4 hover:text-blue-700">
+                        {it.label}
+                      </a>
+                    ) : (
+                      it.label
+                    )}
+                    {it.ai && <span class="sr-only"> ({p.aiLabel})</span>}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+    <p class="text-small text-ink-500 mt-5">
+      {`${p.note.before} `}
+      <Icon name="spark" class="inline-block size-4 align-[-3px] text-blue-600" />
+      <span class="sr-only">{p.note.icon}</span>
+      {` ${p.note.after}`}
+    </p>
+  </Stage>
+
+  <div class="border-line mt-16 grid gap-20 border-t pt-16 lg:mt-24 lg:gap-24 lg:pt-24">
+    <Timetabling lang={lang} reverse />
+    <Grader lang={lang} />
+    <Xss lang={lang} reverse />
+  </div>
+</Section>
+
+<script>
+  import { initViz } from '../../scripts/solutions';
+
+  initViz('map');
+</script>

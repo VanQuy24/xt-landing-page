@@ -1,0 +1,210 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import Icon, { type IconName } from '../ui/Icon.astro';
+import ProjectShowcase from '../ui/ProjectShowcase.astro';
+import Stage from './Stage.astro';
+import WindowFrame from './WindowFrame.astro';
+
+// Solutions §4c (pages/solutions.md): XSS, a sub-product inside the XT Smart Platform section. A safety command
+// center for a fictional campus: floor plan with pulsing camera / door markers, smart attendance count-up, an
+// alert feed and a live classroom tile. No faces: students are seated outlines; three labelled detections
+// (hand raised, sleeping, phone in use, as the owner asked) appear in turn. Plays once in view (markers pulse
+// while on screen); server HTML = final state.
+interface Props {
+  lang: Locale;
+  reverse?: boolean;
+}
+
+const { lang, reverse = false } = Astro.props;
+const t = getDictionary(lang);
+const p = t.solutions.xss;
+const v = p.viz;
+const z = v.zones;
+const pct = Math.round((v.count / v.total) * 1000) / 10;
+
+// Classroom tile: six seated outlines (no faces); three detections appear in turn.
+const seats = ['hand', 'plain', 'plain', 'plain', 'sleep', 'phone'] as const;
+const detections = [
+  { seat: 0, label: v.detections[0], border: 'border-blue-300', bg: 'bg-blue-300' },
+  { seat: 4, label: v.detections[1], border: 'border-gold-300', bg: 'bg-gold-300' },
+  { seat: 5, label: v.detections[2], border: 'border-gold-300', bg: 'bg-gold-300' },
+];
+const tones: Record<string, { box: string; icon: IconName; iconClass: string }> = {
+  info: { box: 'border-line bg-white text-ink-700', icon: 'users', iconClass: 'text-blue-600' },
+  warn: { box: 'border-gold-200 bg-gold-50 text-gold-700', icon: 'alert', iconClass: 'text-gold-700' },
+  ok: { box: 'border-line bg-white text-success', icon: 'check', iconClass: 'text-success' },
+  danger: { box: 'border-danger bg-white text-danger', icon: 'alert', iconClass: 'text-danger' },
+};
+// Floor plan zones on a 6 × 4 grid; markers are placed in % inside a zone.
+const zones = [
+  { name: z.classrooms, area: 'col-span-4 row-span-2', cam: true },
+  { name: z.lab, area: 'col-span-2', door: true },
+  { name: z.library, area: 'col-span-2 row-span-2', cam: true },
+  { name: z.hall, area: 'col-span-3 row-span-2', cam: true },
+  { name: z.gateA, area: 'col-span-1 row-span-2', door: false, gate: true },
+  { name: z.gateB, area: 'col-span-2', gate: true, cam: true },
+];
+---
+
+<div id="xss">
+  <ProjectShowcase
+    tag={p.category}
+    title={p.title}
+    titleTag="h3"
+    titleId="xss-title"
+    compact
+    body={p.body}
+    chips={p.chips}
+    caption={t.a11y.illustrative}
+    reverse={reverse}
+    hook={p.hook}
+    more={t.solutions.more}
+  >
+    <div data-viz="xss">
+      <p class="sr-only">{p.summary}</p>
+      <Stage accent="gold">
+        <WindowFrame bar={v.bar}>
+          <div aria-hidden="true" class="grid sm:grid-cols-[1fr_14rem]">
+            <div class="flex flex-col p-3 sm:p-4">
+              <p class="text-ink-500 text-xs font-semibold">{v.plan}</p>
+              <div class="bg-surface border-line mt-2 grid aspect-[4/3] grid-cols-6 sm:aspect-auto sm:min-h-56 sm:flex-1 grid-rows-4 gap-1.5 rounded-md border p-1.5">
+                {zones.map((zone) => (
+                  <div
+                    class:list={[
+                      'relative flex items-start rounded-sm border p-1.5 text-[10px] leading-tight font-semibold sm:text-[11px]',
+                      zone.area,
+                      zone.gate ? 'border-blue-200 bg-blue-50 text-blue-700' : 'border-line text-ink-700 bg-white',
+                    ]}
+                  >
+                    {zone.name}
+                    {zone.cam && (
+                      <span class="absolute end-2 bottom-2 flex size-2.5">
+                        <span class="viz-pulse absolute inset-0 rounded-full bg-blue-600" />
+                        <span class="relative size-2.5 rounded-full bg-blue-600" />
+                      </span>
+                    )}
+                    {zone.door && (
+                      <span class="absolute start-2 bottom-2 flex size-2.5">
+                        <span class="viz-pulse bg-gold-500 absolute inset-0 rounded-full" style="animation-delay:-1s" />
+                        <span class="bg-gold-500 relative size-2.5 rounded-full" />
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div class="text-ink-700 mt-2 flex gap-4 text-[11px]">
+                <span class="flex items-center gap-1.5">
+                  <span class="size-2.5 rounded-full bg-blue-600" />
+                  {v.legend.camera}
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <span class="bg-gold-500 size-2.5 rounded-full" />
+                  {v.legend.door}
+                </span>
+              </div>
+            </div>
+
+            <div class="border-line bg-surface flex flex-col gap-3 border-t p-3 sm:border-s sm:border-t-0 sm:p-4">
+              <div class="border-line rounded-md border bg-white p-3">
+                <p class="text-ink-500 text-[11px] font-semibold">{v.attendance}</p>
+                <p class="mt-1 flex items-baseline gap-1.5">
+                  <span class="font-display text-ink-900 text-xl font-bold tabular-nums">
+                    <span data-count>{v.count}</span> / {v.total}
+                  </span>
+                  <span class="text-ink-500 text-[11px]">{v.present}</span>
+                </p>
+                <div class="bg-line mt-2 h-1.5 overflow-hidden rounded-full">
+                  <div
+                    data-bar
+                    data-s="grow-x"
+                    data-on
+                    style={`width:${pct}%`}
+                    class="h-full rounded-full bg-blue-600"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <p class="text-ink-500 text-[11px] font-semibold">{v.alertsTitle}</p>
+                <ul class="mt-1.5 grid gap-1.5">
+                  {v.alerts.map((a) => {
+                    const tone = tones[a.tone] ?? tones.info!;
+                    return (
+                      <li
+                        data-alert
+                        data-s="rise"
+                        data-on
+                        class:list={[
+                          'flex items-start gap-2 rounded-sm border px-2 py-1.5 text-[11px] font-semibold',
+                          tone.box,
+                        ]}
+                      >
+                        <Icon name={tone.icon} class={`mt-px size-3.5 shrink-0 ${tone.iconClass}`} />
+                        <span class="min-w-0 flex-1">{a.text}</span>
+                        <span class="text-ink-500 font-normal tabular-nums">{a.time}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <div class="bg-ink-900 relative aspect-[4/3] overflow-hidden rounded-md">
+                <span class="absolute start-2 top-2 flex items-center gap-1 text-[10px] font-semibold text-white">
+                  <span class="bg-danger size-1.5 rounded-full" />
+                  {v.classroom} · {v.live}
+                </span>
+                <div class="absolute inset-x-3 top-12 bottom-3 grid grid-cols-3 grid-rows-2 gap-x-3 gap-y-5">
+                  {seats.map((seat, i) => {
+                    const d = detections.find((x) => x.seat === i);
+                    return (
+                      <div class="relative flex flex-col items-center justify-end">
+                        {seat === 'hand' && (
+                          <span class="absolute start-[22%] bottom-[48%] h-4 w-0.5 rounded-full bg-white/40" />
+                        )}
+                        <span
+                          class:list={[
+                            'size-3 rounded-full border border-white/40',
+                            seat === 'sleep' && 'translate-x-1.5 translate-y-2',
+                          ]}
+                        />
+                        <span class="mt-0.5 h-4 w-7 rounded-t-full border border-white/40" />
+                        {seat === 'phone' && (
+                          <span class="absolute end-[18%] bottom-1.5 h-2.5 w-1.5 rounded-[2px] border border-white/60" />
+                        )}
+                        <span class="h-px w-full bg-white/25" />
+                        {d && (
+                          <span
+                            data-box
+                            data-s="pop"
+                            data-on
+                            class:list={['absolute -inset-1 rounded-sm border-2', d.border]}
+                          >
+                            <span
+                              class:list={[
+                                'text-ink-900 absolute -top-3.5 px-1 text-[8px] leading-3.5 font-semibold whitespace-nowrap',
+                                i % 3 === 2 ? 'end-[-2px]' : 'start-[-2px]',
+                                d.bg,
+                              ]}
+                            >
+                              {d.label}
+                            </span>
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </WindowFrame>
+      </Stage>
+    </div>
+  </ProjectShowcase>
+</div>
+
+<script>
+  import { initViz } from '../../scripts/solutions';
+
+  initViz('xss');
+</script>

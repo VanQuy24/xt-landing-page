@@ -23,7 +23,7 @@ Must communicate: who this is, where to jump, and how to get in touch from anywh
 Source: live nav, cut down to the sections on this page. Decided 2026-10-11.
 
 - Logo: XionTechs
-- Links: Services · Products · Clients · Process · News · FAQ · Careers
+- Links: Services · Solutions (page) · Clients · Process · News · FAQ · Careers
 - Language switch: EN / VI
 - Button: Get in touch (goes to section 11)
 

@@ -1,5 +1,6 @@
 ---
 import Chip from './Chip.astro';
+import Icon from './Icon.astro';
 
 // MASTER §6.2: tag → title → 2–3 numbers → product window (slot) → chips → "Illustrative" caption.
 interface Props {
@@ -7,50 +8,119 @@ interface Props {
   tagTone?: 'brand' | 'highlight';
   title: string;
   body?: string;
-  numbers: { value: string; label: string }[];
+  /** Key numbers (MASTER §6.2): none renders no row, one renders a single column. */
+  numbers?: { value: string; label: string }[];
   chips?: string[];
   more?: string;
-  caption: string;
+  /** "Illustrative" line under a mockup; leave it out when the visual holds no fictional data. */
+  caption?: string;
   /** Put the window on the start side (alternate between projects). */
   reverse?: boolean;
+  /** Title element: `h3` inside a Home section, `h2` when the showcase is a page section of its own. */
+  titleTag?: 'h2' | 'h3';
+  titleId?: string;
+  /** Smaller title (`h3` size) for a sub-product inside a page section. */
+  compact?: boolean;
+  /** Colours for a navy section (white / blue-100 text, translucent chips). */
+  dark?: boolean;
+  /** Headline hook (question or short quote). With a hook, `title` becomes the small product-name heading. */
+  hook?: string;
+  /** Text link after the chips, e.g. to the brief. */
+  cta?: { href: string; label: string };
 }
 
-const { tag, tagTone = 'brand', title, body, numbers, chips = [], more, caption, reverse = false } = Astro.props;
+const {
+  tag,
+  tagTone = 'brand',
+  title,
+  body,
+  numbers = [],
+  chips = [],
+  more,
+  caption,
+  reverse = false,
+  titleTag: Title = 'h3',
+  titleId,
+  compact = false,
+  dark = false,
+  hook,
+  cta,
+} = Astro.props;
+const line = dark ? 'border-white/20' : 'border-line';
 ---
 
 <article class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
   <div class:list={['lg:col-span-5', reverse && 'lg:order-2']}>
     <Chip tone={tagTone}>{tag}</Chip>
-    <h3 class="font-display text-h2 text-ink-900 mt-4">{title}</h3>
-    {body && <p class="text-body text-ink-700 mt-3">{body}</p>}
-    <dl class="border-line my-6 grid grid-cols-2 border-y">
-      {numbers.map((n) => (
-        <div class="border-line flex flex-col py-4 not-first:border-s not-first:ps-5">
-          <dt class="text-label text-ink-500 mt-1 uppercase">{n.label}</dt>
-          <dd class="font-display text-num-lg text-ink-900 -order-1 tabular-nums">{n.value}</dd>
-        </div>
-      ))}
-    </dl>
+    {hook ? (
+      <>
+        <Title
+          id={titleId}
+          class:list={['font-display text-h4 mt-4 font-bold', dark ? 'text-blue-100' : 'text-blue-600']}
+        >
+          {title}
+        </Title>
+        <p class:list={['font-display mt-2', dark ? 'text-white' : 'text-ink-900', compact ? 'text-h3' : 'text-h2']}>
+          {hook}
+        </p>
+      </>
+    ) : (
+      <Title
+        id={titleId}
+        class:list={['font-display mt-4', dark ? 'text-white' : 'text-ink-900', compact ? 'text-h3' : 'text-h2']}
+      >
+        {title}
+      </Title>
+    )}
+    {body && <p class:list={['text-body mt-3', dark ? 'text-blue-100' : 'text-ink-700']}>{body}</p>}
+    {numbers.length > 0 && (
+      <dl class:list={[line, 'my-6 grid', numbers.length > 1 ? 'grid-cols-2' : 'grid-cols-1', 'border-y']}>
+        {numbers.map((n) => (
+          <div class:list={[line, 'flex flex-col py-4 not-first:border-s not-first:ps-5']}>
+            <dt class:list={['text-label mt-1 uppercase', dark ? 'text-blue-100' : 'text-ink-500']}>{n.label}</dt>
+            <dd class:list={['font-display text-num-lg -order-1 tabular-nums', dark ? 'text-white' : 'text-ink-900']}>
+              {n.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    )}
     {chips.length > 0 && (
-      <ul class="flex flex-wrap gap-2">
+      <ul class:list={['flex flex-wrap gap-2', numbers.length === 0 && 'mt-6']}>
         {chips.map((c) => (
           <li>
-            <Chip>{c}</Chip>
+            <Chip tone={dark ? 'dark' : 'neutral'}>{c}</Chip>
           </li>
         ))}
         {more && (
           <li>
-            <Chip tone="more">{more}</Chip>
+            <Chip tone={dark ? 'moreDark' : 'more'}>{more}</Chip>
           </li>
         )}
       </ul>
+    )}
+    {cta && (
+      <a
+        href={cta.href}
+        class:list={[
+          'group mt-5 inline-flex min-h-11 items-center gap-2 font-semibold underline-offset-4 hover:underline',
+          dark ? 'text-white focus-visible:outline-white' : 'text-blue-600',
+        ]}
+      >
+        {cta.label}
+        <Icon name="arrow" class="size-5 transition-transform duration-150 group-hover:translate-x-0.5" />
+      </a>
     )}
   </div>
   <figure class:list={['lg:col-span-7', reverse && 'lg:order-1']}>
     <div data-showcase-window class="showcase-window">
       <slot />
     </div>
-    <figcaption class="text-small text-ink-500 mt-3 text-center">{caption}</figcaption>
+    {caption && (
+      <figcaption class:list={['text-small mt-3 text-center', dark ? 'text-blue-100' : 'text-ink-500']}>
+        {caption}
+      </figcaption>
+    )}
   </figure>
 </article>
 

@@ -1,0 +1,29 @@
+---
+// Solutions page "stage" behind a product visualization (pages/solutions.md): a tinted panel with the dot
+// pattern and one flat decorative circle at a corner, behind the window. `accent` alternates gold / blue
+// between products; `dark` is the variant for the navy section.
+interface Props {
+  accent?: 'gold' | 'blue';
+  dark?: boolean;
+  class?: string;
+}
+
+const { accent = 'blue', dark = false, class: className } = Astro.props;
+const circle =
+  accent === 'gold'
+    ? ['-end-[10%] -top-[14%]', dark ? 'bg-gold-400/15' : 'bg-gold-100']
+    : ['-start-[10%] -bottom-[14%]', dark ? 'bg-blue-400/20' : 'bg-blue-100'];
+---
+
+<div
+  class:list={[
+    'relative isolate rounded-lg p-4 sm:p-8',
+    dark ? 'bg-dots border border-white/10 bg-white/5' : 'bg-dots-light bg-blue-50',
+    className,
+  ]}
+>
+  <span aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-lg">
+    <span class:list={['absolute aspect-square w-[40%] rounded-full', ...circle]}></span>
+  </span>
+  <slot />
+</div>

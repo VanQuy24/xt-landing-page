@@ -14,7 +14,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 ## Header
 
 - Logo: XionTechs
-- Links: Dịch vụ · Sản phẩm · Khách hàng · Quy trình · Tin tức · Hỏi đáp · Tuyển dụng
+- Links: Dịch vụ · Giải pháp (trang) · Khách hàng · Quy trình · Tin tức · Hỏi đáp · Tuyển dụng
 - Language switch: EN / VI
 - Button: Liên hệ
 

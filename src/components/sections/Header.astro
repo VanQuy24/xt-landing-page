@@ -18,7 +18,7 @@ const t = getDictionary(lang);
 const home = getRelativeLocaleUrl(lang);
 const links = [
   { href: `${home}#services`, label: t.nav.services },
-  { href: `${home}#products`, label: t.nav.products },
+  { href: getRelativeLocaleUrl(lang, 'solutions'), label: t.nav.solutions },
   { href: `${home}#clients`, label: t.nav.clients },
   { href: `${home}#process`, label: t.nav.process },
   { href: `${home}#news`, label: t.nav.news },

@@ -1,0 +1,21 @@
+---
+// MASTER §6.2 window chrome, the same look as ui/AppWindow: white, 1px line, radius-lg, shadow-2 and a 36px bar
+// with three dots and a generic label. Unlike AppWindow it is not aria-hidden as a whole, because some
+// mockups hold real control buttons; the decorative parts inside set aria-hidden themselves.
+interface Props {
+  bar?: string;
+  class?: string;
+}
+
+const { bar, class: className } = Astro.props;
+---
+
+<div class:list={['border-line shadow-2 overflow-hidden rounded-lg border bg-white', className]}>
+  <div class="border-line text-small text-ink-500 flex h-9 items-center gap-2 border-b px-4" aria-hidden="true">
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="bg-line size-2.5 rounded-full"></span>
+    <span class="bg-line size-2.5 rounded-full"></span>
+    {bar && <span class="ms-2 truncate font-semibold">{bar}</span>}
+  </div>
+  <slot />
+</div>

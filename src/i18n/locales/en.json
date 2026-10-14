@@ -16,7 +16,7 @@
   "nav": {
     "language": "Language",
     "services": "Services",
-    "products": "Products",
+    "solutions": "Solutions",
     "clients": "Clients",
     "process": "Process",
     "news": "News",
@@ -167,7 +167,8 @@
           "tone": "neutral"
         }
       ]
-    }
+    },
+    "allSolutions": "See all solutions"
   },
   "clients": {
     "label": "Clients and domains",
@@ -484,6 +485,517 @@
     "whereHeading": "Where you would work",
     "whereText": "Our engineering team works in Ho Chi Minh City, Vietnam.",
     "address": "Floor 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City"
+  },
+  "solutions": {
+    "meta": {
+      "title": "Solutions - XionTechs",
+      "description": "Products XionTechs has built for schools and businesses: parent and staff apps, HR agents, and XT Smart Platform with smart timetabling, an AI grader and campus safety."
+    },
+    "label": "Solutions",
+    "heading": "Products we've built",
+    "lead": "AI-first platforms for schools and businesses, shown the way they work.",
+    "jumpLabel": "Products on this page",
+    "more": "& more",
+    "parent": {
+      "nav": "Parent Platform",
+      "tag": "Mobile & web app · Education",
+      "title": "Parent Platform",
+      "body": "One assistant for parents on mobile and web: progress, fees, events and requests, by tapping or just asking.",
+      "numbers": [
+        {
+          "value": "2",
+          "label": "Ways to do any task"
+        }
+      ],
+      "chips": [
+        "Student profiles",
+        "Fees & payments",
+        "Events & activities",
+        "Leave requests",
+        "Notifications",
+        "AI assistant"
+      ],
+      "summary": "The parent app on web and mobile. On the web, a student profile for An Nguyen, class 8.1, with profile, medical and documents tabs. On the phone, two modes: Tap shows learning progress and a leave request form; Chat shows a parent asking the AI assistant to request leave, the assistant answering with the filled-in form, and the request sent to the homeroom teacher.",
+      "viz": {
+        "app": "Parent Platform",
+        "modes": "Show the app in",
+        "tap": "Tap",
+        "chat": "Chat",
+        "progress": "Learning progress",
+        "subjects": [
+          {
+            "name": "Maths",
+            "value": 82
+          },
+          {
+            "name": "English",
+            "value": 74
+          }
+        ],
+        "form": "Leave request",
+        "fields": [
+          {
+            "k": "Child",
+            "v": "An"
+          },
+          {
+            "k": "Date",
+            "v": "Fri, 17 Oct"
+          },
+          {
+            "k": "Reason",
+            "v": "Sick"
+          }
+        ],
+        "submit": "Submit",
+        "ask": "An is sick today, please request leave for her.",
+        "confirm": "Confirm",
+        "sent": "Sent to homeroom teacher",
+        "web": {
+          "bar": "Parent Platform · Web",
+          "nav": ["Notifications", "Topics", "Settings"],
+          "title": "Student profile",
+          "student": "An Nguyen · Class 8.1",
+          "tabs": ["Profile", "Medical", "Documents"],
+          "fields": [
+            {
+              "k": "Date of birth",
+              "v": "12 May 2013"
+            },
+            {
+              "k": "Homeroom teacher",
+              "v": "Ms. Lan"
+            },
+            {
+              "k": "Pick-up",
+              "v": "Bus 4"
+            }
+          ]
+        }
+      },
+      "hook": "How is my child doing at school today?"
+    },
+    "staff": {
+      "nav": "Staff Platform",
+      "tag": "Web app · Education",
+      "title": "Staff Platform",
+      "body": "A full staff portal for attendance, notices, activities and wellbeing. Ask the assistant and the page you're on changes.",
+      "numbers": [],
+      "chips": ["Attendance", "Notices", "Activities & venues", "Wellbeing", "Extra-curricular", "Emergency alerts"],
+      "summary": "A staff portal open on the Attendance page: four counts (3 late students, 1 unexcused absence, 2 homerooms at risk, 5 absences this month) and a week of classes. A teacher asks the assistant who was late today, and the page itself changes into a list of three late students with a button to notify parents. Then the teacher asks to open wellbeing for Grade 10, and the page switches to the Wellbeing module with four areas: academic, emotional, social and physical.",
+      "viz": {
+        "bar": "Staff Platform",
+        "tabs": ["Attendance", "Notices", "Activities", "Wellbeing", "Extra-curricular"],
+        "emergency": "Emergency",
+        "page": "Attendance",
+        "kpis": [
+          {
+            "label": "Late students",
+            "value": "3",
+            "delta": "+1 from yesterday"
+          },
+          {
+            "label": "Unexcused absences",
+            "value": "1",
+            "delta": "−1 from yesterday"
+          },
+          {
+            "label": "Homeroom at risk",
+            "value": "2",
+            "delta": "Same as yesterday"
+          },
+          {
+            "label": "Absent this month",
+            "value": "5",
+            "delta": "+2 from yesterday"
+          }
+        ],
+        "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        "week": [
+          ["P1 · 10A1", "P3 · 10A2"],
+          ["P2 · 10A3", "P4 · 10A1"],
+          ["P1 · 10A2", "P2 · 10A3"],
+          ["P3 · 10A1", "P4 · 10A2"],
+          ["P1 · 10A3", "P2 · 10A1"]
+        ],
+        "changed": "Changed by assistant",
+        "back": "Back to page",
+        "lateTitle": "Late today · 3 students",
+        "late": [
+          {
+            "name": "Minh T.",
+            "group": "10A1",
+            "time": "07:42"
+          },
+          {
+            "name": "Hoa P.",
+            "group": "10A2",
+            "time": "07:48"
+          },
+          {
+            "name": "Khang L.",
+            "group": "10A3",
+            "time": "07:55"
+          }
+        ],
+        "notify": "Notify parents",
+        "wellbeingTitle": "Wellbeing · Grade 10",
+        "wellbeing": [
+          {
+            "label": "Academic",
+            "value": "12"
+          },
+          {
+            "label": "Emotional",
+            "value": "5"
+          },
+          {
+            "label": "Social",
+            "value": "3"
+          },
+          {
+            "label": "Physical",
+            "value": "2"
+          }
+        ],
+        "wellbeingNote": "students to check in with",
+        "assistant": "AI assistant",
+        "greeting": "Good morning. Got a question?",
+        "topics": ["Attendance", "Wellbeing"],
+        "ask1": "Who was late today?",
+        "done1": "Showing who was late",
+        "ask2": "Open wellbeing for Grade 10",
+        "done2": "Opened Wellbeing · Grade 10",
+        "input": "Ask anything…"
+      },
+      "hook": "What if every screen listened to you?"
+    },
+    "ess": {
+      "nav": "ESS agents",
+      "tag": "Copilot Studio · Microsoft 365",
+      "title": "Employee self-service agents",
+      "body": "HR answers and requests inside Microsoft Teams and Microsoft 365 Copilot, connected to Dynamics 365.",
+      "numbers": [
+        {
+          "value": "15",
+          "label": "Agents"
+        },
+        {
+          "value": "2",
+          "label": "Places to use them"
+        }
+      ],
+      "chips": ["Copilot Studio", "Microsoft Teams", "Microsoft 365 Copilot", "Dynamics 365"],
+      "summary": "A chat app. An employee asks the HR assistant how many leave days are left; the assistant answers with a card: 9 days of annual leave and 4 days of sick leave, with buttons to request leave or view history. Beside it, 15 tiles stand for the 15 agents.",
+      "viz": {
+        "app": "HR Assistant",
+        "ask": "How many leave days do I have left?",
+        "card": "Leave balance",
+        "rows": [
+          {
+            "k": "Annual leave",
+            "v": "9 days"
+          },
+          {
+            "k": "Sick leave",
+            "v": "4 days"
+          }
+        ],
+        "primary": "Request leave",
+        "secondary": "View history",
+        "input": "Message HR Assistant",
+        "agents": "15 agents"
+      },
+      "hook": "HR answers, right where people already work."
+    },
+    "smart": {
+      "nav": "XT Smart Platform",
+      "tag": "Our platform · Education",
+      "title": "XT Smart Platform",
+      "body": "One platform for every part of a smart school: learning, administration and safety.",
+      "numbers": [
+        {
+          "value": "6",
+          "label": "Core areas"
+        }
+      ],
+      "chips": ["AI agents", "IoT", "Robots", "Data platform"],
+      "mapLabel": "What the platform covers",
+      "aiLabel": "AI-powered",
+      "categories": [
+        {
+          "name": "Learning & Academics",
+          "items": [
+            {
+              "label": "AI tutoring & adaptive learning",
+              "ai": true
+            },
+            {
+              "label": "AI Grader",
+              "ai": true,
+              "href": "grader"
+            },
+            {
+              "label": "AI language coach",
+              "ai": true
+            }
+          ]
+        },
+        {
+          "name": "Administration & School ERP",
+          "items": [
+            {
+              "label": "AI timetable scheduling",
+              "ai": true,
+              "href": "timetabling"
+            },
+            {
+              "label": "Student information system"
+            }
+          ]
+        },
+        {
+          "name": "Safety & Security",
+          "items": [
+            {
+              "label": "Smart attendance & presence",
+              "ai": true,
+              "href": "xss"
+            },
+            {
+              "label": "CCTV AI video analytics",
+              "ai": true
+            }
+          ]
+        },
+        {
+          "name": "Analytics & Reporting",
+          "items": [
+            {
+              "label": "Student performance dashboards"
+            },
+            {
+              "label": "Early intervention alerts"
+            }
+          ]
+        },
+        {
+          "name": "Experiences & Communication",
+          "items": [
+            {
+              "label": "School hubs for parents, teachers and students",
+              "highlight": true
+            },
+            {
+              "label": "Multi-language support"
+            }
+          ]
+        },
+        {
+          "name": "Campus & Operations",
+          "items": [
+            {
+              "label": "Transport & route safety"
+            },
+            {
+              "label": "Smart canteen"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "before": "A few examples from each area.",
+        "icon": "Spark icon",
+        "after": "= AI-powered. The platform keeps growing."
+      },
+      "hook": "What if every system in a school worked as one?"
+    },
+    "timetabling": {
+      "category": "Administration & ERP",
+      "title": "Smart timetabling",
+      "body": "Rank your school's priorities. The agent builds timetables, weighs cost and movement, and explains the best option.",
+      "numbers": [
+        {
+          "value": "4",
+          "label": "Options to compare"
+        }
+      ],
+      "chips": ["Priorities", "Budget", "Floor plan", "LLM judge"],
+      "summary": "Three steps. First, the school ranks four priorities: wellbeing, learning, staffing cost and room fit. Then the agent compares four timetable options; the wellbeing-optimised one fits best at 84.6% and is recommended. Last, the chosen week timetable, with lessons, labs, gym and studio periods.",
+      "viz": {
+        "bar": "Smart timetabling",
+        "stepsLabel": "Show step",
+        "steps": ["Priorities", "Options", "Timetable"],
+        "prioritiesTitle": "Drag to rank what matters most",
+        "priorities": ["Wellbeing", "Learning", "Staffing cost", "Room fit"],
+        "optionsTitle": "Timetable options",
+        "options": [
+          {
+            "name": "Wellbeing optimised",
+            "fit": "84.6"
+          },
+          {
+            "name": "Best fit",
+            "fit": "81.0"
+          },
+          {
+            "name": "Learning optimised",
+            "fit": "80.8"
+          },
+          {
+            "name": "Staffing optimised",
+            "fit": "68.5"
+          }
+        ],
+        "fit": "fit",
+        "recommended": "Recommended",
+        "overCap": "Over salary cap",
+        "lowestCost": "Lowest cost",
+        "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        "periods": ["P1", "P2", "P3", "P4"],
+        "break": "Break",
+        "week": [
+          ["ENG", "MAT", "SCI", "ENG", "MAT"],
+          ["MAT", "SCI", "ENG", "HUM", "FRE"],
+          ["HUM", "ART", "PE", "FRE", "SCI"],
+          ["FRE", "ENG", "MAT", "ART", "PE"]
+        ],
+        "legend": {
+          "teach": "Teaching",
+          "lab": "Lab",
+          "gym": "Gym",
+          "studio": "Studio"
+        }
+      },
+      "hook": "Next term's timetable, built around what your school values."
+    },
+    "grader": {
+      "category": "Learning & Academics",
+      "title": "Grader agent",
+      "body": "Upload work or recordings. The agent reads it, OCR included, and proposes a mark the teacher approves.",
+      "chips": ["OCR", "Audio", "Rubrics", "Teacher approval"],
+      "summary": "A marking screen. A student's recording of a reading passage is checked word by word: most words matched, a few skipped, one read differently. The agent proposes 9.3 out of 10, rated Excellent, from three criteria: accuracy 9, fluency 10 and completeness 9. The teacher can save a draft or approve it.",
+      "viz": {
+        "bar": "Grader · Marking",
+        "students": [
+          {
+            "name": "Student A",
+            "mark": "9.5/10"
+          },
+          {
+            "name": "Student B",
+            "mark": "9.3/10"
+          }
+        ],
+        "passageTitle": "Reading aloud: The Old Lighthouse",
+        "passage": "The old lighthouse stood ~alone~ at the edge of the cliff. Every night its ~bright~ beam swept across the ^dark^ water, and ships ~far~ out at sea knew that home was near. The keeper climbed ~all~ ninety stairs each evening to light the lamp.",
+        "legend": {
+          "matched": "Matched",
+          "skipped": "Skipped",
+          "different": "Read differently"
+        },
+        "assessment": "AI assessment",
+        "proposed": "Proposed mark",
+        "mark": "9.3",
+        "outOf": "/ 10",
+        "grade": "Excellent",
+        "rubric": [
+          {
+            "name": "Accuracy",
+            "score": 9
+          },
+          {
+            "name": "Fluency",
+            "score": 10
+          },
+          {
+            "name": "Completeness",
+            "score": 9
+          }
+        ],
+        "save": "Save draft",
+        "approve": "Approve & next",
+        "note": "Proposed by the agent · nothing is final until the teacher approves"
+      },
+      "hook": "Let the agent take the first pass at marking."
+    },
+    "xss": {
+      "category": "Safety & Security",
+      "title": "XSS · Safety & Security",
+      "body": "AI attendance, classroom insights, video analytics and alerts in one command center.",
+      "chips": [
+        "Smart attendance",
+        "Classroom behaviour insights",
+        "AI video analytics",
+        "Access control",
+        "Emergency alerts"
+      ],
+      "summary": "A safety dashboard for a fictional campus. A floor plan shows six zones with camera and door markers. Smart attendance counts 412 of 420 people present. The alert feed lists a visitor at Gate B, a door left open in Lab 2, a fire drill all clear in the Hall, and a possible fight detected in the Hall with staff alerted. A live classroom tile for class 3B shows six seated students as outlines without faces, with three detections: hand raised, sleeping and phone in use.",
+      "viz": {
+        "bar": "XSS · Safety command center",
+        "plan": "Campus · Level 1",
+        "zones": {
+          "gateA": "Gate A",
+          "gateB": "Gate B",
+          "classrooms": "Classrooms",
+          "lab": "Lab 2",
+          "library": "Library",
+          "hall": "Hall"
+        },
+        "legend": {
+          "camera": "Camera",
+          "door": "Door"
+        },
+        "attendance": "Smart attendance",
+        "present": "present",
+        "count": 412,
+        "total": 420,
+        "alertsTitle": "Alerts",
+        "alerts": [
+          {
+            "text": "Gate B · Visitor checked in",
+            "time": "08:02",
+            "tone": "info"
+          },
+          {
+            "text": "Lab 2 · Door left open",
+            "time": "08:15",
+            "tone": "warn"
+          },
+          {
+            "text": "Hall · Fire drill · All clear",
+            "time": "08:31",
+            "tone": "ok"
+          },
+          {
+            "text": "Hall · Possible fight detected · Staff alerted",
+            "time": "08:40",
+            "tone": "danger"
+          }
+        ],
+        "live": "Live",
+        "classroom": "Classroom 3B",
+        "detections": ["Hand raised", "Sleeping", "Phone in use"]
+      },
+      "hook": "Know your campus is safe, at a glance."
+    },
+    "cta": {
+      "heading": "Have something similar in mind?",
+      "lead": "Use one of our products, or let us build something like it for you.",
+      "use": {
+        "label": "Use one of our products",
+        "button": "Book a demo"
+      },
+      "build": {
+        "label": "Build something similar",
+        "button": "Tell us your idea"
+      },
+      "reply": "We reply by email within 24 business hours.",
+      "photo": {
+        "alt": "XionTechs engineers presenting to visiting clients in Ho Chi Minh City",
+        "caption": "Our team with a client, Ho Chi Minh City"
+      }
+    }
   },
   "legal": {
     "privacy": {
