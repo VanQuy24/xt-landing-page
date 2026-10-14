@@ -53,7 +53,7 @@ Source: live home stats. The office line is rewritten because the live text name
 | Number                                  | Label                                          | Detail line                                                                                                                                                                                                           |
 | --------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 25+                                     | Years of leadership experience                 | Our leadership team's experience in IT services and product engineering. [DUMMY: does 25+ count one person's career or several people's years added together? The detail line names neither until this is confirmed.] |
-| 20+                                     | Technologies we work with                      | From AI/ML and cloud to microservices and front-end frameworks.                                                                                                                                                       |
+| 20+                                     | Tech stack expertise                           | From AI/ML and cloud to microservices and front-end frameworks.                                                                                                                                                       |
 | 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam).                                                                                                                                                            |
 | [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                                                                                    |
 
@@ -65,21 +65,21 @@ Source: live home stats. The office line is rewritten because the live text name
 
 Must communicate: what XionTechs can be hired for.
 
-Source: live home "Our services", all 8, service names word for word. Descriptions rewritten on 2026-10-12 to one sentence each, making no claim the live copy did not make (audit P1-10).
+Source: live home "Our services", all 8, word for word. "Staffings Service" fixed to "Staffing services".
 
 - Section label: Our services
-- Heading: What you can hire us for
+- Heading: Technology solutions that transform your business
 
-| Service                | Description                                                                                                                      |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Product engineering    | We turn a product idea into a market-ready digital product that scales with its users.                                           |
-| AI-driven analytics    | We use AI and data visualization to find patterns in your data and turn them into decisions you can measure.                     |
-| Product co-creation    | Your domain knowledge and our engineering, combined into a product built around your business goals.                             |
-| Staffing services      | Skilled engineers who join your team when you need them, to speed up delivery.                                                   |
-| Custom app development | Apps built to your requirements, and modernization of legacy systems to cut manual work.                                         |
-| Low-code solutions     | Faster, lower-cost delivery on Power Platform, Make, n8n, Retool and Bubble, with tools your team can use to build its own apps. |
-| AI-powered solutions   | Intelligent automation, predictive analytics and conversational interfaces, built with AI.                                       |
-| Cloud computing        | Migration, optimization and integration of cloud resources on Azure, AWS and GCP.                                                |
+| Service                | Description                                                                                                                                                                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Product engineering    | Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation.                  |
+| AI-driven analytics    | Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes. |
+| Product co-creation    | Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives.                                        |
+| Staffing services      | Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery.                                                 |
+| Custom app development | Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage.                                      |
+| Low-code solutions     | Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications.              |
+| AI-powered solutions   | Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth.                                     |
+| Cloud computing        | Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs.                       |
 
 ---
 
@@ -217,8 +217,8 @@ Must communicate: a real company whose name means something, with engineers in V
 Source: heading, paragraph and bullets from live home "Who we are". The broken bullet "market presence Enhance" is split back into two bullets with no words changed. The team approved the name line on 2026-10-11 as the one plain mention of the mountain. All other mountain wording from the draft is cut.
 
 - Section label: Who we are
-- Heading: Our team in Ho Chi Minh City and Plano
-- Paragraph: XionTechs specializes in delivering technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth. [CONTENT-LEAD: tighten. "Thrive in today's digital landscape" says nothing specific.]
+- Heading: We deliver consumer-centric tech solutions
+- Paragraph: XionTechs specializes in delivering consumer-centric technology solutions that empower businesses to thrive in today's digital landscape. Our client-focused approach combines cutting-edge technical expertise with deep industry knowledge, enabling us to create tailored solutions that drive measurable results and sustainable growth. [CONTENT-LEAD: tighten. "Thrive in today's digital landscape" says nothing specific.]
 - Bullets:
   - Identify growth opportunities and expand market presence
   - Enhance operational efficiency and reduce waste
