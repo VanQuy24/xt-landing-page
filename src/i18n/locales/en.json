@@ -208,7 +208,8 @@
           "v": "$1,250"
         }
       ],
-      "confirm": "Confirm"
+      "confirm": "Confirm",
+      "paid": "Paid"
     },
     "domainsLabel": "Domains",
     "domains": ["EdTech", "Healthcare", "Logistics"],

@@ -208,7 +208,8 @@
           "v": "$1,250"
         }
       ],
-      "confirm": "Xác nhận"
+      "confirm": "Xác nhận",
+      "paid": "Đã thanh toán"
     },
     "domainsLabel": "Lĩnh vực",
     "domains": ["EdTech", "Y tế", "Logistics"],

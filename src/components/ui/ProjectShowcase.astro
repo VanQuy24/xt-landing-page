@@ -82,7 +82,10 @@ const { tag, tagTone = 'brand', title, body, numbers, chips = [], more, caption,
     { threshold: 0.3 },
   );
   document.querySelectorAll<HTMLElement>('[data-showcase-window]').forEach((el) => {
-    if (el.getBoundingClientRect().top > innerHeight) el.dataset.state = 'pending';
+    if (el.getBoundingClientRect().top > innerHeight) {
+      el.dataset.state = 'pending';
+      el.dataset.animate = '';
+    }
     io.observe(el);
   });
 </script>
