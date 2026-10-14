@@ -145,10 +145,6 @@ Multi-school apps for parents and staff. Parents chat with an AI assistant to pa
 
 Our domain knowledge runs deepest in EdTech, healthcare and logistics.
 
-**Client visit**
-
-In October 2025 a client visited our delivery center in Ho Chi Minh City to explore AI and robotics in education.
-
 Client names appear as text only. No client logos.
 
 ---
@@ -237,22 +233,22 @@ Source: newxion.com/newsroom, fetched 2026-10-12. New-office photos and title fr
 - Section label: News
 - Heading: Latest from XionTechs
 - Featured (chip "Latest", no date):
-  - Title: New Home, New Heights: Our 7th-Floor Office
+  - Title: Our new office on Floor 7
   - Body: Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.
   - Place line: Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam
   - Tag: New office · Link: Get directions (Google Maps, new tab)
   - Photos: the building (alt: The building of our new Ho Chi Minh City office); moving day (alt: Team members setting up desks and monitors on moving day); desks (alt: Engineers at work in the new office); full team (alt: The full team at work in the new office)
 - Item, 2026-07-31:
-  - Title: Work Smart, Play Sharp
+  - Title: Work smart, play sharp
   - Body: On July 31, we organized the "Thực Chiến AI với Agentic Workflow" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.
   - Photo alt: A team member presenting the Agentic Workflow workshop to colleagues
 - Item, 2025-10-10:
-  - Title: Showcasing AI Robotics: Client Visit Spotlight
-  - Body: Our esteemed client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.
+  - Title: A client visit to explore AI robotics in education
+  - Body: A client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.
   - Photo alt: XionTechs engineers presenting to visiting clients in a meeting room
 - Item, 2025-04-08:
-  - Title: Advancing Together: Project Kickoff Highlights
-  - Body: Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.
+  - Title: Kicking off an education project with a client
+  - Body: A client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.
   - Photo alt: The project team giving a thumbs up in front of the XionTech sign
 
 Address confirmed by the team on 2026-10-12.
@@ -338,7 +334,7 @@ Source: legal name, license and D-U-N-S from the live Support and legal pages. S
 - Brand: XionTechs · Get IT Done
 - Line: AI-powered IT services and products
 - Contact: +1 469 322 9899 · +84 908 107 552 · contact@xiontechs.com
-- Offices: Plano, Texas, USA · Ho Chi Minh City, Vietnam
+- Offices: Plano, Texas, USA and Ho Chi Minh City, Vietnam
 - Links: Careers · Privacy policy · Terms of service
 - Social: Facebook (facebook.com/xiontechs) · LinkedIn (linkedin.com/company/xiontechs)
 - Legal line: © 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815
