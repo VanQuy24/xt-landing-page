@@ -18,7 +18,7 @@ These Terms of Service (“Terms”) govern your use of digital products, applic
 - **Company:** XIONTECH JOINT STOCK COMPANY
 - **Address:** Floor No. 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam [UPDATE: change if the registered office moves]
 - **Email:** contact@xiontechs.com
-- **Phone:** +084-908-107552 [DUMMY: "+084" cannot be dialled. Home uses "+84 908 107 552". The company confirms the number before the legal text changes.]
+- **Phone:** +084-908-107552
 - **Business License Number:** 0318883639
 - **D-U-N-S Number:** 665533815
 
