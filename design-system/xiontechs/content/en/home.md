@@ -50,12 +50,12 @@ Must communicate: a long track record, wide technical range and real offices.
 
 Source: live home stats. The office line is rewritten because the live text names Dallas and Da Nang, which the team corrected: no Da Nang office, and the US office is in Plano. The "24/7" claim is cut because the live Support page gives Monday to Friday, 9:00 to 18:00 ICT.
 
-| Number                                  | Label                                          | Detail line                                                                                                                                                                                                           |
-| --------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 25+                                     | Years of leadership experience                 | Our leadership team's experience in IT services and product engineering. [DUMMY: does 25+ count one person's career or several people's years added together? The detail line names neither until this is confirmed.] |
-| 20+                                     | Tech stack expertise                           | From AI/ML and cloud to microservices and front-end frameworks.                                                                                                                                                       |
-| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam).                                                                                                                                                            |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                                                                                    |
+| Number                                  | Label                                          | Detail line                                                                                        |
+| --------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| 25+                                     | Years of leadership experience                 | Our leadership team's experience in IT services and product engineering.                           |
+| 20+                                     | Tech stack expertise                           | From AI/ML and cloud to microservices and front-end frameworks.                                    |
+| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam).                                         |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.] |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 

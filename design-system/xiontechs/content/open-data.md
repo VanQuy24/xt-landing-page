@@ -20,7 +20,6 @@ Every `[DUMMY: ...]` marker in `content/`, as of 2026-10-14. Markers that ask fo
 | 12  | `vi/privacy.md:5`                      | Top                         | Professional legal translation of the privacy policy. Don't machine-translate it.                                                                                         | Director                                          |
 | 13  | `vi/terms.md:5`                        | Top                         | Professional legal translation of the terms of service. Don't machine-translate it.                                                                                       | Director                                          |
 | 14  | `sitemap.md:59`                        | URLs that must keep working | Which app store listings or apps link the live privacy and support URLs.                                                                                                  | Director                                          |
-| 15  | `en/home.md:55`                        | 2. Numbers                  | What "25+ years of leadership experience" counts: one person's career, or several people's years added together. The detail line stays neutral until then.                | Director                                          |
 | 16  | `en/home.md:269`                       | 10. FAQ                     | Whether private equity is a sector we work in. Section 5 lists only EdTech, healthcare and logistics.                                                                     | Director                                          |
 | 17  | `en/home.md:274`                       | 10. FAQ                     | Which security practices and certifications are real, so the security answer can name them. The privacy policy lists ISO 27001 and SOC 2 only under "designed to comply". | Director                                          |
 
@@ -28,6 +27,6 @@ Every `[DUMMY: ...]` marker in `content/`, as of 2026-10-14. Markers that ask fo
 
 - **Sales:** 5, 6, 7, 8, 9, and maybe 4. Most of these are approvals from clients.
 - **HR:** 1, 2.
-- **Director:** 3, 10, 11, 12, 13, 14, 15, 16, 17, and maybe 4.
+- **Director:** 3, 10, 11, 12, 13, 14, 16, 17, and maybe 4.
 
 Items 8 and 9 decide whether section 6 ships. If no real quote arrives, `en/home.md` says to remove the whole Testimonials section.
