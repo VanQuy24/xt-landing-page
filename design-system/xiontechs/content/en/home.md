@@ -33,9 +33,9 @@ Source: live nav, cut down to the sections on this page. Decided 2026-10-11.
 
 Must communicate: XionTechs builds secure software, it is AI-powered, and the next step is to get in touch.
 
-Source: headline rewritten on 2026-10-12 from facts already on this page, because the live headline could front any IT company (audit P0-3). Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
+Source: headline chosen by the team on 2026-10-12, replacing the audit version "School platforms and custom software". Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
 
-- Headline: School platforms and custom software
+- Headline: Where intelligence meets identity.
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
 - Image: Ho Chi Minh City at sunrise over the Saigon River, Landmark 81 in the centre (Binh Thanh), no people; the city where our engineers work. Decorative: `alt=""` (MASTER §4.2). Photo by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License (free, no attribution required; credited here).
