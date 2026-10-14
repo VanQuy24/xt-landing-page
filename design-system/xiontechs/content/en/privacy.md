@@ -20,7 +20,7 @@ By using our Services, you agree to this Privacy Policy.
 - **Company:** XIONTECH JOINT STOCK COMPANY
 - **Address:** Floor No. 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam [UPDATE: change if the registered office moves]
 - **Email:** contact@xiontechs.com
-- **Phone:** +084-908-107552
+- **Phone:** +84 908 107 552
 - **Business License Number:** 0318883639
 - **D-U-N-S Number:** 665533815
 
@@ -579,7 +579,7 @@ This Privacy Policy is designed to comply with applicable privacy laws and regul
 **Primary Contact:**
 
 - **Email:** contact@xiontechs.com
-- **Phone:** +084-908-107552
+- **Phone:** +84 908 107 552
 
 **Privacy-Specific Inquiries:**
 
