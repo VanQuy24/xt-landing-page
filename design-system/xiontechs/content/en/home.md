@@ -243,7 +243,7 @@ Source: newxion.com/newsroom, fetched 2026-10-12. New-office photos and title fr
   - Body: Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.
   - Place line: Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam
   - Tag: New office · Link: Get directions (Google Maps, new tab)
-  - Photos: the building (alt: The building of our new Ho Chi Minh City office); moving day (alt: Team members setting up desks and monitors on moving day); desks (alt: Engineers at work in the new office); full team (alt: The full team at work in the new office)
+  - Photos: the building (alt: The building of our new Ho Chi Minh City office); desks row (alt: Engineers working along a row of desks in the new office); desks (alt: Engineers at work in the new office); full team (alt: The full team at work in the new office)
 - Item, 2026-07-31:
   - Title: Work Smart, Play Sharp
   - Body: On July 31, we organized the "Thực Chiến AI với Agentic Workflow" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.
