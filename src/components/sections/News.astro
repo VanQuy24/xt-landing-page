@@ -1,0 +1,202 @@
+---
+import { Image } from 'astro:assets';
+import { getDictionary, type Locale } from '../../i18n';
+import agenticWorkshop from '../../assets/news/agentic-workshop.jpg';
+import clientVisit from '../../assets/news/client-visit.jpg';
+import kickoff from '../../assets/news/kickoff.jpg';
+import newOffice1 from '../../assets/news/new-office-1.jpg';
+import newOffice2 from '../../assets/news/new-office-2.jpg';
+import newOffice3 from '../../assets/news/new-office-3.jpg';
+import officeBuilding from '../../assets/news/office-building.webp';
+import Chip from '../ui/Chip.astro';
+import Icon from '../ui/Icon.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+// Home §9a (MASTER §5.16): featured new-office card (with a Google Maps directions link) + 3 dated cards, newest first.
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const n = t.news;
+const dateFormat = new Intl.DateTimeFormat(lang, { dateStyle: 'medium', timeZone: 'UTC' });
+
+// Images and dates are keyed by the dictionary item `id`, so items can be reordered or added safely.
+const images = {
+  'agentic-workshop': agenticWorkshop,
+  'client-visit': clientVisit,
+  kickoff,
+  'new-office-1': newOffice1,
+  'new-office-2': newOffice2,
+  'new-office-3': newOffice3,
+};
+const dates: Record<string, string> = {
+  'agentic-workshop': '2026-07-31',
+  'client-visit': '2025-10-10',
+  kickoff: '2025-04-08',
+};
+function imageFor(id: string) {
+  const src = images[id as keyof typeof images];
+  if (!src) throw new Error(`News: no image for id "${id}" (${lang})`);
+  return src;
+}
+function dateFor(id: string) {
+  const date = dates[id];
+  if (!date) throw new Error(`News: no date for id "${id}" (${lang})`);
+  return date;
+}
+
+// Featured: the building of the new office leads; the office photos follow as thumbnails.
+const photos = n.featured.photos.map((p) => ({ id: p.id, src: imageFor(p.id), alt: p.alt }));
+const thumbs = ['new-office-3', 'new-office-2', 'new-office-1'].flatMap((id) => photos.filter((p) => p.id === id));
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('54 Nguyễn Văn Thủ, Tân Định, Hồ Chí Minh')}`;
+const items = n.items
+  .map((item) => {
+    const [before, after] = item.body.split('{workshop}');
+    return { ...item, src: imageFor(item.id), date: dateFor(item.id), before, after };
+  })
+  .sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<Section id="news" labelledby="news-title" class="border-line border-t">
+  <SectionHeader id="news-title" label={n.label} heading={n.heading} />
+
+  <article class="bg-surface mt-10 overflow-hidden rounded-lg lg:grid lg:grid-cols-3">
+    <div class="relative lg:col-span-1">
+      <Image
+        src={officeBuilding}
+        alt={n.featured.buildingAlt}
+        width={764}
+        widths={[382, 764]}
+        sizes="(min-width: 1280px) 400px, (min-width: 1024px) 33vw, 100vw"
+        class="aspect-4/3 w-full object-cover object-[center_30%] lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+      />
+    </div>
+    <div class="flex flex-col justify-center p-6 sm:p-8 lg:col-span-2 lg:p-10">
+      <div class="flex flex-wrap gap-2">
+        <Chip tone="highlight">{n.latest}</Chip>
+        <Chip tone="brand">{n.featured.tag}</Chip>
+      </div>
+      <h3 class="font-display text-h2 text-ink-900 mt-5">{n.featured.title}</h3>
+      <p class="text-body text-ink-700 mt-4">{n.featured.body}</p>
+      <div class="border-line mt-6 border-t pt-6">
+        <p class="text-body text-ink-900 flex items-start gap-3 font-medium">
+          <Icon name="pin" class="mt-1 size-5 shrink-0 text-blue-600" />
+          {n.featured.place}
+        </p>
+        <a
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={n.featured.directionsLabel}
+          class="text-small mt-3 ms-8 inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:underline hover:underline-offset-4"
+        >
+          {n.featured.directions}
+          <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+      <ul class="mt-6 flex gap-3">
+        {thumbs.map((p) => (
+          <li>
+            <Image
+              src={p.src}
+              alt={p.alt}
+              width={192}
+              widths={[96, 192]}
+              sizes="96px"
+              class="aspect-square size-20 rounded-md object-cover sm:size-24"
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+
+  <div class="mt-14" data-news-scroller>
+    <div class="flex items-center justify-between gap-4">
+      <h3 class="text-label text-ink-500 uppercase">{n.listLabel}</h3>
+      <div data-controls class="hidden gap-2 md:flex">
+        <button
+          type="button"
+          data-dir="-1"
+          aria-label={n.prev}
+          class="border-line text-ink-700 hover:border-blue-200 hover:text-blue-600 grid size-11 cursor-pointer place-items-center rounded-full border transition duration-150 disabled:cursor-default disabled:opacity-40"
+        >
+          <Icon name="arrow" class="size-5 rotate-180" />
+        </button>
+        <button
+          type="button"
+          data-dir="1"
+          aria-label={n.next}
+          class="border-line text-ink-700 hover:border-blue-200 hover:text-blue-600 grid size-11 cursor-pointer place-items-center rounded-full border transition duration-150 disabled:cursor-default disabled:opacity-40"
+        >
+          <Icon name="arrow" class="size-5" />
+        </button>
+      </div>
+    </div>
+    <ul
+      data-track
+      tabindex="0"
+      aria-label={n.listLabel}
+      class="mt-5 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [scrollbar-width:none] focus-visible:outline-offset-4 [&::-webkit-scrollbar]:hidden"
+    >
+      {items.map((item) => (
+        <li class="w-[82%] shrink-0 snap-start last:snap-end sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
+          <article class="group">
+            <div class="overflow-hidden rounded-md">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={800}
+                widths={[400, 800]}
+                sizes="(min-width: 1280px) 384px, (min-width: 1024px) 31vw, (min-width: 640px) 47vw, 82vw"
+                class="ease-out aspect-16/9 w-full object-cover transition-transform duration-250 group-hover:scale-[1.04]"
+              />
+            </div>
+            <time datetime={item.date} class="text-label text-ink-500 mt-4 block uppercase">
+              {dateFormat.format(new Date(item.date))}
+            </time>
+            <h4 class="font-display text-h4 text-ink-900 mt-2 transition-colors duration-150 group-hover:text-blue-600">
+              {item.title}
+            </h4>
+            <p class="text-small text-ink-500 mt-2 line-clamp-2">
+              {item.before}
+              {item.workshop && <span lang="vi">{item.workshop}</span>}
+              {item.after}
+            </p>
+          </article>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Section>
+
+<script>
+  // Prev/next buttons for the horizontal news list; touch, trackpad and keyboard scroll natively.
+  document.querySelectorAll<HTMLElement>('[data-news-scroller]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('[data-track]');
+    const buttons = root.querySelectorAll<HTMLButtonElement>('button[data-dir]');
+    if (!track) return;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const controls = root.querySelector<HTMLElement>('[data-controls]');
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 1;
+      // Hide the buttons when every item already fits (e.g. 3 items on desktop).
+      if (controls) controls.style.visibility = max <= 0 ? 'hidden' : '';
+      buttons.forEach((b) => {
+        b.disabled = b.dataset.dir === '-1' ? track.scrollLeft <= 0 : track.scrollLeft >= max;
+      });
+    };
+    buttons.forEach((b) =>
+      b.addEventListener('click', () => {
+        const step = track.clientWidth * 0.8 * Number(b.dataset.dir);
+        track.scrollBy({ left: step, behavior: smooth ? 'smooth' : 'auto' });
+      }),
+    );
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+</script>

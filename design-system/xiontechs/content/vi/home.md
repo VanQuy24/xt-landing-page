@@ -14,7 +14,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 ## Header
 
 - Logo: XionTechs
-- Links: Dịch vụ · Sản phẩm · Khách hàng · Quy trình · Hỏi đáp · Tuyển dụng
+- Links: Dịch vụ · Sản phẩm · Khách hàng · Quy trình · Tin tức · Hỏi đáp · Tuyển dụng
 - Language switch: EN / VI
 - Button: Liên hệ
 
@@ -25,6 +25,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 - Headline: Kiến tạo giải pháp CNTT an toàn và đổi mới
 - Subline: XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.
 - Button: Liên hệ
+- Image: TP. Hồ Chí Minh lúc bình minh bên sông Sài Gòn, trang trí (`alt=""`). Credit as in `en/home.md` §1.
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Công nghệ đơn giản. Giải pháp mạnh mẽ." and "Giải pháp CNTT phù hợp cho doanh nghiệp của bạn". The live banner line "Trao quyền cho những nhà đổi mới công nghệ bằng giải pháp CNTT thế hệ mới" can be a fourth headline or a second subline.]
 
@@ -36,7 +37,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 | --------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | 25+                                     | Năm kinh nghiệm lãnh đạo                       | Đội ngũ lãnh đạo có hàng chục năm kinh nghiệm về dịch vụ CNTT và phát triển sản phẩm, qua nhiều ngành và nhiều đợt chuyển đổi công nghệ. |
 | 20+                                     | Nền tảng công nghệ thành thạo                  | Từ AI/ML và cloud đến microservices và front-end framework.                                                                              |
-| 3                                       | Văn phòng                                      | Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam). [UPDATE: same as English]                                                    |
+| 3                                       | Văn phòng                                      | Plano (Mỹ) và hai văn phòng tại TP. Hồ Chí Minh (Việt Nam).                                                                              |
 | [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                       |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
@@ -182,6 +183,31 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 
 ---
 
+## 9a. News
+
+- Section label: Tin tức
+- Heading: Tin mới từ XionTechs
+- Featured (chip "Mới nhất", no date):
+  - Title: Nhà mới, tầm cao mới: Văn phòng tầng 7 của chúng tôi
+  - Body: Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.
+  - Place line: Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh
+  - Tag: Văn phòng mới · Link: Chỉ đường (Google Maps, tab mới)
+  - Photos: tòa nhà (alt: Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh); ngày chuyển văn phòng (alt: Thành viên sắp xếp bàn làm việc và màn hình trong ngày chuyển văn phòng); bàn làm việc (alt: Kỹ sư làm việc tại văn phòng mới); toàn đội (alt: Toàn đội làm việc tại văn phòng mới)
+- Item, 2026-07-31:
+  - Title: Làm việc thông minh, giải trí hết mình
+  - Body: Ngày 31/7, chúng tôi tổ chức workshop "Thực Chiến AI với Agentic Workflow", nơi các thành viên chia sẻ kinh nghiệm thực tế và trình bày cách họ ứng dụng các công cụ AI trong công việc hằng ngày.
+  - Photo alt: Một thành viên trình bày tại workshop Agentic Workflow cho đồng nghiệp
+- Item, 2025-10-10:
+  - Title: Giới thiệu AI Robotics: Khách hàng đến thăm
+  - Body: Khách hàng quý giá của chúng tôi đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.
+  - Photo alt: Kỹ sư XionTechs thuyết trình cho khách hàng đến thăm trong phòng họp
+- Item, 2025-04-08:
+  - Title: Cùng nhau tiến bước: Điểm nhấn buổi khởi động dự án
+  - Body: Khách hàng của chúng tôi đã đến thăm Besco Delivery Center tại TP. Hồ Chí Minh để trao đổi yêu cầu dự án và chính thức khởi động một dự án giáo dục quy mô lớn.
+  - Photo alt: Đội dự án giơ ngón cái trước biển hiệu XionTech
+
+---
+
 ## 10. FAQ
 
 - Heading: Câu hỏi thường gặp
@@ -236,7 +262,7 @@ Offices:
 
 - Plano: 7950 Legacy Drive, Suite 400, Plano, TX 75024, USA
 - TP. Hồ Chí Minh: Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh
-- TP. Hồ Chí Minh: Tầng 15, Tòa nhà B1, 279 Nguyễn Tri Phương, TP. Hồ Chí Minh [UPDATE: same as English]
+- TP. Hồ Chí Minh: Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh
 
 ---
 

@@ -232,12 +232,13 @@ For `/privacy-policy` and `/terms-of-service`:
 
 ### 4.1 What images are for
 
-| Image type              | Source                                             | Where                                       |
-| ----------------------- | -------------------------------------------------- | ------------------------------------------- |
-| **Product mockups**     | Built in HTML/SVG (crisp, translatable, light)     | Home §4 and §5 (Project Visualization §6.2) |
-| **Real company photos** | XionTech's own (team, office, events, robots)      | Home, Careers                               |
-| **Icons**               | One outline set (Lucide), 24px grid, 1.75px stroke | Everywhere                                  |
-| Stock photos            | **Avoid.** Never as "our team / office / clients"  | Rare                                        |
+| Image type                          | Source                                             | Where                                       |
+| ----------------------------------- | -------------------------------------------------- | ------------------------------------------- |
+| **Product mockups**                 | Built in HTML/SVG (crisp, translatable, light)     | Home §4 and §5 (Project Visualization §6.2) |
+| **Real company photos**             | XionTech's own (team, office, events, robots)      | Home, Careers                               |
+| **Icons**                           | One outline set (Lucide), 24px grid, 1.75px stroke | Everywhere                                  |
+| Stock photos                        | **Avoid.** Never as "our team / office / clients"  | Rare                                        |
+| Scenic stock (landscape, no people) | Free-licensed, credited in content/en/home.md      | Home hero only                              |
 
 ### 4.2 Image optimization rules
 
@@ -275,7 +276,7 @@ Lucide outline icons, copied as **inline SVG** into `src/components/ui/Icon.astr
 
 ### 5.2 Navigation bar
 
-White, sticky, 72px tall, bottom border 1px `line` (appears after 8px of scroll). Logo left, links center (Inter 500 15px, `ink-700`, active = `blue-600` with a 2px gold underline), language switcher + primary CTA **"Get in touch"** right. Links per `content/sitemap.md`: Services · Products · Clients · Process · FAQ (anchors to Home sections) · Careers. From other pages the anchors go to Home first.
+White, sticky, 72px tall, bottom border 1px `line` (appears after 8px of scroll). Logo left, links center (Inter 500 15px, `ink-700`, active = `blue-600` with a 2px gold underline), language switcher + primary CTA **"Get in touch"** right. Links per `content/sitemap.md`: Services · Products · Clients · Process · News · FAQ (anchors to Home sections) · Careers. From other pages the anchors go to Home first. The inline links show from `xl` (1280px); below that they move into the menu button (seven links, longer in Vietnamese, do not fit at 1024px). Links never wrap.
 
 **Mobile (< `lg`):** logo + language switcher + menu button (44px, `aria-expanded`, `aria-controls`). The menu opens a full-width sheet under the bar (z 60), 56px rows, CTA as a full-width primary button at the bottom. Escape and a link click close it; focus returns to the menu button. Body scroll is locked while open.
 
@@ -352,6 +353,12 @@ The only dark surfaces: **CTA band** and **footer**, both `brand-navy` bg, white
 ### 5.15 404 page
 
 Same header and footer. Centered block: `num-hero` "404" (ink-900, gold bar above) → `h1` + one `lead` line from `content/{en,vi}/404.md` → primary button back to Home + text link to the brief. No illustration.
+
+### 5.16 News (Home §9a)
+
+White section with a 1px `line` top border, section header (§5.5) first. **Featured block**: one `surface` card, `radius-lg`, 1/3 photo (the new-office building, cover, fills the text height on `lg`; 4:3 above it on mobile) and 2/3 text: "Latest" highlight chip + "New office" brand chip, `h2`-size title, body, a `line`-topped address row (pin, full address, "Get directions" link to Google Maps in a new tab) and three 1:1 office thumbnails. Then a **horizontal news row** under a small "More news" label: no card chrome (no border, no fill), each item = 16:9 photo (`radius-md`) → date (`label`, uppercase, ink-500, `<time datetime>`, `Intl.DateTimeFormat` `dateStyle: 'medium'`, UTC) → `h4` title → `small` ink-500 excerpt clamped to 2 lines. Hover: photo scales to 1.04 inside its `radius-md` frame (250ms ease-out) and the title turns `blue-600`; no cursor change, since items do not link. Three items fit on `lg` (two on `sm`, 82% wide on mobile so the next one peeks); the row scrolls only when there are more; scroll-snap, hidden scrollbar, focusable track, and round prev/next buttons from `md` (disabled at the ends, hidden when nothing overflows). **No links** on the block or the cards. Card images take the card's `radius-lg` top corners (a card exception to the photo `radius-md`). The workshop name keeps `lang="vi"` in the English page. Each item in the dictionaries has an `id` that picks its image and date in `News.astro`, so order and count can change safely. News is in the header nav (`#news`, between Process and FAQ). All images lazy, with `widths` + `sizes` and never above 2× display size (§4.2).
+
+**Home hero (§1):** full-bleed scenic photo behind the centered headline (decorative, `alt=""`, eager + `fetchpriority="high"`, `object-cover`). A `blue-950` shade fades from 80% at the top to transparent at the bottom so white text and the white secondary button stay ≥ 4.5:1 over the sky. The slogan "Get IT Done" above the headline is `h4` size in Manrope bold, uppercase, 0.16em tracking, white, between two 4×40px `gold-400` bars (larger than a normal `label` kicker because it is the brand slogan). Gold highlight + `light` buttons. The numbers strip sits below on white.
 
 ---
 

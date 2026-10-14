@@ -17,7 +17,7 @@ Decided in the grilling session of 2026-10-11. The site exists to get a brief se
 Header, on every page:
 
 - Logo, links to Home
-- Services · Products · Clients · Process · FAQ: jump to Home sections 3, 4, 5, 7 and 10. From Careers or the legal pages they go to Home first.
+- Services · Products · Clients · Process · News · FAQ: jump to Home sections 3, 4, 5, 7, 9a and 10. From Careers or the legal pages they go to Home first.
 - Careers
 - Language switch: EN / VI, to the same page in the other language
 - Button: Get in touch, to Home section 11 (Send a brief)

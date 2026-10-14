@@ -19,6 +19,7 @@
     "products": "Products",
     "clients": "Clients",
     "process": "Process",
+    "news": "News",
     "faq": "FAQ",
     "careers": "Careers",
     "cta": "Get in touch"
@@ -33,9 +34,22 @@
   "numbers": {
     "label": "XionTechs in numbers",
     "items": [
-      { "value": 25, "suffix": "+", "label": "Years of leadership experience" },
-      { "value": 20, "suffix": "+", "label": "Tech stack expertise" },
-      { "value": 3, "suffix": "", "label": "Office locations", "context": "Plano (USA) · Ho Chi Minh City (Vietnam)" }
+      {
+        "value": 25,
+        "suffix": "+",
+        "label": "Years of leadership experience"
+      },
+      {
+        "value": 20,
+        "suffix": "+",
+        "label": "Tech stack expertise"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Office locations",
+        "context": "Plano (USA) · Ho Chi Minh City (Vietnam)"
+      }
     ]
   },
   "services": {
@@ -107,8 +121,14 @@
       ]
     },
     "numbers": [
-      { "value": "10", "label": "Platform features" },
-      { "value": "2", "label": "School products" }
+      {
+        "value": "10",
+        "label": "Platform features"
+      },
+      {
+        "value": "2",
+        "label": "School products"
+      }
     ],
     "timetabling": {
       "title": "AI-powered timetabling",
@@ -117,14 +137,35 @@
     "window": {
       "bar": "School platform · Dashboard",
       "kpis": [
-        { "label": "To mark", "value": "3" },
-        { "label": "Classes today", "value": "5" },
-        { "label": "Tasks", "value": "4" }
+        {
+          "label": "To mark",
+          "value": "3"
+        },
+        {
+          "label": "Classes today",
+          "value": "5"
+        },
+        {
+          "label": "Tasks",
+          "value": "4"
+        }
       ],
       "rows": [
-        { "text": "Wellbeing note — Class 5B", "status": "Due", "tone": "highlight" },
-        { "text": "Attendance — Period 2", "status": "Done", "tone": "success" },
-        { "text": "Timetable — next week", "status": "Draft", "tone": "neutral" }
+        {
+          "text": "Wellbeing note — Class 5B",
+          "status": "Due",
+          "tone": "highlight"
+        },
+        {
+          "text": "Attendance — Period 2",
+          "status": "Done",
+          "tone": "success"
+        },
+        {
+          "text": "Timetable — next week",
+          "status": "Draft",
+          "tone": "neutral"
+        }
       ]
     }
   },
@@ -138,8 +179,14 @@
       "title": "Multi-school apps for parents and staff",
       "body": "Parents chat with an AI assistant to pay fees, update their details and get notifications.",
       "numbers": [
-        { "value": "2", "label": "Audiences" },
-        { "value": "3", "label": "Assistant tasks" }
+        {
+          "value": "2",
+          "label": "Audiences"
+        },
+        {
+          "value": "3",
+          "label": "Assistant tasks"
+        }
       ],
       "chips": ["Pay fees", "Update details", "Notifications"]
     },
@@ -148,9 +195,18 @@
       "ask": "Pay this term's fees for my son.",
       "card": "Confirm payment",
       "rows": [
-        { "k": "Student", "v": "Grade 5" },
-        { "k": "Term", "v": "Term 2" },
-        { "k": "Amount", "v": "$1,250" }
+        {
+          "k": "Student",
+          "v": "Grade 5"
+        },
+        {
+          "k": "Term",
+          "v": "Term 2"
+        },
+        {
+          "k": "Amount",
+          "v": "$1,250"
+        }
       ],
       "confirm": "Confirm"
     },
@@ -222,11 +278,75 @@
     "name": "The name Xion is inspired by a mountain, a high place that people reach together.",
     "place": "Our engineers work in Ho Chi Minh City, Vietnam. Our US office is in Plano, Texas.",
     "photos": [
-      { "alt": "The XionTechs team at an AI workshop", "caption": "AI workshop" },
-      { "alt": "Hands-on AI training at XionTechs", "caption": "Hands-on AI training" },
-      { "alt": "A company-wide knowledge sharing session", "caption": "Knowledge sharing" },
-      { "alt": "Team members recognized for great work", "caption": "Recognizing great work" }
+      {
+        "alt": "The XionTechs team at an AI workshop",
+        "caption": "AI workshop"
+      },
+      {
+        "alt": "Hands-on AI training at XionTechs",
+        "caption": "Hands-on AI training"
+      },
+      {
+        "alt": "A company-wide knowledge sharing session",
+        "caption": "Knowledge sharing"
+      },
+      {
+        "alt": "Team members recognized for great work",
+        "caption": "Recognizing great work"
+      }
     ]
+  },
+  "news": {
+    "label": "News",
+    "heading": "Latest from XionTechs",
+    "latest": "Latest",
+    "featured": {
+      "title": "New Home, New Heights: Our 7th-Floor Office",
+      "body": "Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.",
+      "place": "Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam",
+      "buildingAlt": "The building of our new Ho Chi Minh City office",
+      "photos": [
+        {
+          "id": "new-office-2",
+          "alt": "Team members setting up desks and monitors on moving day"
+        },
+        {
+          "id": "new-office-1",
+          "alt": "Engineers at work in the new office"
+        },
+        {
+          "id": "new-office-3",
+          "alt": "The full team at work in the new office"
+        }
+      ],
+      "tag": "New office",
+      "directions": "Get directions",
+      "directionsLabel": "Get directions to our new office in Google Maps (opens in a new tab)"
+    },
+    "items": [
+      {
+        "id": "agentic-workshop",
+        "title": "Work Smart, Play Sharp",
+        "body": "On July 31, we organized the \"{workshop}\" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.",
+        "alt": "A team member presenting the Agentic Workflow workshop to colleagues",
+        "workshop": "Thực Chiến AI với Agentic Workflow"
+      },
+      {
+        "id": "client-visit",
+        "title": "Showcasing AI Robotics: Client Visit Spotlight",
+        "body": "Our esteemed client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.",
+        "alt": "XionTechs engineers presenting to visiting clients in a meeting room"
+      },
+      {
+        "id": "kickoff",
+        "title": "Advancing Together: Project Kickoff Highlights",
+        "body": "Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.",
+        "alt": "The project team giving a thumbs up in front of the XionTech sign"
+      }
+    ],
+    "listLabel": "More news",
+    "prev": "Previous news",
+    "next": "Next news"
   },
   "faq": {
     "label": "FAQ",
@@ -265,14 +385,17 @@
     "hoursValue": "Monday to Friday, 9:00 to 18:00 (ICT, GMT+7)",
     "officesLabel": "Offices",
     "offices": [
-      { "city": "Plano", "address": "7950 Legacy Drive, Suite 400, Plano, TX 75024, USA" },
+      {
+        "city": "Plano",
+        "address": "7950 Legacy Drive, Suite 400, Plano, TX 75024, USA"
+      },
       {
         "city": "Ho Chi Minh City",
         "address": "Floor 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam"
       },
       {
         "city": "Ho Chi Minh City",
-        "address": "Floor 15, B1 Building, 279 Nguyen Tri Phuong, Ho Chi Minh City, Vietnam"
+        "address": "Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam"
       }
     ]
   },

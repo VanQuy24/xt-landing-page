@@ -23,7 +23,7 @@ Must communicate: who this is, where to jump, and how to get in touch from anywh
 Source: live nav, cut down to the sections on this page. Decided 2026-10-11.
 
 - Logo: XionTechs
-- Links: Services · Products · Clients · Process · FAQ · Careers
+- Links: Services · Products · Clients · Process · News · FAQ · Careers
 - Language switch: EN / VI
 - Button: Get in touch (goes to section 11)
 
@@ -38,6 +38,7 @@ Source: headline from live home. Subline from the earlier draft, `source/en/hero
 - Headline: Crafting secure and innovative IT solutions
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
+- Image: Ho Chi Minh City at sunrise over the Saigon River, Landmark 81 in the centre (Binh Thanh), no people; the city where our engineers work. Decorative: `alt=""` (MASTER §4.2). Photo by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License (free, no attribution required; credited here).
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Tech made simple. Solutions, made powerful." and "Perfect IT solutions for your business". The live banner line "Empowering tech innovators with next-generation IT solutions" can be a fourth headline or a second subline.]
 
@@ -49,12 +50,12 @@ Must communicate: a long track record, wide technical range and real offices.
 
 Source: live home stats. The office line is rewritten because the live text names Dallas and Da Nang, which the team corrected: no Da Nang office, and the US office is in Plano. The "24/7" claim is cut because the live Support page gives Monday to Friday, 9:00 to 18:00 ICT.
 
-| Number                                  | Label                                          | Detail line                                                                                                                                             |
-| --------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 25+                                     | Years of leadership experience                 | Our leadership team brings decades of expertise in IT services and product engineering across multiple industries and technology transformations.       |
-| 20+                                     | Tech stack expertise                           | From AI/ML and cloud solutions to microservices and front-end frameworks.                                                                               |
-| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam). [UPDATE: one HCMC office is moving. If the move leaves two offices, change the number to 2.] |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                      |
+| Number                                  | Label                                          | Detail line                                                                                                                                       |
+| --------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 25+                                     | Years of leadership experience                 | Our leadership team brings decades of expertise in IT services and product engineering across multiple industries and technology transformations. |
+| 20+                                     | Tech stack expertise                           | From AI/ML and cloud solutions to microservices and front-end frameworks.                                                                         |
+| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam).                                                                                        |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 
@@ -229,6 +230,37 @@ Source: heading, paragraph and bullets from live home "Who we are". The broken b
 
 ---
 
+## 9a. News
+
+Must communicate: the team is active right now: a new office, workshops and client visits.
+
+Source: newxion.com/newsroom, fetched 2026-10-12. New-office photos and title from the team, 2026-10-12. Live copy is kept word for word; only "XionTech" is changed to "XionTechs". The Town Hall, Lunar New Year and AI in Action posts are not used.
+
+- Section label: News
+- Heading: Latest from XionTechs
+- Featured (chip "Latest", no date):
+  - Title: New Home, New Heights: Our 7th-Floor Office
+  - Body: Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.
+  - Place line: Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam
+  - Tag: New office · Link: Get directions (Google Maps, new tab)
+  - Photos: the building (alt: The building of our new Ho Chi Minh City office); moving day (alt: Team members setting up desks and monitors on moving day); desks (alt: Engineers at work in the new office); full team (alt: The full team at work in the new office)
+- Item, 2026-07-31:
+  - Title: Work Smart, Play Sharp
+  - Body: On July 31, we organized the "Thực Chiến AI với Agentic Workflow" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.
+  - Photo alt: A team member presenting the Agentic Workflow workshop to colleagues
+- Item, 2025-10-10:
+  - Title: Showcasing AI Robotics: Client Visit Spotlight
+  - Body: Our esteemed client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.
+  - Photo alt: XionTechs engineers presenting to visiting clients in a meeting room
+- Item, 2025-04-08:
+  - Title: Advancing Together: Project Kickoff Highlights
+  - Body: Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.
+  - Photo alt: The project team giving a thumbs up in front of the XionTech sign
+
+Address confirmed by the team on 2026-10-12.
+
+---
+
 ## 10. FAQ
 
 Must communicate: answers to the questions a buyer asks before sending a brief.
@@ -291,7 +323,7 @@ Offices:
 
 - Plano: 7950 Legacy Drive, Suite 400, Plano, TX 75024, USA
 - Ho Chi Minh City: Floor 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam
-- Ho Chi Minh City: Floor 15, B1 Building, 279 Nguyen Tri Phuong, Ho Chi Minh City, Vietnam [UPDATE: this office is moving. Put in the new address and recheck the office count in section 2.]
+- Ho Chi Minh City: Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam (moved from Floor 15, B1 Building, 279 Nguyen Tri Phuong)
 
 ---
 
