@@ -11,9 +11,11 @@ import Icon from '../ui/Icon.astro';
 // MASTER §5.2. Section links jump to Home anchors from any page.
 interface Props {
   lang: Locale;
+  variant?: 'default' | 'home';
 }
 
-const { lang } = Astro.props;
+const { lang, variant = 'default' } = Astro.props;
+const isHome = variant === 'home';
 const t = getDictionary(lang);
 const home = getRelativeLocaleUrl(lang);
 const links = [
@@ -31,11 +33,18 @@ const current = (href: string) =>
   !href.includes('#') && Astro.url.pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
 ---
 
-<header data-header class="sticky top-0 z-50 border-b border-transparent bg-white transition-colors duration-150">
-  <Container class="flex h-18 items-center gap-6">
+<header
+  data-header
+  class:list={[
+    'sticky top-0 z-50 border-b border-transparent bg-white transition-colors duration-150',
+    { 'home-header': isHome },
+  ]}
+>
+  <Container class="header-inner flex h-18 items-center gap-6">
     <a
       href={home}
-      class="font-display text-h4 text-brand-navy flex min-h-11 shrink-0 items-center gap-2 font-extrabold"
+      class="header-brand font-display text-h4 text-brand-navy flex min-h-11 shrink-0 items-center gap-2 font-extrabold"
+      aria-label={t.a11y.home}
     >
       <Image src={mark} alt="" height={28} densities={[1, 2]} class="h-7 w-auto" loading="eager" />
       XionTechs
@@ -60,8 +69,9 @@ const current = (href: string) =>
     <div class="ms-auto flex items-center gap-3 xl:ms-0">
       <LanguageSwitcher lang={lang} />
       <div class="hidden lg:block">
-        <Button href={contact} size="sm">
+        <Button href={contact} size="sm" variant={isHome ? 'highlight' : 'primary'}>
           {t.nav.cta}
+          {isHome && <Icon name="arrow" class="size-5" />}
         </Button>
       </div>
       <button
@@ -103,8 +113,9 @@ const current = (href: string) =>
         ))}
       </ul>
     </nav>
-    <Button href={contact} class="mt-6 w-full">
+    <Button href={contact} variant={isHome ? 'highlight' : 'primary'} class="mt-6 w-full">
       {t.nav.cta}
+      {isHome && <Icon name="arrow" class="size-5" />}
     </Button>
   </div>
 </header>
@@ -130,7 +141,10 @@ const current = (href: string) =>
 
   button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
   menu.addEventListener('click', (e) => {
-    if ((e.target as HTMLElement).closest('a')) setOpen(false);
+    if ((e.target as HTMLElement).closest('a')) {
+      setOpen(false);
+      button.focus({ preventScroll: true });
+    }
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
@@ -138,5 +152,34 @@ const current = (href: string) =>
       button.focus();
     }
   });
-  matchMedia('(min-width: 1024px)').addEventListener('change', (e) => e.matches && setOpen(false));
+  matchMedia('(min-width: 1280px)').addEventListener('change', (e) => {
+    if (!e.matches || button.getAttribute('aria-expanded') !== 'true') return;
+    setOpen(false);
+    // The browser may already have blurred a link when the media query hides the sheet.
+    header.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
+  });
 </script>
+
+<style>
+  .home-header :global(.header-inner) {
+    max-width: 1380px;
+    padding-inline: clamp(1rem, 4.8vw, 4.625rem);
+    gap: clamp(0.5rem, 1.6vw, 1.5rem);
+  }
+  .home-header .header-brand {
+    font-size: clamp(1.125rem, 2.2vw, 2rem);
+    letter-spacing: -0.05em;
+    gap: clamp(0.375rem, 0.8vw, 0.75rem);
+  }
+  .home-header .header-brand :global(img) {
+    height: clamp(1.5rem, 2.3vw, 2rem);
+  }
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    .home-header :global(.header-inner) {
+      padding-inline: 1.5rem;
+    }
+    .home-header nav a {
+      padding-inline: 0.5rem;
+    }
+  }
+</style>

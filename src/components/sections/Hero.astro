@@ -1,60 +1,280 @@
 ---
-import { Image } from 'astro:assets';
-import heroCity from '../../assets/hero-hcmc.jpg';
+import { getImage } from 'astro:assets';
+import desktop from '../../assets/hero-texas-vietnam.png';
+import mobile from '../../assets/hero-texas-vietnam-mobile.png';
 import { getDictionary, type Locale } from '../../i18n';
 import Button from '../ui/Button.astro';
-import Container from '../ui/Container.astro';
+import Icon from '../ui/Icon.astro';
 import StatStrip from '../ui/StatStrip.astro';
 
-// Home §1 Hero + §2 Numbers. The gold Highlight button is used here and nowhere else (MASTER §5.1).
-// Full-bleed scenic stock with no people (MASTER §4.1), credited in content/en/home.md §1. A navy shade
-// fades out from the top so white text stays ≥ 4.5:1 over the sky while the sunrise over the city stays bright.
 interface Props {
   lang: Locale;
 }
-
 const t = getDictionary(Astro.props.lang);
+// Art direction uses one picture so the browser only downloads the matching source.
+const sources = await Promise.all(
+  [
+    { image: mobile, media: '(max-width: 767px)', widths: [390, 640, 941] },
+    { image: desktop, media: '(min-width: 768px)', widths: [768, 1280, 1536] },
+  ].flatMap(({ image, media, widths }) =>
+    (['avif', 'webp'] as const).map(async (format) => {
+      const images = await Promise.all(widths.map((width) => getImage({ src: image, width, format, quality: 55 })));
+      return {
+        media,
+        type: `image/${format}`,
+        width: image.width,
+        height: image.height,
+        srcset: images.map((image, i) => `${image.src} ${widths[i]}w`).join(', '),
+      };
+    }),
+  ),
+);
+const fallback = await getImage({ src: desktop, width: 1536, format: 'webp', quality: 55 });
+const highlightStart = t.hero.title.lastIndexOf(t.hero.titleHighlight);
+const titleStart = highlightStart < 0 ? t.hero.title : t.hero.title.slice(0, highlightStart);
 ---
 
-<section aria-labelledby="hero-title" class="relative isolate overflow-hidden">
-  <Image
-    src={heroCity}
-    alt=""
-    width={1920}
-    widths={[768, 1280, 1920, 2400]}
-    sizes="100vw"
-    loading="eager"
-    fetchpriority="high"
-    class="absolute inset-0 -z-20 size-full object-cover object-bottom"
-  />
-  <div
-    class="from-blue-950/80 via-blue-950/55 absolute inset-0 -z-10 bg-linear-to-b to-transparent"
-    aria-hidden="true"
-  ></div>
-  <Container>
-    <div class="mx-auto flex min-h-[640px] max-w-3xl flex-col items-center pt-20 pb-64 text-center sm:min-h-[720px] lg:pt-28 lg:pb-80">
-      <p class="font-display text-h4 flex items-center gap-4 font-bold text-white">
-        <span class="bg-gold-400 h-1 w-10 rounded-full" aria-hidden="true"></span>
-        {t.hero.eyebrow}
-        <span class="bg-gold-400 h-1 w-10 rounded-full" aria-hidden="true"></span>
-      </p>
-      <h1 id="hero-title" class="font-display text-display mt-5 text-white">
-        {t.hero.title}
-      </h1>
-      <p class="text-lead mt-6 max-w-2xl text-blue-50">{t.hero.subtitle}</p>
-      <div class="mt-10 flex flex-wrap justify-center gap-3">
-        <Button href="#contact" variant="highlight">
-          {t.hero.cta}
-        </Button>
-        <Button href="#services" variant="light">
-          {t.hero.secondary}
-        </Button>
-      </div>
+<section aria-labelledby="hero-title" class="home-hero">
+  <div class="hero-copy">
+    <h1 id="hero-title" class="font-display text-hero text-white">
+      {titleStart}
+      <span class="text-gold-300">{highlightStart >= 0 && t.hero.titleHighlight}</span>
+    </h1>
+    <p class="hero-description">{t.hero.subtitle}</p>
+    <div class="hero-actions">
+      <Button href="#contact" variant="highlight">
+        {t.hero.cta}
+        <Icon name="arrow" class="size-5" />
+      </Button>
+      <Button href="#services" variant="outlineLight">
+        {t.hero.secondary}
+        <Icon name="arrow" class="size-5" />
+      </Button>
     </div>
-  </Container>
+  </div>
+  <div class="hero-scene">
+    <picture>
+      {sources.map((source) => (
+        <source {...source} sizes="100vw" />
+      ))}
+      <img
+        src={fallback.src}
+        width={desktop.width}
+        height={desktop.height}
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+    <p class="hero-place hero-texas">
+      {t.hero.texas}
+      <span aria-hidden="true"></span>
+    </p>
+    <p class="hero-place hero-vietnam">
+      {t.hero.vietnam}
+      <span aria-hidden="true"></span>
+    </p>
+    <p class="hero-slogan">{t.hero.eyebrow}</p>
+  </div>
+  <div class="hero-numbers">
+    <StatStrip items={t.numbers.items} label={t.numbers.label} variant="hero" />
+  </div>
 </section>
-<section aria-label={t.numbers.label} class="pt-12 pb-16 lg:pt-16 lg:pb-24">
-  <Container>
-    <StatStrip items={t.numbers.items} label={t.numbers.label} />
-  </Container>
-</section>
+
+<style>
+  .home-hero {
+    isolation: isolate;
+    overflow: clip;
+    background: var(--color-hero-navy);
+    color: var(--color-white);
+  }
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 1080px;
+    margin-inline: auto;
+    padding: clamp(3rem, 4.2vw, 4rem) 1.5rem 2rem;
+    text-align: center;
+  }
+  h1 {
+    max-width: 1000px;
+    margin-inline: auto;
+    text-wrap: balance;
+  }
+  .hero-description {
+    max-width: 850px;
+    margin: 1.25rem auto 0;
+    font-size: clamp(1.0625rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--color-blue-200);
+    text-wrap: pretty;
+  }
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .hero-actions :global(a) {
+    min-width: 204px;
+    gap: 0.75rem;
+    height: auto;
+    min-height: 48px;
+    padding-block: 0.75rem;
+    white-space: normal;
+  }
+  .hero-actions :global(a:focus-visible) {
+    outline-color: var(--color-white);
+  }
+  .hero-scene {
+    position: relative;
+    z-index: -1;
+    margin-top: -33vw;
+  }
+  .hero-scene picture {
+    display: block;
+  }
+  .hero-scene img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  /* Blend only the empty sky and bottom edge; preserve the supplied city colors. */
+  .hero-scene::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(var(--color-hero-navy), transparent 22%, transparent 83%, var(--color-hero-navy));
+  }
+  .hero-slogan {
+    position: absolute;
+    z-index: 1;
+    top: 50.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--color-gold-400);
+    border-radius: var(--radius-full);
+    background: var(--color-hero-navy);
+    padding: 0.4rem 2.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .hero-place {
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    transform: translateX(-50%);
+    font-size: clamp(0.75rem, 0.9vw, 0.875rem);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .hero-texas {
+    left: 13%;
+  }
+  .hero-vietnam {
+    left: 88%;
+  }
+  .hero-place span {
+    display: block;
+    width: 1px;
+    height: clamp(1rem, 3.4vw, 3.25rem);
+    background: var(--color-blue-200);
+    margin: 0.5rem auto 0;
+    position: relative;
+  }
+  .hero-place span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    width: 5px;
+    height: 5px;
+    background: var(--color-gold-300);
+    border-radius: 50%;
+  }
+  .hero-numbers {
+    position: relative;
+    z-index: 1;
+    margin-top: -8vw;
+    padding: 0 2rem 3.5rem;
+    background: var(--color-hero-navy);
+  }
+  .hero-numbers::before {
+    content: '';
+    position: absolute;
+    inset: -80px 0 auto;
+    height: 80px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(transparent, var(--color-hero-navy));
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero-copy {
+      padding-bottom: 4rem;
+    }
+    .hero-place {
+      top: 38%;
+    }
+  }
+  @media (max-width: 767px) {
+    .hero-copy {
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+    h1 {
+      max-width: 11em;
+    }
+    .hero-description {
+      max-width: 33em;
+    }
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .hero-actions :global(a) {
+      width: min(100%, 320px);
+    }
+    .hero-scene {
+      --scene-trim: clamp(0px, calc(100vw - 430px), 337px);
+      margin: calc(-78vw + var(--scene-trim)) 0 0;
+    }
+    .hero-scene picture {
+      height: calc(177.6833vw - var(--scene-trim) * 2);
+      overflow: hidden;
+    }
+    .hero-scene img {
+      aspect-ratio: 941 / 1672;
+      transform: translateY(calc(-1 * var(--scene-trim)));
+    }
+    .hero-slogan {
+      top: calc(93.8168vw - var(--scene-trim));
+      padding: 0.35rem 1.5rem;
+      font-size: 0.875rem;
+    }
+    .hero-place {
+      top: calc(78.1807vw - var(--scene-trim));
+      font-size: 0.6875rem;
+      letter-spacing: 0.18em;
+    }
+    .hero-texas {
+      left: 15%;
+    }
+    .hero-vietnam {
+      left: 87%;
+    }
+    .hero-place span {
+      height: 1.25rem;
+    }
+    .hero-numbers {
+      margin-top: -15vw;
+      padding: 0 1.5rem 2.5rem;
+    }
+  }
+</style>

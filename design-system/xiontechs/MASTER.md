@@ -129,6 +129,8 @@ Rules: **max 2 colored series per chart**; more series → small multiples. One 
 
 ## 2. Typography
 
+**Home-only tokens (2026-10-15):** `hero-navy` = `#031B3B`, sampled to blend the supplied Texas/Vietnam scenery; `text-hero` = `clamp(2.25rem, 1rem + 4.2vw, 5rem)`, Manrope 800, line height 1.12, tracking -0.035em. These do not change the shared display scale. See `pages/home.md` for the approved dark hero, multiple gold accents, and image art direction.
+
 ### 2.1 Typefaces (both ship the Vietnamese subset)
 
 | Role                  | Font                           | Why                                                                                   |

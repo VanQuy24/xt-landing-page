@@ -9,6 +9,12 @@
 @theme {
   --color-*: initial;
   --color-white: #ffffff;
+  --color-hero-navy: #031b3b;
+  --radius-full: 999px;
+  --text-hero: clamp(2.25rem, 1rem + 4.2vw, 5rem);
+  --text-hero--line-height: 1.12;
+  --text-hero--font-weight: 800;
+  --text-hero--letter-spacing: -0.035em;
 
   /* Brand (sampled from the logo) */
   --color-brand-navy: #173762;

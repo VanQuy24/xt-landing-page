@@ -27,6 +27,9 @@
   "hero": {
     "eyebrow": "Get IT Done",
     "title": "Where intelligence meets identity.",
+    "titleHighlight": "identity.",
+    "texas": "Texas",
+    "vietnam": "Vietnam",
     "subtitle": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.",
     "cta": "Get in touch",
     "secondary": "Explore services"

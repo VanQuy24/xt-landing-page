@@ -38,7 +38,7 @@ Source: headline chosen by the team on 2026-10-12, replacing the audit version "
 - Headline: Where intelligence meets identity.
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
-- Image: Ho Chi Minh City at sunrise over the Saigon River, Landmark 81 in the centre (Binh Thanh), no people; the city where our engineers work. Decorative: `alt=""` (MASTER §4.2). Photo by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License (free, no attribution required; credited here).
+- Image: user-supplied Texas/Vietnam city composite, with separate desktop and portrait mobile originals in `src/assets/hero-texas-vietnam{,-mobile}.png`. Decorative: `alt=""`. Layout and art direction follow `pages/home.md`. The previous unused `hero-hcmc.jpg` is by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License; this credit applies only to that retained stock asset.
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Tech made simple. Solutions, made powerful." and "Perfect IT solutions for your business". The live banner line "Empowering tech innovators with next-generation IT solutions" can be a fourth headline or a second subline.]
 
