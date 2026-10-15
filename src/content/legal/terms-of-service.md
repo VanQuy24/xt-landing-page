@@ -13,7 +13,7 @@ These Terms of Service (“Terms”) govern your use of digital products, applic
 - **Company:** XIONTECH JOINT STOCK COMPANY
 - **Address:** Floor No. 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam
 - **Email:** contact@xiontechs.com
-- **Phone:** +084-908-107552
+- **Phone:** +84 908 107 552
 - **Business License Number:** 0318883639
 - **D-U-N-S Number:** 665533815
 
@@ -331,7 +331,7 @@ You agree that any disputes will be resolved individually and not as part of a c
 **XionTech Joint Stock Company**
 
 - **Email:** contact@xiontechs.com
-- **Phone:** +084-908-107552
+- **Phone:** +84 908 107 552
 - **Address:** Floor No. 12, A2 Tower, Viettel Building, 285 Cach Mang Thang Tam St., Hoa Hung Ward, Ho Chi Minh City, Vietnam
 
 ### Legal and Compliance Inquiries
@@ -347,7 +347,7 @@ For legal questions or compliance matters:
 For technical support and service assistance:
 
 - **Email:** itsupport@xiontechs.com
-- **Phone:** +084-908-107552 (Business Hours: Monday-Friday, 9:00 AM – 6:00 PM ICT)
+- **Phone:** +84 908 107 552 (Business Hours: Monday-Friday, 9:00 AM – 6:00 PM ICT)
 - **Response Time:** Within 24 hours for standard support requests
 
 ## Miscellaneous Provisions

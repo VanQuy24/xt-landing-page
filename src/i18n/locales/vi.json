@@ -26,7 +26,7 @@
   },
   "hero": {
     "eyebrow": "Get IT Done",
-    "title": "Kiến tạo giải pháp CNTT an toàn và đổi mới",
+    "title": "Nơi trí tuệ gặp bản sắc.",
     "subtitle": "XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.",
     "cta": "Liên hệ",
     "secondary": "Xem dịch vụ"
@@ -48,7 +48,7 @@
         "value": 3,
         "suffix": "",
         "label": "Văn phòng",
-        "context": "Plano (Mỹ) · TP. Hồ Chí Minh (Việt Nam)"
+        "context": "Plano (Mỹ) và TP. Hồ Chí Minh (Việt Nam)"
       }
     ]
   },
@@ -102,7 +102,7 @@
     "label": "Sản phẩm cho trường học",
     "heading": "Sản phẩm của chúng tôi cho trường học",
     "intro": "Những sản phẩm riêng dành cho trường học, xây dựng trên cùng nền tảng kỹ thuật chúng tôi dùng cho dự án khách hàng.",
-    "tag": "Sản phẩm của chúng tôi · Giáo dục",
+    "tag": "Sản phẩm giáo dục của chúng tôi",
     "platform": {
       "title": "Nền tảng trường học thông minh ứng dụng AI",
       "body": "Một hệ sinh thái số tích hợp, dùng trí tuệ nhân tạo để nâng cao việc học, đơn giản hóa quản lý và tăng sự gắn kết của học sinh. Nền tảng mang lại lộ trình học cá nhân hóa, phân tích theo thời gian thực, chấm điểm tự động và quản lý tài nguyên thông minh.",
@@ -135,7 +135,7 @@
       "body": "Hệ thống xếp lịch thông minh, tự động tạo và tối ưu thời khóa biểu. Hệ thống so sánh các thời khóa biểu tạo từ những đầu vào và ràng buộc khác nhau, trò chuyện với người dùng để hiểu mục tiêu xếp lịch, và báo cáo về việc sử dụng phòng học và sức chứa."
     },
     "window": {
-      "bar": "Nền tảng trường học · Tổng quan",
+      "bar": "Bảng tổng quan nền tảng trường học",
       "kpis": [
         {
           "label": "Cần chấm",
@@ -175,7 +175,7 @@
     "namesLabel": "Khách hàng",
     "names": ["Varkey Education", "CyberHive"],
     "work": {
-      "tag": "Dự án khách hàng · Giáo dục",
+      "tag": "Dự án khách hàng trong giáo dục",
       "title": "Ứng dụng đa trường cho phụ huynh và nhân viên",
       "body": "Phụ huynh trò chuyện với trợ lý AI để đóng học phí, cập nhật thông tin và nhận thông báo.",
       "numbers": [
@@ -191,7 +191,7 @@
       "chips": ["Đóng học phí", "Cập nhật thông tin", "Thông báo"]
     },
     "window": {
-      "bar": "Ứng dụng phụ huynh · Trợ lý AI",
+      "bar": "Ứng dụng phụ huynh có trợ lý AI",
       "ask": "Đóng học phí học kỳ này cho con tôi.",
       "card": "Xác nhận thanh toán",
       "rows": [
@@ -208,13 +208,13 @@
           "v": "$1,250"
         }
       ],
-      "confirm": "Xác nhận"
+      "confirm": "Xác nhận",
+      "paid": "Đã thanh toán"
     },
     "domainsLabel": "Lĩnh vực",
     "domains": ["EdTech", "Y tế", "Logistics"],
     "domainsBody": "Chúng tôi am hiểu sâu nhất về EdTech, y tế và logistics.",
-    "more": "và hơn nữa",
-    "visit": "Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát triển của chúng tôi tại TP. Hồ Chí Minh để tìm hiểu ứng dụng AI và robot trong giáo dục."
+    "more": "và hơn nữa"
   },
   "process": {
     "label": "Quy trình 4-D",
@@ -301,7 +301,7 @@
     "heading": "Tin mới từ XionTechs",
     "latest": "Mới nhất",
     "featured": {
-      "title": "Nhà mới, tầm cao mới: Văn phòng tầng 7 của chúng tôi",
+      "title": "Văn phòng mới của chúng tôi ở tầng 7",
       "body": "Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.",
       "place": "Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh",
       "buildingAlt": "Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh",
@@ -333,13 +333,13 @@
       },
       {
         "id": "client-visit",
-        "title": "Giới thiệu AI Robotics: Khách hàng đến thăm",
-        "body": "Khách hàng quý giá của chúng tôi đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.",
+        "title": "Khách hàng đến thăm để tìm hiểu AI robotics trong giáo dục",
+        "body": "Một khách hàng đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.",
         "alt": "Kỹ sư XionTechs thuyết trình cho khách hàng đến thăm trong phòng họp"
       },
       {
         "id": "kickoff",
-        "title": "Cùng nhau tiến bước: Điểm nhấn buổi khởi động dự án",
+        "title": "Khởi động dự án giáo dục cùng khách hàng",
         "body": "Khách hàng của chúng tôi đã đến thăm Besco Delivery Center tại TP. Hồ Chí Minh để trao đổi yêu cầu dự án và chính thức khởi động một dự án giáo dục quy mô lớn.",
         "alt": "Đội dự án giơ ngón cái trước biển hiệu XionTech"
       }
@@ -404,7 +404,7 @@
     "line": "Dịch vụ và sản phẩm CNTT ứng dụng AI",
     "contactLabel": "Liên hệ",
     "officesLabel": "Văn phòng",
-    "offices": "Plano, Texas, Mỹ · TP. Hồ Chí Minh, Việt Nam",
+    "offices": "Plano, Texas, Mỹ và TP. Hồ Chí Minh, Việt Nam",
     "linksLabel": "Công ty",
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản dịch vụ",

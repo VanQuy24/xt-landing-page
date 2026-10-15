@@ -22,7 +22,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 1. Hero
 
-- Headline: Kiến tạo giải pháp CNTT an toàn và đổi mới
+- Headline: Nơi trí tuệ gặp bản sắc.
 - Subline: XionTechs là đội ngũ cung cấp dịch vụ và sản phẩm CNTT ứng dụng AI. Chúng tôi xây dựng phần mềm an toàn, hiệu năng cao từ Texas và Việt Nam.
 - Button: Liên hệ
 - Image: TP. Hồ Chí Minh lúc bình minh bên sông Sài Gòn, trang trí (`alt=""`). Credit as in `en/home.md` §1.
@@ -116,10 +116,6 @@ Hệ thống xếp lịch thông minh, tự động tạo và tối ưu thời k
 
 Chúng tôi am hiểu sâu nhất về EdTech, y tế và logistics.
 
-**Chuyến thăm của khách hàng**
-
-Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát triển của chúng tôi tại TP. Hồ Chí Minh để tìm hiểu ứng dụng AI và robot trong giáo dục.
-
 ---
 
 ## 6. Testimonials
@@ -188,7 +184,7 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
 - Section label: Tin tức
 - Heading: Tin mới từ XionTechs
 - Featured (chip "Mới nhất", no date):
-  - Title: Nhà mới, tầm cao mới: Văn phòng tầng 7 của chúng tôi
+  - Title: Văn phòng mới của chúng tôi ở tầng 7
   - Body: Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.
   - Place line: Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh
   - Tag: Văn phòng mới · Link: Chỉ đường (Google Maps, tab mới)
@@ -198,11 +194,11 @@ Tháng 10 năm 2025, một khách hàng đã đến thăm trung tâm phát tri�
   - Body: Ngày 31/7, chúng tôi tổ chức workshop "Thực Chiến AI với Agentic Workflow", nơi các thành viên chia sẻ kinh nghiệm thực tế và trình bày cách họ ứng dụng các công cụ AI trong công việc hằng ngày.
   - Photo alt: Một thành viên trình bày tại workshop Agentic Workflow cho đồng nghiệp
 - Item, 2025-10-10:
-  - Title: Giới thiệu AI Robotics: Khách hàng đến thăm
-  - Body: Khách hàng quý giá của chúng tôi đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.
+  - Title: Khách hàng đến thăm để tìm hiểu AI robotics trong giáo dục
+  - Body: Một khách hàng đã đến thăm XionTechs Delivery Center tại TP. Hồ Chí Minh để tìm hiểu cơ hội ứng dụng AI và robotics trong giáo dục.
   - Photo alt: Kỹ sư XionTechs thuyết trình cho khách hàng đến thăm trong phòng họp
 - Item, 2025-04-08:
-  - Title: Cùng nhau tiến bước: Điểm nhấn buổi khởi động dự án
+  - Title: Khởi động dự án giáo dục cùng khách hàng
   - Body: Khách hàng của chúng tôi đã đến thăm Besco Delivery Center tại TP. Hồ Chí Minh để trao đổi yêu cầu dự án và chính thức khởi động một dự án giáo dục quy mô lớn.
   - Photo alt: Đội dự án giơ ngón cái trước biển hiệu XionTech
 
@@ -271,7 +267,7 @@ Offices:
 - Brand: XionTechs · Get IT Done
 - Line: Dịch vụ và sản phẩm CNTT ứng dụng AI
 - Contact: +1 469 322 9899 · +84 908 107 552 · contact@xiontechs.com
-- Offices: Plano, Texas, Mỹ · TP. Hồ Chí Minh, Việt Nam
+- Offices: Plano, Texas, Mỹ và TP. Hồ Chí Minh, Việt Nam
 - Links: Tuyển dụng · Chính sách bảo mật · Điều khoản dịch vụ
 - Social: Facebook · LinkedIn
 - Legal line: © 2026 XIONTECH JOINT STOCK COMPANY · Giấy phép kinh doanh 0318883639 · D-U-N-S 665533815 [VI-REVIEW: registered Vietnamese company name, if the team wants it here instead of the English one]
