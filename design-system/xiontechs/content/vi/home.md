@@ -46,19 +46,30 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 
 ## 3. Services
 
+Source: the existing eight service offerings, condensed with user approval on 2026-10-15. Names and order are preserved; no new delivery claims or metrics are added.
+
 - Section label: Dịch vụ
 - Heading: Giải pháp công nghệ giúp doanh nghiệp của bạn đổi mới
+- Intro: Từ ý tưởng đến giá trị thực tế, chúng tôi giúp bạn xây dựng, hiện đại hóa và mở rộng bằng công nghệ.
+- Project CTA: Trao đổi dự án → #contact
+- Initial interaction: eight cards, no selection. Selecting a card opens the vertical detail layout; Tất cả dịch vụ returns to the cards.
 
-| Service                          | Description                                                                                                                                                                                                                             |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phát triển sản phẩm              | Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường nhờ năng lực kỹ thuật toàn diện. Chúng tôi xây dựng giải pháp có khả năng mở rộng, lấy người dùng làm trung tâm, hướng tới thành công thương mại và sự khác biệt trên thị trường. |
-| Phân tích dữ liệu bằng AI        | Biến dữ liệu thô thành thông tin hữu ích bằng AI và kỹ thuật trực quan hóa. Giải pháp của chúng tôi tìm ra các quy luật ẩn, tối ưu vận hành và giúp ra quyết định dựa trên dữ liệu, với kết quả đo lường được.                          |
-| Đồng kiến tạo sản phẩm           | Đẩy nhanh đổi mới bằng cách kết hợp hiểu biết chuyên ngành của bạn với năng lực kỹ thuật của chúng tôi, để phát triển giải pháp riêng theo đúng mục tiêu kinh doanh.                                                                    |
-| Cung ứng nhân sự                 | Có ngay nhân sự công nghệ chuyên môn khi cần, với hình thức linh hoạt. Kỹ sư của chúng tôi hòa nhập vào đội ngũ của bạn để đẩy nhanh tiến độ dự án.                                                                                     |
-| Phát triển ứng dụng theo yêu cầu | Phát triển giải pháp theo đúng yêu cầu riêng và hiện đại hóa hệ thống cũ. Ứng dụng của chúng tôi tăng hiệu quả, loại bỏ quy trình thủ công và tạo lợi thế cạnh tranh.                                                                   |
-| Giải pháp low-code               | Chuyển đổi nhanh hơn với các nền tảng như Power Platform, Make, n8n, Retool và Bubble. Giải pháp low-code giúp triển khai nhanh, giảm chi phí và cho phép đội ngũ của bạn tự tạo ứng dụng.                                              |
-| Giải pháp ứng dụng AI            | Dùng trí tuệ nhân tạo để đổi mới vận hành: tự động hóa thông minh, phân tích dự báo, giao diện hội thoại và tự động hóa quy trình bằng AI.                                                                                              |
-| Điện toán đám mây                | Giải pháp trên Azure, AWS và GCP cho việc chuyển đổi, tối ưu và tích hợp tài nguyên cloud. Chúng tôi giúp tăng khả năng mở rộng, tăng bảo mật và tối ưu chi phí vận hành.                                                               |
+| ID                     | Service                          | Description                                                                                                | Panel headline                       | Capabilities                                              |
+| ---------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
+| product-engineering    | Phát triển sản phẩm              | Biến ý tưởng thành sản phẩm số sẵn sàng ra thị trường với chuyên môn kỹ thuật từ đầu đến cuối.             | Xây dựng. Ra mắt. Mở rộng.           | Chiến lược · Thiết kế · Phát triển                        |
+| ai-analytics           | Phân tích dữ liệu bằng AI        | Biến dữ liệu thành thông tin hữu ích với AI, trực quan hóa và phân tích dự báo.                            | Để dữ liệu tạo ra giá trị.           | Phân tích · Trực quan hóa · Dự báo                        |
+| product-co-creation    | Đồng kiến tạo sản phẩm           | Kết hợp hiểu biết ngành của bạn với chuyên môn kỹ thuật của chúng tôi để xây dựng giải pháp theo mục tiêu. | Cùng tạo nên sản phẩm tốt hơn.       | Cộng tác · Thử nghiệm ý tưởng · Kỹ thuật                  |
+| staffing               | Cung ứng nhân sự                 | Bổ sung nhân sự công nghệ chuyên môn vào đội ngũ với hình thức linh hoạt, phù hợp tiến độ dự án.           | Đúng chuyên môn, cùng đội ngũ.       | Nhân sự chuyên môn · Hòa nhập đội ngũ · Hợp tác linh hoạt |
+| custom-app-development | Phát triển ứng dụng theo yêu cầu | Xây dựng ứng dụng theo yêu cầu riêng và hiện đại hóa hệ thống cũ để đơn giản hóa vận hành.                 | Phần mềm theo cách bạn vận hành.     | Web & di động · Hiện đại hóa · Tích hợp                   |
+| low-code               | Giải pháp low-code               | Đẩy nhanh phát triển và tự động hóa quy trình bằng nền tảng low-code cùng các công cụ kết nối.             | Kết nối công cụ. Đơn giản công việc. | Ứng dụng low-code · Quy trình · Tích hợp                  |
+| ai-solutions           | Giải pháp ứng dụng AI            | Ứng dụng AI để tự động hóa quy trình, hỗ trợ hội thoại và khai thác thông tin trong vận hành.              | Đưa AI vào công việc hằng ngày.      | Tự động hóa · Trợ lý AI · Phân tích dự báo                |
+| cloud                  | Điện toán đám mây                | Xây dựng, chuyển đổi và tối ưu hạ tầng cloud trên Azure, AWS và GCP.                                       | Xây nền tảng cloud vững chắc.        | Chuyển đổi cloud · Kiến trúc · Tối ưu                     |
+
+- Help title: Chưa biết bắt đầu từ đâu?
+- Help body: Chia sẻ mục tiêu của bạn. Chúng tôi sẽ cùng bạn tìm giải pháp phù hợp.
+- Help CTA: Liên hệ tư vấn → #contact
+
+Artwork: eight AI-generated decorative illustrations, one per service. Prompts and asset paths are recorded in `../../services-image-prompts.json`. Layout and progressive-enhancement behavior follow `../../pages/home.md`.
 
 ---
 
