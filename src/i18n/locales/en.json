@@ -27,6 +27,9 @@
   "hero": {
     "eyebrow": "Get IT Done",
     "title": "Where intelligence meets identity.",
+    "titleHighlight": "identity.",
+    "texas": "Texas",
+    "vietnam": "Vietnam",
     "subtitle": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.",
     "cta": "Get in touch",
     "secondary": "Explore services"
@@ -54,49 +57,81 @@
   },
   "services": {
     "label": "Our services",
+    "allServices": "All services",
     "heading": "Technology solutions that transform your business",
     "items": [
       {
         "icon": "code",
         "title": "Product engineering",
-        "body": "Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation."
+        "body": "Turn innovative ideas into market-ready digital products with end-to-end engineering expertise.",
+        "id": "product-engineering",
+        "headline": "Build. Launch. Scale.",
+        "capabilities": ["Strategy", "Design", "Development"]
       },
       {
         "icon": "chart",
         "title": "AI-driven analytics",
-        "body": "Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes."
+        "body": "Turn your data into actionable insights with AI, visualization and predictive analytics.",
+        "id": "ai-analytics",
+        "headline": "Make data work for you.",
+        "capabilities": ["Analytics", "Visualization", "Prediction"]
       },
       {
         "icon": "users",
         "title": "Product co-creation",
-        "body": "Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives."
+        "body": "Combine your industry knowledge with our engineering expertise to create solutions around your goals.",
+        "id": "product-co-creation",
+        "headline": "Better products, built together.",
+        "capabilities": ["Collaboration", "Prototyping", "Engineering"]
       },
       {
         "icon": "briefcase",
         "title": "Staffing services",
-        "body": "Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery."
+        "body": "Bring specialized technology talent into your team with flexible staffing that supports project delivery.",
+        "id": "staffing",
+        "headline": "The right expertise for your team.",
+        "capabilities": ["Specialist talent", "Team integration", "Flexible staffing"]
       },
       {
         "icon": "window",
         "title": "Custom app development",
-        "body": "Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage."
+        "body": "Build applications around your requirements and modernize legacy systems to simplify daily operations.",
+        "id": "custom-app-development",
+        "headline": "Software shaped around your business.",
+        "capabilities": ["Web & mobile", "Modernization", "Integration"]
       },
       {
         "icon": "zap",
         "title": "Low-code solutions",
-        "body": "Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications."
+        "body": "Accelerate delivery and automate workflows with modern low-code platforms and connected tools.",
+        "id": "low-code",
+        "headline": "Connect tools. Simplify work.",
+        "capabilities": ["Low-code apps", "Workflows", "Integrations"]
       },
       {
         "icon": "spark",
         "title": "AI-powered solutions",
-        "body": "Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth."
+        "body": "Apply AI to automate processes, support conversations and uncover insights across your operations.",
+        "id": "ai-solutions",
+        "headline": "Put intelligence into everyday work.",
+        "capabilities": ["Automation", "AI assistants", "Predictive insights"]
       },
       {
         "icon": "cloud",
         "title": "Cloud computing",
-        "body": "Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs."
+        "body": "Build, migrate and optimize cloud infrastructure across Azure, AWS and GCP.",
+        "id": "cloud",
+        "headline": "Build a stronger cloud foundation.",
+        "capabilities": ["Cloud migration", "Architecture", "Optimization"]
       }
-    ]
+    ],
+    "intro": "From idea to impact, we help you build, modernize and scale with technology.",
+    "cta": "Discuss your project",
+    "helpTitle": "Not sure where to start?",
+    "helpBody": "Tell us about your goals. We’ll help you find the right solution.",
+    "helpCta": "Let’s talk",
+    "loading": "Loading service illustration…",
+    "imageError": "Illustration unavailable. Service details and contact links are still available."
   },
   "products": {
     "label": "Products for schools",

@@ -11,12 +11,13 @@ interface Props {
   items: Stat[];
   label: string;
   class?: string;
+  variant?: 'default' | 'hero';
 }
 
-const { items, label, class: className } = Astro.props;
+const { items, label, class: className, variant = 'default' } = Astro.props;
 ---
 
-<dl aria-label={label} class:list={['grid gap-y-8 sm:grid-cols-3', className]}>
+<dl aria-label={label} class:list={['grid gap-y-8 sm:grid-cols-3', { 'hero-stats': variant === 'hero' }, className]}>
   {items.map((s) => (
     <div class="border-line flex flex-col sm:border-s sm:px-7 sm:first:border-s-0 sm:first:ps-0">
       <dt class="text-label text-ink-500 mt-3 uppercase">{s.label}</dt>
@@ -31,6 +32,84 @@ const { items, label, class: className } = Astro.props;
     </div>
   ))}
 </dl>
+
+<style>
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 960px;
+    margin-inline: auto;
+  }
+  .hero-stats > div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.25rem;
+    align-content: start;
+    align-items: start;
+    border: 0;
+    padding: 0;
+  }
+  .hero-stats dt {
+    margin: 0;
+    color: var(--color-blue-200);
+    text-transform: none;
+    font-size: 1rem;
+    line-height: 1.45;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .hero-stats dd:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hero-stats dd:first-of-type > span:first-child {
+    display: none;
+  }
+  .hero-stats dd:first-of-type > span:last-child {
+    color: var(--color-white);
+    font-size: var(--text-num-lg);
+    white-space: nowrap;
+  }
+  .hero-stats dd:first-of-type > span:last-child > span {
+    color: inherit;
+  }
+  .hero-stats dd + dd {
+    grid-column: 2;
+    color: var(--color-blue-200);
+    font-size: 0.875rem;
+  }
+  @media (min-width: 768px) {
+    .hero-stats {
+      grid-template-columns: 1.1fr 1fr 1.3fr;
+      gap: 0;
+    }
+    .hero-stats > div {
+      padding-inline: clamp(1rem, 2.5vw, 2.5rem);
+      border-inline-start: 1px solid var(--color-blue-400);
+    }
+    .hero-stats > div:first-child {
+      border: 0;
+      padding-inline-start: 0;
+    }
+    .hero-stats > div:last-child {
+      padding-inline-end: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .hero-stats {
+      max-width: 360px;
+    }
+    .hero-stats > div {
+      grid-template-columns: 5rem 1fr;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid color-mix(in srgb, var(--color-blue-200) 25%, transparent);
+    }
+    .hero-stats > div:last-child {
+      border: 0;
+      padding-bottom: 0;
+    }
+  }
+</style>
 
 <script>
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

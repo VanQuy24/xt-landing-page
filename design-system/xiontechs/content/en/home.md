@@ -38,7 +38,7 @@ Source: headline chosen by the team on 2026-10-12, replacing the audit version "
 - Headline: Where intelligence meets identity.
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
-- Image: Ho Chi Minh City at sunrise over the Saigon River, Landmark 81 in the centre (Binh Thanh), no people; the city where our engineers work. Decorative: `alt=""` (MASTER §4.2). Photo by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License (free, no attribution required; credited here).
+- Image: user-supplied Texas/Vietnam city composite, with separate desktop and portrait mobile originals in `src/assets/hero-texas-vietnam{,-mobile}.png`. Decorative: `alt=""`. Layout and art direction follow `pages/home.md`. The previous unused `hero-hcmc.jpg` is by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License; this credit applies only to that retained stock asset.
 
 [DESIGN-DEPENDENT: one headline or several rotating ones. If several, the other live headlines are "Tech made simple. Solutions, made powerful." and "Perfect IT solutions for your business". The live banner line "Empowering tech innovators with next-generation IT solutions" can be a fourth headline or a second subline.]
 
@@ -63,23 +63,30 @@ Source: live home stats. The office line is rewritten because the live text name
 
 ## 3. Services
 
-Must communicate: what XionTechs can be hired for.
-
-Source: live home "Our services", all 8, word for word. "Staffings Service" fixed to "Staffing services".
+Source: the existing eight service offerings, condensed with user approval on 2026-10-15. Names and order are preserved; no new delivery claims or metrics are added.
 
 - Section label: Our services
 - Heading: Technology solutions that transform your business
+- Intro: From idea to impact, we help you build, modernize and scale with technology.
+- Project CTA: Discuss your project → #contact
+- Initial interaction: eight cards, no selection. Selecting a card opens the vertical detail layout; All services returns to the cards.
 
-| Service                | Description                                                                                                                                                                                                                         |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Product engineering    | Transform innovative ideas into market-ready digital products with our comprehensive engineering expertise. We build scalable, user-centered solutions designed for commercial success and market differentiation.                  |
-| AI-driven analytics    | Transform raw data into actionable intelligence using AI and advanced visualization techniques. Our solutions reveal hidden patterns, optimize operations, and enable data-driven decision-making for measurable business outcomes. |
-| Product co-creation    | Accelerate innovation through collaboration that combines your domain knowledge with our technical expertise to develop customized solutions aligned with your specific business objectives.                                        |
-| Staffing services      | Access specialized technology talent when needed with flexible solutions that provide skilled professionals who integrate seamlessly with your team to accelerate project delivery.                                                 |
-| Custom app development | Develop custom solutions aligned with your unique requirements and modernize legacy systems. Our applications enhance efficiency, eliminate manual processes, and drive competitive advantage.                                      |
-| Low-code solutions     | Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications.              |
-| AI-powered solutions   | Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth.                                     |
-| Cloud computing        | Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs.                       |
+| ID                     | Service                | Description                                                                                               | Panel headline                        | Capabilities                                             |
+| ---------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------- |
+| product-engineering    | Product engineering    | Turn innovative ideas into market-ready digital products with end-to-end engineering expertise.           | Build. Launch. Scale.                 | Strategy · Design · Development                          |
+| ai-analytics           | AI-driven analytics    | Turn your data into actionable insights with AI, visualization and predictive analytics.                  | Make data work for you.               | Analytics · Visualization · Prediction                   |
+| product-co-creation    | Product co-creation    | Combine your industry knowledge with our engineering expertise to create solutions around your goals.     | Better products, built together.      | Collaboration · Prototyping · Engineering                |
+| staffing               | Staffing services      | Bring specialized technology talent into your team with flexible staffing that supports project delivery. | The right expertise for your team.    | Specialist talent · Team integration · Flexible staffing |
+| custom-app-development | Custom app development | Build applications around your requirements and modernize legacy systems to simplify daily operations.    | Software shaped around your business. | Web & mobile · Modernization · Integration               |
+| low-code               | Low-code solutions     | Accelerate delivery and automate workflows with modern low-code platforms and connected tools.            | Connect tools. Simplify work.         | Low-code apps · Workflows · Integrations                 |
+| ai-solutions           | AI-powered solutions   | Apply AI to automate processes, support conversations and uncover insights across your operations.        | Put intelligence into everyday work.  | Automation · AI assistants · Predictive insights         |
+| cloud                  | Cloud computing        | Build, migrate and optimize cloud infrastructure across Azure, AWS and GCP.                               | Build a stronger cloud foundation.    | Cloud migration · Architecture · Optimization            |
+
+- Help title: Not sure where to start?
+- Help body: Tell us about your goals. We’ll help you find the right solution.
+- Help CTA: Let’s talk → #contact
+
+Artwork: eight AI-generated decorative illustrations, one per service. Prompts and asset paths are recorded in `../../services-image-prompts.json`. Layout and progressive-enhancement behavior follow `../../pages/home.md`.
 
 ---
 

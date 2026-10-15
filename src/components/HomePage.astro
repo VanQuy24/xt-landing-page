@@ -22,7 +22,7 @@ const { lang } = Astro.props;
 const t = getDictionary(lang);
 ---
 
-<BaseLayout lang={lang} title={t.meta.title} description={t.meta.description}>
+<BaseLayout lang={lang} title={t.meta.title} description={t.meta.description} homeHeader>
   <Hero lang={lang} />
   <Services lang={lang} />
   <Products lang={lang} />

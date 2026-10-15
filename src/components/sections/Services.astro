@@ -1,28 +1,532 @@
 ---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { getDictionary, type Locale } from '../../i18n';
+import Button from '../ui/Button.astro';
 import Icon, { type IconName } from '../ui/Icon.astro';
-import Section from '../ui/Section.astro';
-import SectionHeader from '../ui/SectionHeader.astro';
+import ServiceArtwork from '../ui/ServiceArtwork.astro';
 
-// Home §3. Cards per MASTER §5.8 (icon → h3 → body); not links, so no hover lift.
 interface Props {
   lang: Locale;
 }
-
 const t = getDictionary(Astro.props.lang);
+const assets = import.meta.glob<{ default: ImageMetadata }>('../../assets/services/*.png', { eager: true });
+const services = await Promise.all(
+  t.services.items.map(async (item) => {
+    const image = assets[`../../assets/services/${item.id}.png`].default;
+    const widths = [480, 800, 1200].filter((width) => width <= image.width);
+    const sources = await Promise.all(
+      (['avif', 'webp'] as const).map(async (format) => {
+        const images = await Promise.all(widths.map((width) => getImage({ src: image, width, format, quality: 65 })));
+        return {
+          type: `image/${format}`,
+          srcset: images.map((result, i) => `${result.src} ${widths[i]}w`).join(', '),
+          src: images[0].src,
+        };
+      }),
+    );
+    return { ...item, artwork: { sources, src: sources[1].src, width: image.width, height: image.height } };
+  }),
+);
 ---
 
-<Section id="services" labelledby="services-title" surface>
-  <SectionHeader id="services-title" label={t.services.label} heading={t.services.heading} />
-  <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-    {t.services.items.map((s) => (
-      <li class="border-line rounded-lg border bg-white p-6 lg:p-8">
-        <span class="inline-flex size-12 items-center justify-center rounded-md bg-blue-50 text-blue-600">
-          <Icon name={s.icon as IconName} />
-        </span>
-        <h3 class="font-display text-h3 text-ink-900 mt-5">{s.title}</h3>
-        <p class="text-small text-ink-500 mt-3">{s.body}</p>
-      </li>
-    ))}
-  </ul>
-</Section>
+<section
+  id="services"
+  aria-labelledby="services-title"
+  class="services-section bg-surface"
+  data-services
+  data-loading-label={t.services.loading}
+>
+  <div class="services-container">
+    <header class="services-heading">
+      <p class="text-label text-blue-600">
+        <span aria-hidden="true"></span>
+        {t.services.label}
+      </p>
+      <h2 id="services-title" class="font-display text-h1 text-ink-900">
+        {t.services.heading}
+      </h2>
+      <p class="text-lead text-ink-500">{t.services.intro}</p>
+    </header>
+    <div class="services-toolbar">
+      <button type="button" class="services-back text-blue-600" data-services-back hidden>
+        <Icon name="arrow" class="size-5 rotate-180" />
+        {t.services.allServices}
+      </button>
+    </div>
+    <div class="services-workspace">
+      <div class="services-list">
+        {services.map((service, i) => (
+          <details class="service-item" name="home-services" data-service={service.id}>
+            <summary
+              id={`service-trigger-${service.id}`}
+              aria-controls={`service-content-${service.id} service-visual-${service.id}`}
+            >
+              <span class="service-number font-display" aria-hidden="true">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span class="service-overview-icon service-icon">
+                <Icon name={service.icon as IconName} />
+              </span>
+              <h3 class="font-display">{service.title}</h3>
+              <span class="service-preview text-small text-ink-500" aria-hidden="true">
+                {service.body}
+              </span>
+              <span class="service-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path d="m5 9 7 7 7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div id={`service-content-${service.id}`} class="service-content">
+              <p class="service-description">{service.body}</p>
+              <div
+                id={`service-visual-${service.id}`}
+                class="service-visual"
+                data-visual
+                role="region"
+                aria-labelledby={`service-trigger-${service.id}`}
+              >
+                <p class="service-identity">
+                  <span class="service-icon">
+                    <Icon name={service.icon as IconName} />
+                  </span>
+                  {service.title}
+                </p>
+                <h4 class="font-display text-ink-900">{service.headline}</h4>
+                <ul class="service-capabilities" aria-label={service.title}>
+                  {service.capabilities.map((capability) => (
+                    <li>{capability}</li>
+                  ))}
+                </ul>
+                <div class="service-illustration" data-illustration>
+                  <template data-artwork>
+                    <ServiceArtwork {...service.artwork} />
+                  </template>
+                  <noscript>
+                    <ServiceArtwork {...service.artwork} />
+                  </noscript>
+                  <p class="art-error text-small text-ink-500" hidden>
+                    {t.services.imageError}
+                  </p>
+                </div>
+              </div>
+              <a class="service-cta text-blue-600" href="#contact">
+                {t.services.cta}
+                <Icon name="arrow" class="size-5" />
+              </a>
+            </div>
+          </details>
+        ))}
+      </div>
+      <div class="services-side">
+        <div class="services-stage" data-services-stage></div>
+        <aside class="services-help" aria-labelledby="services-help-title">
+          <span class="service-icon">
+            <Icon name="message" />
+          </span>
+          <div>
+            <h3 id="services-help-title" class="font-display text-h3 text-ink-900">
+              {t.services.helpTitle}
+            </h3>
+            <p class="text-small text-ink-500">{t.services.helpBody}</p>
+          </div>
+          <Button href="#contact">
+            {t.services.helpCta}
+            <Icon name="arrow" class="size-5" />
+          </Button>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+<p id="services-status" class="sr-only" aria-live="polite" data-service-status></p>
+
+<script>
+  import { initServices } from '../../scripts/services';
+  document.querySelectorAll<HTMLElement>('[data-services]').forEach(initServices);
+</script>
+
+<style>
+  .services-section {
+    padding: clamp(2.5rem, 3.2vw, 3rem) 0;
+    overflow-anchor: none;
+  }
+  .services-container {
+    max-width: 1500px;
+    padding-inline: clamp(1rem, 3.9vw, 3.75rem);
+    margin-inline: auto;
+  }
+  .services-heading {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+  .services-heading > p:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: uppercase;
+  }
+  .services-heading > p:first-child span {
+    width: 28px;
+    height: 3px;
+    border-radius: var(--radius-full);
+    background: var(--color-blue-600);
+  }
+  .services-heading h2 {
+    max-width: 850px;
+    margin-inline: auto;
+    margin-top: 1rem;
+    text-wrap: balance;
+  }
+  .services-heading > p:last-child {
+    max-width: 950px;
+    margin: 1rem auto 0;
+    text-wrap: pretty;
+  }
+  .services-list {
+    display: grid;
+    align-content: start;
+    gap: 0.625rem;
+    min-width: 0;
+  }
+  .services-toolbar:has(button[hidden]) {
+    display: none;
+  }
+  .services-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms;
+  }
+  .services-back:hover {
+    background: var(--color-blue-100);
+  }
+  .services-back[hidden] {
+    display: none;
+  }
+  .service-item .service-overview-icon,
+  .service-preview {
+    display: none;
+  }
+  .services-section:not(:has(.service-item[open])) .services-workspace {
+    display: block;
+  }
+  .services-section:not(:has(.service-item[open])) .services-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .services-section:not(:has(.service-item[open])) .service-item:hover {
+    border-color: var(--color-blue-400);
+    background: var(--color-blue-50);
+  }
+  .services-section:not(:has(.service-item[open])) summary {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) 16px;
+    gap: 0.5rem 0.875rem;
+    align-content: start;
+    align-items: start;
+    height: 100%;
+    min-height: 148px;
+    padding: 1.25rem;
+  }
+  .services-section:not(:has(.service-item[open])) .service-number {
+    display: none;
+  }
+  .services-section:not(:has(.service-item[open])) .service-overview-icon {
+    display: inline-flex;
+    grid-row: 1 / 3;
+  }
+  .services-section:not(:has(.service-item[open])) summary h3 {
+    grid-column: 2;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .services-section:not(:has(.service-item[open])) .service-preview {
+    display: -webkit-box;
+    grid-column: 2;
+    grid-row: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+  }
+  .services-section:not(:has(.service-item[open])) .service-chevron {
+    grid-column: 3;
+    grid-row: 1;
+    flex-basis: 16px;
+    margin-top: 0.125rem;
+  }
+  .services-section:not(:has(.service-item[open])) .service-chevron svg {
+    width: 16px;
+    height: 16px;
+    transform: rotate(-90deg);
+  }
+  .services-section:not(:has(.service-item[open])) .services-help {
+    margin-top: 1.25rem;
+  }
+  @media (max-width: 1279px) {
+    .services-section:not(:has(.service-item[open])) .services-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 639px) {
+    .services-section:not(:has(.service-item[open])) .services-list {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+    .services-section:not(:has(.service-item[open])) summary {
+      min-height: 116px;
+      padding: 1rem;
+    }
+  }
+  .service-item {
+    min-width: 0;
+    overflow: clip;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    transition:
+      border-color 200ms,
+      background-color 200ms;
+  }
+  .service-item[open] {
+    border-color: var(--color-blue-500);
+    background: var(--color-blue-50);
+  }
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.625rem 1.25rem;
+    min-height: 64px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: var(--radius-lg);
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:hover {
+    color: var(--color-blue-600);
+  }
+  summary:focus-visible {
+    outline-offset: -4px;
+  }
+  summary h3 {
+    font-size: clamp(1.0625rem, 1.5vw, 1.375rem);
+    line-height: 1.35;
+    font-weight: 700;
+    color: var(--color-ink-900);
+  }
+  .service-number {
+    display: inline-flex;
+    flex: 0 0 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-blue-50);
+    border-radius: var(--radius-md);
+    color: var(--color-blue-600);
+    font-weight: 700;
+  }
+  .service-item[open] .service-number {
+    background: var(--color-blue-100);
+  }
+  .service-chevron {
+    margin-inline-start: auto;
+    color: var(--color-blue-600);
+    flex: 0 0 22px;
+  }
+  .service-chevron svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 200ms;
+  }
+  .service-item[open] .service-chevron svg {
+    transform: rotate(180deg);
+  }
+  .service-item.is-pending summary {
+    opacity: 0.65;
+  }
+  .service-content {
+    padding: 0 1.25rem 1rem;
+  }
+  .service-description {
+    color: var(--color-ink-500);
+    font-size: var(--text-body);
+    line-height: 1.5;
+  }
+  .service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .service-cta:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .service-visual {
+    margin-top: 1.25rem;
+    padding: clamp(1.25rem, 2.5vw, 2.25rem);
+    border-radius: var(--radius-lg);
+    background: var(--color-blue-50);
+    border: 1px solid var(--color-blue-100);
+    overflow: clip;
+  }
+  .service-identity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-brand-navy);
+    font-size: var(--text-small);
+    font-weight: 600;
+  }
+  .service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    color: var(--color-blue-600);
+    background: var(--color-blue-100);
+  }
+  .service-visual h4 {
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    max-width: 17ch;
+    margin-top: 1.25rem;
+    text-wrap: balance;
+  }
+  .service-capabilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  .service-capabilities li {
+    background: var(--color-blue-100);
+    border-radius: var(--radius-full);
+    padding: 0.375rem 0.75rem;
+    color: var(--color-blue-700);
+    font-size: var(--text-small);
+    line-height: 1.4;
+  }
+  .service-illustration {
+    position: relative;
+    margin: 0.5rem -1rem -1rem;
+    aspect-ratio: 16 / 10;
+  }
+  .service-illustration :global(picture) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .service-illustration :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .art-error {
+    position: absolute;
+    inset: 25% 10%;
+    text-align: center;
+  }
+  .services-stage:empty {
+    display: none;
+  }
+  .services-help {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: clamp(1.25rem, 2vw, 1.5rem);
+    margin-top: 1rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+  }
+  .services-help h3 {
+    font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  }
+  .services-help p {
+    margin-top: 0.5rem;
+  }
+  .services-help :global(a) {
+    margin-inline-start: auto;
+    flex-shrink: 0;
+    white-space: normal;
+    min-height: 48px;
+    height: auto;
+    padding-block: 0.75rem;
+  }
+  @media (min-width: 1024px) {
+    .enhanced .services-workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+      align-items: start;
+      gap: 1.25rem;
+    }
+    .enhanced .service-content {
+      padding-inline-start: 5rem;
+    }
+    .services-stage .service-visual {
+      margin: 0;
+      min-height: 600px;
+    }
+    .services-side {
+      min-width: 0;
+    }
+    .services-help .service-icon {
+      display: none;
+    }
+  }
+  @media (max-width: 639px) {
+    .services-heading > p:last-child {
+      font-size: 1rem;
+    }
+    summary {
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+    .service-content {
+      padding-inline: 1rem;
+    }
+    .services-help {
+      flex-wrap: wrap;
+    }
+    .services-help > div {
+      flex: 1 1 180px;
+    }
+    .services-help :global(a) {
+      width: 100%;
+    }
+    .service-identity {
+      display: none;
+    }
+    .service-visual h4 {
+      margin-top: 0;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .service-item,
+    .service-chevron svg {
+      transition: none;
+    }
+  }
+</style>

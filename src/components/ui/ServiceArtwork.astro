@@ -1,0 +1,16 @@
+---
+interface Props {
+  sources: { type: string; srcset: string }[];
+  src: string;
+  width: number;
+  height: number;
+}
+const { sources, src, width, height } = Astro.props;
+---
+
+<picture>
+  {sources.map((source) => (
+    <source {...source} sizes="(min-width: 1536px) 680px, (min-width: 1024px) 48vw, calc(100vw - 80px)" />
+  ))}
+  <img src={src} width={width} height={height} alt="" loading="lazy" decoding="async" />
+</picture>
