@@ -443,7 +443,7 @@ Rules:
 - **Product window = built UI** in HTML/CSS with fictional data and generic names, never a client screenshot. Labelled "Illustrative". Decorative parts `aria-hidden`; the meaning is in the title, numbers and chips.
 - Window chrome: white, 1px `line`, `radius-lg`, `shadow-2`, a 36px top bar (three `line` dots or a generic label). Inside, the UI uses the same tokens.
 - Layout: desktop = text + numbers at the start (5/12 columns), window at the end (7/12); alternate sides between projects. Mobile = stacked (numbers → window → chips).
-- Motion: the window's content **animates once** when scrolled into view (cards slide in, the chat reply streams). It never loops. Off under reduced motion.
+- Motion: the window's content **animates once** when scrolled into view (cards slide in, the chat reply streams). In the agent chat window the question appears, typing dots show, the card streams in row by row, then Confirm is pressed and turns to a green "Paid" (about 3.5s in all). It never loops. Off under reduced motion, which shows the static Confirm state.
 
 **Window types:**
 

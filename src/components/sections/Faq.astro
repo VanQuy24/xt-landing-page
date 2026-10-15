@@ -31,3 +31,72 @@ const t = getDictionary(Astro.props.lang);
     </div>
   </div>
 </Section>
+
+<style>
+  /* Slide the answer open and closed with the icon (MASTER §5.12, dur-base). Browsers without
+     ::details-content or interpolate-size (Firefox, Safari) get the script below instead. */
+  details {
+    interpolate-size: allow-keywords;
+  }
+  details::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition:
+      block-size 250ms var(--ease-out),
+      content-visibility 250ms allow-discrete;
+  }
+  details[open]::details-content {
+    block-size: auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    details::details-content {
+      transition: none;
+    }
+  }
+  /* While the script animates a close, <details> stays open, so turn the icon back now. */
+  details[data-closing] summary > :global(svg) {
+    rotate: 0deg;
+  }
+</style>
+
+<script>
+  // Fallback slide for browsers where the CSS above cannot animate. Without this script the
+  // accordion still works natively, it just toggles instantly.
+  const cssSlides = CSS.supports('selector(::details-content)') && CSS.supports('interpolate-size', 'allow-keywords');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (!cssSlides) {
+    for (const details of document.querySelectorAll<HTMLDetailsElement>('#faq details')) {
+      const summary = details.querySelector('summary')!;
+      const answer = summary.nextElementSibling as HTMLElement;
+      let anim: Animation | undefined;
+      let wantOpen = details.open;
+
+      summary.addEventListener('click', (event) => {
+        if (reduce.matches) return;
+        event.preventDefault();
+        wantOpen = !wantOpen;
+        // Measure before cancelling, so a click mid-slide reverses from where it is.
+        const from = details.offsetHeight;
+        anim?.cancel();
+        details.open = true;
+        // Firefox updates the <details> height a couple of frames after opening, so add up the
+        // parts instead of reading it.
+        const closed = summary.offsetHeight + details.offsetHeight - details.clientHeight;
+        const to = wantOpen ? closed + answer.getBoundingClientRect().height : closed;
+        details.toggleAttribute('data-closing', !wantOpen);
+        details.style.overflow = 'clip';
+        anim = details.animate(
+          { height: [`${from}px`, `${to}px`] },
+          { duration: 250, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' },
+        );
+        anim.onfinish = () => {
+          details.open = wantOpen;
+          details.removeAttribute('data-closing');
+          details.style.overflow = '';
+          anim = undefined;
+        };
+      });
+    }
+  }
+</script>

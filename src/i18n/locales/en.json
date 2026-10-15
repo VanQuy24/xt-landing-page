@@ -26,7 +26,7 @@
   },
   "hero": {
     "eyebrow": "Get IT Done",
-    "title": "Crafting secure and innovative IT solutions",
+    "title": "Where intelligence meets identity.",
     "subtitle": "XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.",
     "cta": "Get in touch",
     "secondary": "Explore services"
@@ -48,7 +48,7 @@
         "value": 3,
         "suffix": "",
         "label": "Office locations",
-        "context": "Plano (USA) · Ho Chi Minh City (Vietnam)"
+        "context": "Plano (USA) and Ho Chi Minh City (Vietnam)"
       }
     ]
   },
@@ -102,7 +102,7 @@
     "label": "Products for schools",
     "heading": "Our products for schools",
     "intro": "Products of our own for schools, built on the same engineering we bring to client work.",
-    "tag": "Our product · Education",
+    "tag": "Our product for education",
     "platform": {
       "title": "AI-powered platform for smart schools",
       "body": "An integrated digital ecosystem that uses artificial intelligence to improve learning, streamline administration and raise student engagement. It delivers personalized learning paths, real-time analytics, automated grading and smart resource management.",
@@ -135,7 +135,7 @@
       "body": "An intelligent scheduling system that automates the creation and optimization of academic timetables. It compares timetables generated from different inputs and constraints, talks users through their scheduling goals, and reports on room use and capacity."
     },
     "window": {
-      "bar": "School platform · Dashboard",
+      "bar": "School platform dashboard",
       "kpis": [
         {
           "label": "To mark",
@@ -176,7 +176,7 @@
     "namesLabel": "Clients",
     "names": ["Varkey Education", "CyberHive"],
     "work": {
-      "tag": "Client work · Education",
+      "tag": "Client work in education",
       "title": "Multi-school apps for parents and staff",
       "body": "Parents chat with an AI assistant to pay fees, update their details and get notifications.",
       "numbers": [
@@ -192,7 +192,7 @@
       "chips": ["Pay fees", "Update details", "Notifications"]
     },
     "window": {
-      "bar": "Parent app · AI assistant",
+      "bar": "Parent app with AI assistant",
       "ask": "Pay this term's fees for my son.",
       "card": "Confirm payment",
       "rows": [
@@ -209,13 +209,13 @@
           "v": "$1,250"
         }
       ],
-      "confirm": "Confirm"
+      "confirm": "Confirm",
+      "paid": "Paid"
     },
     "domainsLabel": "Domains",
     "domains": ["EdTech", "Healthcare", "Logistics"],
     "domainsBody": "Our domain knowledge runs deepest in EdTech, healthcare and logistics.",
-    "more": "& more",
-    "visit": "In October 2025 a client visited our delivery center in Ho Chi Minh City to explore AI and robotics in education."
+    "more": "& more"
   },
   "process": {
     "label": "4-D process",
@@ -302,7 +302,7 @@
     "heading": "Latest from XionTechs",
     "latest": "Latest",
     "featured": {
-      "title": "New Home, New Heights: Our 7th-Floor Office",
+      "title": "Our new office on Floor 7",
       "body": "Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.",
       "place": "Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam",
       "buildingAlt": "The building of our new Ho Chi Minh City office",
@@ -327,21 +327,21 @@
     "items": [
       {
         "id": "agentic-workshop",
-        "title": "Work Smart, Play Sharp",
+        "title": "Work smart, play sharp",
         "body": "On July 31, we organized the \"{workshop}\" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.",
         "alt": "A team member presenting the Agentic Workflow workshop to colleagues",
         "workshop": "Thực Chiến AI với Agentic Workflow"
       },
       {
         "id": "client-visit",
-        "title": "Showcasing AI Robotics: Client Visit Spotlight",
-        "body": "Our esteemed client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.",
+        "title": "A client visit to explore AI robotics in education",
+        "body": "A client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.",
         "alt": "XionTechs engineers presenting to visiting clients in a meeting room"
       },
       {
         "id": "kickoff",
-        "title": "Advancing Together: Project Kickoff Highlights",
-        "body": "Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.",
+        "title": "Kicking off an education project with a client",
+        "body": "A client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.",
         "alt": "The project team giving a thumbs up in front of the XionTech sign"
       }
     ],
@@ -405,7 +405,7 @@
     "line": "AI-powered IT services and products",
     "contactLabel": "Contact",
     "officesLabel": "Offices",
-    "offices": "Plano, Texas, USA · Ho Chi Minh City, Vietnam",
+    "offices": "Plano, Texas, USA and Ho Chi Minh City, Vietnam",
     "linksLabel": "Company",
     "privacy": "Privacy policy",
     "terms": "Terms of service",

@@ -2,18 +2,21 @@
 import Icon from './Icon.astro';
 
 // MASTER §6.2 "Agent chat window": the user asks, the assistant answers with a card (UI, not text). Decorative.
+// Inside a ProjectShowcase it plays once on scroll-in: question, typing dots, the card streams in row by row,
+// then Confirm is pressed and turns to Paid. Without JS or under reduced motion it shows the static Confirm state.
 interface Props {
   bar: string;
   ask: string;
   card: string;
   rows: { k: string; v: string }[];
   confirm: string;
+  paid: string;
 }
 
-const { bar, ask, card, rows, confirm } = Astro.props;
+const { bar, ask, card, rows, confirm, paid } = Astro.props;
 ---
 
-<div class="border-line shadow-2 overflow-hidden rounded-lg border bg-white" aria-hidden="true">
+<div class="chat border-line shadow-2 overflow-hidden rounded-lg border bg-white" aria-hidden="true">
   <div class="border-line text-small text-ink-500 flex h-9 items-center gap-2 border-b px-4">
     <span class="bg-line size-2.5 rounded-full"></span>
     <span class="bg-line size-2.5 rounded-full"></span>
@@ -21,25 +24,132 @@ const { bar, ask, card, rows, confirm } = Astro.props;
     <span class="ms-2 truncate font-semibold">{bar}</span>
   </div>
   <div class="bg-surface grid gap-4 p-4 sm:p-6">
-    <p data-step class="text-small ms-auto max-w-[80%] rounded-lg rounded-ee-sm bg-blue-600 px-4 py-3 text-white">
+    <p class="chat-ask text-small ms-auto max-w-[80%] rounded-lg rounded-ee-sm bg-blue-600 px-4 py-3 text-white">
       {ask}
     </p>
-    <div data-step style="--i:1" class="border-line max-w-sm rounded-lg rounded-es-sm border bg-white p-4">
-      <p class="text-ink-900 flex items-center gap-2 font-semibold">
-        <Icon name="file" class="size-5 text-blue-600" />
-        {card}
-      </p>
-      <dl class="text-small mt-3 grid grid-cols-[auto_1fr] gap-x-6 gap-y-1">
-        {rows.map((r) => (
-          <>
-            <dt class="text-ink-500">{r.k}</dt>
-            <dd class="text-ink-900 font-semibold">{r.v}</dd>
-          </>
-        ))}
-      </dl>
-      <span class="mt-4 inline-flex h-9 items-center rounded-md bg-blue-600 px-4 text-sm font-semibold text-white">
-        {confirm}
+    <div class="relative max-w-sm">
+      <span class="chat-typing border-line absolute start-0 top-0 flex gap-1 rounded-lg rounded-es-sm border bg-white px-4 py-3 opacity-0">
+        <span class="bg-ink-500 size-1.5 rounded-full"></span>
+        <span class="bg-ink-500 size-1.5 rounded-full"></span>
+        <span class="bg-ink-500 size-1.5 rounded-full"></span>
       </span>
+      <div class="chat-card border-line rounded-lg rounded-es-sm border bg-white p-4">
+        <p class="text-ink-900 flex items-center gap-2 font-semibold">
+          <Icon name="file" class="size-5 text-blue-600" />
+          {card}
+        </p>
+        <dl class="text-small mt-3 grid grid-cols-[auto_1fr] gap-x-6 gap-y-1">
+          {rows.map((r, i) => (
+            <>
+              <dt class="chat-row text-ink-500" style={`--r:${i}`}>
+                {r.k}
+              </dt>
+              <dd class="chat-row text-ink-900 font-semibold" style={`--r:${i}`}>
+                {r.v}
+              </dd>
+            </>
+          ))}
+        </dl>
+        <span class="chat-button mt-4 inline-grid h-9 text-sm font-semibold text-white">
+          <span class="chat-confirm col-start-1 row-start-1 inline-flex items-center justify-center rounded-md bg-blue-600 px-4">
+            {confirm}
+          </span>
+          <span class="chat-paid bg-success col-start-1 row-start-1 inline-flex items-center justify-center gap-1.5 rounded-md px-4 opacity-0">
+            <Icon name="check" class="size-4" />
+            {paid}
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* ProjectShowcase sets data-animate on windows that start below the fold, data-state="pending" until they
+     scroll in, then "done". Delays add up to one ~3.5s exchange. Only opacity and transform move (MASTER §7). */
+  @media (prefers-reduced-motion: no-preference) {
+    :global([data-state='pending']) .chat :is(.chat-ask, .chat-card, .chat-row, .chat-button) {
+      opacity: 0;
+    }
+    :global([data-animate][data-state='done']) .chat {
+      .chat-ask {
+        animation: chat-in 400ms var(--ease-out) both;
+      }
+      .chat-typing {
+        animation: chat-typing 1000ms linear 500ms both;
+        & > span {
+          animation: chat-dot 600ms ease-in-out 500ms 2 both;
+          &:nth-child(2) {
+            animation-delay: 650ms;
+          }
+          &:nth-child(3) {
+            animation-delay: 800ms;
+          }
+        }
+      }
+      .chat-card {
+        animation: chat-in 400ms var(--ease-out) 1500ms both;
+      }
+      .chat-row {
+        animation: chat-fade 250ms var(--ease-out) calc(1750ms + var(--r) * 120ms) both;
+      }
+      .chat-button {
+        animation:
+          chat-fade 250ms var(--ease-out) 2150ms both,
+          chat-press 250ms var(--ease-out) 3000ms;
+      }
+      .chat-confirm {
+        animation: chat-out 150ms linear 3150ms both;
+      }
+      .chat-paid {
+        animation: chat-show 250ms var(--ease-out) 3150ms both;
+      }
+    }
+  }
+
+  @keyframes chat-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+  @keyframes chat-fade {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes chat-show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes chat-out {
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes chat-typing {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    15%,
+    85% {
+      opacity: 1;
+    }
+  }
+  @keyframes chat-dot {
+    50% {
+      opacity: 0.3;
+      transform: translateY(-3px);
+    }
+  }
+  @keyframes chat-press {
+    50% {
+      transform: scale(0.96);
+    }
+  }
+</style>

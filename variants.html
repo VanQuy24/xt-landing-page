@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XionTechs variants</title>
+    <!-- Design exploration only. Not part of the site build: Astro serves src/pages and public only.
+     Keep this file at the repo root so the src/assets/ photo paths resolve.
+     Google Fonts is loaded here because this file is never built; the site itself self-hosts Manrope and Inter (AGENTS.md). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Tokens copied from src/styles/global.css @theme (MASTER §1-3). */
+      :root {
+        --white: #ffffff;
+        --navy: #173762;
+        --gold-400: #fcc00a;
+        --gold-600: #ae7d00;
+        --blue-50: #e9f6ff;
+        --blue-100: #dbe9fc;
+        --blue-200: #b8d3f9;
+        --blue-600: #295896;
+        --blue-700: #154481;
+        --blue-950: #0f2440;
+        --surface: #f7f9fc;
+        --line: #e3e8ef;
+        --ink-500: #5b6676;
+        --ink-700: #334155;
+        --ink-900: #0f1b2d;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --shadow-2: 0 12px 32px rgb(15 27 45 / 8%);
+        --display: clamp(2.5rem, 1.878rem + 2.652vw, 4rem);
+        --h2: clamp(1.75rem, 1.491rem + 1.105vw, 2.375rem);
+        --h3: clamp(1.25rem, 1.146rem + 0.442vw, 1.5rem);
+        --h4: clamp(1.0625rem, 1.037rem + 0.11vw, 1.125rem);
+        --lead: clamp(1.125rem, 1.073rem + 0.221vw, 1.25rem);
+        --body: clamp(1rem, 0.974rem + 0.11vw, 1.0625rem);
+        --small: clamp(0.875rem, 0.849rem + 0.11vw, 0.9375rem);
+        --label: clamp(0.75rem, 0.724rem + 0.11vw, 0.8125rem);
+        --num-xl: clamp(2.75rem, 2.232rem + 2.21vw, 4rem);
+        --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+        --font-display: 'Manrope', system-ui, sans-serif;
+        --font-sans: 'Inter', system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--white);
+        color: var(--ink-700);
+        font-family: var(--font-sans);
+        font-size: var(--body);
+        line-height: 1.65;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      @media (min-width: 768px) {
+        .wrap {
+          padding: 0 32px;
+        }
+      }
+      :focus-visible {
+        outline: 2px solid var(--blue-600);
+        outline-offset: 2px;
+      }
+
+      /* Switcher */
+      .bar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--ink-900);
+        color: var(--white);
+        font-size: var(--small);
+      }
+      .bar .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .bar strong {
+        font-family: var(--font-display);
+      }
+      .group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+      }
+      .group span {
+        color: #b8c2d1;
+        margin-right: 4px;
+      }
+      .bar button {
+        font: 600 var(--small)/1 var(--font-sans);
+        min-height: 36px;
+        padding: 0 12px;
+        border-radius: 8px;
+        border: 1px solid #3a4a63;
+        background: transparent;
+        color: var(--white);
+        cursor: pointer;
+        transition: background 150ms var(--ease-out);
+      }
+      .bar button:hover {
+        background: #1d2c44;
+      }
+      .bar button[aria-pressed='true'] {
+        background: var(--white);
+        color: var(--ink-900);
+        border-color: var(--white);
+      }
+      .note {
+        background: var(--blue-50);
+        color: var(--ink-700);
+        font-size: var(--small);
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .note b {
+        color: var(--ink-900);
+      }
+
+      /* Shared bits */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 24px;
+        border-radius: var(--radius-md);
+        font: 600 16px/1 var(--font-sans);
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 150ms var(--ease-out);
+      }
+      .btn-gold {
+        background: var(--gold-400);
+        color: var(--navy);
+      }
+      .btn-gold:hover {
+        background: #ffcc4f;
+      }
+      .btn-light {
+        background: var(--white);
+        color: var(--navy);
+      }
+      .btn-primary-outline {
+        background: var(--white);
+        color: var(--blue-600);
+        border: 1.5px solid var(--blue-600);
+      }
+      .btn-primary-outline:hover {
+        background: var(--blue-50);
+      }
+      .btn-ghost-light {
+        color: var(--white);
+        border: 1.5px solid rgb(255 255 255 / 70%);
+      }
+      .btn-ghost-light:hover {
+        background: rgb(255 255 255 / 10%);
+      }
+      .ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 40px;
+      }
+      .eyebrow {
+        font: 700 var(--h4)/1.35 var(--font-display);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .eyebrow::before {
+        content: '';
+        width: 40px;
+        height: 4px;
+        border-radius: 4px;
+        background: var(--gold-400);
+      }
+      .h1 {
+        font: 800 var(--display)/1.1 var(--font-display);
+        letter-spacing: -0.03em;
+      }
+      .lead {
+        font-size: var(--lead);
+        line-height: 1.55;
+      }
+      .stats {
+        display: grid;
+        gap: 24px;
+      }
+      @media (min-width: 768px) {
+        .stats {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0;
+        }
+        .stats > div + div {
+          border-left: 1px solid var(--line);
+          padding-left: 32px;
+        }
+      }
+      .stat .n {
+        font: 800 var(--num-xl)/1 var(--font-display);
+        letter-spacing: -0.02em;
+        color: var(--ink-900);
+      }
+      .stat .n i {
+        font-style: normal;
+        color: var(--gold-600);
+      }
+      .stat .l {
+        font: 600 var(--label)/1.3 var(--font-sans);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-500);
+        margin-top: 8px;
+      }
+      .stat .c {
+        font-size: var(--small);
+        color: var(--ink-500);
+        margin-top: 4px;
+      }
+      .stat::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 4px;
+        background: var(--blue-600);
+        border-radius: 4px;
+        margin-bottom: 16px;
+      }
+      .label {
+        font: 600 var(--label)/1.3 var(--font-sans);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--blue-600);
+      }
+      .h2 {
+        font: 700 var(--h2)/1.2 var(--font-display);
+        letter-spacing: -0.02em;
+        color: var(--ink-900);
+      }
+      .tag {
+        display: inline-block;
+        font: 600 var(--label)/1 var(--font-sans);
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--ink-700);
+      }
+
+      [data-variant] {
+        display: none;
+      }
+      [data-variant].on {
+        display: block;
+      }
+      .vname {
+        font: 600 var(--label)/1 var(--font-sans);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-500);
+        padding: 24px 0 8px;
+      }
+
+      /* Hero: Now (the site today, centered) */
+      .h-now {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        color: var(--white);
+        text-align: center;
+      }
+      .h-now img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
+      .h-now .shade {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(to bottom, rgb(15 36 64 / 80%), rgb(15 36 64 / 55%), transparent);
+      }
+      .h-now .inner {
+        max-width: 768px;
+        margin: 0 auto;
+        min-height: 640px;
+        padding: 80px 0 256px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .h-now .eyebrow::after {
+        content: '';
+        width: 40px;
+        height: 4px;
+        border-radius: 4px;
+        background: var(--gold-400);
+      }
+      .h-now .h1 {
+        margin-top: 20px;
+      }
+      .h-now .lead {
+        margin-top: 24px;
+        color: var(--blue-50);
+      }
+      .h-now .ctas {
+        justify-content: center;
+      }
+
+      /* Hero A: left-aligned on the photo */
+      .h-a {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        color: var(--white);
+      }
+      .h-a img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 70% bottom;
+      }
+      .h-a .shade {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(to right, rgb(15 36 64 / 88%) 0%, rgb(15 36 64 / 60%) 45%, rgb(15 36 64 / 0%) 75%);
+      }
+      .h-a .inner {
+        min-height: 640px;
+        padding: 96px 0 112px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 620px;
+      }
+      .h-a .h1 {
+        margin-top: 20px;
+      }
+      .h-a .lead {
+        margin-top: 24px;
+        color: var(--blue-50);
+        max-width: 34rem;
+      }
+      @media (max-width: 767px) {
+        .h-a .shade {
+          background: rgb(15 36 64 / 70%);
+        }
+        .h-a .inner {
+          min-height: 560px;
+          padding: 72px 0 80px;
+        }
+      }
+
+      /* Hero B: split, text on white, photo framed */
+      .h-b {
+        padding: 56px 0 24px;
+      }
+      .h-b .grid {
+        display: grid;
+        gap: 40px;
+        align-items: center;
+      }
+      @media (min-width: 1024px) {
+        .h-b .grid {
+          grid-template-columns: 5fr 7fr;
+          gap: 56px;
+        }
+      }
+      .h-b .eyebrow {
+        color: var(--navy);
+      }
+      .h-b .h1 {
+        margin-top: 20px;
+        color: var(--ink-900);
+      }
+      .h-b .lead {
+        margin-top: 24px;
+        color: var(--ink-500);
+      }
+      .h-b figure {
+        margin: 0;
+      }
+      .h-b figure img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center bottom;
+        border-radius: var(--radius-lg);
+      }
+      .h-b figcaption {
+        font-size: var(--small);
+        color: var(--ink-500);
+        margin-top: 8px;
+      }
+
+      /* Hero C: photo band with the numbers set into its base */
+      .h-c {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        color: var(--white);
+      }
+      .h-c img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 80%;
+      }
+      .h-c .shade {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(to bottom, rgb(15 36 64 / 82%), rgb(15 36 64 / 45%) 60%, rgb(15 36 64 / 15%));
+      }
+      .h-c .inner {
+        padding: 96px 0 72px;
+        max-width: 760px;
+      }
+      .h-c .h1 {
+        margin-top: 20px;
+      }
+      .h-c .lead {
+        margin-top: 24px;
+        color: var(--blue-50);
+        max-width: 36rem;
+      }
+      .h-c .band {
+        background: var(--blue-950);
+      }
+      .h-c .band .stats {
+        padding: 32px 0;
+      }
+      .h-c .band .stat .n {
+        color: var(--white);
+      }
+      .h-c .band .stat .n i {
+        color: var(--gold-400);
+      }
+      .h-c .band .stat .l,
+      .h-c .band .stat .c {
+        color: #c9d4e3;
+      }
+      .h-c .band .stat::before {
+        background: var(--gold-400);
+      }
+      @media (min-width: 768px) {
+        .h-c .band .stats > div + div {
+          border-left-color: rgb(255 255 255 / 18%);
+        }
+      }
+
+      .numbers {
+        padding: 48px 0 64px;
+      }
+
+      /* Why: Now (three icon cards) */
+      .why {
+        background: var(--surface);
+        padding: 80px 0;
+      }
+      .why .lead {
+        color: var(--ink-500);
+        margin-top: 16px;
+        max-width: 46rem;
+      }
+      .why .h2 {
+        margin-top: 12px;
+      }
+      .cards {
+        list-style: none;
+        padding: 0;
+        margin: 48px 0 0;
+        display: grid;
+        gap: 24px;
+      }
+      @media (min-width: 768px) {
+        .cards {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .cards li {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 32px;
+      }
+      .cards .ic {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-md);
+        background: var(--blue-50);
+        color: var(--blue-600);
+        display: grid;
+        place-items: center;
+      }
+      .cards h3 {
+        font: 700 var(--h3)/1.3 var(--font-display);
+        color: var(--ink-900);
+        margin-top: 20px;
+      }
+      .cards p {
+        font-size: var(--small);
+        color: var(--ink-500);
+        margin-top: 12px;
+      }
+
+      /* Why 1: ruled list, slogan as the visual */
+      .why1 {
+        padding: 80px 0;
+        border-top: 1px solid var(--line);
+      }
+      .why1 .grid {
+        display: grid;
+        gap: 40px;
+      }
+      @media (min-width: 1024px) {
+        .why1 .grid {
+          grid-template-columns: 5fr 7fr;
+          gap: 64px;
+        }
+      }
+      .why1 .slogan {
+        font: 800 clamp(3rem, 2rem + 4vw, 5.5rem)/0.95 var(--font-display);
+        letter-spacing: -0.04em;
+        color: var(--navy);
+        margin-top: 24px;
+      }
+      .why1 .slogan span {
+        display: block;
+      }
+      .why1 .h2 {
+        margin-top: 12px;
+      }
+      .why1 .intro {
+        color: var(--ink-500);
+        margin-top: 16px;
+      }
+      .rows {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 2px solid var(--ink-900);
+      }
+      .rows li {
+        display: grid;
+        gap: 8px;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      @media (min-width: 768px) {
+        .rows li {
+          grid-template-columns: 14rem 1fr;
+          gap: 32px;
+        }
+      }
+      .rows h3 {
+        font: 700 var(--h4)/1.35 var(--font-display);
+        color: var(--ink-900);
+      }
+      .rows p {
+        color: var(--ink-700);
+      }
+
+      /* Why 2: cut, show the seam */
+      .seam-a {
+        padding: 48px 0;
+        background: var(--white);
+      }
+      .seam-a p {
+        font-size: var(--small);
+        color: var(--ink-500);
+      }
+      .cut {
+        border-top: 2px dashed var(--ink-500);
+        border-bottom: 2px dashed var(--ink-500);
+        padding: 16px 0;
+        text-align: center;
+        font-size: var(--small);
+        color: var(--ink-700);
+      }
+      .seam-b {
+        padding: 64px 0 80px;
+      }
+      .seam-b .h2 {
+        margin-top: 12px;
+      }
+      .seam-b .grid {
+        display: grid;
+        gap: 32px;
+        margin-top: 8px;
+      }
+      @media (min-width: 1024px) {
+        .seam-b .grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 48px;
+          align-items: start;
+        }
+      }
+      .seam-b .photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .seam-b .photos img {
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+      }
+      .seam-b .body {
+        color: var(--ink-700);
+        margin-top: 16px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar" role="region" aria-label="Variant switcher">
+      <div class="wrap">
+        <strong>XionTechs variants</strong>
+        <div class="group" data-group="hero">
+          <span>Hero</span>
+          <button type="button" data-pick="now" aria-pressed="false">Now</button>
+          <button type="button" data-pick="a" aria-pressed="true">A. Left on photo</button>
+          <button type="button" data-pick="b" aria-pressed="false">B. Split</button>
+          <button type="button" data-pick="c" aria-pressed="false">C. Numbers band</button>
+        </div>
+        <div class="group" data-group="why">
+          <span>Why choose us</span>
+          <button type="button" data-pick="now" aria-pressed="false">Now</button>
+          <button type="button" data-pick="1" aria-pressed="true">1. Ruled list</button>
+          <button type="button" data-pick="2" aria-pressed="false">2. Cut it</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div data-group-body="hero">
+      <section data-variant="now">
+        <div class="note">
+          <div class="wrap">
+            <b>Now.</b> The site today. A centered stack over the photo, which the scanner flags as P0 L1, audit finding
+            N-1.
+          </div>
+        </div>
+        <div class="h-now">
+          <img src="src/assets/hero-hcmc.jpg" alt="" />
+          <div class="shade" aria-hidden="true"></div>
+          <div class="wrap">
+            <div class="inner">
+              <p class="eyebrow">Get IT Done</p>
+              <h1 class="h1">Where intelligence meets identity.</h1>
+              <p class="lead">
+                XionTechs is an AI-powered IT services and products team. We build secure, high-performance software
+                from Texas and Vietnam.
+              </p>
+              <div class="ctas">
+                <a class="btn btn-gold" href="#">Get in touch</a><a class="btn btn-light" href="#">Explore services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-variant="a" class="on">
+        <div class="note">
+          <div class="wrap">
+            <b>A. Left on the photo.</b> Same photo, same copy. The text moves to the left third, so the eye goes
+            headline, subtitle, button in one line down, and the skyline stays clear on the right. The shade fades left
+            to right instead of top to bottom. Closest to PR #15's hero, so the merge stays easy.
+          </div>
+        </div>
+        <div class="h-a">
+          <img src="src/assets/hero-hcmc.jpg" alt="" />
+          <div class="shade" aria-hidden="true"></div>
+          <div class="wrap">
+            <div class="inner">
+              <p class="eyebrow">Get IT Done</p>
+              <h1 class="h1">Where intelligence meets identity.</h1>
+              <p class="lead">
+                XionTechs is an AI-powered IT services and products team. We build secure, high-performance software
+                from Texas and Vietnam.
+              </p>
+              <div class="ctas">
+                <a class="btn btn-gold" href="#">Get in touch</a
+                ><a class="btn btn-ghost-light" href="#">Explore services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-variant="b">
+        <div class="note">
+          <div class="wrap">
+            <b>B. Split.</b> Text on white on the left, the photo framed on the right. No dark shade at all, so the
+            subtitle is dark ink on white and the easiest version to read. The page opens calmer and the photo reads as
+            a picture of the city, not a backdrop. The cost is a shorter, less dramatic hero.
+          </div>
+        </div>
+        <div class="h-b">
+          <div class="wrap">
+            <div class="grid">
+              <div>
+                <p class="eyebrow">Get IT Done</p>
+                <h1 class="h1">Where intelligence meets identity.</h1>
+                <p class="lead">
+                  XionTechs is an AI-powered IT services and products team. We build secure, high-performance software
+                  from Texas and Vietnam.
+                </p>
+                <div class="ctas">
+                  <a class="btn btn-gold" href="#">Get in touch</a
+                  ><a class="btn btn-primary-outline" href="#">Explore services</a>
+                </div>
+              </div>
+              <figure>
+                <img src="src/assets/hero-hcmc.jpg" alt="Ho Chi Minh City at sunrise" />
+                <figcaption>Ho Chi Minh City, where our engineers work.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-variant="c">
+        <div class="note">
+          <div class="wrap">
+            <b>C. Numbers band.</b> Left-aligned text on the photo, and the three numbers sit in a navy band at the
+            bottom of the hero instead of in their own white section below. MASTER's rule P1 says each section opens
+            with a number or a picture, and this puts both in the first screen. The labels are still the restored
+            wording, and "25+" still needs the company to say whose years they are.
+          </div>
+        </div>
+        <div class="h-c">
+          <img src="src/assets/hero-hcmc.jpg" alt="" />
+          <div class="shade" aria-hidden="true"></div>
+          <div class="wrap">
+            <div class="inner">
+              <p class="eyebrow">Get IT Done</p>
+              <h1 class="h1">Where intelligence meets identity.</h1>
+              <p class="lead">
+                XionTechs is an AI-powered IT services and products team. We build secure, high-performance software
+                from Texas and Vietnam.
+              </p>
+              <div class="ctas">
+                <a class="btn btn-gold" href="#">Get in touch</a
+                ><a class="btn btn-ghost-light" href="#">Explore services</a>
+              </div>
+            </div>
+          </div>
+          <div class="band">
+            <div class="wrap">
+              <div class="stats">
+                <div class="stat">
+                  <p class="n">25<i>+</i></p>
+                  <p class="l">Years of leadership experience</p>
+                </div>
+                <div class="stat">
+                  <p class="n">20<i>+</i></p>
+                  <p class="l">Tech stack expertise</p>
+                </div>
+                <div class="stat">
+                  <p class="n">3</p>
+                  <p class="l">Office locations</p>
+                  <p class="c">Plano (USA) and Ho Chi Minh City (Vietnam)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Numbers strip as on the site; hidden for C, which carries it in the hero. -->
+      <section class="numbers" data-numbers>
+        <div class="wrap">
+          <div class="stats">
+            <div class="stat">
+              <p class="n">25<i>+</i></p>
+              <p class="l">Years of leadership experience</p>
+            </div>
+            <div class="stat">
+              <p class="n">20<i>+</i></p>
+              <p class="l">Tech stack expertise</p>
+            </div>
+            <div class="stat">
+              <p class="n">3</p>
+              <p class="l">Office locations</p>
+              <p class="c">Plano (USA) and Ho Chi Minh City (Vietnam)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <div data-group-body="why">
+      <section data-variant="now">
+        <div class="note">
+          <div class="wrap"><b>Now.</b> Three identical icon cards, audit finding P0-4. PR #15 cuts the section.</div>
+        </div>
+        <div class="why">
+          <div class="wrap">
+            <p class="label">Why choose us</p>
+            <h2 class="h2">Our priority, our commitment, our solutions</h2>
+            <p class="lead">
+              Choose XionTechs for integrated solutions, industry experience, and metric-driven delivery. We bring
+              product ideas to life through collaborative creation and a "Get IT Done" attitude.
+            </p>
+            <ul class="cards">
+              <li>
+                <span class="ic" aria-hidden="true"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg
+                ></span>
+                <h3>Client centricity focus</h3>
+                <p>
+                  XionTechs emphasizes a client-first approach, focusing on providing exceptional experiences and
+                  valuable outcomes.
+                </p>
+              </li>
+              <li>
+                <span class="ic" aria-hidden="true"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg
+                ></span>
+                <h3>Integrity and ethical standards</h3>
+                <p>
+                  With an integrity mindset, XionTechs operates with honesty and transparency, maintaining the highest
+                  ethical standards in all work.
+                </p>
+              </li>
+              <li>
+                <span class="ic" aria-hidden="true"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6 9 17l-5-5" /></svg
+                ></span>
+                <h3>High quality delivery</h3>
+                <p>
+                  XionTechs is responsible for providing high-quality solutions that are reliable and efficient,
+                  exceeding industry standards.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-variant="1" class="on">
+        <div class="note">
+          <div class="wrap">
+            <b>1. Ruled list.</b> Keeps the section and its copy word for word, but drops the cards and icons. The
+            company's own slogan, set large in navy, is the picture on the left. The three claims become ruled rows you
+            read top to bottom. The heading and claims are still generic, so this only fixes the look. The copy needs
+            the Content lead.
+          </div>
+        </div>
+        <div class="why1">
+          <div class="wrap">
+            <div class="grid">
+              <div>
+                <p class="label">Why choose us</p>
+                <h2 class="h2">Our priority, our commitment, our solutions</h2>
+                <p class="slogan" aria-hidden="true"><span>Get</span><span>IT</span><span>Done</span></p>
+              </div>
+              <div>
+                <p class="intro">
+                  Choose XionTechs for integrated solutions, industry experience, and metric-driven delivery. We bring
+                  product ideas to life through collaborative creation and a "Get IT Done" attitude.
+                </p>
+                <ul class="rows" style="margin-top: 32px">
+                  <li>
+                    <h3>Client centricity focus</h3>
+                    <p>
+                      XionTechs emphasizes a client-first approach, focusing on providing exceptional experiences and
+                      valuable outcomes.
+                    </p>
+                  </li>
+                  <li>
+                    <h3>Integrity and ethical standards</h3>
+                    <p>
+                      With an integrity mindset, XionTechs operates with honesty and transparency, maintaining the
+                      highest ethical standards in all work.
+                    </p>
+                  </li>
+                  <li>
+                    <h3>High quality delivery</h3>
+                    <p>
+                      XionTechs is responsible for providing high-quality solutions that are reliable and efficient,
+                      exceeding industry standards.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-variant="2">
+        <div class="note">
+          <div class="wrap">
+            <b>2. Cut it.</b> The section goes, as in PR #15. The 4-D process runs straight into "Who we are", and the
+            page gets one card grid shorter. A visitor loses nothing they could check. The three claims have no proof
+            behind them, and "Get IT Done" already appears in the hero and footer.
+          </div>
+        </div>
+        <div class="seam-a">
+          <div class="wrap">
+            <p>
+              … end of the 4-D process: Agile practices and an AI-driven workflow, with metric-driven project
+              management.
+            </p>
+          </div>
+        </div>
+        <div class="cut"><div class="wrap">"Why choose us" removed here</div></div>
+        <div class="seam-b">
+          <div class="wrap">
+            <p class="label">Who we are</p>
+            <div class="grid">
+              <div>
+                <h2 class="h2">We deliver consumer-centric tech solutions</h2>
+                <p class="body">
+                  XionTechs specializes in delivering consumer-centric technology solutions that empower businesses to
+                  thrive in today's digital landscape. …
+                </p>
+              </div>
+              <div class="photos">
+                <img src="src/assets/team-at-work.webp" alt="The XionTechs team at an AI workshop" />
+                <img src="src/assets/ai-training.webp" alt="Hands-on AI training at XionTechs" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // Hero and Why switch independently; C carries the numbers, so hide the separate strip there.
+      const numbers = document.querySelector('[data-numbers]');
+      document.querySelectorAll('[data-group]').forEach((group) => {
+        const body = document.querySelector(`[data-group-body="${group.dataset.group}"]`);
+        group.addEventListener('click', (e) => {
+          const btn = e.target.closest('button[data-pick]');
+          if (!btn) return;
+          const pick = btn.dataset.pick;
+          group.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+          body
+            .querySelectorAll(':scope > [data-variant]')
+            .forEach((v) => v.classList.toggle('on', v.dataset.variant === pick));
+          if (group.dataset.group === 'hero') numbers.hidden = pick === 'c';
+        });
+      });
+    </script>
+  </body>
+</html>

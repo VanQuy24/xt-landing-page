@@ -40,9 +40,7 @@ const c = t.clients;
       </ul>
     </div>
   </div>
-  <p class="text-body text-ink-700 mt-6 max-w-2xl">
-    {c.domainsBody} {c.visit}
-  </p>
+  <p class="text-body text-ink-700 mt-6 max-w-2xl">{c.domainsBody}</p>
 
   <div class="mt-14">
     <ProjectShowcase
@@ -60,6 +58,7 @@ const c = t.clients;
         card={c.window.card}
         rows={c.window.rows}
         confirm={c.window.confirm}
+        paid={c.window.paid}
       />
     </ProjectShowcase>
   </div>

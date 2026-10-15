@@ -33,9 +33,9 @@ Source: live nav, cut down to the sections on this page. Decided 2026-10-11.
 
 Must communicate: XionTechs builds secure software, it is AI-powered, and the next step is to get in touch.
 
-Source: headline from live home. Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
+Source: headline chosen by the team on 2026-10-12, replacing the audit version "School platforms and custom software". Subline from the earlier draft, `source/en/hero.json`, checked against the facts confirmed on 2026-10-11.
 
-- Headline: Crafting secure and innovative IT solutions
+- Headline: Where intelligence meets identity.
 - Subline: XionTechs is an AI-powered IT services and products team. We build secure, high-performance software from Texas and Vietnam.
 - Button: Get in touch
 - Image: Ho Chi Minh City at sunrise over the Saigon River, Landmark 81 in the centre (Binh Thanh), no people; the city where our engineers work. Decorative: `alt=""` (MASTER §4.2). Photo by Peter Nguyen on Unsplash, https://unsplash.com/photos/75rWOqdKCdM, Unsplash License (free, no attribution required; credited here).
@@ -50,12 +50,12 @@ Must communicate: a long track record, wide technical range and real offices.
 
 Source: live home stats. The office line is rewritten because the live text names Dallas and Da Nang, which the team corrected: no Da Nang office, and the US office is in Plano. The "24/7" claim is cut because the live Support page gives Monday to Friday, 9:00 to 18:00 ICT.
 
-| Number                                  | Label                                          | Detail line                                                                                                                                       |
-| --------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 25+                                     | Years of leadership experience                 | Our leadership team brings decades of expertise in IT services and product engineering across multiple industries and technology transformations. |
-| 20+                                     | Tech stack expertise                           | From AI/ML and cloud solutions to microservices and front-end frameworks.                                                                         |
-| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam).                                                                                        |
-| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.]                                                |
+| Number                                  | Label                                          | Detail line                                                                                        |
+| --------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| 25+                                     | Years of leadership experience                 | Our leadership team's experience in IT services and product engineering.                           |
+| 20+                                     | Tech stack expertise                           | From AI/ML and cloud to microservices and front-end frameworks.                                    |
+| 3                                       | Office locations                               | Plano (USA) and two offices in Ho Chi Minh City (Vietnam).                                         |
+| [DUMMY: confirmed headcount, e.g. 200+] | [DUMMY: label, e.g. Engineers and specialists] | [DUMMY: one line. An unverified job-site profile says 200+ people in Vietnam. Confirm before use.] |
 
 [DESIGN-DEPENDENT: whether the detail lines show at all. The simplest version shows number and label only.]
 
@@ -80,8 +80,6 @@ Source: live home "Our services", all 8, word for word. "Staffings Service" fixe
 | Low-code solutions     | Accelerate transformation with modern platforms like Power Platform, Make, n8n, Retool, and Bubble. Our low-code solutions enable faster deployment, reduce costs, and empower teams to create their own applications.              |
 | AI-powered solutions   | Harness artificial intelligence to transform operations with intelligent automation, predictive analytics, conversational interfaces, and AI-driven process automation that accelerates growth.                                     |
 | Cloud computing        | Deliver expert solutions on Azure, AWS, and GCP for seamless migration, optimization, and integration of cloud resources. We ensure improved scalability, enhanced security, and optimized operational costs.                       |
-
-[CONTENT-LEAD: tighten. Several descriptions open with "Transform" or "Accelerate" and use filler like "seamless" and "competitive advantage".]
 
 ---
 
@@ -146,10 +144,6 @@ Multi-school apps for parents and staff. Parents chat with an AI assistant to pa
 **Domains**
 
 Our domain knowledge runs deepest in EdTech, healthcare and logistics.
-
-**Client visit**
-
-In October 2025 a client visited our delivery center in Ho Chi Minh City to explore AI and robotics in education.
 
 Client names appear as text only. No client logos.
 
@@ -239,22 +233,22 @@ Source: newxion.com/newsroom, fetched 2026-10-12. New-office photos and title fr
 - Section label: News
 - Heading: Latest from XionTechs
 - Featured (chip "Latest", no date):
-  - Title: New Home, New Heights: Our 7th-Floor Office
+  - Title: Our new office on Floor 7
   - Body: Our Ho Chi Minh City team has set up in a new office on the 7th floor, from unpacking day to the first full day at our desks.
   - Place line: Floor 7, 54 Nguyen Van Thu St., Tan Dinh Ward, Ho Chi Minh City, Vietnam
   - Tag: New office · Link: Get directions (Google Maps, new tab)
   - Photos: the building (alt: The building of our new Ho Chi Minh City office); desks row (alt: Engineers working along a row of desks in the new office); desks (alt: Engineers at work in the new office); full team (alt: The full team at work in the new office)
 - Item, 2026-07-31:
-  - Title: Work Smart, Play Sharp
+  - Title: Work smart, play sharp
   - Body: On July 31, we organized the "Thực Chiến AI với Agentic Workflow" workshop, where team members shared practical experiences and demonstrated how they leverage AI tools in their daily work.
   - Photo alt: A team member presenting the Agentic Workflow workshop to colleagues
 - Item, 2025-10-10:
-  - Title: Showcasing AI Robotics: Client Visit Spotlight
-  - Body: Our esteemed client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.
+  - Title: A client visit to explore AI robotics in education
+  - Body: A client visited XionTechs Delivery Center in Ho Chi Minh City to explore opportunities for applying AI and robotics in education.
   - Photo alt: XionTechs engineers presenting to visiting clients in a meeting room
 - Item, 2025-04-08:
-  - Title: Advancing Together: Project Kickoff Highlights
-  - Body: Our valued client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.
+  - Title: Kicking off an education project with a client
+  - Body: A client visited the Besco Delivery Center in Ho Chi Minh City to outline project requirements and officially kick off a major education initiative.
   - Photo alt: The project team giving a thumbs up in front of the XionTech sign
 
 Address confirmed by the team on 2026-10-12.
@@ -272,8 +266,12 @@ Source: live FAQs page, answers word for word with spelling fixed. [CONTENT-LEAD
 **What services does XionTechs offer?**
 XionTechs offers digital product engineering, digital insights and analytics, product co-creation, and staffing services. These services leverage emerging technologies like AI/ML and generative AI. XionTechs focuses on industries such as EdTech, healthcare, logistics, and private equity.
 
+Section 5 lists EdTech, healthcare and logistics only. [DUMMY: is private equity a sector we work in? If not, drop it from this answer.]
+
 **How do you ensure data security?**
 With an integrity mindset, XionTechs maintains honesty and transparency in all dealings, ensuring client data is protected through ethical standards and responsible practices. Security automation and continuous scanning further enhance data protection.
+
+[DUMMY: which security practices and certifications are real. This answer talks about integrity, not security, while the hero promises secure software.]
 
 **How do you run a project?**
 We follow the 4-D process: Discovery, Design, Development and Deployment. The team works with Agile practices and an AI-driven workflow, and project management is metric-driven, so you read quality and progress in numbers.
@@ -293,7 +291,7 @@ Source: form labels and messages from the earlier draft, `source/en/form.json`. 
 - Heading: Tell us what you are building
 - Intro: Send a brief and we reply by email within 24 business hours.
 
-Form:
+Form (later, once a form service is chosen; until then the site uses an "Email your brief" mail link, MASTER §5.13):
 
 - Your name (required)
 - Work email (required)
@@ -336,7 +334,7 @@ Source: legal name, license and D-U-N-S from the live Support and legal pages. S
 - Brand: XionTechs · Get IT Done
 - Line: AI-powered IT services and products
 - Contact: +1 469 322 9899 · +84 908 107 552 · contact@xiontechs.com
-- Offices: Plano, Texas, USA · Ho Chi Minh City, Vietnam
+- Offices: Plano, Texas, USA and Ho Chi Minh City, Vietnam
 - Links: Careers · Privacy policy · Terms of service
 - Social: Facebook (facebook.com/xiontechs) · LinkedIn (linkedin.com/company/xiontechs)
 - Legal line: © 2026 XIONTECH JOINT STOCK COMPANY · Business license 0318883639 · D-U-N-S 665533815
