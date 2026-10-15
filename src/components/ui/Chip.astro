@@ -6,6 +6,10 @@ const tones = {
   highlight: 'bg-gold-400 text-brand-navy',
   success: 'bg-surface text-success',
   more: 'border border-dashed border-ink-500 text-ink-500',
+  /** On navy bands: white text on a translucent white fill. */
+  dark: 'border border-white/20 bg-white/10 text-white',
+  /** "& more" on navy bands. */
+  moreDark: 'border border-dashed border-white/40 text-blue-100',
 } as const;
 
 export type ChipTone = keyof typeof tones;

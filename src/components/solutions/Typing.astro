@@ -1,0 +1,22 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+// "Assistant is typing" bubble for the Solutions mockups. Hidden by default (a `fade` step without `data-on`);
+// the dots bob through the `viz-typing` loop in global.css. Decorative: it sits inside aria-hidden markup.
+type Props = HTMLAttributes<'span'>;
+
+const { class: className, ...attrs } = Astro.props;
+---
+
+<span
+  data-s="fade"
+  class:list={[
+    'viz-typing border-line inline-flex h-8 items-center gap-1 rounded-md rounded-es-sm border bg-white px-3',
+    className,
+  ]}
+  {...attrs}
+>
+  <span class="bg-ink-400 size-1.5 rounded-full"></span>
+  <span class="bg-ink-400 size-1.5 rounded-full" style="--i:1"></span>
+  <span class="bg-ink-400 size-1.5 rounded-full" style="--i:2"></span>
+</span>

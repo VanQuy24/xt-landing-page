@@ -1,23 +1,24 @@
 # Sitemap
 
-Decided in the grilling session of 2026-10-11. The site exists to get a brief sent. Four pages plus a 404, in English and Vietnamese.
+Decided in the grilling session of 2026-10-11. The site exists to get a brief sent. Five pages plus a 404, in English and Vietnamese. Solutions was added by the product owner on 2026-10-14.
 
 ## Pages
 
-| Page             | English URL         | Vietnamese URL         | Why it earns its place                                                                                                                                                                  | Content                          |
-| ---------------- | ------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| Home             | `/`                 | `/vi/`                 | The one page that sells. It holds everything a buyer needs before sending a brief: services, products, clients, process, FAQ and the form.                                              | `en/home.md`, `vi/home.md`       |
-| Careers          | `/careers`          | `/vi/careers`          | A second goal, hiring. The live site has five real perks and the seven values, and candidates are a different reader from buyers, so they get their own page instead of a Home section. | `en/careers.md`, `vi/careers.md` |
-| Privacy policy   | `/privacy-policy`   | `/vi/privacy-policy`   | The form collects names and emails, so a privacy policy is required. The live text exists.                                                                                              | `en/privacy.md`, `vi/privacy.md` |
-| Terms of service | `/terms-of-service` | `/vi/terms-of-service` | Linked from the footer. The live text exists and costs nothing to keep.                                                                                                                 | `en/terms.md`, `vi/terms.md`     |
-| 404              | any unknown URL     | any unknown `/vi/` URL | Catches old links and typos.                                                                                                                                                            | `en/404.md`, `vi/404.md`         |
+| Page             | English URL         | Vietnamese URL         | Why it earns its place                                                                                                                                                                  | Content                              |
+| ---------------- | ------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Home             | `/`                 | `/vi/`                 | The one page that sells. It holds everything a buyer needs before sending a brief: services, products, clients, process, FAQ and the form.                                              | `en/home.md`, `vi/home.md`           |
+| Solutions        | `/solutions`        | `/vi/solutions`        | Shows the products we built (Parent Platform, Staff Platform, ESS agents, XT Smart Platform with timetabling, the grader and XSS) as working mockups, which Home has no room for.       | `en/solutions.md`, `vi/solutions.md` |
+| Careers          | `/careers`          | `/vi/careers`          | A second goal, hiring. The live site has five real perks and the seven values, and candidates are a different reader from buyers, so they get their own page instead of a Home section. | `en/careers.md`, `vi/careers.md`     |
+| Privacy policy   | `/privacy-policy`   | `/vi/privacy-policy`   | The form collects names and emails, so a privacy policy is required. The live text exists.                                                                                              | `en/privacy.md`, `vi/privacy.md`     |
+| Terms of service | `/terms-of-service` | `/vi/terms-of-service` | Linked from the footer. The live text exists and costs nothing to keep.                                                                                                                 | `en/terms.md`, `vi/terms.md`         |
+| 404              | any unknown URL     | any unknown `/vi/` URL | Catches old links and typos.                                                                                                                                                            | `en/404.md`, `vi/404.md`             |
 
 ## Navigation
 
 Header, on every page:
 
 - Logo, links to Home
-- Services · Products · Clients · Process · News · FAQ: jump to Home sections 3, 4, 5, 7, 9a and 10. From Careers or the legal pages they go to Home first.
+- Services · Solutions (page) · Clients · Process · News · FAQ: Solutions opens `/solutions`; the others jump to Home sections 3, 5, 7, 9a and 10. From other pages the anchors go to Home first. Home section 4 links to Solutions with "See all solutions".
 - Careers
 - Language switch: EN / VI, to the same page in the other language
 - Button: Get in touch, to Home section 11 (Send a brief)
@@ -62,7 +63,7 @@ The privacy policy says it covers XionTech's web, desktop and mobile apps, and p
 
 English is the default with no URL prefix. Vietnamese lives under `/vi/`. The live site has no Vietnamese version, so the Vietnamese copy is a new translation:
 
-- `vi/home.md`, `vi/careers.md`, `vi/404.md`: translated, marked `[VI-REVIEW]` for a native speaker to check.
+- `vi/home.md`, `vi/careers.md`, `vi/solutions.md`, `vi/404.md`: translated, marked `[VI-REVIEW]` for a native speaker to check.
 - `vi/privacy.md`, `vi/terms.md`: not translated. Legal text needs a professional translation.
 
 ## Gaps to fill before launch

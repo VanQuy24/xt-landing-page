@@ -1,0 +1,211 @@
+---
+import { getDictionary, type Locale } from '../../i18n';
+import Chip from '../ui/Chip.astro';
+import Icon from '../ui/Icon.astro';
+import ProjectShowcase from '../ui/ProjectShowcase.astro';
+import Stage from './Stage.astro';
+import WindowFrame from './WindowFrame.astro';
+
+// Solutions §4a (pages/solutions.md), a sub-product inside the XT Smart Platform section: a three-step stepper with real buttons. 1 Priorities (one row moves up a
+// place, like a drag and drop), 2 Options (four scored timetables), 3 Timetable (a week grid). Auto-advances
+// while on screen; a click takes manual control. The server HTML is step 3 (no JS, reduced motion).
+interface Props {
+  lang: Locale;
+  reverse?: boolean;
+}
+
+const { lang, reverse = false } = Astro.props;
+const t = getDictionary(lang);
+const p = t.solutions.timetabling;
+const v = p.viz;
+
+// Room type per subject code; codes are the same in both languages.
+const kinds = {
+  teach: 'bg-blue-100',
+  lab: 'bg-gold-100',
+  gym: 'border border-line bg-surface',
+  studio: 'border border-blue-200 bg-blue-50',
+} as const;
+type Kind = keyof typeof kinds;
+const kindOf = (code: string): Kind =>
+  (({ SCI: 'lab', PE: 'gym', ART: 'studio' }) as Record<string, Kind>)[code] ?? 'teach';
+// Rows in the priorities list, in their final order. Learning starts one place lower and moves up.
+const swap = { 1: 'down', 2: 'up' } as Record<number, string>;
+const percent = (fit: string) => Number(fit.replace(',', '.'));
+---
+
+<div id="timetabling">
+  <ProjectShowcase
+    tag={p.category}
+    title={p.title}
+    titleTag="h3"
+    titleId="timetabling-title"
+    compact
+    body={p.body}
+    numbers={p.numbers}
+    chips={p.chips}
+    caption={t.a11y.illustrative}
+    reverse={reverse}
+    hook={p.hook}
+    more={t.solutions.more}
+  >
+    <div data-viz="timetabling">
+      <p class="sr-only">{p.summary}</p>
+      <Stage accent="gold">
+        <WindowFrame bar={v.bar}>
+          <div role="group" aria-label={v.stepsLabel} class="border-line grid grid-cols-3 gap-1 border-b p-1.5 sm:p-2">
+            {v.steps.map((label, i) => (
+              <button
+                type="button"
+                data-goto={String(i + 1)}
+                aria-pressed={i === 2 ? 'true' : 'false'}
+                class="group text-ink-500 hover:bg-surface aria-pressed:text-ink-900 flex min-h-11 cursor-pointer items-center justify-center gap-1.5 rounded-md px-1.5 text-xs font-semibold transition-colors duration-150 aria-pressed:bg-blue-50 sm:gap-2 sm:px-2 sm:text-sm"
+              >
+                <span
+                  aria-hidden="true"
+                  class="border-line flex size-6 shrink-0 items-center justify-center rounded-full border bg-white text-xs transition-colors duration-150 group-aria-pressed:border-blue-600 group-aria-pressed:bg-blue-600 group-aria-pressed:text-white"
+                >
+                  {i + 1}
+                </span>
+                <span class="text-start leading-tight">{label}</span>
+              </button>
+            ))}
+          </div>
+
+          <div aria-hidden="true" class="grid p-3 sm:p-5">
+            <div data-pane="1" data-s="fade" class="col-start-1 row-start-1">
+              <p class="text-ink-500 text-xs font-semibold">{v.prioritiesTitle}</p>
+              <div class="mt-3 grid grid-cols-[auto_1fr] gap-x-3" style="--pitch:3.25rem">
+                <ol class="grid gap-2">
+                  {v.priorities.map((_, i) => (
+                    <li class="font-display flex h-11 w-6 items-center justify-center text-sm font-bold text-blue-600">
+                      {i + 1}
+                    </li>
+                  ))}
+                </ol>
+                <ul class="grid gap-2">
+                  {v.priorities.map((name, i) => (
+                    <li
+                      data-s={swap[i]}
+                      data-swap={swap[i] ? '' : undefined}
+                      data-on={swap[i] ? '' : undefined}
+                      class:list={[
+                        'border-line text-ink-900 relative flex h-11 items-center gap-2 rounded-md border bg-white px-3 text-sm font-semibold',
+                        i === 1 && 'z-10',
+                      ]}
+                    >
+                      <Icon name="grip" class="text-ink-400 size-4 shrink-0" />
+                      <span class="truncate">{name}</span>
+                      {i === 1 && (
+                        <span
+                          data-lift
+                          data-s="fade"
+                          class="shadow-2 pointer-events-none absolute -inset-px rounded-md border-2 border-blue-600"
+                        />
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div data-pane="2" data-s="fade" class="col-start-1 row-start-1">
+              <p class="text-ink-500 text-xs font-semibold">{v.optionsTitle}</p>
+              <div class="mt-5 grid grid-cols-2 gap-x-2 gap-y-4 sm:gap-x-3">
+                {v.options.map((o, i) => (
+                  <div
+                    data-s="rise"
+                    style={`--i:${i}`}
+                    class:list={[
+                      'relative rounded-md bg-white p-2.5 sm:p-3',
+                      i === 0 ? 'border-2 border-blue-600' : 'border-line border',
+                    ]}
+                  >
+                    {i === 0 && (
+                      <Chip tone="highlight" size="xs" class="absolute -top-3 end-2">
+                        {v.recommended}
+                      </Chip>
+                    )}
+                    <p class="text-ink-700 truncate text-xs font-semibold">{o.name}</p>
+                    <p class="font-display text-ink-900 mt-1 text-xl font-bold tabular-nums sm:text-2xl">
+                      {o.fit}%<span class="text-ink-500 ms-1 font-sans text-[11px] font-normal">{v.fit}</span>
+                    </p>
+                    <div class="bg-line mt-2 h-1.5 overflow-hidden rounded-full">
+                      <div
+                        data-s="grow-x"
+                        style={`width:${percent(o.fit)}%;--i:${i + 2}`}
+                        class="h-full rounded-full bg-blue-600"
+                      />
+                    </div>
+                    {i < 3 ? (
+                      <p class="text-danger mt-2 flex items-center gap-1 text-[11px] font-semibold">
+                        <Icon name="alert" class="size-3.5 shrink-0" />
+                        <span class="truncate">{v.overCap}</span>
+                      </p>
+                    ) : (
+                      <p class="text-success mt-2 flex items-center gap-1 text-[11px] font-semibold">
+                        <Icon name="check" class="size-3.5 shrink-0" />
+                        <span class="truncate">{v.lowestCost}</span>
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div data-pane="3" data-s="fade" data-on class="col-start-1 row-start-1">
+              <div class="grid grid-cols-[auto_repeat(5,minmax(0,1fr))] gap-1 text-[10px] sm:text-xs">
+                <span></span>
+                {v.days.map((d) => (
+                  <span class="text-ink-500 pb-0.5 text-center font-semibold">{d}</span>
+                ))}
+                {v.week.map((row, r) => (
+                  <>
+                    {r === 2 && (
+                      <>
+                        <span />
+                        <span class="border-line text-ink-500 col-span-5 flex h-5 items-center justify-center rounded-sm border border-dashed text-[10px]">
+                          {v.break}
+                        </span>
+                      </>
+                    )}
+                    <span class="text-ink-500 flex items-center pe-1 font-semibold whitespace-nowrap">
+                      {v.periods[r]}
+                    </span>
+                    {row.map((code, c) => (
+                      <span
+                        data-s="pop"
+                        data-on
+                        style={`--i:${r * 5 + c}`}
+                        class:list={[
+                          'text-ink-900 flex h-7 items-center justify-center rounded-sm font-semibold sm:h-8',
+                          kinds[kindOf(code)],
+                        ]}
+                      >
+                        {code}
+                      </span>
+                    ))}
+                  </>
+                ))}
+              </div>
+              <ul class="text-ink-700 mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px]">
+                {(Object.keys(kinds) as Kind[]).map((k) => (
+                  <li class="flex items-center gap-1.5">
+                    <span class:list={['size-3 rounded-sm', kinds[k]]} />
+                    {v.legend[k]}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </WindowFrame>
+      </Stage>
+    </div>
+  </ProjectShowcase>
+</div>
+
+<script>
+  import { initViz } from '../../scripts/solutions';
+
+  initViz('timetabling');
+</script>

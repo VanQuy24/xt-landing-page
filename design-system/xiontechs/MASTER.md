@@ -228,6 +228,17 @@ For `/privacy-policy` and `/terms-of-service`:
 
 ---
 
+### 3.5 Dot-grid pattern
+
+A flat, regular texture, not a decorative gradient: tiny dots on a 22px grid, drawn with a CSS `radial-gradient` from the color tokens. Two utilities in `src/styles/global.css` (they set only the image; pair them with a background color):
+
+| Utility          | Dots              | Use                                                                      |
+| ---------------- | ----------------- | ------------------------------------------------------------------------ |
+| `.bg-dots`       | `white` at 8%     | Navy bands (`bg-brand-navy`): Solutions hero, ESS section, CTA band      |
+| `.bg-dots-light` | `blue-200` at 50% | Light tinted panels (`bg-blue-50`): the "stage" behind Solutions mockups |
+
+Use it on large surfaces only, never behind body text smaller than `lead` on light panels, and never together with a shadow glow.
+
 ## 4. Imagery
 
 ### 4.1 What images are for
@@ -276,7 +287,7 @@ Lucide outline icons, copied as **inline SVG** into `src/components/ui/Icon.astr
 
 ### 5.2 Navigation bar
 
-White, sticky, 72px tall, bottom border 1px `line` (appears after 8px of scroll). Logo left, links center (Inter 500 15px, `ink-700`, active = `blue-600` with a 2px gold underline), language switcher + primary CTA **"Get in touch"** right. Links per `content/sitemap.md`: Services · Products · Clients · Process · News · FAQ (anchors to Home sections) · Careers. From other pages the anchors go to Home first. The inline links show from `xl` (1280px); below that they move into the menu button (seven links, longer in Vietnamese, do not fit at 1024px). Links never wrap.
+White, sticky, 72px tall, bottom border 1px `line` (appears after 8px of scroll). Logo left, links center (Inter 500 15px, `ink-700`, active = `blue-600` with a 2px gold underline), language switcher + primary CTA **"Get in touch"** right. Links per `content/sitemap.md`: Services · Solutions (page) · Clients · Process · News · FAQ (anchors to Home sections) · Careers. From other pages the anchors go to Home first. The inline links show from `xl` (1280px); below that they move into the menu button (seven links, longer in Vietnamese, do not fit at 1024px). Links never wrap.
 
 **Mobile (< `lg`):** logo + language switcher + menu button (44px, `aria-expanded`, `aria-controls`). The menu opens a full-width sheet under the bar (z 60), 56px rows, CTA as a full-width primary button at the bottom. Escape and a link click close it; focus returns to the menu button. Body scroll is locked while open.
 

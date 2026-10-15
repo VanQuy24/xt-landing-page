@@ -14,7 +14,7 @@ Meta description: XionTechs là đội ngũ cung cấp dịch vụ và sản ph�
 ## Header
 
 - Logo: XionTechs
-- Links: Dịch vụ · Sản phẩm · Khách hàng · Quy trình · Tin tức · Hỏi đáp · Tuyển dụng
+- Links: Dịch vụ · Giải pháp (trang) · Khách hàng · Quy trình · Tin tức · Hỏi đáp · Tuyển dụng
 - Language switch: EN / VI
 - Button: Liên hệ
 
@@ -188,7 +188,7 @@ Chúng tôi am hiểu sâu nhất về EdTech, y tế và logistics.
   - Body: Đội ngũ tại TP. Hồ Chí Minh đã chuyển đến văn phòng mới ở tầng 7, từ ngày mở thùng sắp xếp đồ đạc đến ngày đầu tiên làm việc trọn vẹn tại bàn mới.
   - Place line: Tầng 7, 54 Nguyễn Văn Thủ, Phường Tân Định, TP. Hồ Chí Minh
   - Tag: Văn phòng mới · Link: Chỉ đường (Google Maps, tab mới)
-  - Photos: tòa nhà (alt: Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh); ngày chuyển văn phòng (alt: Thành viên sắp xếp bàn làm việc và màn hình trong ngày chuyển văn phòng); bàn làm việc (alt: Kỹ sư làm việc tại văn phòng mới); toàn đội (alt: Toàn đội làm việc tại văn phòng mới)
+  - Photos: tòa nhà (alt: Tòa nhà đặt văn phòng mới của chúng tôi tại TP. Hồ Chí Minh); ngày chuyển văn phòng (alt: Kỹ sư làm việc tại dãy bàn trong văn phòng mới); bàn làm việc (alt: Kỹ sư làm việc tại văn phòng mới); toàn đội (alt: Toàn đội làm việc tại văn phòng mới)
 - Item, 2026-07-31:
   - Title: Làm việc thông minh, giải trí hết mình
   - Body: Ngày 31/7, chúng tôi tổ chức workshop "Thực Chiến AI với Agentic Workflow", nơi các thành viên chia sẻ kinh nghiệm thực tế và trình bày cách họ ứng dụng các công cụ AI trong công việc hằng ngày.

@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getDictionary, type Locale } from '../../i18n';
 import AppWindow from '../ui/AppWindow.astro';
 import Icon from '../ui/Icon.astro';
@@ -49,4 +50,12 @@ const p = t.products;
       <p class="text-small text-ink-500 mt-3">{p.timetabling.body}</p>
     </div>
   </div>
+
+  <a
+    href={getRelativeLocaleUrl(Astro.props.lang, 'solutions')}
+    class="group mt-10 inline-flex min-h-11 items-center gap-2 font-semibold text-blue-600 underline-offset-4 hover:underline"
+  >
+    {p.allSolutions}
+    <Icon name="arrow" class="size-5 transition-transform duration-150 group-hover:translate-x-0.5" />
+  </a>
 </Section>

@@ -16,7 +16,7 @@
   "nav": {
     "language": "Ngôn ngữ",
     "services": "Dịch vụ",
-    "products": "Sản phẩm",
+    "solutions": "Giải pháp",
     "clients": "Khách hàng",
     "process": "Quy trình",
     "news": "Tin tức",
@@ -167,7 +167,8 @@
           "tone": "neutral"
         }
       ]
-    }
+    },
+    "allSolutions": "Xem tất cả giải pháp"
   },
   "clients": {
     "label": "Khách hàng và lĩnh vực",
@@ -308,7 +309,7 @@
       "photos": [
         {
           "id": "new-office-2",
-          "alt": "Thành viên sắp xếp bàn làm việc và màn hình trong ngày chuyển văn phòng"
+          "alt": "Kỹ sư làm việc tại dãy bàn trong văn phòng mới"
         },
         {
           "id": "new-office-1",
@@ -484,6 +485,524 @@
     "whereHeading": "Nơi bạn sẽ làm việc",
     "whereText": "Đội ngũ kỹ sư của chúng tôi làm việc tại TP. Hồ Chí Minh, Việt Nam.",
     "address": "Tầng 12, Tòa A2, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, TP. Hồ Chí Minh"
+  },
+  "solutions": {
+    "meta": {
+      "title": "Giải pháp - XionTechs",
+      "description": "Các sản phẩm XionTechs đã xây dựng cho trường học và doanh nghiệp: ứng dụng cho phụ huynh và nhân viên, agent nhân sự, và XT Smart Platform với xếp thời khóa biểu, chấm bài bằng AI và an toàn trường học."
+    },
+    "label": "Giải pháp",
+    "heading": "Sản phẩm chúng tôi đã xây dựng",
+    "lead": "Các nền tảng ưu tiên AI cho trường học và doanh nghiệp, giới thiệu đúng như cách chúng vận hành.",
+    "jumpLabel": "Các sản phẩm trên trang này",
+    "more": "& nhiều hơn nữa",
+    "parent": {
+      "nav": "Parent Platform",
+      "tag": "Ứng dụng di động & web · Giáo dục",
+      "title": "Parent Platform",
+      "body": "Một trợ lý cho phụ huynh trên điện thoại và web: tiến độ, học phí, sự kiện và yêu cầu, chỉ cần chạm hoặc hỏi.",
+      "numbers": [
+        {
+          "value": "2",
+          "label": "Cách làm mọi việc"
+        }
+      ],
+      "chips": [
+        "Hồ sơ học sinh",
+        "Học phí & thanh toán",
+        "Sự kiện & hoạt động",
+        "Xin nghỉ học",
+        "Thông báo",
+        "Trợ lý AI"
+      ],
+      "summary": "Ứng dụng phụ huynh trên web và điện thoại. Trên web là hồ sơ học sinh An Nguyen, lớp 8.1, với các thẻ hồ sơ, y tế và tài liệu. Trên điện thoại có hai chế độ: Chạm hiện tiến độ học tập và đơn xin nghỉ; Trò chuyện hiện phụ huynh nhờ trợ lý AI xin nghỉ cho con, trợ lý trả lời bằng đơn đã điền sẵn, và đơn được gửi tới giáo viên chủ nhiệm.",
+      "viz": {
+        "app": "Parent Platform",
+        "modes": "Xem ứng dụng ở chế độ",
+        "tap": "Chạm",
+        "chat": "Trò chuyện",
+        "progress": "Tiến độ học tập",
+        "subjects": [
+          {
+            "name": "Toán",
+            "value": 82
+          },
+          {
+            "name": "Tiếng Anh",
+            "value": 74
+          }
+        ],
+        "form": "Đơn xin nghỉ học",
+        "fields": [
+          {
+            "k": "Con",
+            "v": "An"
+          },
+          {
+            "k": "Ngày",
+            "v": "T6, 17/10"
+          },
+          {
+            "k": "Lý do",
+            "v": "Bị ốm"
+          }
+        ],
+        "submit": "Gửi",
+        "ask": "Hôm nay An bị ốm, nhờ xin cho cháu nghỉ học giúp tôi.",
+        "confirm": "Xác nhận",
+        "sent": "Đã gửi giáo viên chủ nhiệm",
+        "web": {
+          "bar": "Parent Platform · Web",
+          "nav": ["Thông báo", "Chủ đề", "Cài đặt"],
+          "title": "Hồ sơ học sinh",
+          "student": "An Nguyen · Lớp 8.1",
+          "tabs": ["Hồ sơ", "Y tế", "Tài liệu"],
+          "fields": [
+            {
+              "k": "Ngày sinh",
+              "v": "12/05/2013"
+            },
+            {
+              "k": "GV chủ nhiệm",
+              "v": "Cô Lan"
+            },
+            {
+              "k": "Đưa đón",
+              "v": "Xe số 4"
+            }
+          ]
+        }
+      },
+      "hook": "Hôm nay con tôi học hành thế nào?"
+    },
+    "staff": {
+      "nav": "Staff Platform",
+      "tag": "Ứng dụng web · Giáo dục",
+      "title": "Staff Platform",
+      "body": "Cổng thông tin đầy đủ cho nhân viên: điểm danh, thông báo, hoạt động và sức khỏe tinh thần. Hỏi trợ lý và trang bạn đang xem sẽ thay đổi.",
+      "numbers": [],
+      "chips": [
+        "Điểm danh",
+        "Thông báo",
+        "Hoạt động & địa điểm",
+        "Sức khỏe tinh thần",
+        "Ngoại khóa",
+        "Cảnh báo khẩn cấp"
+      ],
+      "summary": "Cổng thông tin nhân viên đang mở trang Điểm danh: bốn chỉ số (3 học sinh đi muộn, 1 vắng không phép, 2 lớp chủ nhiệm cần chú ý, 5 lượt vắng trong tháng) và lịch học trong tuần. Giáo viên hỏi trợ lý hôm nay ai đi muộn, và chính trang đó đổi thành danh sách ba học sinh đi muộn kèm nút báo phụ huynh. Sau đó giáo viên yêu cầu mở sức khỏe tinh thần khối 10, và trang chuyển sang mô-đun Sức khỏe tinh thần với bốn mặt: học tập, cảm xúc, xã hội và thể chất.",
+      "viz": {
+        "bar": "Staff Platform",
+        "tabs": ["Điểm danh", "Thông báo", "Hoạt động", "Sức khỏe", "Ngoại khóa"],
+        "emergency": "Khẩn cấp",
+        "page": "Điểm danh",
+        "kpis": [
+          {
+            "label": "Học sinh đi muộn",
+            "value": "3",
+            "delta": "+1 so với hôm qua"
+          },
+          {
+            "label": "Vắng không phép",
+            "value": "1",
+            "delta": "−1 so với hôm qua"
+          },
+          {
+            "label": "Lớp cần chú ý",
+            "value": "2",
+            "delta": "Như hôm qua"
+          },
+          {
+            "label": "Vắng trong tháng",
+            "value": "5",
+            "delta": "+2 so với hôm qua"
+          }
+        ],
+        "days": ["T2", "T3", "T4", "T5", "T6"],
+        "week": [
+          ["T1 · 10A1", "T3 · 10A2"],
+          ["T2 · 10A3", "T4 · 10A1"],
+          ["T1 · 10A2", "T2 · 10A3"],
+          ["T3 · 10A1", "T4 · 10A2"],
+          ["T1 · 10A3", "T2 · 10A1"]
+        ],
+        "changed": "Trợ lý đã thay đổi",
+        "back": "Về trang gốc",
+        "lateTitle": "Đi muộn hôm nay · 3 học sinh",
+        "late": [
+          {
+            "name": "Minh T.",
+            "group": "10A1",
+            "time": "07:42"
+          },
+          {
+            "name": "Hoa P.",
+            "group": "10A2",
+            "time": "07:48"
+          },
+          {
+            "name": "Khang L.",
+            "group": "10A3",
+            "time": "07:55"
+          }
+        ],
+        "notify": "Báo phụ huynh",
+        "wellbeingTitle": "Sức khỏe tinh thần · Khối 10",
+        "wellbeing": [
+          {
+            "label": "Học tập",
+            "value": "12"
+          },
+          {
+            "label": "Cảm xúc",
+            "value": "5"
+          },
+          {
+            "label": "Xã hội",
+            "value": "3"
+          },
+          {
+            "label": "Thể chất",
+            "value": "2"
+          }
+        ],
+        "wellbeingNote": "học sinh cần trao đổi",
+        "assistant": "Trợ lý AI",
+        "greeting": "Chào buổi sáng. Bạn cần hỏi gì?",
+        "topics": ["Điểm danh", "Sức khỏe"],
+        "ask1": "Hôm nay ai đi muộn?",
+        "done1": "Đang hiện học sinh đi muộn",
+        "ask2": "Mở sức khỏe tinh thần khối 10",
+        "done2": "Đã mở Sức khỏe · Khối 10",
+        "input": "Hỏi bất cứ điều gì…"
+      },
+      "hook": "Nếu mọi màn hình đều lắng nghe bạn?"
+    },
+    "ess": {
+      "nav": "Agent ESS",
+      "tag": "Copilot Studio · Microsoft 365",
+      "title": "Agent tự phục vụ cho nhân viên",
+      "body": "Giải đáp và xử lý yêu cầu nhân sự ngay trong Microsoft Teams và Microsoft 365 Copilot, kết nối với Dynamics 365.",
+      "numbers": [
+        {
+          "value": "15",
+          "label": "Agent"
+        },
+        {
+          "value": "2",
+          "label": "Nơi sử dụng"
+        }
+      ],
+      "chips": ["Copilot Studio", "Microsoft Teams", "Microsoft 365 Copilot", "Dynamics 365"],
+      "summary": "Một ứng dụng chat. Nhân viên hỏi trợ lý nhân sự còn bao nhiêu ngày phép; trợ lý trả lời bằng một thẻ: 9 ngày phép năm và 4 ngày nghỉ ốm, kèm nút xin nghỉ phép và xem lịch sử. Bên cạnh, 15 ô tượng trưng cho 15 agent.",
+      "viz": {
+        "app": "Trợ lý nhân sự",
+        "ask": "Tôi còn bao nhiêu ngày phép?",
+        "card": "Số ngày phép còn lại",
+        "rows": [
+          {
+            "k": "Phép năm",
+            "v": "9 ngày"
+          },
+          {
+            "k": "Nghỉ ốm",
+            "v": "4 ngày"
+          }
+        ],
+        "primary": "Xin nghỉ phép",
+        "secondary": "Xem lịch sử",
+        "input": "Nhắn cho Trợ lý nhân sự",
+        "agents": "15 agent"
+      },
+      "hook": "Giải đáp nhân sự ngay nơi mọi người làm việc."
+    },
+    "smart": {
+      "nav": "XT Smart Platform",
+      "tag": "Nền tảng của chúng tôi · Giáo dục",
+      "title": "XT Smart Platform",
+      "body": "Một nền tảng cho mọi mặt của trường học thông minh: học tập, quản trị và an toàn.",
+      "numbers": [
+        {
+          "value": "6",
+          "label": "Lĩnh vực cốt lõi"
+        }
+      ],
+      "chips": ["Agent AI", "IoT", "Robot", "Nền tảng dữ liệu"],
+      "mapLabel": "Nền tảng bao gồm những gì",
+      "aiLabel": "Có AI",
+      "categories": [
+        {
+          "name": "Học tập & học thuật",
+          "items": [
+            {
+              "label": "Gia sư AI & học tập thích ứng",
+              "ai": true
+            },
+            {
+              "label": "AI chấm bài",
+              "ai": true,
+              "href": "grader"
+            },
+            {
+              "label": "Huấn luyện ngôn ngữ bằng AI",
+              "ai": true
+            }
+          ]
+        },
+        {
+          "name": "Quản trị & ERP trường học",
+          "items": [
+            {
+              "label": "Xếp thời khóa biểu bằng AI",
+              "ai": true,
+              "href": "timetabling"
+            },
+            {
+              "label": "Hệ thống thông tin học sinh"
+            }
+          ]
+        },
+        {
+          "name": "An toàn & an ninh",
+          "items": [
+            {
+              "label": "Điểm danh & hiện diện thông minh",
+              "ai": true,
+              "href": "xss"
+            },
+            {
+              "label": "Phân tích video CCTV bằng AI",
+              "ai": true
+            }
+          ]
+        },
+        {
+          "name": "Phân tích & báo cáo",
+          "items": [
+            {
+              "label": "Bảng theo dõi kết quả học tập"
+            },
+            {
+              "label": "Cảnh báo can thiệp sớm"
+            }
+          ]
+        },
+        {
+          "name": "Trải nghiệm & giao tiếp",
+          "items": [
+            {
+              "label": "Cổng thông tin trường cho phụ huynh, giáo viên và học sinh",
+              "highlight": true
+            },
+            {
+              "label": "Hỗ trợ đa ngôn ngữ"
+            }
+          ]
+        },
+        {
+          "name": "Khuôn viên & vận hành",
+          "items": [
+            {
+              "label": "Đưa đón & an toàn tuyến đường"
+            },
+            {
+              "label": "Căng tin thông minh"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "before": "Một vài ví dụ trong mỗi lĩnh vực.",
+        "icon": "Biểu tượng tia sáng",
+        "after": "= có AI. Nền tảng vẫn đang tiếp tục phát triển."
+      },
+      "hook": "Nếu mọi hệ thống trong trường cùng vận hành như một?"
+    },
+    "timetabling": {
+      "category": "Quản trị & ERP",
+      "title": "Xếp thời khóa biểu thông minh",
+      "body": "Xếp hạng các ưu tiên của trường. Agent dựng thời khóa biểu, cân nhắc chi phí và việc di chuyển, rồi giải thích phương án tốt nhất.",
+      "numbers": [
+        {
+          "value": "4",
+          "label": "Phương án để so sánh"
+        }
+      ],
+      "chips": ["Ưu tiên", "Ngân sách", "Sơ đồ tầng", "LLM judge"],
+      "summary": "Ba bước. Đầu tiên, nhà trường xếp hạng bốn ưu tiên: sức khỏe tinh thần, học tập, chi phí nhân sự và độ phù hợp phòng học. Sau đó agent so sánh bốn phương án thời khóa biểu; phương án ưu tiên sức khỏe tinh thần phù hợp nhất với 84,6% và được đề xuất. Cuối cùng là thời khóa biểu tuần đã chọn, gồm tiết học, phòng lab, thể chất và mỹ thuật.",
+      "viz": {
+        "bar": "Smart timetabling",
+        "stepsLabel": "Xem bước",
+        "steps": ["Ưu tiên", "Phương án", "Thời khóa biểu"],
+        "prioritiesTitle": "Kéo để xếp hạng điều quan trọng nhất",
+        "priorities": ["Sức khỏe tinh thần", "Học tập", "Chi phí nhân sự", "Phù hợp phòng học"],
+        "optionsTitle": "Các phương án thời khóa biểu",
+        "options": [
+          {
+            "name": "Ưu tiên sức khỏe",
+            "fit": "84,6"
+          },
+          {
+            "name": "Phù hợp nhất",
+            "fit": "81,0"
+          },
+          {
+            "name": "Ưu tiên học tập",
+            "fit": "80,8"
+          },
+          {
+            "name": "Ưu tiên nhân sự",
+            "fit": "68,5"
+          }
+        ],
+        "fit": "phù hợp",
+        "recommended": "Đề xuất",
+        "overCap": "Vượt trần lương",
+        "lowestCost": "Chi phí thấp nhất",
+        "days": ["T2", "T3", "T4", "T5", "T6"],
+        "periods": ["Tiết 1", "Tiết 2", "Tiết 3", "Tiết 4"],
+        "break": "Ra chơi",
+        "week": [
+          ["ENG", "MAT", "SCI", "ENG", "MAT"],
+          ["MAT", "SCI", "ENG", "HUM", "FRE"],
+          ["HUM", "ART", "PE", "FRE", "SCI"],
+          ["FRE", "ENG", "MAT", "ART", "PE"]
+        ],
+        "legend": {
+          "teach": "Lớp học",
+          "lab": "Phòng lab",
+          "gym": "Thể chất",
+          "studio": "Mỹ thuật"
+        }
+      },
+      "hook": "Thời khóa biểu kỳ tới, dựa trên điều trường bạn coi trọng."
+    },
+    "grader": {
+      "category": "Học tập & học thuật",
+      "title": "Grader agent",
+      "body": "Tải lên bài làm hoặc bản ghi âm. Agent đọc bài, kể cả bằng OCR, và đề xuất điểm để giáo viên duyệt.",
+      "chips": ["OCR", "Âm thanh", "Tiêu chí chấm", "Giáo viên duyệt"],
+      "summary": "Một màn hình chấm bài. Bản ghi âm học sinh đọc một đoạn văn được kiểm tra từng từ: hầu hết các từ khớp, vài từ bị bỏ qua, một từ đọc khác. Agent đề xuất 9,3 trên 10, xếp loại Xuất sắc, theo ba tiêu chí: độ chính xác 9, độ trôi chảy 10 và độ đầy đủ 9. Giáo viên có thể lưu nháp hoặc duyệt.",
+      "viz": {
+        "bar": "Grader · Chấm bài",
+        "students": [
+          {
+            "name": "Học sinh A",
+            "mark": "9,5/10"
+          },
+          {
+            "name": "Học sinh B",
+            "mark": "9,3/10"
+          }
+        ],
+        "passageTitle": "Đọc to: The Old Lighthouse",
+        "passage": "The old lighthouse stood ~alone~ at the edge of the cliff. Every night its ~bright~ beam swept across the ^dark^ water, and ships ~far~ out at sea knew that home was near. The keeper climbed ~all~ ninety stairs each evening to light the lamp.",
+        "legend": {
+          "matched": "Khớp",
+          "skipped": "Bỏ qua",
+          "different": "Đọc khác"
+        },
+        "assessment": "Đánh giá của AI",
+        "proposed": "Điểm đề xuất",
+        "mark": "9,3",
+        "outOf": "/ 10",
+        "grade": "Xuất sắc",
+        "rubric": [
+          {
+            "name": "Độ chính xác",
+            "score": 9
+          },
+          {
+            "name": "Độ trôi chảy",
+            "score": 10
+          },
+          {
+            "name": "Độ đầy đủ",
+            "score": 9
+          }
+        ],
+        "save": "Lưu nháp",
+        "approve": "Duyệt & tiếp",
+        "note": "Agent chỉ đề xuất · chưa có gì là chính thức cho đến khi giáo viên duyệt"
+      },
+      "hook": "Để agent chấm lượt đầu tiên."
+    },
+    "xss": {
+      "category": "An toàn & an ninh",
+      "title": "XSS · An toàn & an ninh",
+      "body": "Điểm danh bằng AI, phân tích hành vi trong lớp, phân tích video và cảnh báo trong một trung tâm điều hành.",
+      "chips": [
+        "Điểm danh thông minh",
+        "Phân tích hành vi trong lớp",
+        "Phân tích video AI",
+        "Kiểm soát ra vào",
+        "Cảnh báo khẩn cấp"
+      ],
+      "summary": "Bảng điều khiển an toàn của một khuôn viên giả định. Sơ đồ tầng có sáu khu với vị trí camera và cửa. Điểm danh thông minh đếm 412 trên 420 người có mặt. Danh sách cảnh báo gồm khách ở Cổng B, cửa Lab 2 chưa đóng, diễn tập phòng cháy ở Hội trường an toàn, và nghi có xô xát ở Hội trường đã báo nhân viên. Ô camera trực tiếp lớp 3B hiện sáu học sinh ngồi dưới dạng đường viền, không có khuôn mặt, với ba nhận diện: giơ tay, đang ngủ và dùng điện thoại.",
+      "viz": {
+        "bar": "XSS · Trung tâm điều hành an toàn",
+        "plan": "Khuôn viên · Tầng 1",
+        "zones": {
+          "gateA": "Cổng A",
+          "gateB": "Cổng B",
+          "classrooms": "Phòng học",
+          "lab": "Lab 2",
+          "library": "Thư viện",
+          "hall": "Hội trường"
+        },
+        "legend": {
+          "camera": "Camera",
+          "door": "Cửa"
+        },
+        "attendance": "Điểm danh thông minh",
+        "present": "có mặt",
+        "count": 412,
+        "total": 420,
+        "alertsTitle": "Cảnh báo",
+        "alerts": [
+          {
+            "text": "Cổng B · Khách đã check-in",
+            "time": "08:02",
+            "tone": "info"
+          },
+          {
+            "text": "Lab 2 · Cửa chưa đóng",
+            "time": "08:15",
+            "tone": "warn"
+          },
+          {
+            "text": "Hội trường · Diễn tập PCCC · An toàn",
+            "time": "08:31",
+            "tone": "ok"
+          },
+          {
+            "text": "Hội trường · Nghi có xô xát · Đã báo nhân viên",
+            "time": "08:40",
+            "tone": "danger"
+          }
+        ],
+        "live": "Trực tiếp",
+        "classroom": "Lớp 3B",
+        "detections": ["Giơ tay", "Đang ngủ", "Dùng điện thoại"]
+      },
+      "hook": "Nắm tình hình an toàn khuôn viên trong nháy mắt."
+    },
+    "cta": {
+      "heading": "Bạn đang có ý tưởng tương tự?",
+      "lead": "Dùng một sản phẩm của chúng tôi, hoặc để chúng tôi xây dựng một giải pháp tương tự cho bạn.",
+      "use": {
+        "label": "Dùng sản phẩm của chúng tôi",
+        "button": "Đặt lịch demo"
+      },
+      "build": {
+        "label": "Xây dựng giải pháp tương tự",
+        "button": "Chia sẻ ý tưởng của bạn"
+      },
+      "reply": "Chúng tôi trả lời qua email trong vòng 24 giờ làm việc.",
+      "photo": {
+        "alt": "Kỹ sư XionTechs trình bày với khách hàng đến thăm tại Thành phố Hồ Chí Minh",
+        "caption": "Đội ngũ của chúng tôi cùng khách hàng, TP. Hồ Chí Minh"
+      }
+    }
   },
   "legal": {
     "privacy": {

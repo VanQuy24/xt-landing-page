@@ -19,7 +19,8 @@ Every `[DUMMY: ...]` marker in `content/`, as of 2026-10-14. Markers that ask fo
 | 11  | `en/terms.md:8`, `vi/terms.md:8`       | Meta                        | One-line meta description for the terms of service.                                                                                                                       | Director approves. The Content lead can draft it. |
 | 12  | `vi/privacy.md:5`                      | Top                         | Professional legal translation of the privacy policy. Don't machine-translate it.                                                                                         | Director                                          |
 | 13  | `vi/terms.md:5`                        | Top                         | Professional legal translation of the terms of service. Don't machine-translate it.                                                                                       | Director                                          |
-| 14  | `sitemap.md:59`                        | URLs that must keep working | Which app store listings or apps link the live privacy and support URLs.                                                                                                  | Director                                          |
+| 14  | `sitemap.md:60`                        | URLs that must keep working | Which app store listings or apps link the live privacy and support URLs.                                                                                                  | Director                                          |
+| 15  | `en/solutions.md`, `vi/solutions.md`   | Real product screens        | Closed 2026-10-15: the owner decided the Solutions page shows illustrative mockups only; no real screens or photos are needed there.                                      | Owner                                             |
 | 16  | `en/home.md:269`                       | 10. FAQ                     | Whether private equity is a sector we work in. Section 5 lists only EdTech, healthcare and logistics.                                                                     | Director                                          |
 | 17  | `en/home.md:274`                       | 10. FAQ                     | Which security practices and certifications are real, so the security answer can name them. The privacy policy lists ISO 27001 and SOC 2 only under "designed to comply". | Director                                          |
 
@@ -28,5 +29,6 @@ Every `[DUMMY: ...]` marker in `content/`, as of 2026-10-14. Markers that ask fo
 - **Sales:** 5, 6, 7, 8, 9, and maybe 4. Most of these are approvals from clients.
 - **HR:** 1, 2.
 - **Director:** 3, 10, 11, 12, 13, 14, 16, 17, and maybe 4.
+- **Teammate:** 15.
 
 Items 8 and 9 decide whether section 6 ships. If no real quote arrives, `en/home.md` says to remove the whole Testimonials section.
